@@ -35,6 +35,7 @@
                                                               alpha:1.0]];
         [[UITabBar appearance] setShadowImage:[UIImage imageNamed:@"none.png"]];
     }
+
 }
 
 - (BOOL)application:(UIApplication *)application
@@ -42,7 +43,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
     [self setupUI];
-    
+
     return YES;
 }
 

@@ -7,15 +7,43 @@
 //
 
 #import "ZAppDelegate.h"
+#import "Telephone.h"
+#import "Config.h"
 
 @implementation ZAppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+- (void)setupUI
+{
+    [[UINavigationBar appearance] setTitleTextAttributes:@{UITextAttributeFont: [UIFont systemFontOfSize:18],
+                                                           UITextAttributeTextColor: [UIColor blackColor],
+                                                           UITextAttributeTextShadowOffset: [NSValue valueWithCGSize:CGSizeZero]}];
+    if (!IS_IOS_7) {
+        [[UIBarButtonItem appearance] setBackButtonBackgroundImage:[UIImage imageNamed:@"UI7NavigationBarBackButton.png"]
+                                                          forState:UIControlStateNormal
+                                                        barMetrics:UIBarMetricsDefault];
+        [[UIBarButtonItem appearance] setTitleTextAttributes:@{UITextAttributeTextColor: [UIColor blackColor],
+                                                               UITextAttributeFont: [UIFont systemFontOfSize:16],
+                                                               UITextAttributeTextShadowOffset: [NSValue valueWithCGSize:CGSizeZero]}
+                                                    forState:UIControlStateNormal];
+        [[UITabBar appearance] setSelectedImageTintColor:[UIColor colorWithRed:0.25
+                                                                         green:0.58
+                                                                          blue:1.0
+                                                                         alpha:1.0]];
+        [[UITabBar appearance] setTintColor:[UIColor colorWithWhite:0.94
+                                                              alpha:1.0]];
+        [[UITabBar appearance] setShadowImage:[UIImage imageNamed:@"none.png"]];
+    }
+}
+
+- (BOOL)application:(UIApplication *)application
+didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [self setupUI];
+    
     return YES;
 }
-							
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -24,7 +52,7 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
+    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
 

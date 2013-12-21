@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>3466F3CF-0004-49DF-A868-B45B03B0141A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Z</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D6895EC0-4F64-45D4-B061-E989454B06FC</key>
+		<string>https://github.com/rickytan/Z.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Z.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D6895EC0-4F64-45D4-B061-E989454B06FC</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/rickytan/Z.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D6895EC0-4F64-45D4-B061-E989454B06FC</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D6895EC0-4F64-45D4-B061-E989454B06FC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Z</string>
+		</dict>
+	</array>
+</dict>
+</plist>

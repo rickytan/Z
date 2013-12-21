@@ -1,0 +1,21 @@
+
+/* Class = "IBUITabBarItem"; title = "Item"; ObjectID = "4H8-N2-90V"; */
+"4H8-N2-90V.title" = "Item";
+
+/* Class = "IBUITabBarItem"; title = "Item"; ObjectID = "4Qc-p5-nWg"; */
+"4Qc-p5-nWg.title" = "Item";
+
+/* Class = "IBUINavigationItem"; title = "常用电话"; ObjectID = "Gvh-xO-RKL"; */
+"Gvh-xO-RKL.title" = "常用电话";
+
+/* Class = "IBUITabBarItem"; title = "Item"; ObjectID = "pgy-2F-vTJ"; */
+"pgy-2F-vTJ.title" = "Item";
+
+/* Class = "IBUINavigationItem"; title = "我的收藏"; ObjectID = "rRq-bn-kV8"; */
+"rRq-bn-kV8.title" = "我的收藏";
+
+/* Class = "IBUITabBarItem"; title = "Item"; ObjectID = "vrz-vh-X2N"; */
+"vrz-vh-X2N.title" = "Item";
+
+/* Class = "IBUINavigationItem"; title = "电话浏览"; ObjectID = "zCi-FU-Qoz"; */
+"zCi-FU-Qoz.title" = "电话浏览";

@@ -130,7 +130,7 @@
 
 - (void)searchWithText:(NSString*)text
 {
-    self.tableView.userInteractionEnabled = NO;
+    //self.tableView.userInteractionEnabled = NO;
     NSInvocationOperation *op = [[NSInvocationOperation alloc] initWithTarget:self
                                                                      selector:@selector(searchWithTextInBackground:)
                                                                        object:text];
@@ -221,12 +221,13 @@
 - (void)searchDidFinished
 {
     [self.tableView reloadData];
-    self.tableView.userInteractionEnabled = _operationQueue.operationCount == 1;
+    //self.tableView.userInteractionEnabled = _operationQueue.operationCount == 1;
 }
 
 #pragma mark - UISearchBar Delegate
 
-- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
+- (void)searchBar:(UISearchBar *)searchBar
+    textDidChange:(NSString *)searchText
 {
     [self searchWithText:searchText];
 }

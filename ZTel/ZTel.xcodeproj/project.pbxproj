@@ -207,9 +207,9 @@
 		9C4D1EEE18658D2200EFE020 /* ZTel */ = {
 			isa = PBXGroup;
 			children = (
-				9C4D20451865B5FC00EFE020 /* Config.h */,
 				9C4D202D1865A70800EFE020 /* AppHelper.h */,
 				9C4D202E1865A70800EFE020 /* AppHelper.m */,
+				9C4D20451865B5FC00EFE020 /* Config.h */,
 				9C4D1FEC1865A62900EFE020 /* Emcall.h */,
 				9C4D1FED1865A62900EFE020 /* Emcall.m */,
 				9C4D20421865B59E00EFE020 /* FavoritePhoneController.h */,
@@ -320,6 +320,10 @@
 		9C4D20471865C86A00EFE020 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9C4D205E1865FB2B00EFE020 /* bar@2x.png */,
+				9C4D20601865FF8400EFE020 /* Default-568h@2x.png */,
+				9C4D20611865FF8400EFE020 /* Default.png */,
+				9C4D20621865FF8400EFE020 /* Default@2x.png */,
 				9C4D20481865C86A00EFE020 /* Icon-120@2x.png */,
 				9C4D20491865C86A00EFE020 /* Icon.png */,
 				9C4D204A1865C86A00EFE020 /* Icon@2x.png */,
@@ -329,10 +333,6 @@
 				9C4D20531865EA3100EFE020 /* star-highlight@2x.png */,
 				9C4D20521865EA3100EFE020 /* star@2x.png */,
 				9C4D20561865ECD100EFE020 /* UI7NavigationBarBackButton@2x.png */,
-				9C4D20601865FF8400EFE020 /* Default-568h@2x.png */,
-				9C4D20611865FF8400EFE020 /* Default.png */,
-				9C4D20621865FF8400EFE020 /* Default@2x.png */,
-				9C4D205E1865FB2B00EFE020 /* bar@2x.png */,
 				9C4D20581865EE6800EFE020 /* view@2x.png */,
 				9C4D204B1865C86A00EFE020 /* zjutel.db */,
 			);

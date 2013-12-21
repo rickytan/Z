@@ -18,6 +18,8 @@
                                                            UITextAttributeTextColor: [UIColor blackColor],
                                                            UITextAttributeTextShadowOffset: [NSValue valueWithCGSize:CGSizeZero]}];
     if (!IS_IOS_7) {
+        [[UINavigationBar appearance] setTintColor:[UIColor colorWithWhite:0.94
+                                                                     alpha:1.0]];
         [[UIBarButtonItem appearance] setBackButtonBackgroundImage:[UIImage imageNamed:@"UI7NavigationBarBackButton.png"]
                                                           forState:UIControlStateNormal
                                                         barMetrics:UIBarMetricsDefault];

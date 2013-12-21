@@ -167,11 +167,11 @@
             </objects>
             <point key="canvasLocation" x="524" y="1882"/>
         </scene>
-        <!--Navigation Controller - sss-->
+        <!--Navigation Controller-->
         <scene sceneID="W2F-2t-HL4">
             <objects>
                 <navigationController definesPresentationContext="YES" id="g5f-ea-ZyJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="sss" image="star.png" id="pgy-2F-vTJ"/>
+                    <tabBarItem key="tabBarItem" title="" image="star.png" id="pgy-2F-vTJ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" shadowImage="none.png" id="OY8-tc-iut">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>

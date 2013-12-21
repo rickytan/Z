@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:ZFreshman/ZFreshman.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:ZWork/ZWork.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:ZShare/ZShare.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:ZTel/ZTel.xcodeproj">
+   </FileRef>
+</Workspace>

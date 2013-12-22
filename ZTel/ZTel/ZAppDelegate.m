@@ -9,6 +9,7 @@
 #import "ZAppDelegate.h"
 #import "Telephone.h"
 #import "Config.h"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation ZAppDelegate
 
@@ -44,14 +45,9 @@
                                                                UITextAttributeFont: [UIFont systemFontOfSize:16],
                                                                UITextAttributeTextShadowOffset: [NSValue valueWithCGSize:CGSizeZero]}
                                                     forState:UIControlStateHighlighted];
-        [[UITabBar appearance] setSelectedImageTintColor:[UIColor colorWithRed:0.25
-                                                                         green:0.58
-                                                                          blue:1.0
-                                                                         alpha:1.0]];
-        [[UITabBar appearance] setSelectionIndicatorImage:[UIImage imageNamed:@"none.png"]];
         [[UITabBar appearance] setTintColor:[UIColor colorWithWhite:0.94
                                                               alpha:1.0]];
-        [[UITabBar appearance] setShadowImage:[UIImage imageNamed:@"none.png"]];
+        [[UITabBar appearance] setSelectionIndicatorImage:[[UIImage alloc] init]];
     }
 }
 
@@ -60,6 +56,26 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
     [self setupUI];
+    
+    UIViewController *view = [self.window.rootViewController.storyboard instantiateViewControllerWithIdentifier:@"coverView"];
+    view.view.layer.anchorPoint = CGPointMake(0, 0.5);
+    CGPoint p = view.view.center;
+    p.x = 0;
+    view.view.center = p;
+    if (IS_IPHONE_5)
+        ((UIImageView*)view.view).image = [UIImage imageNamed:@"Default-568h.png"];
+    [self.window.rootViewController.view addSubview:view.view];
+
+    [UIView animateWithDuration:1.2
+                          delay:0.2
+                        options:0
+                     animations:^{
+                         view.view.transform = CGAffineTransformMakeTranslation(0, -800);
+                     }
+                     completion:^(BOOL finished) {
+                         [view.view removeFromSuperview];
+                     }];
+
 
     return YES;
 }

@@ -22,6 +22,18 @@
 
 @implementation FavoritePhoneController
 
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [self.tabBarItem setFinishedSelectedImage:[UIImage imageNamed:@"star-selected.png"]
+                      withFinishedUnselectedImage:[UIImage imageNamed:@"star.png"]];
+        if (IS_IOS_7)
+            self.tabBarItem.selectedImage = [UIImage imageNamed:@"star-selected.png"];
+    }
+    return self;
+}
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];

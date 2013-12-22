@@ -15,6 +15,18 @@
 
 @implementation Emcall
 
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [self.tabBarItem setFinishedSelectedImage:[UIImage imageNamed:@"phone-selected.png"]
+                      withFinishedUnselectedImage:[UIImage imageNamed:@"phone.png"]];
+        if (IS_IOS_7)
+            self.tabBarItem.selectedImage = [UIImage imageNamed:@"phone-selected.png"];
+    }
+    return self;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

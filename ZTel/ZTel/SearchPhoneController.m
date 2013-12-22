@@ -38,6 +38,18 @@
 @synthesize filteredPhone = _filteredPhone;
 @synthesize favoritePhone = _favoritePhone;
 
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [self.tabBarItem setFinishedSelectedImage:[UIImage imageNamed:@"search-selected.png"]
+                      withFinishedUnselectedImage:[UIImage imageNamed:@"search.png"]];
+        if (IS_IOS_7)
+            self.tabBarItem.selectedImage = [UIImage imageNamed:@"search-selected.png"];
+    }
+    return self;
+}
+
 - (void)dealloc
 {
     [_databasePool releaseAllDatabases];

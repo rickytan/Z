@@ -53,6 +53,11 @@
 		9C4D20631865FF8400EFE020 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C4D20601865FF8400EFE020 /* Default-568h@2x.png */; };
 		9C4D20641865FF8400EFE020 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C4D20611865FF8400EFE020 /* Default.png */; };
 		9C4D20651865FF8400EFE020 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C4D20621865FF8400EFE020 /* Default@2x.png */; };
+		9C7C68C31867373800EABAEA /* ZNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C7C68C21867373800EABAEA /* ZNavigationViewController.m */; };
+		9C7C68CA18674E4300EABAEA /* view-selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C7C68C718674E4300EABAEA /* view-selected@2x.png */; };
+		9C7C68CB18674E4300EABAEA /* search-selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C7C68C818674E4300EABAEA /* search-selected@2x.png */; };
+		9C7C68CC18674E4300EABAEA /* star-selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C7C68C918674E4300EABAEA /* star-selected@2x.png */; };
+		9C7C68CE1867507C00EABAEA /* phone-selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C7C68CD1867507C00EABAEA /* phone-selected@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,6 +143,12 @@
 		9C4D20601865FF8400EFE020 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		9C4D20611865FF8400EFE020 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		9C4D20621865FF8400EFE020 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		9C7C68C11867373800EABAEA /* ZNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNavigationViewController.h; sourceTree = "<group>"; };
+		9C7C68C21867373800EABAEA /* ZNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNavigationViewController.m; sourceTree = "<group>"; };
+		9C7C68C718674E4300EABAEA /* view-selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "view-selected@2x.png"; sourceTree = "<group>"; };
+		9C7C68C818674E4300EABAEA /* search-selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search-selected@2x.png"; sourceTree = "<group>"; };
+		9C7C68C918674E4300EABAEA /* star-selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-selected@2x.png"; sourceTree = "<group>"; };
+		9C7C68CD1867507C00EABAEA /* phone-selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "phone-selected@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +235,8 @@
 				9C4D1FF91865A62900EFE020 /* YellowPageViewController.m */,
 				9C4D1EF718658D2200EFE020 /* ZAppDelegate.h */,
 				9C4D1EF818658D2200EFE020 /* ZAppDelegate.m */,
+				9C7C68C11867373800EABAEA /* ZNavigationViewController.h */,
+				9C7C68C21867373800EABAEA /* ZNavigationViewController.m */,
 			);
 			path = ZTel;
 			sourceTree = "<group>";
@@ -329,10 +342,14 @@
 				9C4D204A1865C86A00EFE020 /* Icon@2x.png */,
 				9C4D205C1865F25500EFE020 /* none@2x.png */,
 				9C4D20501865E68500EFE020 /* phone@2x.png */,
+				9C7C68CD1867507C00EABAEA /* phone-selected@2x.png */,
+				9C7C68C818674E4300EABAEA /* search-selected@2x.png */,
 				9C4D205A1865EE9300EFE020 /* search@2x.png */,
 				9C4D20531865EA3100EFE020 /* star-highlight@2x.png */,
+				9C7C68C918674E4300EABAEA /* star-selected@2x.png */,
 				9C4D20521865EA3100EFE020 /* star@2x.png */,
 				9C4D20561865ECD100EFE020 /* UI7NavigationBarBackButton@2x.png */,
+				9C7C68C718674E4300EABAEA /* view-selected@2x.png */,
 				9C4D20581865EE6800EFE020 /* view@2x.png */,
 				9C4D204B1865C86A00EFE020 /* zjutel.db */,
 			);
@@ -416,10 +433,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C7C68CB18674E4300EABAEA /* search-selected@2x.png in Resources */,
 				9C4D205B1865EE9300EFE020 /* search@2x.png in Resources */,
 				9C4D204D1865C86A00EFE020 /* Icon.png in Resources */,
 				9C4D20591865EE6800EFE020 /* view@2x.png in Resources */,
 				9C4D20641865FF8400EFE020 /* Default.png in Resources */,
+				9C7C68CE1867507C00EABAEA /* phone-selected@2x.png in Resources */,
 				9C4D204F1865C86A00EFE020 /* zjutel.db in Resources */,
 				9C4D20541865EA3100EFE020 /* star@2x.png in Resources */,
 				9C4D1EFC18658D2200EFE020 /* Main.storyboard in Resources */,
@@ -428,8 +447,10 @@
 				9C4D20651865FF8400EFE020 /* Default@2x.png in Resources */,
 				9C4D20631865FF8400EFE020 /* Default-568h@2x.png in Resources */,
 				9C4D204C1865C86A00EFE020 /* Icon-120@2x.png in Resources */,
+				9C7C68CC18674E4300EABAEA /* star-selected@2x.png in Resources */,
 				9C4D204E1865C86A00EFE020 /* Icon@2x.png in Resources */,
 				9C4D205F1865FB2B00EFE020 /* bar@2x.png in Resources */,
+				9C7C68CA18674E4300EABAEA /* view-selected@2x.png in Resources */,
 				9C4D20551865EA3100EFE020 /* star-highlight@2x.png in Resources */,
 				9C4D20511865E68500EFE020 /* phone@2x.png in Resources */,
 				9C4D205D1865F25500EFE020 /* none@2x.png in Resources */,
@@ -450,6 +471,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C7C68C31867373800EABAEA /* ZNavigationViewController.m in Sources */,
 				9C4D202A1865A6BD00EFE020 /* unzip.c in Sources */,
 				9C4D1FFF1865A62900EFE020 /* Telephone.m in Sources */,
 				9C4D20441865B59E00EFE020 /* FavoritePhoneController.m in Sources */,

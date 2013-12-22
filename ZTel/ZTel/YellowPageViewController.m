@@ -25,7 +25,7 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         self.favButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        self.favButton.frame = CGRectMake(0, 0, 20, 18);
+        self.favButton.frame = CGRectMake(0, 0, 24, 24);
         [self.favButton setBackgroundImage:[UIImage imageNamed:@"star.png"]
                                   forState:UIControlStateNormal];
         [self.favButton setBackgroundImage:[UIImage imageNamed:@"star-highlight.png"]
@@ -186,6 +186,18 @@
                           error:&error])
             NSLog(@"%@", error);
     }
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [self.tabBarItem setFinishedSelectedImage:[UIImage imageNamed:@"view-selected.png"]
+                      withFinishedUnselectedImage:[UIImage imageNamed:@"view.png"]];
+        if (IS_IOS_7)
+            self.tabBarItem.selectedImage = [UIImage imageNamed:@"view-selected.png"];
+    }
+    return self;
 }
 
 - (void)viewDidLoad

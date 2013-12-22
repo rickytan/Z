@@ -25,15 +25,6 @@
 
 @interface NSString (Extension)
 + (BOOL)isNullOrEmpty:(NSString*)string;
-- (NSString*)md5;
-- (NSString*)stringByReplaceStringWithChar:(const char)p;
-+ (NSString*)uniqueString;
-+ (NSString*)documentsPath;
-+ (NSString*)libraryPath;
-+ (NSString*)cachePath;
-+ (NSString*)downloadPath;
-+ (NSString*)tmpPath;
-
 @end
 
 @interface NSData (Extension)

@@ -58,6 +58,7 @@ static AppHelper * theInstance = nil;
                                                        cancelButtonTitle:@"取消"
                                                   destructiveButtonTitle:numbers.lastObject
                                                        otherButtonTitles:nil];
+        callAction.actionSheetStyle = UIActionSheetStyleBlackTranslucent;
         [callAction showInView:window];
     }
     else {

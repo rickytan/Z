@@ -17,6 +17,19 @@
     [[UINavigationBar appearance] setTitleTextAttributes:@{UITextAttributeFont: [UIFont systemFontOfSize:18],
                                                            UITextAttributeTextColor: [UIColor blackColor],
                                                            UITextAttributeTextShadowOffset: [NSValue valueWithCGSize:CGSizeZero]}];
+    
+    [[UITabBarItem appearance] setTitleTextAttributes:@{UITextAttributeTextColor: [UIColor blackColor],
+                                                        UITextAttributeFont: [UIFont systemFontOfSize:10],
+                                                        UITextAttributeTextShadowOffset: [NSValue valueWithCGSize:CGSizeZero]}
+                                             forState:UIControlStateNormal];
+    [[UITabBarItem appearance] setTitleTextAttributes:@{UITextAttributeTextColor: [UIColor colorWithRed:0.25
+                                                                                                  green:0.58
+                                                                                                   blue:1.0
+                                                                                                  alpha:1.0],
+                                                        UITextAttributeFont: [UIFont systemFontOfSize:10],
+                                                        UITextAttributeTextShadowOffset: [NSValue valueWithCGSize:CGSizeZero]}
+                                             forState:UIControlStateSelected];
+    
     if (!IS_IOS_7) {
         [[UINavigationBar appearance] setTintColor:[UIColor colorWithWhite:0.94
                                                                      alpha:1.0]];
@@ -27,15 +40,19 @@
                                                                UITextAttributeFont: [UIFont systemFontOfSize:16],
                                                                UITextAttributeTextShadowOffset: [NSValue valueWithCGSize:CGSizeZero]}
                                                     forState:UIControlStateNormal];
+        [[UIBarButtonItem appearance] setTitleTextAttributes:@{UITextAttributeTextColor: [UIColor blackColor],
+                                                               UITextAttributeFont: [UIFont systemFontOfSize:16],
+                                                               UITextAttributeTextShadowOffset: [NSValue valueWithCGSize:CGSizeZero]}
+                                                    forState:UIControlStateHighlighted];
         [[UITabBar appearance] setSelectedImageTintColor:[UIColor colorWithRed:0.25
                                                                          green:0.58
                                                                           blue:1.0
                                                                          alpha:1.0]];
+        [[UITabBar appearance] setSelectionIndicatorImage:[UIImage imageNamed:@"none.png"]];
         [[UITabBar appearance] setTintColor:[UIColor colorWithWhite:0.94
                                                               alpha:1.0]];
         [[UITabBar appearance] setShadowImage:[UIImage imageNamed:@"none.png"]];
     }
-
 }
 
 - (BOOL)application:(UIApplication *)application

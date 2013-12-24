@@ -10,7 +10,6 @@
 		9C4D1F6818658E3F00EFE020 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4D1F6718658E3F00EFE020 /* Foundation.framework */; };
 		9C4D1F6A18658E3F00EFE020 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4D1F6918658E3F00EFE020 /* CoreGraphics.framework */; };
 		9C4D1F6C18658E3F00EFE020 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4D1F6B18658E3F00EFE020 /* UIKit.framework */; };
-		9C4D1F7218658E3F00EFE020 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C4D1F7018658E3F00EFE020 /* InfoPlist.strings */; };
 		9C4D1F7418658E3F00EFE020 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4D1F7318658E3F00EFE020 /* main.m */; };
 		9C4D1F7818658E3F00EFE020 /* ZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4D1F7718658E3F00EFE020 /* ZAppDelegate.m */; };
 		9C4D1F7B18658E3F00EFE020 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C4D1F7918658E3F00EFE020 /* Main.storyboard */; };
@@ -18,8 +17,16 @@
 		9C4D1F8718658E3F00EFE020 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4D1F8618658E3F00EFE020 /* XCTest.framework */; };
 		9C4D1F8818658E3F00EFE020 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4D1F6718658E3F00EFE020 /* Foundation.framework */; };
 		9C4D1F8918658E3F00EFE020 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4D1F6B18658E3F00EFE020 /* UIKit.framework */; };
-		9C4D1F9118658E3F00EFE020 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C4D1F8F18658E3F00EFE020 /* InfoPlist.strings */; };
 		9C4D1F9318658E3F00EFE020 /* ZWorkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4D1F9218658E3F00EFE020 /* ZWorkTests.m */; };
+		9C7C20E618691F0100F2B2EA /* ku@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C7C20E518691F0100F2B2EA /* ku@2x.png */; };
+		9C7C20E9186920F900F2B2EA /* blueButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C7C20E7186920F900F2B2EA /* blueButton@2x.png */; };
+		9C7C20EA186920F900F2B2EA /* blueButtonHighlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C7C20E8186920F900F2B2EA /* blueButtonHighlight@2x.png */; };
+		9C7C20ED1869210400F2B2EA /* greenButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C7C20EB1869210400F2B2EA /* greenButton@2x.png */; };
+		9C7C20EE1869210400F2B2EA /* greenButtonHighlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C7C20EC1869210400F2B2EA /* greenButtonHighlight@2x.png */; };
+		9C7C20F21869250100F2B2EA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C7C20EF1869250100F2B2EA /* Default-568h@2x.png */; };
+		9C7C20F31869250100F2B2EA /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C7C20F01869250100F2B2EA /* Default.png */; };
+		9C7C20F41869250100F2B2EA /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C7C20F11869250100F2B2EA /* Default@2x.png */; };
+		9C7C20F71869269900F2B2EA /* ZNeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C7C20F61869269900F2B2EA /* ZNeedViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +45,6 @@
 		9C4D1F6918658E3F00EFE020 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		9C4D1F6B18658E3F00EFE020 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9C4D1F6F18658E3F00EFE020 /* ZWork-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ZWork-Info.plist"; sourceTree = "<group>"; };
-		9C4D1F7118658E3F00EFE020 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9C4D1F7318658E3F00EFE020 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9C4D1F7518658E3F00EFE020 /* ZWork-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZWork-Prefix.pch"; sourceTree = "<group>"; };
 		9C4D1F7618658E3F00EFE020 /* ZAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZAppDelegate.h; sourceTree = "<group>"; };
@@ -49,8 +55,18 @@
 		9C4D1F8518658E3F00EFE020 /* ZWorkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZWorkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C4D1F8618658E3F00EFE020 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		9C4D1F8E18658E3F00EFE020 /* ZWorkTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ZWorkTests-Info.plist"; sourceTree = "<group>"; };
-		9C4D1F9018658E3F00EFE020 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9C4D1F9218658E3F00EFE020 /* ZWorkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWorkTests.m; sourceTree = "<group>"; };
+		9C7C20E518691F0100F2B2EA /* ku@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ku@2x.png"; sourceTree = "<group>"; };
+		9C7C20E7186920F900F2B2EA /* blueButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blueButton@2x.png"; sourceTree = "<group>"; };
+		9C7C20E8186920F900F2B2EA /* blueButtonHighlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blueButtonHighlight@2x.png"; sourceTree = "<group>"; };
+		9C7C20EB1869210400F2B2EA /* greenButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "greenButton@2x.png"; sourceTree = "<group>"; };
+		9C7C20EC1869210400F2B2EA /* greenButtonHighlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "greenButtonHighlight@2x.png"; sourceTree = "<group>"; };
+		9C7C20EF1869250100F2B2EA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		9C7C20F01869250100F2B2EA /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		9C7C20F11869250100F2B2EA /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		9C7C20F51869269900F2B2EA /* ZNeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNeedViewController.h; sourceTree = "<group>"; };
+		9C7C20F61869269900F2B2EA /* ZNeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNeedViewController.m; sourceTree = "<group>"; };
+		9C7C20F8186927A600F2B2EA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +96,7 @@
 		9C4D1F5B18658E3F00EFE020 = {
 			isa = PBXGroup;
 			children = (
+				9C7C20E418691F0100F2B2EA /* Resources */,
 				9C4D1F6D18658E3F00EFE020 /* ZWork */,
 				9C4D1F8C18658E3F00EFE020 /* ZWorkTests */,
 				9C4D1F6618658E3F00EFE020 /* Frameworks */,
@@ -116,6 +133,8 @@
 				9C4D1F7C18658E3F00EFE020 /* ZViewController.h */,
 				9C4D1F7D18658E3F00EFE020 /* ZViewController.m */,
 				9C4D1F6E18658E3F00EFE020 /* Supporting Files */,
+				9C7C20F51869269900F2B2EA /* ZNeedViewController.h */,
+				9C7C20F61869269900F2B2EA /* ZNeedViewController.m */,
 			);
 			path = ZWork;
 			sourceTree = "<group>";
@@ -124,7 +143,6 @@
 			isa = PBXGroup;
 			children = (
 				9C4D1F6F18658E3F00EFE020 /* ZWork-Info.plist */,
-				9C4D1F7018658E3F00EFE020 /* InfoPlist.strings */,
 				9C4D1F7318658E3F00EFE020 /* main.m */,
 				9C4D1F7518658E3F00EFE020 /* ZWork-Prefix.pch */,
 			);
@@ -144,9 +162,23 @@
 			isa = PBXGroup;
 			children = (
 				9C4D1F8E18658E3F00EFE020 /* ZWorkTests-Info.plist */,
-				9C4D1F8F18658E3F00EFE020 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9C7C20E418691F0100F2B2EA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9C7C20EF1869250100F2B2EA /* Default-568h@2x.png */,
+				9C7C20F01869250100F2B2EA /* Default.png */,
+				9C7C20F11869250100F2B2EA /* Default@2x.png */,
+				9C7C20E7186920F900F2B2EA /* blueButton@2x.png */,
+				9C7C20E8186920F900F2B2EA /* blueButtonHighlight@2x.png */,
+				9C7C20EB1869210400F2B2EA /* greenButton@2x.png */,
+				9C7C20EC1869210400F2B2EA /* greenButtonHighlight@2x.png */,
+				9C7C20E518691F0100F2B2EA /* ku@2x.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,7 +258,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C4D1F7218658E3F00EFE020 /* InfoPlist.strings in Resources */,
+				9C7C20E618691F0100F2B2EA /* ku@2x.png in Resources */,
+				9C7C20F31869250100F2B2EA /* Default.png in Resources */,
+				9C7C20F41869250100F2B2EA /* Default@2x.png in Resources */,
+				9C7C20EE1869210400F2B2EA /* greenButtonHighlight@2x.png in Resources */,
+				9C7C20E9186920F900F2B2EA /* blueButton@2x.png in Resources */,
+				9C7C20EA186920F900F2B2EA /* blueButtonHighlight@2x.png in Resources */,
+				9C7C20F21869250100F2B2EA /* Default-568h@2x.png in Resources */,
+				9C7C20ED1869210400F2B2EA /* greenButton@2x.png in Resources */,
 				9C4D1F7B18658E3F00EFE020 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -235,7 +274,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C4D1F9118658E3F00EFE020 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C4D1F7418658E3F00EFE020 /* main.m in Sources */,
+				9C7C20F71869269900F2B2EA /* ZNeedViewController.m in Sources */,
 				9C4D1F7E18658E3F00EFE020 /* ZViewController.m in Sources */,
 				9C4D1F7818658E3F00EFE020 /* ZAppDelegate.m in Sources */,
 			);
@@ -271,28 +310,13 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		9C4D1F7018658E3F00EFE020 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9C4D1F7118658E3F00EFE020 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		9C4D1F7918658E3F00EFE020 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				9C4D1F7A18658E3F00EFE020 /* Base */,
+				9C7C20F8186927A600F2B2EA /* zh-Hans */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		9C4D1F8F18658E3F00EFE020 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9C4D1F9018658E3F00EFE020 /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

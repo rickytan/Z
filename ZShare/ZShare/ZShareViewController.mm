@@ -10,6 +10,7 @@
 #import "XQuquerService.h"
 #import "NSString+RExtension.h"
 #import <CommonCrypto/CommonCryptor.h>
+#import <ASIHTTPRequest/ASIFormDataRequest.h>
 
 const char dkey[] = {5,0,9,7,12,4,3,10,6,8,11,2,15,1,13,14};
 const char ekey[] = {1,13,11,6,5,0,8,3,9,2,7,10,4,14,15,12};
@@ -52,7 +53,7 @@ const char ekey[] = {1,13,11,6,5,0,8,3,9,2,7,10,4,14,15,12};
 @end
 
 @interface ZShareViewController () <XQuquerDelegate>
-
+@property (nonatomic, retain) NSString *token;
 @end
 
 @implementation ZShareViewController
@@ -76,7 +77,11 @@ const char ekey[] = {1,13,11,6,5,0,8,3,9,2,7,10,4,14,15,12};
     //                                 andSecretkey:@"8e47a8bda484eca5bbc32df8743b3e3c"];
     //[[XQuquerService defaultService] uploadData:@"hello word"];
 
-    [self sendToken:@"00032420d0"];
+    //[self sendToken:@"00030000d0"];
+
+    NSString *file = [[NSBundle mainBundle] pathForResource:@"bootstrap_cheatsheet"
+                                                     ofType:@"pdf"];
+    [self uploadFile:file];
 }
 
 - (void)didReceiveMemoryWarning
@@ -84,6 +89,8 @@ const char ekey[] = {1,13,11,6,5,0,8,3,9,2,7,10,4,14,15,12};
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark - Methods
 
 - (void)sendToken:(NSString *)token
 {
@@ -96,9 +103,56 @@ const char ekey[] = {1,13,11,6,5,0,8,3,9,2,7,10,4,14,15,12};
     }
     NSString *ququerToken = [NSString stringWithCharacters:text
                                                     length:16];
+    NSLog(@"Final string: %@", ququerToken);
     if ([[XQuquerService defaultService] sendDataToken:ququerToken]) {
         NSLog(@"Success!");
     }
+}
+
+- (void)uploadFile:(NSString *)filePath
+{
+
+    __weak ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:[NSURL URLWithString:@"http://box.myqsc.com/item/add_item"]];
+
+    [request addRequestHeader:@"Referer"
+                        value:@"http://box.myqsc.com/"];
+    [request addRequestHeader:@"Cookie"
+                        value:@"PHPSESSID=73ftnudvefphfn9tu4875gs6e3;"];
+
+    [request addFile:filePath
+        withFileName:filePath.lastPathComponent
+      andContentType:@"application/octet-stream"
+              forKey:@"file"];
+
+
+    [request setCompletionBlock:^{
+        NSError *error = nil;
+        if (request.responseString.length > 8) {
+            NSRegularExpression *regular = [NSRegularExpression regularExpressionWithPattern:@"<code>(.*)</code>"
+                                                                                     options:NSRegularExpressionCaseInsensitive
+                                                                                       error:&error];
+            if (!error) {
+                NSArray *results = [regular matchesInString:request.responseString
+                                                    options:0
+                                                      range:NSMakeRange(0, request.responseString.length)];
+                if (results.count > 0) {
+                    NSTextCheckingResult *result = [results objectAtIndex:0];
+                    if (result.numberOfRanges > 0) {
+                        NSRange range = [result rangeAtIndex:1];
+                        NSString *code = [request.responseString substringWithRange:range];
+                        NSLog(@"%@", code);
+                        self.token = [@"00" stringByAppendingString:code];
+                        [self sendToken:self.token];
+                    }
+                }
+            }
+        }
+
+    }];
+    [request setFailedBlock:^{
+
+    }];
+    [request startAsynchronous];
 }
 
 #pragma mark - Table view data source
@@ -121,60 +175,60 @@ const char ekey[] = {1,13,11,6,5,0,8,3,9,2,7,10,4,14,15,12};
 {
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
+
     // Configure the cell...
-    
+
     return cell;
 }
 
 /*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
+ // Override to support conditional editing of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ // Return NO if you do not want the specified item to be editable.
+ return YES;
+ }
+ */
 
 /*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
+ // Override to support editing the table view.
+ - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ if (editingStyle == UITableViewCellEditingStyleDelete) {
+ // Delete the row from the data source
+ [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+ }
+ else if (editingStyle == UITableViewCellEditingStyleInsert) {
+ // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+ }
+ }
+ */
 
 /*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
+ // Override to support rearranging the table view.
+ - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+ {
+ }
+ */
 
 /*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
+ // Override to support conditional rearranging of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ // Return NO if you do not want the item to be re-orderable.
+ return YES;
+ }
+ */
 
 /*
-#pragma mark - Navigation
+ #pragma mark - Navigation
 
-// In a story board-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
+ // In a story board-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+ {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
 
  */
 

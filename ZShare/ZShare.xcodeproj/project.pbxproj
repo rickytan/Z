@@ -29,6 +29,7 @@
 		9C4D1F5218658D8400EFE020 /* ZShareTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4D1F5118658D8400EFE020 /* ZShareTests.m */; };
 		9CD39E441880776900CF97A1 /* NSString+RExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD39E431880776900CF97A1 /* NSString+RExtension.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9CD39E46188079F100CF97A1 /* ASIHTTPRequest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD39E45188079F100CF97A1 /* ASIHTTPRequest.framework */; };
+		9CD39E4818807E8A00CF97A1 /* bootstrap_cheatsheet.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 9CD39E4718807E8A00CF97A1 /* bootstrap_cheatsheet.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		9CD39E421880776900CF97A1 /* NSString+RExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+RExtension.h"; sourceTree = "<group>"; };
 		9CD39E431880776900CF97A1 /* NSString+RExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RExtension.m"; sourceTree = "<group>"; };
 		9CD39E45188079F100CF97A1 /* ASIHTTPRequest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ASIHTTPRequest.framework; sourceTree = "<group>"; };
+		9CD39E4718807E8A00CF97A1 /* bootstrap_cheatsheet.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = bootstrap_cheatsheet.pdf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 				9CD39E431880776900CF97A1 /* NSString+RExtension.m */,
 				9C4D1F3B18658D8400EFE020 /* ZAppDelegate.h */,
 				9C4D1F3C18658D8400EFE020 /* ZAppDelegate.m */,
+				9CD39E4718807E8A00CF97A1 /* bootstrap_cheatsheet.pdf */,
 				9C4D1F3E18658D8400EFE020 /* Images.xcassets */,
 				9C4D1F3318658D8400EFE020 /* Supporting Files */,
 				9C287D061880490800934786 /* Storyboard.storyboard */,
@@ -277,6 +280,7 @@
 				9C4D1F3718658D8400EFE020 /* InfoPlist.strings in Resources */,
 				9C4D1F3F18658D8400EFE020 /* Images.xcassets in Resources */,
 				9C287D071880490800934786 /* Storyboard.storyboard in Resources */,
+				9CD39E4818807E8A00CF97A1 /* bootstrap_cheatsheet.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

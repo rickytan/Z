@@ -38,7 +38,7 @@
 {
     if (![super inputView]) {
         UIDatePicker *picker = [[UIDatePicker alloc] initWithFrame:CGRectMake(0, 0, 320, 200)];
-        NSDate *date = [NSDate date];
+        NSDate *date = nil;
         if (self.canSelectTime) {
             picker.datePickerMode = UIDatePickerModeDateAndTime;
             date = [NSDate dateFromString:self.text

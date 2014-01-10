@@ -20,6 +20,9 @@
 		9C287CF718803C0400934786 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9C287CF418803C0400934786 /* SVProgressHUD.bundle */; };
 		9C287CF818803C0400934786 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C287CF618803C0400934786 /* SVProgressHUD.m */; };
 		9C287CFB1880442D00934786 /* ZHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C287CFA1880442D00934786 /* ZHelpViewController.m */; };
+		9C287CFF188044D300934786 /* icon-120@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C287CFC188044D300934786 /* icon-120@2x.png */; };
+		9C287D00188044D300934786 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C287CFD188044D300934786 /* icon.png */; };
+		9C287D01188044D300934786 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C287CFE188044D300934786 /* icon@2x.png */; };
 		9C4D1F6818658E3F00EFE020 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4D1F6718658E3F00EFE020 /* Foundation.framework */; };
 		9C4D1F6A18658E3F00EFE020 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4D1F6918658E3F00EFE020 /* CoreGraphics.framework */; };
 		9C4D1F6C18658E3F00EFE020 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4D1F6B18658E3F00EFE020 /* UIKit.framework */; };
@@ -74,6 +77,9 @@
 		9C287CF618803C0400934786 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		9C287CF91880442D00934786 /* ZHelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHelpViewController.h; sourceTree = "<group>"; };
 		9C287CFA1880442D00934786 /* ZHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHelpViewController.m; sourceTree = "<group>"; };
+		9C287CFC188044D300934786 /* icon-120@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-120@2x.png"; sourceTree = "<group>"; };
+		9C287CFD188044D300934786 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		9C287CFE188044D300934786 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		9C4D1F6418658E3F00EFE020 /* ZWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C4D1F6718658E3F00EFE020 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9C4D1F6918658E3F00EFE020 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -236,6 +242,9 @@
 		9C7C20E418691F0100F2B2EA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9C287CFC188044D300934786 /* icon-120@2x.png */,
+				9C287CFD188044D300934786 /* icon.png */,
+				9C287CFE188044D300934786 /* icon@2x.png */,
 				9C7C20EF1869250100F2B2EA /* Default-568h@2x.png */,
 				9C7C20F01869250100F2B2EA /* Default.png */,
 				9C7C20F11869250100F2B2EA /* Default@2x.png */,
@@ -327,11 +336,14 @@
 			files = (
 				9C7C20E618691F0100F2B2EA /* ku@2x.png in Resources */,
 				9C7C20F31869250100F2B2EA /* Default.png in Resources */,
+				9C287D01188044D300934786 /* icon@2x.png in Resources */,
 				9C7C20F41869250100F2B2EA /* Default@2x.png in Resources */,
 				9C7C20EE1869210400F2B2EA /* greenButtonHighlight@2x.png in Resources */,
 				9C7C20E9186920F900F2B2EA /* blueButton@2x.png in Resources */,
+				9C287CFF188044D300934786 /* icon-120@2x.png in Resources */,
 				9C287CF718803C0400934786 /* SVProgressHUD.bundle in Resources */,
 				9C7C20EA186920F900F2B2EA /* blueButtonHighlight@2x.png in Resources */,
+				9C287D00188044D300934786 /* icon.png in Resources */,
 				9C7C20F21869250100F2B2EA /* Default-568h@2x.png in Resources */,
 				9C7C20ED1869210400F2B2EA /* greenButton@2x.png in Resources */,
 				9C4D1F7B18658E3F00EFE020 /* Main.storyboard in Resources */,

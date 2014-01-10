@@ -7,12 +7,19 @@
 //
 
 #import "ZAppDelegate.h"
+#import <AVOSCloud/AVOSCloud.h>
 
 @implementation ZAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [AVOSCloud setApplicationId:@"6ukj16pp78un0qjf7x04w3vr1swluyj6kljur7j4hisu2iys"
+                      clientKey:@"91t0va30iry17r2b4ielpr970f1x16v8uaqm5csgx71ju5l4"];
+    [AVOSCloud useAVCloudCN];
+    [AVAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    [AVAnalytics trackAppOpenedWithRemoteNotificationPayload:launchOptions];
+    
     return YES;
 }
 							

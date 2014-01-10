@@ -7,6 +7,7 @@
 //
 
 #import "ZViewController.h"
+#import <AVOSCloud/AVOSCloud.h>
 
 @interface ZViewController ()
 @property (nonatomic, assign) IBOutlet UIButton *button1;

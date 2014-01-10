@@ -10,6 +10,8 @@
 #import "ZEditingViewController.h"
 #import <AVOSCloud/AVOSCloud.h>
 #import "NSDate+RExtension.h"
+#import "ZPaymentSettingViewController.h"
+#import "SVProgressHUD.h"
 
 @interface ZImageAttachmentCell : UITableViewCell
 @property (nonatomic, retain) IBOutlet UIImageView *imageView;
@@ -27,9 +29,11 @@
 <ZEditingViewControllerDelegate,
 UITextFieldDelegate,
 UITextViewDelegate,
+ZPaymentSettingDelegate,
 UINavigationControllerDelegate,
 UIImagePickerControllerDelegate>
 @property (nonatomic, readonly) UITextField * subjectField;
+@property (nonatomic, readonly) UITextField * numberOfPeopleField;
 @property (nonatomic, readonly) UITextView * descriptionView;
 @property (nonatomic, strong) AVObject * myNeed;
 @property (nonatomic, strong) NSMutableArray * attachedImages;
@@ -41,6 +45,7 @@ UIImagePickerControllerDelegate>
 
 @implementation ZNeedViewController
 @synthesize subjectField = _subjectField;
+@synthesize numberOfPeopleField = _numberOfPeopleField;
 @synthesize descriptionView = _descriptionView;
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -50,6 +55,13 @@ UIImagePickerControllerDelegate>
         // Custom initialization
     }
     return self;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"Payment"]) {
+        ((ZPaymentSettingViewController *)segue.destinationViewController).delegate = self;
+    }
 }
 
 - (void)viewDidLoad
@@ -100,6 +112,18 @@ UIImagePickerControllerDelegate>
     return _subjectField;
 }
 
+- (UITextField *)numberOfPeopleField
+{
+    if (!_numberOfPeopleField) {
+        _numberOfPeopleField = [self newTextField];
+        _numberOfPeopleField.frame = CGRectMake(0, 0, 64, 36);
+        _numberOfPeopleField.tag = 10;
+        _numberOfPeopleField.textAlignment = NSTextAlignmentRight;
+        _numberOfPeopleField.keyboardType = UIKeyboardTypeNumberPad;
+    }
+    return _numberOfPeopleField;
+}
+
 - (UITextView *)descriptionView
 {
     if (!_descriptionView) {
@@ -125,7 +149,29 @@ UIImagePickerControllerDelegate>
 
 - (IBAction)onDone:(id)sender
 {
+    [self.view endEditing:YES];
 
+    NSInteger count = 0;
+    for (UIImage *image in self.attachedImages) {
+        NSData *imageData = UIImageJPEGRepresentation(image, 0.7);
+        AVFile *file = [AVFile fileWithName:@"image.jpg"
+                                       data:imageData];
+        [file saveInBackground];
+        [self.myNeed setObject:file
+                        forKey:[NSString stringWithFormat:@"image%d", count++]];
+    }
+
+    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
+    [self.myNeed saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            [SVProgressHUD showSuccessWithStatus:@"发布成功！"];
+            [self dismissViewControllerAnimated:YES
+                                     completion:NULL];
+        }
+        else {
+            [SVProgressHUD showErrorWithStatus:@"发布失败！"];
+        }
+    }];
 }
 
 #pragma mark - UITextField Delegate
@@ -135,6 +181,22 @@ shouldChangeCharactersInRange:(NSRange)range
 replacementString:(NSString *)string
 {
     return textField.text.length - range.length + string.length <= 50;
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    if (textField.tag == 10)
+        [self.myNeed setObject:[NSNumber numberWithInt:textField.text.intValue]
+                        forKey:@"numOfPeople"];
+    else
+        [self.myNeed setObject:textField.text
+                        forKey:@"title"];
+}
+
+- (void)textViewDidEndEditing:(UITextView *)textView
+{
+    [self.myNeed setObject:textView.text
+                    forKey:@"details"];
 }
 
 #pragma mark - Table view data source
@@ -168,13 +230,11 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = nil;
-
     switch (indexPath.section) {
         case 0:
         {
-            cell = [tableView dequeueReusableCellWithIdentifier:@"TextCell"
-                                                   forIndexPath:indexPath];
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TextCell"
+                                                                    forIndexPath:indexPath];
             cell.detailTextLabel.text = nil;
             switch (indexPath.row) {
                 case 0:
@@ -187,40 +247,48 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath
                     cell.accessoryView = self.descriptionView;
                     self.descriptionView.text = [self.myNeed objectForKey:@"details"];
                     break;
-                default:
-                    cell.textLabel.text = nil;
-                    cell.imageView.image = [self.attachedImages objectAtIndex:indexPath.row - 2];
-                    break;
             }
+            return cell;
         }
             break;
         case 1:
         {
             if (indexPath.row == self.attachedImages.count) {
-                cell = [tableView dequeueReusableCellWithIdentifier:@"AddImageCell"
-                                                       forIndexPath:indexPath];
+                UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AddImageCell"
+                                                                        forIndexPath:indexPath];
                 cell.textLabel.text = @"添加图片";
                 return cell;
             }
-            cell = [tableView dequeueReusableCellWithIdentifier:@"ImageCell"
-                                                   forIndexPath:indexPath];
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ImageCell"
+                                                                    forIndexPath:indexPath];
             cell.imageView.image = [self.attachedImages objectAtIndex:indexPath.row];
+            return cell;
         }
             break;
         case 2:
         {
-            cell = [tableView dequeueReusableCellWithIdentifier:@"TextCell"
-                                                   forIndexPath:indexPath];
             switch (indexPath.row) {
                 case 0:
+                {
+                    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TextCell"
+                                                                            forIndexPath:indexPath];
                     cell.textLabel.text = @"报酬：";
                     cell.detailTextLabel.text = [self.myNeed objectForKey:@"payment"];
+                    cell.accessoryView = nil;
+                    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+                    return cell;
+                }
                     break;
                 case 1:
                 {
+                    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TextCell"
+                                                                            forIndexPath:indexPath];
                     cell.textLabel.text = @"需要人数：";
+                    cell.detailTextLabel.text = nil;
+                    cell.accessoryView = self.numberOfPeopleField;
                     NSNumber *number = (NSNumber *)[self.myNeed objectForKey:@"numOfPeople"];
-                    cell.detailTextLabel.text = number.stringValue;
+                    self.numberOfPeopleField.text = number.stringValue;
+                    return cell;
                 }
                     break;
                 default:
@@ -230,18 +298,21 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath
             break;
         case 3:
         {
-            cell = [tableView dequeueReusableCellWithIdentifier:@"TextCell"
-                                                   forIndexPath:indexPath];
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TextCell"
+                                                                    forIndexPath:indexPath];
             cell.textLabel.text = @"时间：";
+            cell.accessoryView = nil;
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             NSDate *expire = (NSDate *)[self.myNeed objectForKey:@"expire"];
             cell.detailTextLabel.text = [expire stringWithFormat:@"yyyy-MM-dd HH:mm:ss"];
+            return cell;
         }
             break;
         default:
             break;
     }
 
-    return cell;
+    return nil;
 }
 
 - (void)tableView:(UITableView *)tableView
@@ -258,13 +329,16 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
             break;
         case 2:
         {
-            
+            if (indexPath.row == 0)
+                [self performSegueWithIdentifier:@"Payment"
+                                          sender:self];
         }
             break;
         case 3:
         {
             ZEditingViewController *edit = [[ZEditingViewController alloc] init];
             edit.type = EditingTypeDateTime;
+            edit.delegate = self;
             edit.string = [tableView cellForRowAtIndexPath:indexPath].detailTextLabel.text;
             [self.navigationController pushViewController:edit
                                                  animated:YES];
@@ -282,7 +356,8 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
     if (editingStyle == UITableViewCellEditingStyleInsert) {
         UIImagePickerController *picker = [[UIImagePickerController alloc] init];
         picker.delegate = self;
-        picker.allowsEditing = NO;
+        picker.allowsEditing = YES;
+
         picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
         [self presentViewController:picker
                            animated:YES
@@ -317,12 +392,19 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
 - (void)editingViewController:(ZEditingViewController *)controller
         didEndEditingWithText:(NSString *)text
 {
-
+    [self.myNeed setObject:[NSDate dateFromString:text
+                                       withFormat:@"yyyy-MM-dd HH:mm:ss"]
+                    forKey:@"expire"];
+    [self.tableView reloadData];
 }
 
-- (void)editingViewControllerDidCancelEditing:(ZEditingViewController *)controller
-{
+#pragma mark ZPayment Delegate
 
+- (void)paymentSettingController:(ZPaymentSettingViewController *)controller didEndEditingWithText:(NSString *)text
+{
+    [self.myNeed setObject:text
+                    forKey:@"payment"];
+    [self.tableView reloadData];
 }
 
 #pragma mark - UIImagePicker
@@ -330,7 +412,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
 - (void)imagePickerController:(UIImagePickerController *)picker
 didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    UIImage *image = [info objectForKey:UIImagePickerControllerEditedImage];
     NSInteger count = self.attachedImages.count;
     [self.attachedImages addObject:image];
 

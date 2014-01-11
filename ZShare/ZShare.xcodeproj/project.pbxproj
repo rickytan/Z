@@ -21,7 +21,6 @@
 		9C4D1F3718658D8400EFE020 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C4D1F3518658D8400EFE020 /* InfoPlist.strings */; };
 		9C4D1F3918658D8400EFE020 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4D1F3818658D8400EFE020 /* main.m */; };
 		9C4D1F3D18658D8400EFE020 /* ZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4D1F3C18658D8400EFE020 /* ZAppDelegate.m */; };
-		9C4D1F3F18658D8400EFE020 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C4D1F3E18658D8400EFE020 /* Images.xcassets */; };
 		9C4D1F4618658D8400EFE020 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4D1F4518658D8400EFE020 /* XCTest.framework */; };
 		9C4D1F4718658D8400EFE020 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4D1F2C18658D8400EFE020 /* Foundation.framework */; };
 		9C4D1F4818658D8400EFE020 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4D1F3018658D8400EFE020 /* UIKit.framework */; };
@@ -30,6 +29,13 @@
 		9CD39E441880776900CF97A1 /* NSString+RExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD39E431880776900CF97A1 /* NSString+RExtension.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9CD39E46188079F100CF97A1 /* ASIHTTPRequest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD39E45188079F100CF97A1 /* ASIHTTPRequest.framework */; };
 		9CD39E4818807E8A00CF97A1 /* bootstrap_cheatsheet.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 9CD39E4718807E8A00CF97A1 /* bootstrap_cheatsheet.pdf */; };
+		9CD39E4D1880FA1100CF97A1 /* icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CD39E4A1880FA1100CF97A1 /* icon-60@2x.png */; };
+		9CD39E4E1880FA1100CF97A1 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CD39E4B1880FA1100CF97A1 /* icon.png */; };
+		9CD39E4F1880FA1100CF97A1 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CD39E4C1880FA1100CF97A1 /* icon@2x.png */; };
+		9CD39E531880FE3800CF97A1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CD39E501880FE3800CF97A1 /* Default-568h@2x.png */; };
+		9CD39E541880FE3800CF97A1 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CD39E511880FE3800CF97A1 /* Default@2x.png */; };
+		9CD39E551880FE3800CF97A1 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CD39E521880FE3800CF97A1 /* Default.png */; };
+		9CD39E57188101EB00CF97A1 /* bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CD39E56188101EB00CF97A1 /* bar@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,7 +71,6 @@
 		9C4D1F3A18658D8400EFE020 /* ZShare-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZShare-Prefix.pch"; sourceTree = "<group>"; };
 		9C4D1F3B18658D8400EFE020 /* ZAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZAppDelegate.h; sourceTree = "<group>"; };
 		9C4D1F3C18658D8400EFE020 /* ZAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZAppDelegate.m; sourceTree = "<group>"; };
-		9C4D1F3E18658D8400EFE020 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9C4D1F4418658D8400EFE020 /* ZShareTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZShareTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C4D1F4518658D8400EFE020 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		9C4D1F4D18658D8400EFE020 /* ZShareTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ZShareTests-Info.plist"; sourceTree = "<group>"; };
@@ -74,6 +79,13 @@
 		9CD39E431880776900CF97A1 /* NSString+RExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RExtension.m"; sourceTree = "<group>"; };
 		9CD39E45188079F100CF97A1 /* ASIHTTPRequest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ASIHTTPRequest.framework; sourceTree = "<group>"; };
 		9CD39E4718807E8A00CF97A1 /* bootstrap_cheatsheet.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = bootstrap_cheatsheet.pdf; sourceTree = "<group>"; };
+		9CD39E4A1880FA1100CF97A1 /* icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-60@2x.png"; sourceTree = "<group>"; };
+		9CD39E4B1880FA1100CF97A1 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		9CD39E4C1880FA1100CF97A1 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		9CD39E501880FE3800CF97A1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		9CD39E511880FE3800CF97A1 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		9CD39E521880FE3800CF97A1 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		9CD39E56188101EB00CF97A1 /* bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bar@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +131,7 @@
 		9C4D1F2018658D8400EFE020 = {
 			isa = PBXGroup;
 			children = (
+				9CD39E491880FA1100CF97A1 /* Resources */,
 				9C287D02188048C900934786 /* XQuquerSDK */,
 				9C4D1F3218658D8400EFE020 /* ZShare */,
 				9C4D1F4B18658D8400EFE020 /* ZShareTests */,
@@ -157,14 +170,13 @@
 		9C4D1F3218658D8400EFE020 /* ZShare */ = {
 			isa = PBXGroup;
 			children = (
+				9CD39E4718807E8A00CF97A1 /* bootstrap_cheatsheet.pdf */,
 				9CD39E421880776900CF97A1 /* NSString+RExtension.h */,
 				9CD39E431880776900CF97A1 /* NSString+RExtension.m */,
+				9C287D061880490800934786 /* Storyboard.storyboard */,
+				9C4D1F3318658D8400EFE020 /* Supporting Files */,
 				9C4D1F3B18658D8400EFE020 /* ZAppDelegate.h */,
 				9C4D1F3C18658D8400EFE020 /* ZAppDelegate.m */,
-				9CD39E4718807E8A00CF97A1 /* bootstrap_cheatsheet.pdf */,
-				9C4D1F3E18658D8400EFE020 /* Images.xcassets */,
-				9C4D1F3318658D8400EFE020 /* Supporting Files */,
-				9C287D061880490800934786 /* Storyboard.storyboard */,
 				9C287D08188049BE00934786 /* ZShareViewController.h */,
 				9C287D09188049BE00934786 /* ZShareViewController.mm */,
 			);
@@ -198,6 +210,20 @@
 				9C4D1F4E18658D8400EFE020 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9CD39E491880FA1100CF97A1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9CD39E56188101EB00CF97A1 /* bar@2x.png */,
+				9CD39E501880FE3800CF97A1 /* Default-568h@2x.png */,
+				9CD39E521880FE3800CF97A1 /* Default.png */,
+				9CD39E511880FE3800CF97A1 /* Default@2x.png */,
+				9CD39E4A1880FA1100CF97A1 /* icon-60@2x.png */,
+				9CD39E4B1880FA1100CF97A1 /* icon.png */,
+				9CD39E4C1880FA1100CF97A1 /* icon@2x.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,9 +303,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CD39E541880FE3800CF97A1 /* Default@2x.png in Resources */,
+				9CD39E551880FE3800CF97A1 /* Default.png in Resources */,
+				9CD39E4F1880FA1100CF97A1 /* icon@2x.png in Resources */,
+				9CD39E4D1880FA1100CF97A1 /* icon-60@2x.png in Resources */,
 				9C4D1F3718658D8400EFE020 /* InfoPlist.strings in Resources */,
-				9C4D1F3F18658D8400EFE020 /* Images.xcassets in Resources */,
+				9CD39E4E1880FA1100CF97A1 /* icon.png in Resources */,
 				9C287D071880490800934786 /* Storyboard.storyboard in Resources */,
+				9CD39E531880FE3800CF97A1 /* Default-568h@2x.png in Resources */,
+				9CD39E57188101EB00CF97A1 /* bar@2x.png in Resources */,
 				9CD39E4818807E8A00CF97A1 /* bootstrap_cheatsheet.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,8 +451,6 @@
 		9C4D1F5618658D8400EFE020 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/ricky/Data/Code/Z/ZShare,
@@ -440,8 +470,6 @@
 		9C4D1F5718658D8400EFE020 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/ricky/Data/Code/Z/ZShare,

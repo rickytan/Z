@@ -11,9 +11,49 @@
 
 @implementation ZAppDelegate
 
+- (void)setupUI
+{
+    [[UINavigationBar appearance] setTitleTextAttributes:@{UITextAttributeFont: [UIFont systemFontOfSize:18],
+                                                           UITextAttributeTextColor: [UIColor blackColor],
+                                                           UITextAttributeTextShadowOffset: [NSValue valueWithCGSize:CGSizeZero]}];
+
+    [[UITabBarItem appearance] setTitleTextAttributes:@{UITextAttributeTextColor: [UIColor blackColor],
+                                                        UITextAttributeFont: [UIFont systemFontOfSize:10],
+                                                        UITextAttributeTextShadowOffset: [NSValue valueWithCGSize:CGSizeZero]}
+                                             forState:UIControlStateNormal];
+    [[UITabBarItem appearance] setTitleTextAttributes:@{UITextAttributeTextColor: [UIColor colorWithRed:0.25
+                                                                                                  green:0.58
+                                                                                                   blue:1.0
+                                                                                                  alpha:1.0],
+                                                        UITextAttributeFont: [UIFont systemFontOfSize:10],
+                                                        UITextAttributeTextShadowOffset: [NSValue valueWithCGSize:CGSizeZero]}
+                                             forState:UIControlStateSelected];
+
+    if (!IS_IOS_7) {
+        [[UINavigationBar appearance] setTintColor:[UIColor colorWithWhite:0.94
+                                                                     alpha:1.0]];
+        [[UIBarButtonItem appearance] setBackButtonBackgroundImage:[UIImage imageNamed:@"UI7NavigationBarBackButton.png"]
+                                                          forState:UIControlStateNormal
+                                                        barMetrics:UIBarMetricsDefault];
+        [[UIBarButtonItem appearance] setTitleTextAttributes:@{UITextAttributeTextColor: [UIColor blackColor],
+                                                               UITextAttributeFont: [UIFont systemFontOfSize:16],
+                                                               UITextAttributeTextShadowOffset: [NSValue valueWithCGSize:CGSizeZero]}
+                                                    forState:UIControlStateNormal];
+        [[UIBarButtonItem appearance] setTitleTextAttributes:@{UITextAttributeTextColor: [UIColor blackColor],
+                                                               UITextAttributeFont: [UIFont systemFontOfSize:16],
+                                                               UITextAttributeTextShadowOffset: [NSValue valueWithCGSize:CGSizeZero]}
+                                                    forState:UIControlStateHighlighted];
+        [[UITabBar appearance] setTintColor:[UIColor colorWithWhite:0.94
+                                                              alpha:1.0]];
+        [[UITabBar appearance] setSelectionIndicatorImage:[[UIImage alloc] init]];
+    }
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [self setupUI];
+    
     [AVOSCloud setApplicationId:@"6ukj16pp78un0qjf7x04w3vr1swluyj6kljur7j4hisu2iys"
                       clientKey:@"91t0va30iry17r2b4ielpr970f1x16v8uaqm5csgx71ju5l4"];
     [AVOSCloud useAVCloudCN];

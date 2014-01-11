@@ -17,36 +17,6 @@
             endingLineNumber = "244"
             landmarkName = "-didReceiveDataToken:"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ZShareViewController didReceiveDataToken:]"
-                  moduleName = "ZShare"
-                  urlString = "file:///Users/ricky/Data/Code/Z/ZShare/ZShare/ZShareViewController.mm"
-                  timestampString = "411076618.868404"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "244"
-                  endingLineNumber = "244"
-                  offsetFromSymbolStart = "53">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ZShareViewController didReceiveDataToken:]"
-                  moduleName = "ZShare"
-                  urlString = "file:///Users/ricky/Data/Code/Z/ZShare/ZShare/ZShareViewController.mm"
-                  timestampString = "411076618.86873"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "244"
-                  endingLineNumber = "244"
-                  offsetFromSymbolStart = "123">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

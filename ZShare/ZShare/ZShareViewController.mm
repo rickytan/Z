@@ -9,6 +9,7 @@
 #import "ZShareViewController.h"
 #import "XQuquerService.h"
 #import "NSString+RExtension.h"
+#import "ZTokenManager.h"
 #import <CommonCrypto/CommonCryptor.h>
 #import <ASIHTTPRequest/ASIFormDataRequest.h>
 
@@ -81,7 +82,10 @@ const char ekey[] = {1,13,11,6,5,0,8,3,9,2,7,10,4,14,15,12};
 
     NSString *file = [[NSBundle mainBundle] pathForResource:@"bootstrap_cheatsheet"
                                                      ofType:@"pdf"];
-    [self uploadFile:file];
+    NSString *token = [ZTokenManager generateTokenForFile:file];
+    [self sendToken:token];
+
+    //[self uploadFile:file];
 }
 
 - (void)didReceiveMemoryWarning

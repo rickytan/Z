@@ -36,6 +36,14 @@
 		9CD39E541880FE3800CF97A1 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CD39E511880FE3800CF97A1 /* Default@2x.png */; };
 		9CD39E551880FE3800CF97A1 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CD39E521880FE3800CF97A1 /* Default.png */; };
 		9CD39E57188101EB00CF97A1 /* bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CD39E56188101EB00CF97A1 /* bar@2x.png */; };
+		9CD39E681881413600CF97A1 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 9CD39E621881413600CF97A1 /* LICENSE */; };
+		9CD39E691881413600CF97A1 /* mongoose.c in Sources */ = {isa = PBXBuildFile; fileRef = 9CD39E631881413600CF97A1 /* mongoose.c */; };
+		9CD39E6A1881413600CF97A1 /* MongooseDaemon.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD39E661881413600CF97A1 /* MongooseDaemon.m */; };
+		9CD39E6B1881413600CF97A1 /* README.rdoc in Resources */ = {isa = PBXBuildFile; fileRef = 9CD39E671881413600CF97A1 /* README.rdoc */; };
+		9CD39E6E1881426A00CF97A1 /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CD39E6C1881426A00CF97A1 /* settings@2x.png */; };
+		9CD39E6F1881426A00CF97A1 /* file@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CD39E6D1881426A00CF97A1 /* file@2x.png */; };
+		9CD39E711881459200CF97A1 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 9CD39E701881459200CF97A1 /* index.html */; };
+		9CD39E7418814A7B00CF97A1 /* ZTokenManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD39E7318814A7B00CF97A1 /* ZTokenManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +94,17 @@
 		9CD39E511880FE3800CF97A1 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		9CD39E521880FE3800CF97A1 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		9CD39E56188101EB00CF97A1 /* bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bar@2x.png"; sourceTree = "<group>"; };
+		9CD39E621881413600CF97A1 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		9CD39E631881413600CF97A1 /* mongoose.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mongoose.c; sourceTree = "<group>"; };
+		9CD39E641881413600CF97A1 /* mongoose.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mongoose.h; sourceTree = "<group>"; };
+		9CD39E651881413600CF97A1 /* MongooseDaemon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MongooseDaemon.h; sourceTree = "<group>"; };
+		9CD39E661881413600CF97A1 /* MongooseDaemon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MongooseDaemon.m; sourceTree = "<group>"; };
+		9CD39E671881413600CF97A1 /* README.rdoc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.rdoc; sourceTree = "<group>"; };
+		9CD39E6C1881426A00CF97A1 /* settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@2x.png"; sourceTree = "<group>"; };
+		9CD39E6D1881426A00CF97A1 /* file@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "file@2x.png"; sourceTree = "<group>"; };
+		9CD39E701881459200CF97A1 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		9CD39E7218814A7B00CF97A1 /* ZTokenManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTokenManager.h; sourceTree = "<group>"; };
+		9CD39E7318814A7B00CF97A1 /* ZTokenManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTokenManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +150,7 @@
 		9C4D1F2018658D8400EFE020 = {
 			isa = PBXGroup;
 			children = (
+				9CD39E611881413600CF97A1 /* MongooseDaemon */,
 				9CD39E491880FA1100CF97A1 /* Resources */,
 				9C287D02188048C900934786 /* XQuquerSDK */,
 				9C4D1F3218658D8400EFE020 /* ZShare */,
@@ -179,6 +199,8 @@
 				9C4D1F3C18658D8400EFE020 /* ZAppDelegate.m */,
 				9C287D08188049BE00934786 /* ZShareViewController.h */,
 				9C287D09188049BE00934786 /* ZShareViewController.mm */,
+				9CD39E7218814A7B00CF97A1 /* ZTokenManager.h */,
+				9CD39E7318814A7B00CF97A1 /* ZTokenManager.m */,
 			);
 			path = ZShare;
 			sourceTree = "<group>";
@@ -215,6 +237,9 @@
 		9CD39E491880FA1100CF97A1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9CD39E701881459200CF97A1 /* index.html */,
+				9CD39E6C1881426A00CF97A1 /* settings@2x.png */,
+				9CD39E6D1881426A00CF97A1 /* file@2x.png */,
 				9CD39E56188101EB00CF97A1 /* bar@2x.png */,
 				9CD39E501880FE3800CF97A1 /* Default-568h@2x.png */,
 				9CD39E521880FE3800CF97A1 /* Default.png */,
@@ -224,6 +249,19 @@
 				9CD39E4C1880FA1100CF97A1 /* icon@2x.png */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		9CD39E611881413600CF97A1 /* MongooseDaemon */ = {
+			isa = PBXGroup;
+			children = (
+				9CD39E621881413600CF97A1 /* LICENSE */,
+				9CD39E631881413600CF97A1 /* mongoose.c */,
+				9CD39E641881413600CF97A1 /* mongoose.h */,
+				9CD39E651881413600CF97A1 /* MongooseDaemon.h */,
+				9CD39E661881413600CF97A1 /* MongooseDaemon.m */,
+				9CD39E671881413600CF97A1 /* README.rdoc */,
+			);
+			path = MongooseDaemon;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,12 +341,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CD39E711881459200CF97A1 /* index.html in Resources */,
+				9CD39E6F1881426A00CF97A1 /* file@2x.png in Resources */,
 				9CD39E541880FE3800CF97A1 /* Default@2x.png in Resources */,
+				9CD39E6E1881426A00CF97A1 /* settings@2x.png in Resources */,
 				9CD39E551880FE3800CF97A1 /* Default.png in Resources */,
 				9CD39E4F1880FA1100CF97A1 /* icon@2x.png in Resources */,
 				9CD39E4D1880FA1100CF97A1 /* icon-60@2x.png in Resources */,
 				9C4D1F3718658D8400EFE020 /* InfoPlist.strings in Resources */,
+				9CD39E681881413600CF97A1 /* LICENSE in Resources */,
 				9CD39E4E1880FA1100CF97A1 /* icon.png in Resources */,
+				9CD39E6B1881413600CF97A1 /* README.rdoc in Resources */,
 				9C287D071880490800934786 /* Storyboard.storyboard in Resources */,
 				9CD39E531880FE3800CF97A1 /* Default-568h@2x.png in Resources */,
 				9CD39E57188101EB00CF97A1 /* bar@2x.png in Resources */,
@@ -331,9 +374,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CD39E7418814A7B00CF97A1 /* ZTokenManager.m in Sources */,
 				9C287D0A188049BE00934786 /* ZShareViewController.mm in Sources */,
 				9C4D1F3918658D8400EFE020 /* main.m in Sources */,
+				9CD39E691881413600CF97A1 /* mongoose.c in Sources */,
 				9CD39E441880776900CF97A1 /* NSString+RExtension.m in Sources */,
+				9CD39E6A1881413600CF97A1 /* MongooseDaemon.m in Sources */,
 				9C4D1F3D18658D8400EFE020 /* ZAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

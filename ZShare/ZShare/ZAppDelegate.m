@@ -14,6 +14,16 @@
 - (BOOL)application:(UIApplication *)application
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    NSString *indexFile = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/index.html"];
+    NSFileManager *fm = [NSFileManager defaultManager];
+    if (![fm fileExistsAtPath:indexFile]) {
+        [fm copyItemAtPath:[[NSBundle mainBundle] pathForResource:@"index"
+                                                           ofType:@"html"]
+                    toPath:indexFile
+                     error:NULL];
+    }
+    self.serverDaemon = [[MongooseDaemon alloc] init];
+
     return YES;
 }
 
@@ -27,6 +37,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    [self.serverDaemon stopMongooseDaemon];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
@@ -37,11 +48,14 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    [self.serverDaemon startMongooseDaemon:@"7777"];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    [self.serverDaemon stopMongooseDaemon];
+    self.serverDaemon = nil;
 }
 
 @end

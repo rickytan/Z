@@ -18,10 +18,38 @@
 @end
 
 @implementation ZImageAttachmentCell
+
 - (void)layoutSubviews
 {
     [super layoutSubviews];
     self.imageView.frame = self.contentView.bounds;
+}
+
+- (void)willTransitionToState:(UITableViewCellStateMask)state
+{
+    [super willTransitionToState:state];
+    self.imageView.frame = self.contentView.bounds;
+}
+
+@end
+
+@interface ZTextCell : UITableViewCell
+@end
+
+@implementation ZTextCell
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    CGRect rect;
+    rect = self.textLabel.frame;
+    rect.origin.y = 10;
+    self.textLabel.frame = rect;
+    rect = self.detailTextLabel.frame;
+    rect.origin.y = (CGRectGetHeight(self.contentView.frame) - CGRectGetHeight(rect)) / 2;
+    self.detailTextLabel.frame = rect;
+    rect = self.accessoryView.frame;
+    rect.origin.x = CGRectGetWidth(self.frame) - 14 - CGRectGetWidth(rect);
+    self.accessoryView.frame = rect;
 }
 @end
 
@@ -95,11 +123,12 @@ UIImagePickerControllerDelegate>
 
 - (UITextField *)newTextField
 {
-    UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, 220, 36)];
+    UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, 210, 36)];
     textField.borderStyle = UITextBorderStyleLine;
     textField.clearButtonMode = UITextFieldViewModeWhileEditing;
     textField.delegate = self;
     textField.font = [UIFont systemFontOfSize:18];
+    textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
     return textField;
 }
 
@@ -127,11 +156,13 @@ UIImagePickerControllerDelegate>
 - (UITextView *)descriptionView
 {
     if (!_descriptionView) {
-        _descriptionView = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, 220, 100)];
+        _descriptionView = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, 210, 100)];
         _descriptionView.font = [UIFont systemFontOfSize:12];
+        _descriptionView.backgroundColor = [UIColor clearColor];
         _descriptionView.delegate = self;
         _descriptionView.dataDetectorTypes = UIDataDetectorTypeAll;
         _descriptionView.layer.borderColor = [UIColor blackColor].CGColor;
+        _descriptionView.contentInset = UIEdgeInsetsMake(4, 4, 4, 4);
         _descriptionView.layer.borderWidth = 1;
     }
     return _descriptionView;

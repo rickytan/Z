@@ -28,6 +28,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    self.tableView.backgroundColor = [UIColor whiteColor];
     
     UIBarButtonItem *cancel = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
                                                                             target:self

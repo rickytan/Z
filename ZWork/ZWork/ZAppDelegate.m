@@ -13,7 +13,7 @@
 
 - (void)setupUI
 {
-    [[UINavigationBar appearance] setTitleTextAttributes:@{UITextAttributeFont: [UIFont systemFontOfSize:18],
+    [[UINavigationBar appearance] setTitleTextAttributes:@{UITextAttributeFont: [UIFont systemFontOfSize:20],
                                                            UITextAttributeTextColor: [UIColor blackColor],
                                                            UITextAttributeTextShadowOffset: [NSValue valueWithCGSize:CGSizeZero]}];
 
@@ -28,13 +28,16 @@
                                                         UITextAttributeFont: [UIFont systemFontOfSize:10],
                                                         UITextAttributeTextShadowOffset: [NSValue valueWithCGSize:CGSizeZero]}
                                              forState:UIControlStateSelected];
-
+    
     if (!IS_IOS_7) {
-        [[UINavigationBar appearance] setTintColor:[UIColor colorWithWhite:0.94
+        [[UINavigationBar appearance] setTintColor:[UIColor colorWithWhite:1.0
                                                                      alpha:1.0]];
         [[UIBarButtonItem appearance] setBackButtonBackgroundImage:[UIImage imageNamed:@"UI7NavigationBarBackButton.png"]
                                                           forState:UIControlStateNormal
                                                         barMetrics:UIBarMetricsDefault];
+        [[UIBarButtonItem appearance] setBackgroundImage:[[UIImage alloc] init]
+                                                forState:UIControlStateNormal
+                                              barMetrics:UIBarMetricsDefault];
         [[UIBarButtonItem appearance] setTitleTextAttributes:@{UITextAttributeTextColor: [UIColor blackColor],
                                                                UITextAttributeFont: [UIFont systemFontOfSize:16],
                                                                UITextAttributeTextShadowOffset: [NSValue valueWithCGSize:CGSizeZero]}

@@ -50,6 +50,7 @@
 		9CD39E8318814E6500CF97A1 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD39E7D18814E6500CF97A1 /* FMDatabaseQueue.m */; };
 		9CD39E8418814E6500CF97A1 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD39E7F18814E6500CF97A1 /* FMResultSet.m */; };
 		9CD39E8618814ECC00CF97A1 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD39E8518814ECC00CF97A1 /* libsqlite3.0.dylib */; };
+		9CD39E891881B85900CF97A1 /* UIDevice+RExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD39E881881B85900CF97A1 /* UIDevice+RExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +123,8 @@
 		9CD39E7E18814E6500CF97A1 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		9CD39E7F18814E6500CF97A1 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		9CD39E8518814ECC00CF97A1 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		9CD39E871881B85900CF97A1 /* UIDevice+RExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+RExtension.h"; sourceTree = "<group>"; };
+		9CD39E881881B85900CF97A1 /* UIDevice+RExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+RExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,6 +224,8 @@
 				9C287D09188049BE00934786 /* ZShareViewController.mm */,
 				9CD39E7218814A7B00CF97A1 /* ZTokenManager.h */,
 				9CD39E7318814A7B00CF97A1 /* ZTokenManager.m */,
+				9CD39E871881B85900CF97A1 /* UIDevice+RExtension.h */,
+				9CD39E881881B85900CF97A1 /* UIDevice+RExtension.m */,
 			);
 			path = ZShare;
 			sourceTree = "<group>";
@@ -412,6 +417,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CD39E7418814A7B00CF97A1 /* ZTokenManager.m in Sources */,
+				9CD39E891881B85900CF97A1 /* UIDevice+RExtension.m in Sources */,
 				9C287D0A188049BE00934786 /* ZShareViewController.mm in Sources */,
 				9C4D1F3918658D8400EFE020 /* main.m in Sources */,
 				9CD39E691881413600CF97A1 /* mongoose.c in Sources */,

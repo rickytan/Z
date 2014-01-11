@@ -2734,12 +2734,19 @@ static void
 send_file(struct mg_connection *conn, const char *path, struct mgstat *stp)
 {
 	char		date[64], lm[64], etag[64], range[64];
+    const char  *filename;
 	const char	*fmt = "%a, %d %b %Y %H:%M:%S %Z", *msg = "OK", *hdr;
 	time_t		curtime = time(NULL);
 	uint64_t	cl, r1, r2;
 	struct vec	mime_vec;
 	FILE		*fp;
 	int		n;
+
+    filename = strrchr(path, '/');
+    if (filename)
+        ++filename;
+    else
+        filename = path;
 
 	get_mime_type(conn->ctx, path, &mime_vec);
 	cl = stp->size;
@@ -2782,11 +2789,12 @@ send_file(struct mg_connection *conn, const char *path, struct mgstat *stp)
 	    "Etag: \"%s\"\r\n"
 	    "Content-Type: %.*s\r\n"
 	    "Content-Length: %" UINT64_FMT "u\r\n"
+        "Content-Disposition: attachment; filename=\"%s\";\r\n"
 	    "Connection: close\r\n"
 	    "Accept-Ranges: bytes\r\n"
 	    "%s\r\n",
 	    conn->request_info.status_code, msg, date, lm, etag,
-	    mime_vec.len, mime_vec.ptr, cl, range);
+	    mime_vec.len, mime_vec.ptr, cl, filename, range);
 
 	if (strcmp(conn->request_info.request_method, "HEAD") != 0)
 		send_opened_file_stream(conn, fp, cl);

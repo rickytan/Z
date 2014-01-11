@@ -13,5 +13,6 @@
 + (NSString *)generateTokenForFile:(NSString *)filePath;
 + (BOOL)verifyToken:(NSString *)token;
 + (NSString *)filePathForToken:(NSString *)token;
++ (NSString *)hostForToken:(NSString *)token;
 
 @end

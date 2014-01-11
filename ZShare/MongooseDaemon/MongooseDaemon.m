@@ -43,6 +43,7 @@
 #include <arpa/inet.h>
 #include <netdb.h>
 #import "ZTokenManager.h"
+#import "UIDevice+RExtension.h"
 
 #define DOCUMENTS_FOLDER [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"]
 //#define DOCUMENTS_FOLDER NSHomeDirectory()
@@ -50,32 +51,6 @@
 @implementation MongooseDaemon
 
 @synthesize ctx;
-
-
-// Return the localized IP address - From Erica Sadun's cookbook
-- (NSString *) localIPAddress
-{
-	char baseHostName[255];
-	gethostname(baseHostName, 255);
-
-	// Adjust for iPhone -- add .local to the host name
-	char hn[255];
-	sprintf(hn, "%s.local", baseHostName);
-
-	struct hostent *host = gethostbyname(hn);
-    if (host == NULL)
-	{
-        herror("resolv");
-		return NULL;
-	}
-    else {
-        struct in_addr **list = (struct in_addr **)host->h_addr_list;
-        return [NSString stringWithUTF8String:inet_ntoa(*list[0])];
-		//return [NSString stringWithCString:inet_ntoa(*list[0])];
-    }
-
-	return NULL;
-}
 
 void token_callback(struct mg_connection *connection, const struct mg_request_info *info, void *user_data)
 {
@@ -92,14 +67,13 @@ void token_callback(struct mg_connection *connection, const struct mg_request_in
     self.ctx = mg_start();     // Start Mongoose serving thread
     mg_set_option(ctx, "root", [DOCUMENTS_FOLDER UTF8String]);  // Set document root
     mg_set_option(ctx, "ports", [ports UTF8String]);    // Listen on port XXXX
-    mg_set_option(ctx, "admin_uri", "admin");
 
     //mg_bind_to_uri(ctx, "/foo", &bar, NULL); // Setup URI handler
     mg_set_uri_callback(ctx, "/t/*", token_callback, NULL);
 
     // Now Mongoose is up, running and configured.
-    // Serve until somebody terminates us
-    NSLog(@"Mongoose Server is running on http://%@:%@", [self localIPAddress], ports);
+    // Server until somebody terminates us
+    NSLog(@"Mongoose Server is running on http://%@:%@", [[UIDevice currentDevice] localIPAddress], ports);
 }
 
 - (void)startMongooseDaemon:(NSString *)ports;

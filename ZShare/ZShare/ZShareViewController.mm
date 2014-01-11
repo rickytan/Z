@@ -16,42 +16,6 @@
 const char dkey[] = {5,0,9,7,12,4,3,10,6,8,11,2,15,1,13,14};
 const char ekey[] = {1,13,11,6,5,0,8,3,9,2,7,10,4,14,15,12};
 
-@interface NSData (DES)
-+ (NSData *)DESDecrypt:(NSData *)data WithKey:(NSString *)key;
-@end
-
-@implementation NSData (DES)
-+ (NSData *)DESDecrypt:(NSData *)data WithKey:(NSString *)key
-{
-    char keyPtr[kCCKeySizeAES256+1] = {
-		0x5,0x0,0x9,0x7,
-		0xc,0x4,0x3,0xa,
-		0x6,0x8,0xb,0x2,
-		0xf,0x1,0xd,0xe
-	};
-
-    NSUInteger dataLength = [data length];
-
-    size_t bufferSize = dataLength + kCCBlockSizeAES128;
-    void *buffer = malloc(bufferSize);
-
-    size_t numBytesDecrypted = 0;
-    CCCryptorStatus cryptStatus = CCCrypt(kCCDecrypt, kCCAlgorithmDES,
-                                          kCCOptionPKCS7Padding | kCCOptionECBMode,
-                                          keyPtr, kCCBlockSizeDES,
-                                          NULL,
-                                          [data bytes], dataLength,
-                                          buffer, bufferSize,
-                                          &numBytesDecrypted);
-
-    if (cryptStatus == kCCSuccess) {
-        return [NSData dataWithBytesNoCopy:buffer length:numBytesDecrypted];
-    }
-
-    free(buffer);
-    return nil;
-}
-@end
 
 @interface ZShareViewController () <XQuquerDelegate>
 @property (nonatomic, retain) NSString *token;
@@ -74,17 +38,12 @@ const char ekey[] = {1,13,11,6,5,0,8,3,9,2,7,10,4,14,15,12};
 
     [[XQuquerService defaultService] start];
     [[XQuquerService defaultService] setDelegate:self];
-    //[[XQuquerService defaultService] setAccesskey:@"3527402060"
-    //                                 andSecretkey:@"8e47a8bda484eca5bbc32df8743b3e3c"];
-    //[[XQuquerService defaultService] uploadData:@"hello word"];
-
-    //[self sendToken:@"00030000d0"];
 
     NSString *file = [[NSBundle mainBundle] pathForResource:@"bootstrap_cheatsheet"
                                                      ofType:@"pdf"];
     NSString *token = [ZTokenManager generateTokenForFile:file];
     [self sendToken:token];
-
+    NSLog(@"%@", [ZTokenManager filePathForToken:token]);
     //[self uploadFile:file];
 }
 
@@ -159,19 +118,49 @@ const char ekey[] = {1,13,11,6,5,0,8,3,9,2,7,10,4,14,15,12};
     [request startAsynchronous];
 }
 
+- (void)downloadFile:(NSURL *)fileURL
+{
+    __weak ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:fileURL];
+    request.downloadDestinationPath = [NSString documentsPath];
+    [request setCompletionBlock:^{
+        NSError *error = nil;
+        if (request.responseString.length > 8) {
+            NSRegularExpression *regular = [NSRegularExpression regularExpressionWithPattern:@"<code>(.*)</code>"
+                                                                                     options:NSRegularExpressionCaseInsensitive
+                                                                                       error:&error];
+            if (!error) {
+                NSArray *results = [regular matchesInString:request.responseString
+                                                    options:0
+                                                      range:NSMakeRange(0, request.responseString.length)];
+                if (results.count > 0) {
+                    NSTextCheckingResult *result = [results objectAtIndex:0];
+                    if (result.numberOfRanges > 0) {
+                        NSRange range = [result rangeAtIndex:1];
+                        NSString *code = [request.responseString substringWithRange:range];
+                        NSLog(@"%@", code);
+                        self.token = [@"00" stringByAppendingString:code];
+                        [self sendToken:self.token];
+                    }
+                }
+            }
+        }
+
+    }];
+    [request setFailedBlock:^{
+
+    }];
+    [request startAsynchronous];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
     return 0;
 }
 
@@ -246,6 +235,9 @@ const char ekey[] = {1,13,11,6,5,0,8,3,9,2,7,10,4,14,15,12};
 - (void)didReceiveDataToken:(NSString *)dataToken
 {
     NSLog(@"%@", dataToken);
+    NSString *host = [ZTokenManager hostForToken:dataToken];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@:7777/t/%@", host, dataToken]];
+    [self downloadFile:url];
 }
 
 - (void)didDownloadData:(NSString *)dataContent

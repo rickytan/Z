@@ -84,7 +84,7 @@ typedef union {
     NSData *data = [base64Code base64DecodedData];
     token_t token = *(token_t *)data.bytes;
     struct in_addr addr = [UIDevice currentDevice].addr;
-    addr.s_addr = (addr.s_addr & 0xffff) | (token.loweraddr << 8);
+    addr.s_addr = (addr.s_addr & 0xffff) | (token.loweraddr << 16);
     NSString *host = [NSString stringWithUTF8String:inet_ntoa(addr)];
     return host;
 }

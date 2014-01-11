@@ -41,10 +41,7 @@ const char ekey[] = {1,13,11,6,5,0,8,3,9,2,7,10,4,14,15,12};
 
     NSString *file = [[NSBundle mainBundle] pathForResource:@"bootstrap_cheatsheet"
                                                      ofType:@"pdf"];
-    NSString *token = [ZTokenManager generateTokenForFile:file];
-    [self sendToken:token];
-    NSLog(@"%@", [ZTokenManager filePathForToken:token]);
-    //[self uploadFile:file];
+    [self sendFile:file];
 }
 
 - (void)didReceiveMemoryWarning
@@ -72,82 +69,37 @@ const char ekey[] = {1,13,11,6,5,0,8,3,9,2,7,10,4,14,15,12};
     }
 }
 
-- (void)uploadFile:(NSString *)filePath
+- (void)sendFile:(NSString *)filePath
 {
+    NSString *token = [ZTokenManager generateTokenForFile:filePath];
+    [self sendToken:token];
 
-    __weak ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:[NSURL URLWithString:@"http://box.myqsc.com/item/add_item"]];
-
-    [request addRequestHeader:@"Referer"
-                        value:@"http://box.myqsc.com/"];
-    [request addRequestHeader:@"Cookie"
-                        value:@"PHPSESSID=73ftnudvefphfn9tu4875gs6e3;"];
-
-    [request addFile:filePath
-        withFileName:filePath.lastPathComponent
-      andContentType:@"application/octet-stream"
-              forKey:@"file"];
-
-
-    [request setCompletionBlock:^{
-        NSError *error = nil;
-        if (request.responseString.length > 8) {
-            NSRegularExpression *regular = [NSRegularExpression regularExpressionWithPattern:@"<code>(.*)</code>"
-                                                                                     options:NSRegularExpressionCaseInsensitive
-                                                                                       error:&error];
-            if (!error) {
-                NSArray *results = [regular matchesInString:request.responseString
-                                                    options:0
-                                                      range:NSMakeRange(0, request.responseString.length)];
-                if (results.count > 0) {
-                    NSTextCheckingResult *result = [results objectAtIndex:0];
-                    if (result.numberOfRanges > 0) {
-                        NSRange range = [result rangeAtIndex:1];
-                        NSString *code = [request.responseString substringWithRange:range];
-                        NSLog(@"%@", code);
-                        self.token = [@"00" stringByAppendingString:code];
-                        [self sendToken:self.token];
-                    }
-                }
-            }
-        }
-
-    }];
-    [request setFailedBlock:^{
-
-    }];
-    [request startAsynchronous];
+    [self performSelector:@selector(didReceiveDataToken:)
+               withObject:token
+               afterDelay:5];
 }
 
 - (void)downloadFile:(NSURL *)fileURL
 {
     __weak ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:fileURL];
-    request.downloadDestinationPath = [NSString documentsPath];
     [request setCompletionBlock:^{
         NSError *error = nil;
-        if (request.responseString.length > 8) {
-            NSRegularExpression *regular = [NSRegularExpression regularExpressionWithPattern:@"<code>(.*)</code>"
-                                                                                     options:NSRegularExpressionCaseInsensitive
-                                                                                       error:&error];
-            if (!error) {
-                NSArray *results = [regular matchesInString:request.responseString
-                                                    options:0
-                                                      range:NSMakeRange(0, request.responseString.length)];
-                if (results.count > 0) {
-                    NSTextCheckingResult *result = [results objectAtIndex:0];
-                    if (result.numberOfRanges > 0) {
-                        NSRange range = [result rangeAtIndex:1];
-                        NSString *code = [request.responseString substringWithRange:range];
-                        NSLog(@"%@", code);
-                        self.token = [@"00" stringByAppendingString:code];
-                        [self sendToken:self.token];
-                    }
-                }
-            }
+        NSLog(@"YES");
+    }];
+    [request setHeadersReceivedBlock:^(NSDictionary *responseHeaders) {
+        NSString *filename = nil;
+        NSString *disposition = responseHeaders[@"Content-Disposition"];
+        NSRange range = [disposition rangeOfString:@"="];
+        if (range.length > 0) {
+            NSString *str = [disposition substringFromIndex:range.location + 1];
+            filename = [str stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@" \";"]];
         }
-
+        if (!filename)
+            filename = @"unknown";
+        request.downloadDestinationPath = [[NSString documentsPath] stringByAppendingPathComponent:filename];
     }];
     [request setFailedBlock:^{
-
+        NSLog(@"%@", request.error);
     }];
     [request startAsynchronous];
 }

@@ -20,10 +20,11 @@
 //#define IS_IOS_5 (__IPHONE_OS_VERSION_MIN_REQUIRED >= 50000)
 #define IS_ARC __has_feature(objc_arc)
 
-#define DEFAULT_COLOR_SCHEME [UIColor colorWithRed:9.0/255\
-                                             green:33.0/255\
-                                              blue:84.0/255\
-                                             alpha:1.0f]
+#define DEFAULT_COLOR_SCHEME [UIColor colorWithRed:0\
+                                             green:122.0/255\
+                                              blue:1.0\
+                                             alpha:1.0]
+
 #define RGB(__r,__g,__b) [UIColor colorWithRed:(1.0*(__r)/255)\
                                          green:(1.0*(__g)/255)\
                                           blue:(1.0*(__b)/255)\

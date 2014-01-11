@@ -7,9 +7,24 @@
 //
 
 #import "ZHelpViewController.h"
+#import <AVOSCloud/AVOSCloud.h>
+#import "NSDate+RExtension.h"
+
+@interface ZHelpCell : UITableViewCell
+@property (nonatomic, assign) IBOutlet UILabel     * titleLabel;
+@property (nonatomic, assign) IBOutlet UILabel     * detailLabel;
+@property (nonatomic, assign) IBOutlet UIImageView * attachedImageView;
+@property (nonatomic, assign) IBOutlet UILabel     * paymentLabel;
+@property (nonatomic, assign) IBOutlet UILabel     * numberOfPeople;
+@property (nonatomic, assign) IBOutlet UILabel     * dateLabel;
+@end
+
+@implementation ZHelpCell
+@end
 
 @interface ZHelpViewController ()
-
+@property (nonatomic, strong) NSMutableArray *needsItems;
+- (IBAction)onReload:(id)sender;
 @end
 
 @implementation ZHelpViewController
@@ -27,17 +42,55 @@
 {
     [super viewDidLoad];
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self reloadItems];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)onReload:(id)sender
+{
+    [self reloadItems];
+}
+
+- (void)reloadItems
+{
+    if (!_needsItems) {
+        _needsItems = [NSMutableArray array];
+    }
+
+    AVQuery *query = [AVQuery queryWithClassName:@"Need"];
+    query.skip = 0;
+    query.limit = 20;
+    [query whereKey:@"expire"
+        greaterThan:[NSDate date]];
+    [query orderByDescending:@"updatedAt"];
+
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            [self.needsItems removeAllObjects];
+            [self.tableView reloadData];
+
+            NSInteger count = self.needsItems.count;
+            [self.needsItems addObjectsFromArray:objects];
+            NSMutableArray *indexPathes = [NSMutableArray arrayWithCapacity:objects.count];
+            for (int i=0; i < objects.count; i++) {
+                [indexPathes addObject:[NSIndexPath indexPathForRow:count + i
+                                                          inSection:0]];
+            }
+            [self.tableView insertRowsAtIndexPaths:indexPathes
+                                  withRowAnimation:UITableViewRowAnimationLeft];
+            [self.refreshControl endRefreshing];
+        }
+    }];
+}
+
+- (void)appendItems
+{
+
 }
 
 #pragma mark - Table view data source
@@ -47,70 +100,92 @@
     return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+- (NSInteger)tableView:(UITableView *)tableView
+ numberOfRowsInSection:(NSInteger)section
 {
-    return 0;
+    return self.needsItems.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
+    static NSString *CellIdentifier = @"NeedCell";
+    ZHelpCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+
     // Configure the cell...
-    
+    if (!cell.backgroundView)
+        cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cell-bg.png"]];
+    AVObject *object = self.needsItems[indexPath.row];
+    cell.titleLabel.text = object[@"title"];
+    cell.detailLabel.text = object[@"details"];
+    cell.paymentLabel.text = object[@"payment"];
+    NSDate *expire = (NSDate *)object[@"expire"];
+    NSDate *today = [NSDate date];
+    if (expire.yearComponent == today.yearComponent &&
+        expire.monthComponent == today.monthComponent &&
+        expire.dayComponent == today.dayComponent) {
+            cell.dateLabel.text = [expire stringWithFormat:@"今天 HH:mm 过期"];
+    }
+    else {
+        cell.dateLabel.text = [expire stringWithFormat:@"MM-dd HH:mm 过期"];
+    }
+
+    AVFile *image = object[@"image0"];
+    NSLog(@"%@", image);
+    //    [cell setNeedsUpdateConstraints];
+
     return cell;
 }
 
 /*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
+ // Override to support conditional editing of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ // Return NO if you do not want the specified item to be editable.
+ return YES;
+ }
+ */
 
 /*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
+ // Override to support editing the table view.
+ - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ if (editingStyle == UITableViewCellEditingStyleDelete) {
+ // Delete the row from the data source
+ [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+ }
+ else if (editingStyle == UITableViewCellEditingStyleInsert) {
+ // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+ }
+ }
+ */
 
 /*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
+ // Override to support rearranging the table view.
+ - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+ {
+ }
+ */
 
 /*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
+ // Override to support conditional rearranging of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ // Return NO if you do not want the item to be re-orderable.
+ return YES;
+ }
+ */
 
 /*
-#pragma mark - Navigation
+ #pragma mark - Navigation
 
-// In a story board-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-
+ // In a story board-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+ {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ 
  */
 
 @end

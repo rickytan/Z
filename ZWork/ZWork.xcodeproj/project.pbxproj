@@ -45,6 +45,8 @@
 		9C7C20F71869269900F2B2EA /* ZNeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C7C20F61869269900F2B2EA /* ZNeedViewController.m */; };
 		9CD39E59188101FF00CF97A1 /* bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CD39E58188101FF00CF97A1 /* bar@2x.png */; };
 		9CD39E5C188102AC00CF97A1 /* UI7NavigationBarBackButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CD39E5B188102AC00CF97A1 /* UI7NavigationBarBackButton@2x.png */; };
+		9CD39E5E1881195200CF97A1 /* cell-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CD39E5D1881195200CF97A1 /* cell-bg@2x.png */; };
+		9CD39E6018812C4200CF97A1 /* image-holder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CD39E5F18812C4200CF97A1 /* image-holder@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +114,8 @@
 		9CD39E58188101FF00CF97A1 /* bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bar@2x.png"; sourceTree = "<group>"; };
 		9CD39E5A1881024A00CF97A1 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		9CD39E5B188102AC00CF97A1 /* UI7NavigationBarBackButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UI7NavigationBarBackButton@2x.png"; sourceTree = "<group>"; };
+		9CD39E5D1881195200CF97A1 /* cell-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cell-bg@2x.png"; sourceTree = "<group>"; };
+		9CD39E5F18812C4200CF97A1 /* image-holder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image-holder@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,8 +255,10 @@
 				9CD39E58188101FF00CF97A1 /* bar@2x.png */,
 				9C287CFC188044D300934786 /* icon-120@2x.png */,
 				9C287CFD188044D300934786 /* icon.png */,
+				9CD39E5D1881195200CF97A1 /* cell-bg@2x.png */,
 				9C287CFE188044D300934786 /* icon@2x.png */,
 				9C7C20EF1869250100F2B2EA /* Default-568h@2x.png */,
+				9CD39E5F18812C4200CF97A1 /* image-holder@2x.png */,
 				9C7C20F01869250100F2B2EA /* Default.png */,
 				9C7C20F11869250100F2B2EA /* Default@2x.png */,
 				9C7C20E7186920F900F2B2EA /* blueButton@2x.png */,
@@ -343,7 +349,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C7C20E618691F0100F2B2EA /* ku@2x.png in Resources */,
+				9CD39E5E1881195200CF97A1 /* cell-bg@2x.png in Resources */,
 				9C7C20F31869250100F2B2EA /* Default.png in Resources */,
+				9CD39E6018812C4200CF97A1 /* image-holder@2x.png in Resources */,
 				9C287D01188044D300934786 /* icon@2x.png in Resources */,
 				9C7C20F41869250100F2B2EA /* Default@2x.png in Resources */,
 				9C7C20EE1869210400F2B2EA /* greenButtonHighlight@2x.png in Resources */,

@@ -38,10 +38,7 @@
         [[UIBarButtonItem appearance] setBackgroundImage:[[UIImage alloc] init]
                                                 forState:UIControlStateNormal
                                               barMetrics:UIBarMetricsDefault];
-        [[UIBarButtonItem appearance] setTitleTextAttributes:@{UITextAttributeTextColor: [UIColor colorWithRed:0
-                                                                                                         green:122.0/255
-                                                                                                          blue:1.0
-                                                                                                         alpha:1.0],
+        [[UIBarButtonItem appearance] setTitleTextAttributes:@{UITextAttributeTextColor: DEFAULT_COLOR_SCHEME,
                                                                UITextAttributeFont: [UIFont systemFontOfSize:16],
                                                                UITextAttributeTextShadowOffset: [NSValue valueWithCGSize:CGSizeZero]}
                                                     forState:UIControlStateNormal];
@@ -56,6 +53,7 @@
                                                                UITextAttributeFont: [UIFont systemFontOfSize:16],
                                                                UITextAttributeTextShadowOffset: [NSValue valueWithCGSize:CGSizeZero]}
                                                     forState:UIControlStateDisabled];
+        [[UIBarButtonItem appearance] setTintColor:DEFAULT_COLOR_SCHEME];
         [[UITabBar appearance] setTintColor:[UIColor colorWithWhite:0.94
                                                               alpha:1.0]];
         [[UITabBar appearance] setSelectionIndicatorImage:[[UIImage alloc] init]];

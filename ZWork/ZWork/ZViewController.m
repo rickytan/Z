@@ -29,6 +29,26 @@
                             forState:UIControlStateNormal];
     [self.button2 setBackgroundImage:[[UIImage imageNamed:@"greenButtonHighlight.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(17, 17, 17, 17)]
                             forState:UIControlStateHighlighted];
+
+    CABasicAnimation *anim = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+    anim.fromValue = [NSNumber numberWithFloat:-M_PI / 180 * 3];
+    anim.toValue = [NSNumber numberWithFloat:M_PI / 180 * 3];
+    anim.duration = 1.0;
+    anim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    anim.repeatCount = CGFLOAT_MAX;
+    anim.autoreverses = YES;
+    [self.button2.layer addAnimation:anim
+                              forKey:@"Wobble"];
+
+    anim = [CABasicAnimation animationWithKeyPath:@"transform.translation.y"];
+    anim.byValue = [NSNumber numberWithFloat:-20];
+    anim.duration = 0.5;
+    anim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
+    anim.repeatCount = CGFLOAT_MAX;
+    anim.autoreverses = YES;
+    [self.button1.layer addAnimation:anim
+                              forKey:@"Jump"];
+
 }
 
 - (void)didReceiveMemoryWarning

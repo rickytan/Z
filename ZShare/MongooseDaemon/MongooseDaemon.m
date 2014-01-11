@@ -7,11 +7,11 @@
 
 //
 // Copyright (c) 2009, Rama McIntosh All rights reserved.
-// 
+//
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions
 // are met:
-// 
+//
 // * Redistributions of source code must retain the above copyright
 //   notice, this list of conditions and the following disclaimer.
 // * Redistributions in binary form must reproduce the above copyright
@@ -56,11 +56,11 @@
 {
 	char baseHostName[255];
 	gethostname(baseHostName, 255);
-	
+
 	// Adjust for iPhone -- add .local to the host name
 	char hn[255];
 	sprintf(hn, "%s.local", baseHostName);
-	
+
 	struct hostent *host = gethostbyname(hn);
     if (host == NULL)
 	{
@@ -71,30 +71,32 @@
         struct in_addr **list = (struct in_addr **)host->h_addr_list;
 		return [NSString stringWithCString:inet_ntoa(*list[0])];
     }
-	
+
 	return NULL;
 }
 
 - (void)startHTTP:(NSString *)ports
 {
-  self.ctx = mg_start();     // Start Mongoose serving thread
-  mg_set_option(ctx, "root", [DOCUMENTS_FOLDER UTF8String]);  // Set document root
-  mg_set_option(ctx, "ports", [ports UTF8String]);    // Listen on port XXXX
-  //mg_bind_to_uri(ctx, "/foo", &bar, NULL); // Setup URI handler
+    self.ctx = mg_start();     // Start Mongoose serving thread
+    mg_set_option(ctx, "root", [DOCUMENTS_FOLDER UTF8String]);  // Set document root
+    mg_set_option(ctx, "ports", [ports UTF8String]);    // Listen on port XXXX
+    mg_set_option(ctx, "admin_uri", "admin");
 
-  // Now Mongoose is up, running and configured.
-  // Serve until somebody terminates us
-  NSLog(@"Mongoose Server is running on http://%@:%@", [self localIPAddress], ports);
+    //mg_bind_to_uri(ctx, "/foo", &bar, NULL); // Setup URI handler
+
+    // Now Mongoose is up, running and configured.
+    // Serve until somebody terminates us
+    NSLog(@"Mongoose Server is running on http://%@:%@", [self localIPAddress], ports);
 }
 
 - (void)startMongooseDaemon:(NSString *)ports;
 {
-  [self startHTTP:ports];
+    [self startHTTP:ports];
 }
 
 - (void)stopMongooseDaemon
 {
-  mg_stop(ctx);
+    mg_stop(ctx);
 }
 
 @end

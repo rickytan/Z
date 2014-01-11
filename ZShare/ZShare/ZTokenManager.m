@@ -7,19 +7,31 @@
 //
 
 #import "ZTokenManager.h"
+#import "FMDatabase.h"
+
+static FMDatabase * _database = nil;
 
 @implementation ZTokenManager
 
 + (void)load
 {
-
+    NSString *path = [NSHomeDirectory() stringByAppendingPathComponent:@"Library/file.db"];
+    _database = [FMDatabase databaseWithPath:path];
+    if ([_database open]) {
+        if ([_database executeUpdate:
+             @"CREATE TABLE IF NOT EXITS files("
+             @"   `token` VARCHAR UNIQUE,"
+             @"   `filepath` VARCHAR"
+             @")"]) {
+            [_database executeUpdate:@"CREATA UNIQUE INDEX `token_index` ON files(`token`)"];
+        }
+    }
 }
 
 + (NSString *)generateTokenForFile:(NSString *)filePath
 {
-    short code = filePath.hash & 0xffff ^ 0xffff;
-    NSString *token = [NSString stringWithFormat:@"00%02d%06du", code, filePath.hash];
-
+    NSString *token = [NSString stringWithFormat:@"%010d", filePath.hash];
+    
     return token;
 }
 

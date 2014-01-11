@@ -205,6 +205,8 @@ int mg_printf(struct mg_connection *, const char *fmt, ...);
 const char *mg_get_header(const struct mg_connection *, const char *hdr_name);
 
 
+void mg_send_file(struct mg_connection *, const char *path);
+
 /*
  * Authorize the request.
  * See the documentation for mg_set_auth_callback() function.

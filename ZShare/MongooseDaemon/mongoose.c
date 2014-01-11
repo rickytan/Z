@@ -674,6 +674,17 @@ mg_get_header(const struct mg_connection *conn, const char *name)
 	return (get_header(&conn->request_info, name));
 }
 
+static void
+send_file(struct mg_connection *conn, const char *path, struct mgstat *stp);
+
+
+void
+mg_send_file(struct mg_connection *conn, const char *path)
+{
+    struct mgstat st;
+    send_file(conn, path, &st);
+}
+
 /*
  * A helper function for traversing comma separated list of values.
  * It returns a list pointer shifted to the next value, of NULL if the end

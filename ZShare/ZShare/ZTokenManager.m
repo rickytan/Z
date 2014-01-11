@@ -19,12 +19,15 @@ static FMDatabase * _database = nil;
     _database = [FMDatabase databaseWithPath:path];
     if ([_database open]) {
         if ([_database executeUpdate:
-             @"CREATE TABLE IF NOT EXITS files("
+             @"CREATE TABLE IF NOT EXISTS files("
              @"   `token` VARCHAR UNIQUE,"
              @"   `filepath` VARCHAR"
              @")"]) {
-            [_database executeUpdate:@"CREATA UNIQUE INDEX `token_index` ON files(`token`)"];
+            if (![_database executeUpdate:@"CREATE UNIQUE INDEX `token_index` ON files(`token`)"])
+                NSLog(@"create index error: %@", _database.lastError);
         }
+        else
+            NSLog(@"create table error: %@", _database.lastError);
     }
 }
 
@@ -33,6 +36,11 @@ static FMDatabase * _database = nil;
     NSString *token = [NSString stringWithFormat:@"%010d", filePath.hash];
     
     return token;
+}
+
++ (NSString *)filePathForToken:(NSString *)token
+{
+    return nil;
 }
 
 + (BOOL)verifyToken:(NSString *)token

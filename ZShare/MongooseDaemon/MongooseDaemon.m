@@ -42,6 +42,7 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <netdb.h>
+#import "ZTokenManager.h"
 
 #define DOCUMENTS_FOLDER [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"]
 //#define DOCUMENTS_FOLDER NSHomeDirectory()
@@ -69,10 +70,21 @@
 	}
     else {
         struct in_addr **list = (struct in_addr **)host->h_addr_list;
-		return [NSString stringWithCString:inet_ntoa(*list[0])];
+        return [NSString stringWithUTF8String:inet_ntoa(*list[0])];
+		//return [NSString stringWithCString:inet_ntoa(*list[0])];
     }
 
 	return NULL;
+}
+
+void token_callback(struct mg_connection *connection, const struct mg_request_info *info, void *user_data)
+{
+    NSString *uri = [NSString stringWithUTF8String:info->uri];
+    NSString *token = [uri substringFromIndex:3];
+    if ([ZTokenManager verifyToken:token]) {
+        NSString *path = [ZTokenManager filePathForToken:token];
+        mg_send_file(connection, path.UTF8String);
+    }
 }
 
 - (void)startHTTP:(NSString *)ports
@@ -83,6 +95,7 @@
     mg_set_option(ctx, "admin_uri", "admin");
 
     //mg_bind_to_uri(ctx, "/foo", &bar, NULL); // Setup URI handler
+    mg_set_uri_callback(ctx, "/t/*", token_callback, NULL);
 
     // Now Mongoose is up, running and configured.
     // Serve until somebody terminates us

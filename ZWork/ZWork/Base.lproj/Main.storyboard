@@ -259,13 +259,14 @@
                                 <action selector="onDismiss:" destination="4Oo-yI-LO3" id="L6M-tp-RF6"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="好了" id="o0H-oG-YuI">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="好了" id="o0H-oG-YuI">
                             <connections>
                                 <action selector="onDone:" destination="4Oo-yI-LO3" id="1MY-q0-1EV"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="donwItem" destination="o0H-oG-YuI" id="3FJ-87-po7"/>
                         <segue destination="8mF-gL-cUQ" kind="push" identifier="Payment" id="tyP-eE-rGo"/>
                     </connections>
                 </tableViewController>

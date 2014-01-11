@@ -60,13 +60,14 @@ UITextViewDelegate,
 ZPaymentSettingDelegate,
 UINavigationControllerDelegate,
 UIImagePickerControllerDelegate>
-@property (nonatomic, readonly) UITextField * subjectField;
-@property (nonatomic, readonly) UITextField * numberOfPeopleField;
-@property (nonatomic, readonly) UITextView * descriptionView;
-@property (nonatomic, strong) AVObject * myNeed;
-@property (nonatomic, strong) NSMutableArray * attachedImages;
-@property (nonatomic, assign) NSInteger maxAttachedImage;
-@property (nonatomic, assign) BOOL hideAddImageCell;
+@property (nonatomic, readonly) UITextField              * subjectField;
+@property (nonatomic, readonly) UITextField              * numberOfPeopleField;
+@property (nonatomic, readonly) UITextView               * descriptionView;
+@property (nonatomic, strong)   AVObject                 * myNeed;
+@property (nonatomic, strong)   NSMutableArray           * attachedImages;
+@property (nonatomic, assign)   NSInteger                  maxAttachedImage;
+@property (nonatomic, assign)   BOOL                       hideAddImageCell;
+@property (nonatomic, assign)   IBOutlet UIBarButtonItem * donwItem;
 - (IBAction)onDismiss:(id)sender;
 - (IBAction)onDone:(id)sender;
 @end
@@ -182,6 +183,11 @@ UIImagePickerControllerDelegate>
 {
     [self.view endEditing:YES];
 
+    if (self.subjectField.text.length == 0) {
+        [SVProgressHUD showErrorWithStatus:@"请输入标题！"];
+        return;
+    }
+
     NSInteger count = 0;
     for (UIImage *image in self.attachedImages) {
         NSData *imageData = UIImageJPEGRepresentation(image, 0.7);
@@ -192,7 +198,7 @@ UIImagePickerControllerDelegate>
                         forKey:[NSString stringWithFormat:@"image%d", count++]];
     }
 
-    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
+    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeClear];
     [self.myNeed saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
             [SVProgressHUD showSuccessWithStatus:@"发布成功！"];
@@ -219,9 +225,11 @@ replacementString:(NSString *)string
     if (textField.tag == 10)
         [self.myNeed setObject:[NSNumber numberWithInt:textField.text.intValue]
                         forKey:@"numOfPeople"];
-    else
+    else {
+        self.donwItem.enabled = textField.text.length > 0;
         [self.myNeed setObject:textField.text
                         forKey:@"title"];
+    }
 }
 
 - (void)textViewDidEndEditing:(UITextView *)textView
@@ -450,7 +458,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     [picker dismissViewControllerAnimated:YES completion:^{
         [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:count
                                                                     inSection:1]]
-                              withRowAnimation:UITableViewRowAnimationTop];
+                              withRowAnimation:UITableViewRowAnimationLeft];
         if (self.attachedImages.count == self.maxAttachedImage) {
             self.hideAddImageCell = YES;
             [self.tableView deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:self.maxAttachedImage

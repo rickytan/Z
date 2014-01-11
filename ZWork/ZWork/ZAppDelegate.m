@@ -38,14 +38,24 @@
         [[UIBarButtonItem appearance] setBackgroundImage:[[UIImage alloc] init]
                                                 forState:UIControlStateNormal
                                               barMetrics:UIBarMetricsDefault];
-        [[UIBarButtonItem appearance] setTitleTextAttributes:@{UITextAttributeTextColor: [UIColor blackColor],
+        [[UIBarButtonItem appearance] setTitleTextAttributes:@{UITextAttributeTextColor: [UIColor colorWithRed:0
+                                                                                                         green:122.0/255
+                                                                                                          blue:1.0
+                                                                                                         alpha:1.0],
                                                                UITextAttributeFont: [UIFont systemFontOfSize:16],
                                                                UITextAttributeTextShadowOffset: [NSValue valueWithCGSize:CGSizeZero]}
                                                     forState:UIControlStateNormal];
-        [[UIBarButtonItem appearance] setTitleTextAttributes:@{UITextAttributeTextColor: [UIColor blackColor],
+        [[UIBarButtonItem appearance] setTitleTextAttributes:@{UITextAttributeTextColor: [UIColor colorWithRed:0
+                                                                                                         green:122.0/255
+                                                                                                          blue:1.0
+                                                                                                         alpha:0.6],
                                                                UITextAttributeFont: [UIFont systemFontOfSize:16],
                                                                UITextAttributeTextShadowOffset: [NSValue valueWithCGSize:CGSizeZero]}
                                                     forState:UIControlStateHighlighted];
+        [[UIBarButtonItem appearance] setTitleTextAttributes:@{UITextAttributeTextColor: [UIColor grayColor],
+                                                               UITextAttributeFont: [UIFont systemFontOfSize:16],
+                                                               UITextAttributeTextShadowOffset: [NSValue valueWithCGSize:CGSizeZero]}
+                                                    forState:UIControlStateDisabled];
         [[UITabBar appearance] setTintColor:[UIColor colorWithWhite:0.94
                                                               alpha:1.0]];
         [[UITabBar appearance] setSelectionIndicatorImage:[[UIImage alloc] init]];

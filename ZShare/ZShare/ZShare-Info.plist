@@ -12,10 +12,20 @@
 			<key>CFBundleTypeIconFiles</key>
 			<array/>
 			<key>CFBundleTypeName</key>
-			<string>Document</string>
+			<string>PDF</string>
 			<key>LSItemContentTypes</key>
 			<array>
-				<string>doc;docx;xls;xlsx;ppt;pptx;key;pages;numbers;pdf;txt;jpg;png;gif;bmp;tif</string>
+				<string>com.adobe.pdf</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeIconFiles</key>
+			<array/>
+			<key>CFBundleTypeName</key>
+			<string>Office</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>com.microsoft.doc</string>
 			</array>
 		</dict>
 	</array>
@@ -30,6 +40,8 @@
 				<string>icon-60</string>
 				<string>icon</string>
 			</array>
+			<key>UIPrerenderedIcon</key>
+			<true/>
 		</dict>
 	</dict>
 	<key>CFBundleIdentifier</key>
@@ -49,6 +61,8 @@
 		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Viewer</string>
+			<key>CFBundleURLName</key>
+			<string>org.ricky.zshare</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>zshare</string>
@@ -57,10 +71,14 @@
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
+	<key>LSApplicationCategoryType</key>
+	<string>public.app-category.utilities</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSHumanReadableCopyright</key>
 	<string>ricky © 2014</string>
+	<key>UIFileSharingEnabled</key>
+	<true/>
 	<key>UIMainStoryboardFile</key>
 	<string>Storyboard</string>
 	<key>UIRequiredDeviceCapabilities</key>

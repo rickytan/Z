@@ -14,10 +14,12 @@
 static FMDatabase * _database = nil;
 
 typedef union {
-    char str[6];
+    uint32_t value;
     struct {
-        uint32_t hash;
-        uint16_t loweraddr;
+        uint16_t higher, lower;
+    };
+    struct {
+        uint8_t b0, b1, b2, b3;
     };
 } token_t;
 
@@ -33,7 +35,7 @@ typedef union {
              @"   `token` VARCHAR UNIQUE,"
              @"   `filepath` VARCHAR"
              @")"]) {
-            if (![_database executeUpdate:@"CREATE UNIQUE INDEX `token_index` ON files(`token`)"])
+            if (![_database executeUpdate:@"CREATE UNIQUE INDEX IF NOT EXISTS `token_index` ON files(`token`)"])
                 NSLog(@"create index error: %@", _database.lastError);
         }
         else
@@ -42,8 +44,9 @@ typedef union {
 }
 
 + (BOOL)writeRecord:(NSString *)filePath
+              token:(NSString *)token;
 {
-    if ([_database executeUpdate:@"INSERT OR REPLACE INTO files (`token`, `filepath`) values (?, ?)", [NSNumber numberWithUnsignedInteger:filePath.hash].stringValue, filePath]) {
+    if ([_database executeUpdate:@"INSERT OR REPLACE INTO files (`token`, `filepath`) values (?, ?)", token, filePath]) {
         return YES;
     }
 
@@ -54,23 +57,19 @@ typedef union {
 + (NSString *)generateTokenForFile:(NSString *)filePath
 {
     token_t token = {0};
-    token.loweraddr = ([UIDevice currentDevice].addr.s_addr & 0xffff0000) >> 16;
-    token.hash = filePath.hash;
-    NSData *data = [NSData dataWithBytes:token.str
-                                  length:sizeof(token.str)];
-    NSString *tokenStr = [NSString stringWithFormat:@"00%@", [data base64Encoding]];
-    
-    [self writeRecord:filePath];
+
+    token.higher = ([UIDevice currentDevice].addr.s_addr & 0xffff0000) >> 16;
+    token.lower = (filePath.hash >> 16) ^ filePath.hash;
+    uint16_t checkSum = token.higher ^ token.lower;
+    NSString *tokenStr = [NSString stringWithFormat:@"%02x%08x", (uint8_t)(checkSum >> 8 ^ (checkSum & 0xff)) & 0x7f, token.value];
+
+    [self writeRecord:filePath token:tokenStr];
     return tokenStr;
 }
 
 + (NSString *)filePathForToken:(NSString *)tokenString
 {
-    NSString *base64Code = [tokenString substringFromIndex:2];
-    NSData *data = [base64Code base64DecodedData];
-    token_t token = *(token_t *)data.bytes;
-    NSUInteger fileHash = token.hash;
-    FMResultSet *result = [_database executeQuery:@"SELECT * FROM files WHERE `token` = ? LIMIT 0,1", [NSNumber numberWithUnsignedInteger:fileHash].stringValue];
+    FMResultSet *result = [_database executeQuery:@"SELECT * FROM files WHERE `token` = ? LIMIT 0,1", tokenString];
     if ([result next]) {
         NSString *filePath = [result stringForColumn:@"filepath"];
         return filePath;
@@ -80,18 +79,24 @@ typedef union {
 
 + (NSString *)hostForToken:(NSString *)tokenString
 {
-    NSString *base64Code = [tokenString substringFromIndex:2];
-    NSData *data = [base64Code base64DecodedData];
-    token_t token = *(token_t *)data.bytes;
+    token_t token = {0};
+    sscanf(tokenString.UTF8String + 2, "%08x", &token.value);
     struct in_addr addr = [UIDevice currentDevice].addr;
-    addr.s_addr = (addr.s_addr & 0xffff) | (token.loweraddr << 16);
+    addr.s_addr = (addr.s_addr & 0xffff) | (token.higher << 16);
     NSString *host = [NSString stringWithUTF8String:inet_ntoa(addr)];
     return host;
 }
 
-+ (BOOL)verifyToken:(NSString *)token
++ (BOOL)verifyToken:(NSString *)tokenString
 {
-    return [token hasPrefix:@"00"];
+    if (tokenString.length == 10) {
+        token_t token = {0};
+        uint8_t checkSum = 0;
+        sscanf(tokenString.UTF8String, "%02x%08x", (int *)&checkSum, &token.value);
+        uint8_t result = (token.higher ^ token.lower) >> 8 ^ (token.higher ^ token.lower & 0xff);
+        return checkSum == (result & 0x7f);
+    }
+    return NO;
 }
 
 @end

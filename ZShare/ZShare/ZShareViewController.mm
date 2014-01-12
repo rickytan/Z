@@ -18,7 +18,9 @@ const char ekey[] = {1,13,11,6,5,0,8,3,9,2,7,10,4,14,15,12};
 
 
 @interface ZShareViewController () <XQuquerDelegate>
-@property (nonatomic, retain) NSString *token;
+@property (nonatomic, retain) NSString *tokenSent;
+@property (nonatomic, retain) NSString *tokenReceived;
+- (IBAction)onSend:(id)sender;
 @end
 
 @implementation ZShareViewController
@@ -36,12 +38,17 @@ const char ekey[] = {1,13,11,6,5,0,8,3,9,2,7,10,4,14,15,12};
 {
     [super viewDidLoad];
 
-    [[XQuquerService defaultService] start];
     [[XQuquerService defaultService] setDelegate:self];
+    [[XQuquerService defaultService] start];
+    [[XQuquerService defaultService] setAccesskey:@"3527402060"
+                                     andSecretkey:@"8e47a8bda484eca5bbc32df8743b3e3c"];
+    //[[XQuquerService defaultService] uploadData:@"Hello World!"];
+    //[self sendToken:@"8abd8292af"];
 
     NSString *file = [[NSBundle mainBundle] pathForResource:@"bootstrap_cheatsheet"
                                                      ofType:@"pdf"];
     [self sendFile:file];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -50,9 +57,31 @@ const char ekey[] = {1,13,11,6,5,0,8,3,9,2,7,10,4,14,15,12};
     // Dispose of any resources that can be recreated.
 }
 
+- (void)setTokenSent:(NSString *)tokenSent
+{
+    _tokenSent = tokenSent;
+    [self.tableView reloadData];
+}
+
+- (void)setTokenReceived:(NSString *)tokenReceived
+{
+    _tokenReceived = tokenReceived;
+    [self.tableView reloadData];
+}
+
+#pragma mark - Actions
+
+- (IBAction)onSend:(id)sender
+{
+    if ([[XQuquerService defaultService] sendDataToken:self.tokenSent])
+        NSLog(@"Send %@ OK", self.tokenSent);
+    else
+        NSLog(@"Send %@ Fail...", self.tokenSent);
+}
+
 #pragma mark - Methods
 
-- (void)sendToken:(NSString *)token
+- (NSString *)encodeToken:(NSString *)token
 {
     NSString *wuyifan = [token stringByAppendingString:@"wuyifan"];
     NSString *prefix = [[wuyifan md5] substringToIndex:16 - token.length];
@@ -63,28 +92,42 @@ const char ekey[] = {1,13,11,6,5,0,8,3,9,2,7,10,4,14,15,12};
     }
     NSString *ququerToken = [NSString stringWithCharacters:text
                                                     length:16];
-    NSLog(@"Final string: %@", ququerToken);
-    if ([[XQuquerService defaultService] sendDataToken:ququerToken]) {
-        NSLog(@"Success!");
+    return ququerToken;
+}
+
+- (NSString *)decodeToken:(NSString *)token
+{
+    NSString *str = token;
+    unichar text[16] = {0};
+    for (int i=0; i<str.length; i++) {
+        text[i] = [str characterAtIndex:dkey[i]];
     }
+    NSString *myToken = [NSString stringWithCharacters:text
+                                                length:10];
+    return myToken;
+}
+
+- (void)sendToken:(NSString *)token
+{
+    self.tokenSent = [self encodeToken:token];
+    [self onSend:nil];
 }
 
 - (void)sendFile:(NSString *)filePath
 {
     NSString *token = [ZTokenManager generateTokenForFile:filePath];
     [self sendToken:token];
-
-    [self performSelector:@selector(didReceiveDataToken:)
-               withObject:token
-               afterDelay:5];
 }
 
 - (void)downloadFile:(NSURL *)fileURL
 {
     __weak ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:fileURL];
     [request setCompletionBlock:^{
-        NSError *error = nil;
-        NSLog(@"YES");
+        [[[UIAlertView alloc] initWithTitle:@"下载完成！"
+                                    message:[NSString stringWithFormat:@"文件已经保存至：%@", request.downloadDestinationPath]
+                                   delegate:nil
+                          cancelButtonTitle:@"好"
+                          otherButtonTitles:nil] show];
     }];
     [request setHeadersReceivedBlock:^(NSDictionary *responseHeaders) {
         NSString *filename = nil;
@@ -113,7 +156,7 @@ const char ekey[] = {1,13,11,6,5,0,8,3,9,2,7,10,4,14,15,12};
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 0;
+    return 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -122,6 +165,10 @@ const char ekey[] = {1,13,11,6,5,0,8,3,9,2,7,10,4,14,15,12};
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
 
     // Configure the cell...
+    if (indexPath.row == 0)
+        cell.textLabel.text = self.tokenSent;
+    else
+        cell.textLabel.text = self.tokenReceived;
 
     return cell;
 }
@@ -186,10 +233,13 @@ const char ekey[] = {1,13,11,6,5,0,8,3,9,2,7,10,4,14,15,12};
 
 - (void)didReceiveDataToken:(NSString *)dataToken
 {
-    NSLog(@"%@", dataToken);
-    NSString *host = [ZTokenManager hostForToken:dataToken];
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@:7777/t/%@", host, dataToken]];
-    [self downloadFile:url];
+    self.tokenReceived = dataToken;
+    NSString *decode = [self decodeToken:dataToken];
+    if ([ZTokenManager verifyToken:decode]) {
+        NSString *host = [ZTokenManager hostForToken:decode];
+        NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@:7777/t/%@", host, decode]];
+        [self downloadFile:url];
+    }
 }
 
 - (void)didDownloadData:(NSString *)dataContent
@@ -202,8 +252,8 @@ const char ekey[] = {1,13,11,6,5,0,8,3,9,2,7,10,4,14,15,12};
             withError:(NSError *)error
 {
     NSLog(@"%@", dataToken);
-    if ([[XQuquerService defaultService] sendDataToken:dataToken])
-        NSLog(@"YES");
+    self.tokenSent = dataToken;
+    [self onSend:nil];
 }
 
 @end

@@ -115,7 +115,7 @@ const char ekey[] = {1,13,11,6,5,0,8,3,9,2,7,10,4,14,15,12};
 
 - (void)downloadFile:(NSURL *)fileURL
 {
-    __weak ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:fileURL];
+    __weak ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:fileURL];
     [request setCompletionBlock:^{
         [[[UIAlertView alloc] initWithTitle:@"下载完成！"
                                     message:[NSString stringWithFormat:@"文件已经保存至：%@", request.downloadDestinationPath]

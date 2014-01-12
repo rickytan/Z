@@ -545,6 +545,7 @@
 		9C4D1F5618658D8400EFE020 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/ricky/Data/Code/Z/ZShare,
@@ -557,6 +558,7 @@
 					/Users/ricky/Data/Code/Z/ZShare/XQuquerSDK,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -564,6 +566,7 @@
 		9C4D1F5718658D8400EFE020 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/ricky/Data/Code/Z/ZShare,
@@ -576,6 +579,7 @@
 					/Users/ricky/Data/Code/Z/ZShare/XQuquerSDK,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

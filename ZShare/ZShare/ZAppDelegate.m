@@ -8,6 +8,7 @@
 
 #import "ZAppDelegate.h"
 #import "XQuquerService.h"
+#import "ZShareViewController.h"
 
 @implementation ZAppDelegate
 
@@ -24,6 +25,29 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     }
     self.serverDaemon = [[MongooseDaemon alloc] init];
 
+    return YES;
+}
+
+- (BOOL)application:(UIApplication *)application
+      handleOpenURL:(NSURL *)url
+{
+    return [self application:application
+                     openURL:url
+           sourceApplication:nil
+                  annotation:nil];
+}
+
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation
+{
+    if ([url isFileURL]) {
+        UITabBarController *tab = (UITabBarController *)self.window.rootViewController;
+        tab.selectedIndex = 0;
+        ZShareViewController *share = (ZShareViewController *)(((UINavigationController *)tab.selectedViewController).childViewControllers.firstObject);
+        [share sendFile:url.path];
+    }
     return YES;
 }
 

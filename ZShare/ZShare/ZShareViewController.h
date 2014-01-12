@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface ZShareViewController : UITableViewController
-
+- (void)sendFile:(NSString *)filePath;
 @end

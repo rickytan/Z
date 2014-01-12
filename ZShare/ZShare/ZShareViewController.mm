@@ -10,8 +10,7 @@
 #import "XQuquerService.h"
 #import "NSString+RExtension.h"
 #import "ZTokenManager.h"
-#import <CommonCrypto/CommonCryptor.h>
-#import <ASIHTTPRequest/ASIFormDataRequest.h>
+#import <ASIHTTPRequest/ASIHTTPRequest.h>
 
 const char dkey[] = {5,0,9,7,12,4,3,10,6,8,11,2,15,1,13,14};
 const char ekey[] = {1,13,11,6,5,0,8,3,9,2,7,10,4,14,15,12};
@@ -40,14 +39,6 @@ const char ekey[] = {1,13,11,6,5,0,8,3,9,2,7,10,4,14,15,12};
 
     [[XQuquerService defaultService] setDelegate:self];
     [[XQuquerService defaultService] start];
-    [[XQuquerService defaultService] setAccesskey:@"3527402060"
-                                     andSecretkey:@"8e47a8bda484eca5bbc32df8743b3e3c"];
-    //[[XQuquerService defaultService] uploadData:@"Hello World!"];
-    //[self sendToken:@"8abd8292af"];
-
-    NSString *file = [[NSBundle mainBundle] pathForResource:@"bootstrap_cheatsheet"
-                                                     ofType:@"pdf"];
-    [self sendFile:file];
 
 }
 
@@ -73,6 +64,9 @@ const char ekey[] = {1,13,11,6,5,0,8,3,9,2,7,10,4,14,15,12};
 
 - (IBAction)onSend:(id)sender
 {
+    if (!self.tokenSent)
+        return;
+    
     if ([[XQuquerService defaultService] sendDataToken:self.tokenSent])
         NSLog(@"Send %@ OK", self.tokenSent);
     else
@@ -172,57 +166,6 @@ const char ekey[] = {1,13,11,6,5,0,8,3,9,2,7,10,4,14,15,12};
 
     return cell;
 }
-
-/*
- // Override to support conditional editing of the table view.
- - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
- {
- // Return NO if you do not want the specified item to be editable.
- return YES;
- }
- */
-
-/*
- // Override to support editing the table view.
- - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
- {
- if (editingStyle == UITableViewCellEditingStyleDelete) {
- // Delete the row from the data source
- [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
- }
- else if (editingStyle == UITableViewCellEditingStyleInsert) {
- // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
- }
- }
- */
-
-/*
- // Override to support rearranging the table view.
- - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
- {
- }
- */
-
-/*
- // Override to support conditional rearranging of the table view.
- - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
- {
- // Return NO if you do not want the item to be re-orderable.
- return YES;
- }
- */
-
-/*
- #pragma mark - Navigation
-
- // In a story board-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
- {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
-
- */
 
 #pragma mark - XQuquer Delegate
 

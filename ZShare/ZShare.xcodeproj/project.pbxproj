@@ -16,6 +16,8 @@
 		9C287D1418804AC900934786 /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C287D1318804AC900934786 /* libz.1.2.5.dylib */; };
 		9C287D1618804AD400934786 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C287D1518804AD400934786 /* SystemConfiguration.framework */; };
 		9C287D1818804AEF00934786 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C287D1718804AEF00934786 /* QuartzCore.framework */; };
+		9C39311418839F9F0080D691 /* ios7 in Resources */ = {isa = PBXBuildFile; fileRef = 9C39311218839F9F0080D691 /* ios7 */; };
+		9C39311518839F9F0080D691 /* simple in Resources */ = {isa = PBXBuildFile; fileRef = 9C39311318839F9F0080D691 /* simple */; };
 		9C4D1F2D18658D8400EFE020 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4D1F2C18658D8400EFE020 /* Foundation.framework */; };
 		9C4D1F3118658D8400EFE020 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4D1F3018658D8400EFE020 /* UIKit.framework */; };
 		9C4D1F3718658D8400EFE020 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C4D1F3518658D8400EFE020 /* InfoPlist.strings */; };
@@ -77,6 +79,8 @@
 		9C287D1318804AC900934786 /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
 		9C287D1518804AD400934786 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		9C287D1718804AEF00934786 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		9C39311218839F9F0080D691 /* ios7 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ios7; sourceTree = "<group>"; };
+		9C39311318839F9F0080D691 /* simple */ = {isa = PBXFileReference; lastKnownFileType = folder; path = simple; sourceTree = "<group>"; };
 		9C4D1F2918658D8400EFE020 /* ZShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C4D1F2C18658D8400EFE020 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9C4D1F2E18658D8400EFE020 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -262,6 +266,8 @@
 		9CD39E491880FA1100CF97A1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9C39311218839F9F0080D691 /* ios7 */,
+				9C39311318839F9F0080D691 /* simple */,
 				9CD39E701881459200CF97A1 /* index.html */,
 				9CD39E6C1881426A00CF97A1 /* settings@2x.png */,
 				9CD39E6D1881426A00CF97A1 /* file@2x.png */,
@@ -389,11 +395,13 @@
 				9CD39E6E1881426A00CF97A1 /* settings@2x.png in Resources */,
 				9CD39E551880FE3800CF97A1 /* Default.png in Resources */,
 				9CD39E4F1880FA1100CF97A1 /* icon@2x.png in Resources */,
+				9C39311418839F9F0080D691 /* ios7 in Resources */,
 				9CD39E4D1880FA1100CF97A1 /* icon-60@2x.png in Resources */,
 				9C4D1F3718658D8400EFE020 /* InfoPlist.strings in Resources */,
 				9CD39E681881413600CF97A1 /* LICENSE in Resources */,
 				9CD39E4E1880FA1100CF97A1 /* icon.png in Resources */,
 				9CD39E6B1881413600CF97A1 /* README.rdoc in Resources */,
+				9C39311518839F9F0080D691 /* simple in Resources */,
 				9C287D071880490800934786 /* Storyboard.storyboard in Resources */,
 				9CD39E531880FE3800CF97A1 /* Default-568h@2x.png in Resources */,
 				9CD39E57188101EB00CF97A1 /* bar@2x.png in Resources */,

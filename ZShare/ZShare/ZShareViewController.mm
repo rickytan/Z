@@ -11,6 +11,7 @@
 #import "NSString+RExtension.h"
 #import "ZTokenManager.h"
 #import <ASIHTTPRequest/ASIHTTPRequest.h>
+#import "ZAppDelegate.h"
 
 const char dkey[] = {5,0,9,7,12,4,3,10,6,8,11,2,15,1,13,14};
 const char ekey[] = {1,13,11,6,5,0,8,3,9,2,7,10,4,14,15,12};
@@ -67,10 +68,9 @@ const char ekey[] = {1,13,11,6,5,0,8,3,9,2,7,10,4,14,15,12};
     if (!self.tokenSent)
         return;
     
-    if ([[XQuquerService defaultService] sendDataToken:self.tokenSent])
-        NSLog(@"Send %@ OK", self.tokenSent);
-    else
-        NSLog(@"Send %@ Fail...", self.tokenSent);
+    if ([[XQuquerService defaultService] sendDataToken:self.tokenSent]) {
+        [((ZAppDelegate *)[UIApplication sharedApplication].delegate) startServer];
+    }
 }
 
 #pragma mark - Methods

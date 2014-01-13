@@ -45,8 +45,8 @@
 #import "ZTokenManager.h"
 #import "UIDevice+RExtension.h"
 
-#define DOCUMENTS_FOLDER [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"]
-//#define DOCUMENTS_FOLDER NSHomeDirectory()
+//#define DOCUMENTS_FOLDER [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"]
+#define DOCUMENTS_FOLDER NSTemporaryDirectory()
 
 @implementation MongooseDaemon
 
@@ -83,7 +83,10 @@ void token_callback(struct mg_connection *connection, const struct mg_request_in
 
 - (void)stopMongooseDaemon
 {
-    mg_stop(ctx);
+    if (self.ctx) {
+        mg_stop(ctx);
+        self.ctx = NULL;
+    }
 }
 
 @end

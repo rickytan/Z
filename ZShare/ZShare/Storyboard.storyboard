@@ -91,7 +91,7 @@
             <objects>
                 <tabBarController definesPresentationContext="YES" id="z6t-W9-i96" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="SeQ-lb-UsZ">
+                    <tabBar key="tabBar" contentMode="scaleToFill" itemPositioning="centered" id="SeQ-lb-UsZ">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

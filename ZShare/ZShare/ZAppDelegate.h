@@ -12,6 +12,7 @@
 @interface ZAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-@property (strong, nonatomic) MongooseDaemon *serverDaemon;
 
+- (void)startServer;
+- (void)stopServer;
 @end

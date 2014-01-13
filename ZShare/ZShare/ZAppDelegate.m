@@ -10,21 +10,35 @@
 #import "XQuquerService.h"
 #import "ZShareViewController.h"
 
+@interface ZAppDelegate ()
+@property (nonatomic, assign) BOOL serverStarted;
+@property (strong, nonatomic) MongooseDaemon *serverDaemon;
+@end
+
 @implementation ZAppDelegate
+
+- (void)startServer
+{
+    if (self.serverStarted)
+        return;
+
+    self.serverStarted = YES;
+    [self.serverDaemon startMongooseDaemon:@"7777"];
+}
+
+- (void)stopServer
+{
+    if (!self.serverStarted)
+        return;
+
+    self.serverStarted = NO;
+    [self.serverDaemon stopMongooseDaemon];
+}
 
 - (BOOL)application:(UIApplication *)application
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    NSString *indexFile = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/index.html"];
-    NSFileManager *fm = [NSFileManager defaultManager];
-    if (![fm fileExistsAtPath:indexFile]) {
-        [fm copyItemAtPath:[[NSBundle mainBundle] pathForResource:@"index"
-                                                           ofType:@"html"]
-                    toPath:indexFile
-                     error:NULL];
-    }
     self.serverDaemon = [[MongooseDaemon alloc] init];
-    [self.serverDaemon startMongooseDaemon:@"7777"];
 
     return YES;
 }
@@ -43,13 +57,17 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
   sourceApplication:(NSString *)sourceApplication
          annotation:(id)annotation
 {
-    if ([url isFileURL]) {
+    if (url.isFileURL) {
         UITabBarController *tab = (UITabBarController *)self.window.rootViewController;
         tab.selectedIndex = 0;
         ZShareViewController *share = (ZShareViewController *)(((UINavigationController *)tab.selectedViewController).childViewControllers.firstObject);
         [share sendFile:url.path];
+        return YES;
     }
-    return YES;
+    else if ([url.scheme isEqualToString:@"zshare"]) {
+        
+    }
+    return NO;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

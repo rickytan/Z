@@ -25,7 +25,7 @@
                   symbolName = "-[ZShareViewController didUploadData:withError:]"
                   moduleName = "ZShare"
                   urlString = "file:///Users/ricky/Data/Code/Z/ZShare/ZShare/ZShareViewController.mm"
-                  timestampString = "411245810.268399"
+                  timestampString = "411281363.499379"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "197"
@@ -39,7 +39,7 @@
                   symbolName = "-[ZShareViewController didUploadData:withError:]"
                   moduleName = "ZShare"
                   urlString = "file:///Users/ricky/Data/Code/Z/ZShare/ZShare/ZShareViewController.mm"
-                  timestampString = "411245810.268642"
+                  timestampString = "411281363.499633"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "197"
@@ -53,7 +53,7 @@
                   symbolName = "-[ZShareViewController didUploadData:withError:]"
                   moduleName = "ZShare"
                   urlString = "file:///Users/ricky/Data/Code/Z/ZShare/ZShare/ZShareViewController.mm"
-                  timestampString = "411245810.268818"
+                  timestampString = "411281363.499788"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "197"
@@ -61,84 +61,6 @@
                   offsetFromSymbolStart = "292">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ZShare/ZShare/ZShareViewController.mm"
-            timestampString = "411245810.260254"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
-            landmarkName = "-encodeToken:"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ZShareViewController encodeToken:]"
-                  moduleName = "ZShare"
-                  urlString = "file:///Users/ricky/Data/Code/Z/ZShare/ZShare/ZShareViewController.mm"
-                  timestampString = "411239640.666807"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "86"
-                  endingLineNumber = "86"
-                  offsetFromSymbolStart = "68">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ZShareViewController encodeToken:]"
-                  moduleName = "ZShare"
-                  urlString = "file:///Users/ricky/Data/Code/Z/ZShare/ZShare/ZShareViewController.mm"
-                  timestampString = "411239640.666956"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "86"
-                  endingLineNumber = "86"
-                  offsetFromSymbolStart = "513">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ZShare/ZShare/ZAppDelegate.m"
-            timestampString = "411244528.097332"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "-application:openURL:sourceApplication:annotation:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ZShare/MongooseDaemon/MongooseDaemon.m"
-            timestampString = "411244976.682441"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "token_callback()"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

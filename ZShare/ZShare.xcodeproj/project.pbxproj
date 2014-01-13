@@ -18,6 +18,7 @@
 		9C287D1818804AEF00934786 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C287D1718804AEF00934786 /* QuartzCore.framework */; };
 		9C39311418839F9F0080D691 /* ios7 in Resources */ = {isa = PBXBuildFile; fileRef = 9C39311218839F9F0080D691 /* ios7 */; };
 		9C39311518839F9F0080D691 /* simple in Resources */ = {isa = PBXBuildFile; fileRef = 9C39311318839F9F0080D691 /* simple */; };
+		9C3931181883ACEC0080D691 /* ZFileItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3931171883ACEC0080D691 /* ZFileItem.m */; };
 		9C4D1F2D18658D8400EFE020 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4D1F2C18658D8400EFE020 /* Foundation.framework */; };
 		9C4D1F3118658D8400EFE020 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4D1F3018658D8400EFE020 /* UIKit.framework */; };
 		9C4D1F3718658D8400EFE020 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C4D1F3518658D8400EFE020 /* InfoPlist.strings */; };
@@ -81,6 +82,8 @@
 		9C287D1718804AEF00934786 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		9C39311218839F9F0080D691 /* ios7 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ios7; sourceTree = "<group>"; };
 		9C39311318839F9F0080D691 /* simple */ = {isa = PBXFileReference; lastKnownFileType = folder; path = simple; sourceTree = "<group>"; };
+		9C3931161883ACEC0080D691 /* ZFileItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFileItem.h; sourceTree = "<group>"; };
+		9C3931171883ACEC0080D691 /* ZFileItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFileItem.m; sourceTree = "<group>"; };
 		9C4D1F2918658D8400EFE020 /* ZShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C4D1F2C18658D8400EFE020 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9C4D1F2E18658D8400EFE020 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -230,6 +233,8 @@
 				9CD39E7318814A7B00CF97A1 /* ZTokenManager.m */,
 				9CD39E871881B85900CF97A1 /* UIDevice+RExtension.h */,
 				9CD39E881881B85900CF97A1 /* UIDevice+RExtension.m */,
+				9C3931161883ACEC0080D691 /* ZFileItem.h */,
+				9C3931171883ACEC0080D691 /* ZFileItem.m */,
 			);
 			path = ZShare;
 			sourceTree = "<group>";
@@ -431,6 +436,7 @@
 				9CD39E691881413600CF97A1 /* mongoose.c in Sources */,
 				9CD39E441880776900CF97A1 /* NSString+RExtension.m in Sources */,
 				9CD39E8118814E6500CF97A1 /* FMDatabaseAdditions.m in Sources */,
+				9C3931181883ACEC0080D691 /* ZFileItem.m in Sources */,
 				9CD39E8418814E6500CF97A1 /* FMResultSet.m in Sources */,
 				9CD39E6A1881413600CF97A1 /* MongooseDaemon.m in Sources */,
 				9CD39E8218814E6500CF97A1 /* FMDatabasePool.m in Sources */,

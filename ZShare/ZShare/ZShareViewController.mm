@@ -10,6 +10,7 @@
 #import "XQuquerService.h"
 #import "NSString+RExtension.h"
 #import "ZTokenManager.h"
+#import "ZFileItem.h"
 #import <ASIHTTPRequest/ASIHTTPRequest.h>
 #import "ZAppDelegate.h"
 
@@ -18,8 +19,10 @@ const char ekey[] = {1,13,11,6,5,0,8,3,9,2,7,10,4,14,15,12};
 
 
 @interface ZShareViewController () <XQuquerDelegate>
-@property (nonatomic, retain) NSString *tokenSent;
-@property (nonatomic, retain) NSString *tokenReceived;
+@property (nonatomic, retain) NSString                * tokenSent;
+@property (nonatomic, retain) NSString                * tokenReceived;
+@property (nonatomic, retain) NSArray                 * fileItems;
+@property (nonatomic, strong) UIActivityIndicatorView * spinnerView;
 - (IBAction)onSend:(id)sender;
 @end
 
@@ -38,9 +41,14 @@ const char ekey[] = {1,13,11,6,5,0,8,3,9,2,7,10,4,14,15,12};
 {
     [super viewDidLoad];
 
+    self.spinnerView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    UIBarButtonItem *spinnerItem = [[UIBarButtonItem alloc] initWithCustomView:self.spinnerView];
+    self.navigationItem.rightBarButtonItem = spinnerItem;
+
     [[XQuquerService defaultService] setDelegate:self];
     [[XQuquerService defaultService] start];
 
+    [self loadFileItems];
 }
 
 - (void)didReceiveMemoryWarning
@@ -61,13 +69,38 @@ const char ekey[] = {1,13,11,6,5,0,8,3,9,2,7,10,4,14,15,12};
     [self.tableView reloadData];
 }
 
+- (void)loadFileItems
+{
+    [self.spinnerView startAnimating];
+    self.view.userInteractionEnabled = NO;
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSFileManager *fm = [NSFileManager defaultManager];
+        NSMutableArray *arr = [NSMutableArray array];
+        NSDirectoryEnumerator *enumer = [fm enumeratorAtPath:[NSString documentsPath]];
+        while (NSString *filePath = enumer.nextObject) {
+            if ([enumer.fileAttributes.fileType isEqualToString:NSFileTypeRegular] && ![filePath hasPrefix:@"."]) {
+                ZFileItem *item = [ZFileItem new];
+                item.fileName = filePath;
+                item.fileSize = [NSNumber numberWithUnsignedLongLong:enumer.fileAttributes.fileSize];
+                [arr addObject:item];
+            }
+        }
+        self.fileItems = [NSArray arrayWithArray:arr];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.spinnerView stopAnimating];
+            self.view.userInteractionEnabled = YES;
+            [self.tableView reloadData];
+        });
+    });
+}
+
 #pragma mark - Actions
 
 - (IBAction)onSend:(id)sender
 {
     if (!self.tokenSent)
         return;
-    
+
     if ([[XQuquerService defaultService] sendDataToken:self.tokenSent]) {
         [((ZAppDelegate *)[UIApplication sharedApplication].delegate) startServer];
     }
@@ -150,7 +183,7 @@ const char ekey[] = {1,13,11,6,5,0,8,3,9,2,7,10,4,14,15,12};
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 2;
+    return self.fileItems.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -159,10 +192,14 @@ const char ekey[] = {1,13,11,6,5,0,8,3,9,2,7,10,4,14,15,12};
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
 
     // Configure the cell...
-    if (indexPath.row == 0)
-        cell.textLabel.text = self.tokenSent;
-    else
-        cell.textLabel.text = self.tokenReceived;
+    ZFileItem *item = self.fileItems[indexPath.row];
+    cell.textLabel.text = item.fileName;
+    cell.detailTextLabel.text = item.fileSize.stringValue;
+    UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"simple/%@.png", item.fileName.pathExtension]];
+    if (!image) {
+        image = [UIImage imageNamed:@"all.png"];
+    }
+    cell.imageView.image = image;
 
     return cell;
 }

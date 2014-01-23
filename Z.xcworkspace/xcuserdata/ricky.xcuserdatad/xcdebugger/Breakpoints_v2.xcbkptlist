@@ -17,36 +17,6 @@
             endingLineNumber = "234"
             landmarkName = "-didUploadData:withError:"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ZShareViewController didUploadData:withError:]"
-                  moduleName = "ZShare"
-                  urlString = "file:///Users/ricky/Data/Code/Z/ZShare/ZShare/ZShareViewController.mm"
-                  timestampString = "411284001.046776"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "234"
-                  endingLineNumber = "234"
-                  offsetFromSymbolStart = "85">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ZShareViewController didUploadData:withError:]"
-                  moduleName = "ZShare"
-                  urlString = "file:///Users/ricky/Data/Code/Z/ZShare/ZShare/ZShareViewController.mm"
-                  timestampString = "411284001.047287"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "234"
-                  endingLineNumber = "234"
-                  offsetFromSymbolStart = "254">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

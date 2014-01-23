@@ -1,0 +1,2 @@
+#!/bin/bash
+textutil -convert html $1 -stdout | pandoc -f html -t markdown -o $2

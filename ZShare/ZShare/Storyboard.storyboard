@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--Share View Controller - Root View Controller-->
+        <!--Share View Controller - 文件列表-->
         <scene sceneID="dL1-9f-oB6">
             <objects>
                 <tableViewController id="7c9-4X-2eb" customClass="ZShareViewController" sceneMemberID="viewController">
@@ -13,6 +13,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="qbd-Ec-eqM" detailTextLabel="eCb-vx-ZPY" style="IBUITableViewCellStyleValue1" id="SMW-Ir-IJh">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
@@ -40,13 +41,13 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="1Gk-I6-ARq"/>
+                    <navigationItem key="navigationItem" title="文件列表" id="1Gk-I6-ARq"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a1X-RV-PyC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="609" y="-24"/>
         </scene>
-        <!--Table View Controller - Root View Controller-->
+        <!--Table View Controller - 设置-->
         <scene sceneID="SEr-L3-IcJ">
             <objects>
                 <tableViewController id="GvW-S4-Epu" sceneMemberID="viewController">
@@ -65,7 +66,7 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="lQJ-GM-2Cs"/>
+                    <navigationItem key="navigationItem" title="设置" id="lQJ-GM-2Cs"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lvl-Vz-svK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

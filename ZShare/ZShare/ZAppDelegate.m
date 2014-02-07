@@ -9,6 +9,7 @@
 #import "ZAppDelegate.h"
 #import "XQuquerService.h"
 #import "ZShareViewController.h"
+#import "UIColor+iOS7.h"
 
 @interface ZAppDelegate ()
 @property (nonatomic, assign) BOOL serverStarted;
@@ -35,11 +36,42 @@
     [self.serverDaemon stopMongooseDaemon];
 }
 
+- (void)setupUI
+{
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"bar.png"]
+                                       forBarMetrics:UIBarMetricsDefault];
+    NSDictionary *textAttr = @{UITextAttributeFont: [UIFont boldSystemFontOfSize:20],
+                               UITextAttributeTextColor: [UIColor blackColor],
+                               UITextAttributeTextShadowColor: [UIColor clearColor],
+                               UITextAttributeTextShadowOffset: [NSValue valueWithCGSize:CGSizeZero]};
+    [[UINavigationBar appearance] setTitleTextAttributes:textAttr];
+
+    [[UITabBar appearance] setBackgroundImage:[UIImage imageNamed:@"bar.png"]];
+
+    [[UITabBarItem appearance] setTitleTextAttributes:@{UITextAttributeTextColor: [UIColor blackColor]}
+                                             forState:UIControlStateNormal];
+    [[UITabBarItem appearance] setTitleTextAttributes:@{UITextAttributeTextColor: [UIColor iOS7DefaultBlueTint]}
+                                             forState:UIControlStateSelected];
+
+    UITabBarController *tab = (UITabBarController *)self.window.rootViewController;
+    [tab.tabBar setSelectionIndicatorImage:[[UIImage alloc] init]];
+
+    UITabBarItem *item = nil;
+
+    item = ((UIViewController *)tab.viewControllers[0]).tabBarItem;
+    [item setFinishedSelectedImage:[UIImage imageNamed:@"file-selected.png"]
+       withFinishedUnselectedImage:[UIImage imageNamed:@"file.png"]];
+
+    item = ((UIViewController *)tab.viewControllers[1]).tabBarItem;
+    [item setFinishedSelectedImage:[UIImage imageNamed:@"settings-selected.png"]
+       withFinishedUnselectedImage:[UIImage imageNamed:@"settings.png"]];
+}
+
 - (BOOL)application:(UIApplication *)application
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.serverDaemon = [[MongooseDaemon alloc] init];
-
+    [self setupUI];
     return YES;
 }
 

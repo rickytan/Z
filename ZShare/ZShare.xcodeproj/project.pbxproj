@@ -29,6 +29,9 @@
 		9C4D1F4818658D8400EFE020 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4D1F3018658D8400EFE020 /* UIKit.framework */; };
 		9C4D1F5018658D8400EFE020 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C4D1F4E18658D8400EFE020 /* InfoPlist.strings */; };
 		9C4D1F5218658D8400EFE020 /* ZShareTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4D1F5118658D8400EFE020 /* ZShareTests.m */; };
+		9C6DD4BC18A539F2005A7E1E /* UIColor+iOS7.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6DD4BB18A539F1005A7E1E /* UIColor+iOS7.m */; };
+		9C6DD4BF18A53B3E005A7E1E /* file-selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C6DD4BD18A53B3E005A7E1E /* file-selected@2x.png */; };
+		9C6DD4C018A53B3E005A7E1E /* settings-selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C6DD4BE18A53B3E005A7E1E /* settings-selected@2x.png */; };
 		9CD39E441880776900CF97A1 /* NSString+RExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD39E431880776900CF97A1 /* NSString+RExtension.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9CD39E46188079F100CF97A1 /* ASIHTTPRequest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD39E45188079F100CF97A1 /* ASIHTTPRequest.framework */; };
 		9CD39E4818807E8A00CF97A1 /* bootstrap_cheatsheet.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 9CD39E4718807E8A00CF97A1 /* bootstrap_cheatsheet.pdf */; };
@@ -97,6 +100,11 @@
 		9C4D1F4518658D8400EFE020 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		9C4D1F4D18658D8400EFE020 /* ZShareTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ZShareTests-Info.plist"; sourceTree = "<group>"; };
 		9C4D1F5118658D8400EFE020 /* ZShareTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZShareTests.m; sourceTree = "<group>"; };
+		9C6DD4B718A5311F005A7E1E /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		9C6DD4BA18A539F1005A7E1E /* UIColor+iOS7.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+iOS7.h"; sourceTree = "<group>"; };
+		9C6DD4BB18A539F1005A7E1E /* UIColor+iOS7.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+iOS7.m"; sourceTree = "<group>"; };
+		9C6DD4BD18A53B3E005A7E1E /* file-selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "file-selected@2x.png"; sourceTree = "<group>"; };
+		9C6DD4BE18A53B3E005A7E1E /* settings-selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings-selected@2x.png"; sourceTree = "<group>"; };
 		9CD39E421880776900CF97A1 /* NSString+RExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+RExtension.h"; sourceTree = "<group>"; };
 		9CD39E431880776900CF97A1 /* NSString+RExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RExtension.m"; sourceTree = "<group>"; };
 		9CD39E45188079F100CF97A1 /* ASIHTTPRequest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ASIHTTPRequest.framework; sourceTree = "<group>"; };
@@ -139,9 +147,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C287D1618804AD400934786 /* SystemConfiguration.framework in Frameworks */,
 				9CD39E8618814ECC00CF97A1 /* libsqlite3.0.dylib in Frameworks */,
 				9C287D1818804AEF00934786 /* QuartzCore.framework in Frameworks */,
-				9C287D1618804AD400934786 /* SystemConfiguration.framework in Frameworks */,
 				9C287D1418804AC900934786 /* libz.1.2.5.dylib in Frameworks */,
 				9C287D1218804ABC00934786 /* MobileCoreServices.framework in Frameworks */,
 				9CD39E46188079F100CF97A1 /* ASIHTTPRequest.framework in Frameworks */,
@@ -182,6 +190,7 @@
 				9C4D1F2B18658D8400EFE020 /* Frameworks */,
 				9CD39E611881413600CF97A1 /* MongooseDaemon */,
 				9C4D1F2A18658D8400EFE020 /* Products */,
+				9C6DD4B618A5311F005A7E1E /* Reachability */,
 				9CD39E491880FA1100CF97A1 /* Resources */,
 				9C287D02188048C900934786 /* XQuquerSDK */,
 				9C4D1F3218658D8400EFE020 /* ZShare */,
@@ -235,6 +244,8 @@
 				9CD39E881881B85900CF97A1 /* UIDevice+RExtension.m */,
 				9C3931161883ACEC0080D691 /* ZFileItem.h */,
 				9C3931171883ACEC0080D691 /* ZFileItem.m */,
+				9C6DD4BA18A539F1005A7E1E /* UIColor+iOS7.h */,
+				9C6DD4BB18A539F1005A7E1E /* UIColor+iOS7.m */,
 			);
 			path = ZShare;
 			sourceTree = "<group>";
@@ -268,6 +279,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		9C6DD4B618A5311F005A7E1E /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				9C6DD4B718A5311F005A7E1E /* Reachability.h */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
 		9CD39E491880FA1100CF97A1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -277,6 +296,8 @@
 				9CD39E6C1881426A00CF97A1 /* settings@2x.png */,
 				9CD39E6D1881426A00CF97A1 /* file@2x.png */,
 				9CD39E56188101EB00CF97A1 /* bar@2x.png */,
+				9C6DD4BD18A53B3E005A7E1E /* file-selected@2x.png */,
+				9C6DD4BE18A53B3E005A7E1E /* settings-selected@2x.png */,
 				9CD39E501880FE3800CF97A1 /* Default-568h@2x.png */,
 				9CD39E521880FE3800CF97A1 /* Default.png */,
 				9CD39E511880FE3800CF97A1 /* Default@2x.png */,
@@ -401,10 +422,12 @@
 				9CD39E551880FE3800CF97A1 /* Default.png in Resources */,
 				9CD39E4F1880FA1100CF97A1 /* icon@2x.png in Resources */,
 				9C39311418839F9F0080D691 /* ios7 in Resources */,
+				9C6DD4BF18A53B3E005A7E1E /* file-selected@2x.png in Resources */,
 				9CD39E4D1880FA1100CF97A1 /* icon-60@2x.png in Resources */,
 				9C4D1F3718658D8400EFE020 /* InfoPlist.strings in Resources */,
 				9CD39E681881413600CF97A1 /* LICENSE in Resources */,
 				9CD39E4E1880FA1100CF97A1 /* icon.png in Resources */,
+				9C6DD4C018A53B3E005A7E1E /* settings-selected@2x.png in Resources */,
 				9CD39E6B1881413600CF97A1 /* README.rdoc in Resources */,
 				9C39311518839F9F0080D691 /* simple in Resources */,
 				9C287D071880490800934786 /* Storyboard.storyboard in Resources */,
@@ -443,6 +466,7 @@
 				9CD39E8318814E6500CF97A1 /* FMDatabaseQueue.m in Sources */,
 				9C4D1F3D18658D8400EFE020 /* ZAppDelegate.m in Sources */,
 				9CD39E8018814E6500CF97A1 /* FMDatabase.m in Sources */,
+				9C6DD4BC18A539F2005A7E1E /* UIColor+iOS7.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,7 @@
 #import "ZShareViewController.h"
 #import "XQuquerService.h"
 #import "NSString+RExtension.h"
+#import "Reachability.h"
 #import "ZTokenManager.h"
 #import "ZFileItem.h"
 #import <ASIHTTPRequest/ASIHTTPRequest.h>
@@ -18,15 +19,21 @@ const char dkey[] = {5,0,9,7,12,4,3,10,6,8,11,2,15,1,13,14};
 const char ekey[] = {1,13,11,6,5,0,8,3,9,2,7,10,4,14,15,12};
 
 
-@interface ZShareViewController () <XQuquerDelegate>
+@interface ZShareViewController () <XQuquerDelegate, UIAlertViewDelegate>
 @property (nonatomic, retain) NSString                * tokenSent;
 @property (nonatomic, retain) NSString                * tokenReceived;
+@property (nonatomic, retain) NSURL                   * fileURL;
 @property (nonatomic, retain) NSArray                 * fileItems;
 @property (nonatomic, strong) UIActivityIndicatorView * spinnerView;
 - (IBAction)onSend:(id)sender;
 @end
 
 @implementation ZShareViewController
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -41,6 +48,12 @@ const char ekey[] = {1,13,11,6,5,0,8,3,9,2,7,10,4,14,15,12};
 {
     [super viewDidLoad];
 
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(onNetworkChanged:)
+                                                 name:kReachabilityChangedNotification
+                                               object:nil];
+    [[Reachability reachabilityForLocalWiFi] startNotifier];
+
     self.spinnerView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     UIBarButtonItem *spinnerItem = [[UIBarButtonItem alloc] initWithCustomView:self.spinnerView];
     self.navigationItem.rightBarButtonItem = spinnerItem;
@@ -49,6 +62,7 @@ const char ekey[] = {1,13,11,6,5,0,8,3,9,2,7,10,4,14,15,12};
     [[XQuquerService defaultService] start];
 
     [self loadFileItems];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -104,6 +118,11 @@ const char ekey[] = {1,13,11,6,5,0,8,3,9,2,7,10,4,14,15,12};
     if ([[XQuquerService defaultService] sendDataToken:self.tokenSent]) {
         [((ZAppDelegate *)[UIApplication sharedApplication].delegate) startServer];
     }
+}
+
+- (void)onNetworkChanged:(NSNotification *)notification
+{
+
 }
 
 #pragma mark - Methods
@@ -197,11 +216,30 @@ const char ekey[] = {1,13,11,6,5,0,8,3,9,2,7,10,4,14,15,12};
     cell.detailTextLabel.text = item.fileSize.stringValue;
     UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"simple/%@.png", item.fileName.pathExtension]];
     if (!image) {
-        image = [UIImage imageNamed:@"all.png"];
+        image = [UIImage imageNamed:@"simple/all.png"];
     }
     cell.imageView.image = image;
 
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView
+didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath
+                             animated:YES];
+
+    if ([Reachability reachabilityForLocalWiFi].currentReachabilityStatus != ReachableViaWiFi) {
+        [[[UIAlertView alloc] initWithTitle:@"错误"
+                                    message:@"请连接局域网 WiFi 以使用文件分享功能！"
+                                   delegate:nil
+                          cancelButtonTitle:@"好"
+                          otherButtonTitles:nil] show];
+        return;
+    }
+    ZFileItem *item = self.fileItems[indexPath.row];
+    NSString *path = [[NSString documentsPath] stringByAppendingPathComponent:item.fileName];
+    [self sendFile:path];
 }
 
 #pragma mark - XQuquer Delegate
@@ -218,7 +256,12 @@ const char ekey[] = {1,13,11,6,5,0,8,3,9,2,7,10,4,14,15,12};
     if ([ZTokenManager verifyToken:decode]) {
         NSString *host = [ZTokenManager hostForToken:decode];
         NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@:7777/t/%@", host, decode]];
-        [self downloadFile:url];
+        self.fileURL = url;
+        [[[UIAlertView alloc] initWithTitle:@"收到文件"
+                                   message:@"下载吗？"
+                                  delegate:self
+                         cancelButtonTitle:@"取消"
+                          otherButtonTitles:@"好", nil] show];
     }
 }
 
@@ -234,6 +277,15 @@ const char ekey[] = {1,13,11,6,5,0,8,3,9,2,7,10,4,14,15,12};
     NSLog(@"%@", dataToken);
     self.tokenSent = dataToken;
     [self onSend:nil];
+}
+
+#pragma mark - UIAlert Delegate
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex != alertView.cancelButtonIndex) {
+        [self downloadFile:self.fileURL];
+    }
 }
 
 @end

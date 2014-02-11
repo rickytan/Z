@@ -53,18 +53,30 @@
     [[UITabBarItem appearance] setTitleTextAttributes:@{UITextAttributeTextColor: [UIColor iOS7DefaultBlueTint]}
                                              forState:UIControlStateSelected];
 
+    BOOL isiOS7 = [UIDevice currentDevice].systemVersion.floatValue >= 7.0;
+
     UITabBarController *tab = (UITabBarController *)self.window.rootViewController;
     [tab.tabBar setSelectionIndicatorImage:[[UIImage alloc] init]];
 
     UITabBarItem *item = nil;
 
     item = ((UIViewController *)tab.viewControllers[0]).tabBarItem;
-    [item setFinishedSelectedImage:[UIImage imageNamed:@"file-selected.png"]
-       withFinishedUnselectedImage:[UIImage imageNamed:@"file.png"]];
+    if (isiOS7) {
+        item.selectedImage = [UIImage imageNamed:@"file-selected.png"];
+    }
+    else {
+        [item setFinishedSelectedImage:[UIImage imageNamed:@"file-selected.png"]
+           withFinishedUnselectedImage:[UIImage imageNamed:@"file.png"]];
+    }
 
     item = ((UIViewController *)tab.viewControllers[1]).tabBarItem;
-    [item setFinishedSelectedImage:[UIImage imageNamed:@"settings-selected.png"]
-       withFinishedUnselectedImage:[UIImage imageNamed:@"settings.png"]];
+    if (isiOS7) {
+
+    }
+    else {
+        [item setFinishedSelectedImage:[UIImage imageNamed:@"settings-selected.png"]
+           withFinishedUnselectedImage:[UIImage imageNamed:@"settings.png"]];
+    }
 }
 
 - (BOOL)application:(UIApplication *)application
@@ -97,7 +109,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
         return YES;
     }
     else if ([url.scheme isEqualToString:@"zshare"]) {
-        
+
     }
     return NO;
 }
@@ -110,7 +122,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
+    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
 

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=NO">
+		<title>使用代理服务器上网</title>
+		<style type="text/css">
+			h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #737373;
+    background-color: white;
+    margin: 10px 13px 10px 13px;
+}
+table {
+	margin: 10px 0 15px 0;
+	border-collapse: collapse;
+}
+td,th {	
+	border: 1px solid #ddd;
+	padding: 3px 10px;
+}
+th {
+	padding: 5px 10px;	
+}
+
+a {
+    color: #0069d6;
+}
+a:hover {
+    color: #0050a3;
+    text-decoration: none;
+}
+a img {
+    border: none;
+}
+p {
+    margin-bottom: 9px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #404040;
+    line-height: 36px;
+}
+h1 {
+    margin-bottom: 18px;
+    font-size: 30px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 13px;
+}
+hr {
+    margin: 0 0 19px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+}
+blockquote {
+    padding: 13px 13px 21px 15px;
+    margin-bottom: 18px;
+    font-family:georgia,serif;
+    font-style: italic;
+}
+blockquote:before {
+    content:"\201C";
+    font-size:40px;
+    margin-left:-10px;
+    font-family:georgia,serif;
+    color:#eee;
+}
+blockquote p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    margin-bottom: 0;
+    font-style: italic;
+}
+code, pre {
+    font-family: Monaco, Andale Mono, Courier New, monospace;
+}
+code {
+    background-color: #fee9cc;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 1px 3px;
+    font-size: 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    line-height: 16px;
+    font-size: 11px;
+    border: 1px solid #d9d9d9;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+pre code {
+    background-color: #fff;
+    color:#737373;
+    font-size: 11px;
+    padding: 0;
+}
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:10px auto;
+    }
+}
+@media print {
+	body,code,pre code,h1,h2,h3,h4,h5,h6 {
+		color: black;
+	}
+	table, pre {
+		page-break-inside: avoid;
+	}
+}
+			p {
+				text-indent: 2em;
+			}
+			img {
+				max-width: 90%;
+				border: 8px #fff solid;
+				border-radius: 2px;
+				box-shadow: 1px 1px 4px;
+				text-indent: 0;
+			}
+			li {
+				text-indent: 0;
+			}
+			body > h1 {
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>使用代理服务器上网</h1>
+
+<p>打开IE (Internet Explorer)，选中窗框上端的 </p>
+
+<pre><code>[工具] → [Internet选项] → [连接] → [局域网连接] → 在出现的小框中选中代理服务器 点击[高级]
+</code></pre>
+
+<p>再根据自己所申请的代理类型， 将代理服务器名如：<strong>zjupry2.zju.edu.cn</strong>以及端口号（<strong>6666</strong>）设入。 为确保校内访问的连接速度，可设置校内访问不通过代理服务器，请在[例外]栏目---“对于以下列开头的地址不使用代理服务器”中。将学校网络内的IP地址范围填入：</p>
+
+<pre><code>10.*；*.zju.edu.cn；210.32.*（注意中间用分号“；”相隔）
+</code></pre>
+
+<p>最后点击[确定]，返回前页，并继续点击 [确定] 键，完成配置。 相关的服务器名：</p>
+
+<ol>
+<li>有限代理服务（即俗称国内代理）：zjupry2.zju.edu.cn</li>
+<li>流量代理服务(面向教师,即俗称国外代理)：zjupry.zju.edu.cn</li>
+<li><p>包月代理服务：（俗称教工国际包月、学生国际包月）：zjupry5.zju.edu.cn； zjupry6.zju.edu.cn </p>
+
+<p>端口：均为6666</p></li>
+</ol>
+
+
+		<div class="related">
+			<h2>相关问题：</h2>
+			<ul>
+				<li><a href=./手机中使用zju邮箱账号.html>手机中使用zju邮箱账号</a></li>
+<li><a href=./vpn帐号如何申请.html>vpn帐号如何申请</a></li>
+<li><a href=./学校内如何上网.html>学校内如何上网</a></li>
+<li><a href=./校园卡具备的功能.html>校园卡具备的功能</a></li>
+<li><a href=./浙江大学概况.html>浙江大学概况</a></li>
+
+			</ul>
+		</div>
+	</body>
+</html>
+<!--
+Internet,cn,edu,zju,zjupry,中代,代理,代理服务,俗称,包月,服务器,校内,点击,确定,连接
+-->

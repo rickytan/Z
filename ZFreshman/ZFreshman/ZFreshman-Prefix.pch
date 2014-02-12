@@ -14,3 +14,8 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 #endif
+
+#define RGB(__r, __g, __b)      [UIColor colorWithRed:1.0*(__r)/255 \
+                                                green:1.0*(__g)/255 \
+                                                 blue:1.0*(__b)/255 \
+                                                alpha:1.0]

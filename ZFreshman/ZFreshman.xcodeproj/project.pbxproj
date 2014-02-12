@@ -24,6 +24,7 @@
 		9C6DD4CE18ABBCDD005A7E1E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C6DD4CB18ABBCDD005A7E1E /* Default-568h@2x.png */; };
 		9C6DD4CF18ABBCDD005A7E1E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C6DD4CC18ABBCDD005A7E1E /* Default.png */; };
 		9C6DD4D018ABBCDD005A7E1E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C6DD4CD18ABBCDD005A7E1E /* Default@2x.png */; };
+		9C6DD4D518ABC5D8005A7E1E /* UIColor+RExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6DD4D418ABC5D8005A7E1E /* UIColor+RExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		9C6DD4CB18ABBCDD005A7E1E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		9C6DD4CC18ABBCDD005A7E1E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		9C6DD4CD18ABBCDD005A7E1E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		9C6DD4D318ABC5D8005A7E1E /* UIColor+RExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+RExtension.h"; sourceTree = "<group>"; };
+		9C6DD4D418ABC5D8005A7E1E /* UIColor+RExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+RExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +128,8 @@
 				9C4D1FB818658E9300EFE020 /* ZAppDelegate.m */,
 				9C6DD4C818ABB7AA005A7E1E /* ZHomeViewController.h */,
 				9C6DD4C918ABB7AA005A7E1E /* ZHomeViewController.m */,
+				9C6DD4D318ABC5D8005A7E1E /* UIColor+RExtension.h */,
+				9C6DD4D418ABC5D8005A7E1E /* UIColor+RExtension.m */,
 			);
 			path = ZFreshman;
 			sourceTree = "<group>";
@@ -272,6 +277,7 @@
 			files = (
 				9C4D1FB518658E9300EFE020 /* main.m in Sources */,
 				9C4D1FB918658E9300EFE020 /* ZAppDelegate.m in Sources */,
+				9C6DD4D518ABC5D8005A7E1E /* UIColor+RExtension.m in Sources */,
 				9C6DD4CA18ABB7AA005A7E1E /* ZHomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

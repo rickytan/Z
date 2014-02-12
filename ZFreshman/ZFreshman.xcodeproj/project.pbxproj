@@ -13,17 +13,17 @@
 		9C4D1FB318658E9300EFE020 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C4D1FB118658E9300EFE020 /* InfoPlist.strings */; };
 		9C4D1FB518658E9300EFE020 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4D1FB418658E9300EFE020 /* main.m */; };
 		9C4D1FB918658E9300EFE020 /* ZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4D1FB818658E9300EFE020 /* ZAppDelegate.m */; };
-		9C4D1FBC18658E9300EFE020 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C4D1FBA18658E9300EFE020 /* Main_iPhone.storyboard */; };
-		9C4D1FBF18658E9300EFE020 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C4D1FBD18658E9300EFE020 /* Main_iPad.storyboard */; };
-		9C4D1FC218658E9300EFE020 /* ZMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4D1FC118658E9300EFE020 /* ZMasterViewController.m */; };
-		9C4D1FC518658E9300EFE020 /* ZDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4D1FC418658E9300EFE020 /* ZDetailViewController.m */; };
-		9C4D1FC718658E9300EFE020 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C4D1FC618658E9300EFE020 /* Images.xcassets */; };
 		9C4D1FCE18658E9300EFE020 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4D1FCD18658E9300EFE020 /* XCTest.framework */; };
 		9C4D1FCF18658E9300EFE020 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4D1FA818658E9300EFE020 /* Foundation.framework */; };
 		9C4D1FD018658E9300EFE020 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4D1FAC18658E9300EFE020 /* UIKit.framework */; };
 		9C4D1FD818658E9300EFE020 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C4D1FD618658E9300EFE020 /* InfoPlist.strings */; };
 		9C4D1FDA18658E9300EFE020 /* ZFreshmanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4D1FD918658E9300EFE020 /* ZFreshmanTests.m */; };
 		9C6DD4C518AA6BAA005A7E1E /* HTML in Resources */ = {isa = PBXBuildFile; fileRef = 9C6DD4C418AA6BAA005A7E1E /* HTML */; };
+		9C6DD4C718ABB5C1005A7E1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C6DD4C618ABB5C1005A7E1E /* Main.storyboard */; };
+		9C6DD4CA18ABB7AA005A7E1E /* ZHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6DD4C918ABB7AA005A7E1E /* ZHomeViewController.m */; };
+		9C6DD4CE18ABBCDD005A7E1E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C6DD4CB18ABBCDD005A7E1E /* Default-568h@2x.png */; };
+		9C6DD4CF18ABBCDD005A7E1E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C6DD4CC18ABBCDD005A7E1E /* Default.png */; };
+		9C6DD4D018ABBCDD005A7E1E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C6DD4CD18ABBCDD005A7E1E /* Default@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,19 +47,18 @@
 		9C4D1FB618658E9300EFE020 /* ZFreshman-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZFreshman-Prefix.pch"; sourceTree = "<group>"; };
 		9C4D1FB718658E9300EFE020 /* ZAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZAppDelegate.h; sourceTree = "<group>"; };
 		9C4D1FB818658E9300EFE020 /* ZAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZAppDelegate.m; sourceTree = "<group>"; };
-		9C4D1FBB18658E9300EFE020 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		9C4D1FBE18658E9300EFE020 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		9C4D1FC018658E9300EFE020 /* ZMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMasterViewController.h; sourceTree = "<group>"; };
-		9C4D1FC118658E9300EFE020 /* ZMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMasterViewController.m; sourceTree = "<group>"; };
-		9C4D1FC318658E9300EFE020 /* ZDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDetailViewController.h; sourceTree = "<group>"; };
-		9C4D1FC418658E9300EFE020 /* ZDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDetailViewController.m; sourceTree = "<group>"; };
-		9C4D1FC618658E9300EFE020 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9C4D1FCC18658E9300EFE020 /* ZFreshmanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZFreshmanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C4D1FCD18658E9300EFE020 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		9C4D1FD518658E9300EFE020 /* ZFreshmanTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ZFreshmanTests-Info.plist"; sourceTree = "<group>"; };
 		9C4D1FD718658E9300EFE020 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9C4D1FD918658E9300EFE020 /* ZFreshmanTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFreshmanTests.m; sourceTree = "<group>"; };
 		9C6DD4C418AA6BAA005A7E1E /* HTML */ = {isa = PBXFileReference; lastKnownFileType = folder; path = HTML; sourceTree = SOURCE_ROOT; };
+		9C6DD4C618ABB5C1005A7E1E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		9C6DD4C818ABB7AA005A7E1E /* ZHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHomeViewController.h; sourceTree = "<group>"; };
+		9C6DD4C918ABB7AA005A7E1E /* ZHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHomeViewController.m; sourceTree = "<group>"; };
+		9C6DD4CB18ABBCDD005A7E1E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		9C6DD4CC18ABBCDD005A7E1E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		9C6DD4CD18ABBCDD005A7E1E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,16 +119,12 @@
 		9C4D1FAE18658E9300EFE020 /* ZFreshman */ = {
 			isa = PBXGroup;
 			children = (
+				9C6DD4C618ABB5C1005A7E1E /* Main.storyboard */,
+				9C4D1FAF18658E9300EFE020 /* Supporting Files */,
 				9C4D1FB718658E9300EFE020 /* ZAppDelegate.h */,
 				9C4D1FB818658E9300EFE020 /* ZAppDelegate.m */,
-				9C4D1FBA18658E9300EFE020 /* Main_iPhone.storyboard */,
-				9C4D1FBD18658E9300EFE020 /* Main_iPad.storyboard */,
-				9C4D1FC018658E9300EFE020 /* ZMasterViewController.h */,
-				9C4D1FC118658E9300EFE020 /* ZMasterViewController.m */,
-				9C4D1FC318658E9300EFE020 /* ZDetailViewController.h */,
-				9C4D1FC418658E9300EFE020 /* ZDetailViewController.m */,
-				9C4D1FC618658E9300EFE020 /* Images.xcassets */,
-				9C4D1FAF18658E9300EFE020 /* Supporting Files */,
+				9C6DD4C818ABB7AA005A7E1E /* ZHomeViewController.h */,
+				9C6DD4C918ABB7AA005A7E1E /* ZHomeViewController.m */,
 			);
 			path = ZFreshman;
 			sourceTree = "<group>";
@@ -166,6 +161,9 @@
 		9C6DD4C118AA6B56005A7E1E /* Resouces */ = {
 			isa = PBXGroup;
 			children = (
+				9C6DD4CB18ABBCDD005A7E1E /* Default-568h@2x.png */,
+				9C6DD4CC18ABBCDD005A7E1E /* Default.png */,
+				9C6DD4CD18ABBCDD005A7E1E /* Default@2x.png */,
 				9C6DD4C418AA6BAA005A7E1E /* HTML */,
 			);
 			path = Resouces;
@@ -248,11 +246,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C4D1FBF18658E9300EFE020 /* Main_iPad.storyboard in Resources */,
-				9C4D1FC718658E9300EFE020 /* Images.xcassets in Resources */,
-				9C4D1FBC18658E9300EFE020 /* Main_iPhone.storyboard in Resources */,
+				9C6DD4D018ABBCDD005A7E1E /* Default@2x.png in Resources */,
+				9C6DD4C718ABB5C1005A7E1E /* Main.storyboard in Resources */,
+				9C6DD4CE18ABBCDD005A7E1E /* Default-568h@2x.png in Resources */,
 				9C4D1FB318658E9300EFE020 /* InfoPlist.strings in Resources */,
 				9C6DD4C518AA6BAA005A7E1E /* HTML in Resources */,
+				9C6DD4CF18ABBCDD005A7E1E /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,8 +272,7 @@
 			files = (
 				9C4D1FB518658E9300EFE020 /* main.m in Sources */,
 				9C4D1FB918658E9300EFE020 /* ZAppDelegate.m in Sources */,
-				9C4D1FC518658E9300EFE020 /* ZDetailViewController.m in Sources */,
-				9C4D1FC218658E9300EFE020 /* ZMasterViewController.m in Sources */,
+				9C6DD4CA18ABB7AA005A7E1E /* ZHomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,22 +301,6 @@
 				9C4D1FB218658E9300EFE020 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		9C4D1FBA18658E9300EFE020 /* Main_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9C4D1FBB18658E9300EFE020 /* Base */,
-			);
-			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		9C4D1FBD18658E9300EFE020 /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9C4D1FBE18658E9300EFE020 /* Base */,
-			);
-			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		9C4D1FD618658E9300EFE020 /* InfoPlist.strings */ = {
@@ -409,12 +391,11 @@
 		9C4D1FDE18658E9300EFE020 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZFreshman/ZFreshman-Prefix.pch";
 				INFOPLIST_FILE = "ZFreshman/ZFreshman-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -422,12 +403,11 @@
 		9C4D1FDF18658E9300EFE020 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZFreshman/ZFreshman-Prefix.pch";
 				INFOPLIST_FILE = "ZFreshman/ZFreshman-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

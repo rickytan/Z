@@ -9,7 +9,6 @@
 #import "ZHomeViewController.h"
 #import "UIColor+RExtension.h"
 
-static NSString *cellColors[] = {@"#866fd7", @"#3cc", @"#086ca2", @"#ffd200", @"#00a779", @"#c561d3", @"#274e70", @"#ff7373"};
 static NSString *cellTitles[] = {@"专业简介", @"新生宝典", @"校园地图", @"社团组织"};
 
 @interface ZHomeItemCell : UICollectionViewCell
@@ -75,8 +74,7 @@ static NSString *cellTitles[] = {@"专业简介", @"新生宝典", @"校园地�
 {
     ZHomeItemCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ItemCell"
                                                                            forIndexPath:indexPath];
-    NSInteger count = sizeof(cellColors) / sizeof(NSString *);
-    cell.backgroundColor = [UIColor colorWithHexString:cellColors[indexPath.row % count]];
+    cell.backgroundColor = [UIColor colorForIndex:indexPath.row];
     cell.textLabel.text = cellTitles[indexPath.row];
     return cell;
 }
@@ -86,6 +84,17 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     [collectionView deselectItemAtIndexPath:indexPath
                                    animated:YES];
+    switch (indexPath.row) {
+        case 0:
+
+            break;
+        case 3:
+            [self performSegueWithIdentifier:@"League"
+                                      sender:self];
+            break;
+        default:
+            break;
+    }
 
 }
 

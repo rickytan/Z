@@ -8,6 +8,8 @@
 
 #import "UIColor+RExtension.h"
 
+static NSString *cellColors[] = {@"#866fd7", @"#3cc", @"#086ca2", @"#ffd200", @"#00a779", @"#c561d3", @"#274e70", @"#ff7373"};
+
 @implementation UIColor (RExtension)
 
 + (instancetype)colorWithHexString:(NSString *)colorString
@@ -38,6 +40,12 @@
                            green:1.0 * ((value >> 8) & 0xff) / 255
                             blue:1.0 * ((value >> 0) & 0xff) / 255
                            alpha:1.0];
+}
+
++ (instancetype)colorForIndex:(NSInteger)index
+{
+    NSInteger count = sizeof(cellColors) / sizeof(NSString *);
+    return [UIColor colorWithHexString:cellColors[index % count]];
 }
 
 @end

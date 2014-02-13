@@ -73,7 +73,7 @@
                             <rect key="frame" x="80" y="0.0" width="160" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="fresh.png" translatesAutoresizingMaskIntoConstraints="NO" id="Tc8-fP-U0h">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fresh.png" translatesAutoresizingMaskIntoConstraints="NO" id="Tc8-fP-U0h">
                                     <rect key="frame" x="20" y="0.0" width="118" height="43"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </imageView>
@@ -81,27 +81,28 @@
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="centerX" secondItem="Tc8-fP-U0h" secondAttribute="centerX" constant="1" id="4dS-KY-nLt"/>
+                                <constraint firstAttribute="centerY" secondItem="Tc8-fP-U0h" secondAttribute="centerY" constant="0.5" id="y0Q-Cj-9IS"/>
                             </constraints>
                         </view>
                     </navigationItem>
                     <connections>
-                        <segue destination="UEn-vx-PFI" kind="push" id="SSw-B9-MxP"/>
+                        <segue destination="UEn-vx-PFI" kind="push" identifier="League" id="SSw-B9-MxP"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Vw-3y-e9A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1196" y="203"/>
         </scene>
-        <!--Table View Controller-->
+        <!--League View Controller - 社团组织-->
         <scene sceneID="yai-YW-yrj">
             <objects>
-                <tableViewController id="UEn-vx-PFI" sceneMemberID="viewController">
+                <tableViewController id="UEn-vx-PFI" customClass="ZLeagueViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="84" sectionHeaderHeight="22" sectionFooterHeight="22" id="fd9-QA-B63">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="4iG-s4-ie0" imageView="NXq-3q-BXq" rowHeight="84" style="IBUITableViewCellStyleDefault" id="Kkx-eF-SPg" customClass="ZImageListCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="4iG-s4-ie0" imageView="NXq-3q-BXq" rowHeight="84" style="IBUITableViewCellStyleDefault" id="Kkx-eF-SPg" customClass="ZImageListCell">
                                 <rect key="frame" x="0.0" y="22" width="320" height="84"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Kkx-eF-SPg" id="GBt-pM-5D9">
@@ -128,7 +129,7 @@
                             <outlet property="delegate" destination="UEn-vx-PFI" id="edD-mq-oeJ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Wns-Q3-Slj"/>
+                    <navigationItem key="navigationItem" title="社团组织" id="Wns-Q3-Slj"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qHf-4d-Ii9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

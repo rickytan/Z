@@ -7,9 +7,10 @@
 //
 
 #import "ZLeagueViewController.h"
+#import "UIColor+RExtension.h"
 
 @interface ZLeagueViewController ()
-
+@property (nonatomic, strong) NSArray *leagues;
 @end
 
 @implementation ZLeagueViewController
@@ -27,6 +28,8 @@
 {
     [super viewDidLoad];
 
+    self.leagues = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"League"
+                                                                                    ofType:@"plist"]];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -44,24 +47,36 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return self.leagues.count;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+- (NSInteger)tableView:(UITableView *)tableView
+ numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return ((NSArray *)self.leagues[section][@"leagues"]).count;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UILabel *label = [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"Header"];
+    if (!label) {
+        label = [[UILabel alloc] init];
+        label.font = [UIFont boldSystemFontOfSize:18];
+        label.textColor = [UIColor whiteColor];
+    }
+    label.backgroundColor = [UIColor colorForIndex:section];
+    label.text = self.leagues[section][@"category"];
+    return label;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier
+                                                            forIndexPath:indexPath];
     
     // Configure the cell...
+    cell.textLabel.text = self.leagues[indexPath.section][@"leagues"][indexPath.row][@"name"];
     
     return cell;
 }

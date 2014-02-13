@@ -10,4 +10,5 @@
 
 @interface UIColor (RExtension)
 + (instancetype)colorWithHexString:(NSString *)colorString; // #ffbc90 or #ffc
++ (instancetype)colorForIndex:(NSInteger)index;
 @end

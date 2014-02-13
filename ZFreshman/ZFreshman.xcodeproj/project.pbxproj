@@ -132,6 +132,7 @@
 		9C6DD5AC18ACBC0D005A7E1E /* 97.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C6DD54818ACBC0D005A7E1E /* 97.png */; };
 		9C6DD5AD18ACBC0D005A7E1E /* 98.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C6DD54918ACBC0D005A7E1E /* 98.png */; };
 		9C6DD5AE18ACBC0D005A7E1E /* 99.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C6DD54A18ACBC0D005A7E1E /* 99.png */; };
+		9C6DD5B118ACC14D005A7E1E /* ZLeagueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6DD5B018ACC14D005A7E1E /* ZLeagueViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -278,6 +279,10 @@
 		9C6DD54818ACBC0D005A7E1E /* 97.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 97.png; sourceTree = "<group>"; };
 		9C6DD54918ACBC0D005A7E1E /* 98.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 98.png; sourceTree = "<group>"; };
 		9C6DD54A18ACBC0D005A7E1E /* 99.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 99.png; sourceTree = "<group>"; };
+		9C6DD5AF18ACC14D005A7E1E /* ZLeagueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLeagueViewController.h; sourceTree = "<group>"; };
+		9C6DD5B018ACC14D005A7E1E /* ZLeagueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLeagueViewController.m; sourceTree = "<group>"; };
+		9C6DD5B218ACC3D8005A7E1E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		9C6DD5B318ACC3D8005A7E1E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -350,6 +355,8 @@
 				9C6DD4D918AC5F61005A7E1E /* ZShiningImageView.m */,
 				9C6DD4E118ACA52C005A7E1E /* ZImageListCell.h */,
 				9C6DD4E218ACA52C005A7E1E /* ZImageListCell.m */,
+				9C6DD5AF18ACC14D005A7E1E /* ZLeagueViewController.h */,
+				9C6DD5B018ACC14D005A7E1E /* ZLeagueViewController.m */,
 			);
 			path = ZFreshman;
 			sourceTree = "<group>";
@@ -567,6 +574,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 9C4D1F9C18658E9300EFE020;
 			productRefGroup = 9C4D1FA618658E9300EFE020 /* Products */;
@@ -713,6 +721,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C6DD5B118ACC14D005A7E1E /* ZLeagueViewController.m in Sources */,
 				9C4D1FB518658E9300EFE020 /* main.m in Sources */,
 				9C4D1FB918658E9300EFE020 /* ZAppDelegate.m in Sources */,
 				9C6DD4DA18AC5F61005A7E1E /* ZShiningImageView.m in Sources */,
@@ -745,6 +754,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				9C4D1FB218658E9300EFE020 /* en */,
+				9C6DD5B218ACC3D8005A7E1E /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -753,6 +763,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				9C4D1FD718658E9300EFE020 /* en */,
+				9C6DD5B318ACC3D8005A7E1E /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";

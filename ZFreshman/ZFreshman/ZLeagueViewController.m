@@ -30,6 +30,7 @@
 
     self.leagues = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"League"
                                                                                     ofType:@"plist"]];
+
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -68,6 +69,7 @@
     label.text = self.leagues[section][@"category"];
     return label;
 }
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath

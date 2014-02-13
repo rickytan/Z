@@ -31,7 +31,7 @@
 - (void)layoutSubviews
 {
     [super layoutSubviews];
-    self.imageView.frame = CGRectMake(10, 10, 64, self.bounds.size.height - 20);
+    self.imageView.frame = CGRectMake(10, 10, 84, self.bounds.size.height - 20);
     CGRect rect = self.textLabel.frame;
     rect.origin.x = CGRectGetMaxX(self.imageView.frame) + 8;
     self.textLabel.frame = rect;

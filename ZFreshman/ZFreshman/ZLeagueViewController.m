@@ -69,7 +69,8 @@
     return label;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier
@@ -77,6 +78,7 @@
     
     // Configure the cell...
     cell.textLabel.text = self.leagues[indexPath.section][@"leagues"][indexPath.row][@"name"];
+    cell.imageView.image = [UIImage imageNamed:self.leagues[indexPath.section][@"leagues"][indexPath.row][@"logo"]];
     
     return cell;
 }

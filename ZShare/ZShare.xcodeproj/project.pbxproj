@@ -290,20 +290,20 @@
 		9CD39E491880FA1100CF97A1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				9C39311218839F9F0080D691 /* ios7 */,
-				9C39311318839F9F0080D691 /* simple */,
-				9CD39E701881459200CF97A1 /* index.html */,
-				9CD39E6C1881426A00CF97A1 /* settings@2x.png */,
-				9CD39E6D1881426A00CF97A1 /* file@2x.png */,
 				9CD39E56188101EB00CF97A1 /* bar@2x.png */,
-				9C6DD4BD18A53B3E005A7E1E /* file-selected@2x.png */,
-				9C6DD4BE18A53B3E005A7E1E /* settings-selected@2x.png */,
 				9CD39E501880FE3800CF97A1 /* Default-568h@2x.png */,
 				9CD39E521880FE3800CF97A1 /* Default.png */,
 				9CD39E511880FE3800CF97A1 /* Default@2x.png */,
+				9C6DD4BD18A53B3E005A7E1E /* file-selected@2x.png */,
+				9CD39E6D1881426A00CF97A1 /* file@2x.png */,
 				9CD39E4A1880FA1100CF97A1 /* icon-60@2x.png */,
 				9CD39E4B1880FA1100CF97A1 /* icon.png */,
 				9CD39E4C1880FA1100CF97A1 /* icon@2x.png */,
+				9CD39E701881459200CF97A1 /* index.html */,
+				9C39311218839F9F0080D691 /* ios7 */,
+				9C6DD4BE18A53B3E005A7E1E /* settings-selected@2x.png */,
+				9CD39E6C1881426A00CF97A1 /* settings@2x.png */,
+				9C39311318839F9F0080D691 /* simple */,
 			);
 			path = Resources;
 			sourceTree = "<group>";

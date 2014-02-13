@@ -7,13 +7,41 @@
 //
 
 #import "ZAppDelegate.h"
+#import "UIColor+RExtension.h"
 
 @implementation ZAppDelegate
+
+- (void)setupUI
+{
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"bar.png"]
+                                       forBarMetrics:UIBarMetricsDefault];
+    NSDictionary *textAttr = @{UITextAttributeFont: [UIFont boldSystemFontOfSize:20],
+                               UITextAttributeTextColor: [UIColor blackColor],
+                               UITextAttributeTextShadowColor: [UIColor clearColor],
+                               UITextAttributeTextShadowOffset: [NSValue valueWithCGSize:CGSizeZero]};
+    [[UINavigationBar appearance] setTitleTextAttributes:textAttr];
+
+    if (!IS_IOS_7) {
+        [[UINavigationBar appearance] setTintColor:[UIColor colorWithWhite:1.0
+                                                                     alpha:1.0]];
+        [[UIBarButtonItem appearance] setBackButtonBackgroundImage:[UIImage imageNamed:@"UI7NavigationBarBackButton.png"]
+                                                          forState:UIControlStateNormal
+                                                        barMetrics:UIBarMetricsDefault];
+        [[UIBarButtonItem appearance] setTitleTextAttributes:@{UITextAttributeTextColor: [UIColor blackColor],
+                                                               UITextAttributeFont: [UIFont systemFontOfSize:16],
+                                                               UITextAttributeTextShadowOffset: [NSValue valueWithCGSize:CGSizeZero]}
+                                                    forState:UIControlStateNormal];
+        [[UIBarButtonItem appearance] setTitleTextAttributes:@{UITextAttributeTextColor: [UIColor blackColor],
+                                                               UITextAttributeFont: [UIFont systemFontOfSize:16],
+                                                               UITextAttributeTextShadowOffset: [NSValue valueWithCGSize:CGSizeZero]}
+                                                    forState:UIControlStateHighlighted];
+    }
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-
+    [self setupUI];
     return YES;
 }
 							

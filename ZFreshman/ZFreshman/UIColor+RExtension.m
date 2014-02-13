@@ -48,4 +48,12 @@ static NSString *cellColors[] = {@"#866fd7", @"#3cc", @"#086ca2", @"#ffd200", @"
     return [UIColor colorWithHexString:cellColors[index % count]];
 }
 
++ (UIColor *)iOS7DefaultBlueTint
+{
+    return [UIColor colorWithRed:80.0/255
+                           green:136.0/255
+                            blue:253.0/255
+                           alpha:1.0];
+}
+
 @end

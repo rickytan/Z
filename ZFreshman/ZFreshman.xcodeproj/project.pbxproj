@@ -133,6 +133,9 @@
 		9C6DD67918ACCF4E005A7E1E /* 97@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C6DD61518ACCF4E005A7E1E /* 97@2x.png */; };
 		9C6DD67A18ACCF4E005A7E1E /* 98@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C6DD61618ACCF4E005A7E1E /* 98@2x.png */; };
 		9C6DD67B18ACCF4E005A7E1E /* 99@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C6DD61718ACCF4E005A7E1E /* 99@2x.png */; };
+		9C6DD67D18AD0DD2005A7E1E /* 100@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C6DD67C18AD0DD2005A7E1E /* 100@2x.png */; };
+		9C6DD67F18AD0EE4005A7E1E /* bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C6DD67E18AD0EE4005A7E1E /* bar@2x.png */; };
+		9C6DD68118AD0FA5005A7E1E /* UI7NavigationBarBackButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C6DD68018AD0FA5005A7E1E /* UI7NavigationBarBackButton@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -283,6 +286,9 @@
 		9C6DD61518ACCF4E005A7E1E /* 97@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "97@2x.png"; sourceTree = "<group>"; };
 		9C6DD61618ACCF4E005A7E1E /* 98@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "98@2x.png"; sourceTree = "<group>"; };
 		9C6DD61718ACCF4E005A7E1E /* 99@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "99@2x.png"; sourceTree = "<group>"; };
+		9C6DD67C18AD0DD2005A7E1E /* 100@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "100@2x.png"; sourceTree = "<group>"; };
+		9C6DD67E18AD0EE4005A7E1E /* bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bar@2x.png"; sourceTree = "<group>"; };
+		9C6DD68018AD0FA5005A7E1E /* UI7NavigationBarBackButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UI7NavigationBarBackButton@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -393,16 +399,18 @@
 		9C6DD4C118AA6B56005A7E1E /* Resouces */ = {
 			isa = PBXGroup;
 			children = (
-				9C6DD4E618ACBC0D005A7E1E /* League */,
-				9C6DD4DB18AC9487005A7E1E /* Icon-120@2x.png */,
-				9C6DD4DC18AC9487005A7E1E /* Icon.png */,
-				9C6DD4DD18AC9487005A7E1E /* Icon@2x.png */,
-				9C6DD4D618AC5D8D005A7E1E /* fresh@2x.png */,
+				9C6DD67E18AD0EE4005A7E1E /* bar@2x.png */,
 				9C6DD4CB18ABBCDD005A7E1E /* Default-568h@2x.png */,
 				9C6DD4CC18ABBCDD005A7E1E /* Default.png */,
 				9C6DD4CD18ABBCDD005A7E1E /* Default@2x.png */,
+				9C6DD4D618AC5D8D005A7E1E /* fresh@2x.png */,
 				9C6DD4C418AA6BAA005A7E1E /* HTML */,
+				9C6DD4DB18AC9487005A7E1E /* Icon-120@2x.png */,
+				9C6DD4DC18AC9487005A7E1E /* Icon.png */,
+				9C6DD4DD18AC9487005A7E1E /* Icon@2x.png */,
+				9C6DD4E618ACBC0D005A7E1E /* League */,
 				9C6DD4E418ACA622005A7E1E /* League.plist */,
+				9C6DD68018AD0FA5005A7E1E /* UI7NavigationBarBackButton@2x.png */,
 			);
 			path = Resouces;
 			sourceTree = "<group>";
@@ -510,6 +518,7 @@
 				9C6DD61518ACCF4E005A7E1E /* 97@2x.png */,
 				9C6DD61618ACCF4E005A7E1E /* 98@2x.png */,
 				9C6DD61718ACCF4E005A7E1E /* 99@2x.png */,
+				9C6DD67C18AD0DD2005A7E1E /* 100@2x.png */,
 			);
 			path = League;
 			sourceTree = "<group>";
@@ -600,6 +609,7 @@
 				9C6DD64918ACCF4E005A7E1E /* 49@2x.png in Resources */,
 				9C6DD66318ACCF4E005A7E1E /* 75@2x.png in Resources */,
 				9C6DD63818ACCF4E005A7E1E /* 32@2x.png in Resources */,
+				9C6DD67D18AD0DD2005A7E1E /* 100@2x.png in Resources */,
 				9C6DD61918ACCF4E005A7E1E /* 1@2x.png in Resources */,
 				9C6DD66718ACCF4E005A7E1E /* 79@2x.png in Resources */,
 				9C6DD64318ACCF4E005A7E1E /* 43@2x.png in Resources */,
@@ -619,6 +629,7 @@
 				9C6DD64C18ACCF4E005A7E1E /* 52@2x.png in Resources */,
 				9C6DD64718ACCF4E005A7E1E /* 47@2x.png in Resources */,
 				9C6DD67118ACCF4E005A7E1E /* 89@2x.png in Resources */,
+				9C6DD67F18AD0EE4005A7E1E /* bar@2x.png in Resources */,
 				9C6DD62718ACCF4E005A7E1E /* 15@2x.png in Resources */,
 				9C6DD66918ACCF4E005A7E1E /* 81@2x.png in Resources */,
 				9C6DD4D018ABBCDD005A7E1E /* Default@2x.png in Resources */,
@@ -681,6 +692,7 @@
 				9C6DD65718ACCF4E005A7E1E /* 63@2x.png in Resources */,
 				9C6DD62B18ACCF4E005A7E1E /* 19@2x.png in Resources */,
 				9C6DD63118ACCF4E005A7E1E /* 25@2x.png in Resources */,
+				9C6DD68118AD0FA5005A7E1E /* UI7NavigationBarBackButton@2x.png in Resources */,
 				9C6DD66D18ACCF4E005A7E1E /* 85@2x.png in Resources */,
 				9C6DD64518ACCF4E005A7E1E /* 45@2x.png in Resources */,
 				9C6DD61B18ACCF4E005A7E1E /* 3@2x.png in Resources */,

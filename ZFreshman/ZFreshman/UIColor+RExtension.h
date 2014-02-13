@@ -11,4 +11,5 @@
 @interface UIColor (RExtension)
 + (instancetype)colorWithHexString:(NSString *)colorString; // #ffbc90 or #ffc
 + (instancetype)colorForIndex:(NSInteger)index;
++ (UIColor *)iOS7DefaultBlueTint;
 @end

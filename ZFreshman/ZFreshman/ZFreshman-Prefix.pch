@@ -15,6 +15,9 @@
     #import <Foundation/Foundation.h>
 #endif
 
+#define IS_IOS_5 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 5.0f)
+#define IS_IOS_6 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 6.0f)
+#define IS_IOS_7 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0f)
 #define RGB(__r, __g, __b)      [UIColor colorWithRed:1.0*(__r)/255 \
                                                 green:1.0*(__g)/255 \
                                                  blue:1.0*(__b)/255 \

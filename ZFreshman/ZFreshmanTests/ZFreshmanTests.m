@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "UIColor+RExtension.h"
 
 @interface ZFreshmanTests : XCTestCase
 
@@ -28,7 +29,7 @@
 
 - (void)testExample
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    UIColor *c = [UIColor colorWithHexString:@"#fff"];
 }
 
 @end

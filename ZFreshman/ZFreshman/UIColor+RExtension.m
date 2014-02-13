@@ -33,7 +33,7 @@
     }
 
     unsigned int value = 0;
-    sscanf(colorValue, "%x", &value);
+    sscanf(colorValue+1, "%x", &value);
     return [UIColor colorWithRed:1.0 * (value >> 16) / 255
                            green:1.0 * ((value >> 8) & 0xff) / 255
                             blue:1.0 * ((value >> 0) & 0xff) / 255

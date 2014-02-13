@@ -10,7 +10,8 @@
 
 @implementation ZImageListCell
 
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+- (id)initWithStyle:(UITableViewCellStyle)style
+    reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
@@ -19,11 +20,21 @@
     return self;
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated
+- (void)setSelected:(BOOL)selected
+           animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    self.imageView.frame = CGRectMake(10, 10, 64, self.bounds.size.height - 20);
+    CGRect rect = self.textLabel.frame;
+    rect.origin.x = CGRectGetMaxX(self.imageView.frame) + 8;
+    self.textLabel.frame = rect;
 }
 
 @end

@@ -17,6 +17,19 @@ static NSString *cellTitles[] = {@"专业简介", @"新生宝典", @"校园地�
 @end
 
 @implementation ZHomeItemCell
+
+- (void)didMoveToSuperview
+{
+    CABasicAnimation *anim = [CABasicAnimation animationWithKeyPath:@"transform.scale.x"];
+    anim.toValue = [NSNumber numberWithFloat:1.2];
+    anim.duration = 0.2;
+    anim.repeatCount = 2.0;
+    anim.autoreverses = YES;
+    anim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    [self.layer addAnimation:anim
+                      forKey:@"Boom"];
+}
+
 @end
 
 @interface ZHomeViewController ()

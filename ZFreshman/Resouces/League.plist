@@ -1,5 +1,1420 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict/>
+<array>
+	<dict>
+		<key>category</key>
+		<string>实践公益类</string>
+		<key>leagues</key>
+		<array>
+			<dict>
+				<key>description</key>
+				<string>    浙江大学学生就业与职业发展协会（Student Employment and Career Development Association of Zhejiang University）成立于2003年10月16日。属全国高校中成立的第二家职业发展协会，是服务于学生、服务于企事业单位、服务于社会的学生组织；成立以来得到校方领导和各有关部门的大力支持，成立伊始前任潘云鹤就亲自为协会的名称题字，校就业指导与服务中心、校团委对我们的各项活动都给予了指导和帮助。</string>
+				<key>instructor</key>
+				<string>朱连忠</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生就业与职业发展协会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>浙江大学学生爱心社，英文全称Caring Heart Club of Zhejiang University （shorter form: ZJU CHC），是致力于关注社会弱势群体，组织校内外爱心人士投身各类公益慈善活动的浙大学生公益实践社团。</string>
+				<key>instructor</key>
+				<string>方慰</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生爱心社</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>浙江大学学生绿之源协会是 1999 年成立的校级社团,是实践公益类五星级社团,受浙 江大学团委、环境与资源学院团委指导。协会拥有以本科生为主,包括硕士生、博士生在内 的 500 余名会员,遍及浙江大学各个校区。协会自成立以来,以“亲近自然,践行环保”为 宗旨,以宣传生态环境保护、提高师生生态环保意识、呼唤更广大的社会公众参与环境保护 为目的,开展了大量的环保活动,在校园以及社会上不断掀起绿色环保之风。 协会同时为浙江省青年志愿者协会绿色环保分会的核心会员单位,浙江省自然博物馆共 建单位。在过去的 13 年里,协会同中国环境文化促进会、中国地区性青年环境组织以及全 国各省各地环保 NGO 有着广泛的联系,开展了众多活动。阮俊华(浙江省青年志愿者协会绿 色环保分会秘书长、第七届“地球奖”获得者)、潘宏耕(著名爱鸟老人、第五届“地球奖” 获得者)、楼仁功(浙江大学学工部副部长)</string>
+				<key>instructor</key>
+				<string>指导老师：卞伟</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生绿之源协会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string> 浙江大学广播电视记者协会由浙江大学党委宣传部新闻办指导，是校内重要的媒体传播途径。旨在促进校内新闻爱好者，尤其是浙江大学广播电视台新闻工作者的交流和团结，培养其良好的新闻素质，并在新闻宣传实践中建设高尚文明，积极卓越的新闻队伍，实现组织整体运作的科学化，人性化；促进浙江大学的新闻传播，为浙江大学的文化事业贡献力量。
+口号：声音因你而动听，视界有你更精彩
+
+ 
+</string>
+				<key>instructor</key>
+				<string>韩天高</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生广播电视记者协会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>         红心之启,在浙之滨。
+         你或许不知道这个全国最早成立的高校红十字组织已历经五十余年的风霜雨雪,也不一定知道她所承载的诸如五星级社团、十佳社团、全国红十字模范校等荣誉,但你一定知道这是一个宣扬“人道、博爱、奉献”的集体,一个满载着爱、燃心为香的地方。</string>
+				<key>instructor</key>
+				<string>陈德凤</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学红十字会学生分会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>浙江大学学生国防协会
+浙江大学学生国防协会成立于1986年，至今已走过了二十多个春秋。在这二十多年里，一代又一代的国防人积极响应“求是”校训的号召，本着“倡导‘精英国防’理念；凝聚精英国防人才；拓展国防精神教育途径；普及国防知识,号召广大求是学子关注国防,参与国防,为共建强大现代国防而努力奋斗”的协会宗旨，在浙江大学这片肥沃的土地上勤恳地耕耘着，为广大会员组织开展了许多丰富多彩的活动，诸如国防主题征文大赛，军事影片赏析，国防军事图片巡回展览，举办各类军事讲座，军营之旅，国防知识大型竞赛，尤其是我们国防协会主办的浙江大学“精英国防”军事论坛系列活动更是引起了校内外的极大反响。在“精英国防”的旗帜下正不断吸引着精英人才加入我们，为我们取得更大的成绩打下了坚实的基础。协会曾多次被评为十佳三星级社团，多次受到过校内外和军内外领导的称赞和表扬。在学校领导,指导老师的无限关心和全体社团成员的共同努力工作和无私付出下，国防协会继续发展壮大。 关注国防、服务国防是我们每一个中国人义不容辞的法律责任，而这也是我们社团工作的出发点。近年，在协会曾连续两年获得“校十佳”的背景下，社团的所有成员再接再厉，紧紧围绕“精英国防”的理念，从同学兴趣和利益出发，开展了丰富多彩的各项活动，广泛宣传了国防理念，并受到了广泛好评。 我们明白，无论是当初国防协会的诞生和发展，还是现在国防协会的壮大，我们都始终处在不断探索之中。而一切新的探索都包含了新的艰辛与曲折。但我们的理想是坚定的，我们的顽强拼搏换来了巨大的收获，积累了许多新的宝贵的经验。除此之外，我们要特别感谢校党委、校团委与社团联合会、校人武部、校就业指导与服务中心，南京军区驻浙江大学后备军官选拔培训工作办公室的大力支持，感谢我国防协会陈昆福，李凤旺，祝向群，金海燕四位指导老师的关怀和指导，同样也感谢协会全体成员的积极参与。正是有了这些，才让我们在探索中始终向前，才造就了国防协会今天轰轰烈烈的局面。 </string>
+				<key>instructor</key>
+				<string>陈昆福</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生国防协会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string></string>
+				<key>instructor</key>
+				<string></string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生未来企业家俱乐部</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string></string>
+				<key>instructor</key>
+				<string></string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生心系西部协会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string></string>
+				<key>instructor</key>
+				<string></string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生DATA调查团</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>       浙江大学学生KAB创业俱乐部（成立于2008.02）是在共青团中央、全国青联、中国青少年社会教育基金会支持下成立的，在由团中央国际联络部以及校就业指导中心等单位组成的指导委员会的指导下开展工作的学生社团组织。俱乐部致力于培养学生的创业精神和创业能力，提高学生的职业规划能力和就业能力，帮助学生在实践中认识创业活动，并促进创业大学生的交流和合作。
+
+
+浙大KAB已经走过了5个春秋，每一年都在稳健而快速地成长着。我们不断完善我们的“创业之声”系列活动，“成长心连心”体验式训练活动，创业沙龙分享交流活动等，在此基础上我们也在积极开拓服务于创业，服务于浙大人的新项目，正值青春，我们向前迈进着。
+ 
+ 
+
+
+
+
+ 
+ </string>
+				<key>instructor</key>
+				<string>潘宇</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生KAB创业俱乐部</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>浙江大学学生成长互助训练营(Group Counseling Camp，GCC)是由本科生、研究生及博士生组成的跨学科、跨专业的综合性校级实践性社团，隶属于浙江大学就业指导与服务中心，其日常工作受其指导和监督。
+以向社团内外成员提供团体辅导、开办职业规划类讲座、举行心理咨询沙龙等一系列公益性活动为主要任务，使参与者在真诚、理解、支持性的的氛围中得以解决自己的困惑，并更好地认识自我、悦纳自我，以更积极的姿态面向未来。</string>
+				<key>instructor</key>
+				<string>林芝</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生成长互助训练营</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>浙江大学学生发展联络协会 (Students Development and Liaison Association)秉承“凝聚求是力量”的工作宗旨，积极开展各类优质活动，服务广大校友与在校同学。
+协会协助浙江大学发展联络办公室(发展委员会、校友总会、教育基金会)开展各项事务，接待国内外校友和社会人士的来访、交流，配合发展联络办公室策划、组织国内外校友和社会各界人士的交流、访问、研讨及拓展办学资源等各项活动。
+同时，协会积极为在校学生与广大校友搭建交流的桥梁，宣扬求是文化，加强求是认同。协会将通过各类优质活动的举办，为广大会员提供广阔的能力提升平台，共同发展，一起进步。</string>
+				<key>instructor</key>
+				<string>包永平</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生发展联络协会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string> 
+E志者协会是浙江大学电气学院团委指导下成立的校级学生社团，协会前身是成立于1984年的电气学院电器维修小组，这是一个有着光荣传统和光辉历史的青年志愿者服务小分队，多年来一直活跃在学校和社区服务的舞台上。为适应新时期学校教育体制改革和管理模式的创新，在电气学院团委的大力支持和推动下，终于于2008年9月正式成为校级学生社团。
+ </string>
+				<key>instructor</key>
+				<string>指导老师：潘伟   陈隆道</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生E志者协会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string> z浙江大学学生节能减排协会（SAEC）是由浙江大学后勤管理处、浙江大学节能减排实践基地等部门共同指导的之家全校性社团。协会以“节能减排”为创社宗旨，以“宣传绿色环保、时间节能低碳”为理念，积极开展涉及环保和节能的活动，旨在为大家创建一个“节能减排”为主旨的交流合作平台，为创建节约型校园建设贡献一份力量！</string>
+				<key>instructor</key>
+				<string>屈利娟</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生节能减排协会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string> </string>
+				<key>instructor</key>
+				<string>于洋老师</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生思源会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>    浙江大学学生创业精英俱乐部（SEC）是由杭州市政府、浙江大学校团委共同领导, 浙江大学管理学院具体指导，以知名学者与成功企业家为顾问的学生社团。汇聚了浙江大学校内优秀的创新创业人才；是建立浙江大学操作性最强的创新创业人才培养基地；是搭建服务学生创新创业校内最高端的长期有效平台。举办各种创业实训项目，为广大学生提供与创业相关的理论知识培训，实践环节的应用使得实训项目理论与实践完美结合，丰富了项目的内容。在多次活动与各项事务中相互配合协调，取得了很好的成绩。</string>
+				<key>instructor</key>
+				<string>蔡荃</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生创业精英俱乐部</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string></string>
+				<key>instructor</key>
+				<string></string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生法律硕士协会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string></string>
+				<key>instructor</key>
+				<string></string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生enactus学生圈</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>        斯坦福大学中美学生论坛 (FACES - Forum for American/Chinese Exchange at Stanford)是美国斯坦福大学最有影响力的国际性非营利的学生组织论坛，在浙江大学，北京大学，人民大学，复旦大学设有四家分会。论坛致力于促进中美现今和未来的领导者之间的平等对话以及基层外交活动，旨在加强中美两国之间的文化交流理解，为活跃于中美关系领域的出色学生学者代表搭建交流互动的平台。
+</string>
+				<key>instructor</key>
+				<string></string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生斯坦福中美学生论坛——浙大分会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>浙江大学学生对外交流协会(Students Association for Overseas Exchange)成立于2005年12月3日，旨在为浙大学子建立一个分享对外交流信息的平台。协会致力于通过讲座、经验交流会、对外交流信息的搜集整编和各种形式的活动达到交流普及和交流成果辐射的目的，并针对学生对外交流的情况进行调查研究，努力寻找学生对外交流中的重要问题，让更多的同学分享对外交流成果，为浙大学子开辟另一种参与交流，拓展国际视野的途径。同时，协会在同学和校方之间搭起一座桥梁，方便交流申请者获取申请流程及交流准备的信息。协会希望能够推动我校学生与国际知名高校学生间的交流，加速浙江大学国际化进程，加快创造世界一流大学的步伐，推进大学教育国际化，提高我校大学生的综合素质，加强我校本科学生的国际交流，培养具有国际视野和国际竞争力的高素质人才，以达到“传承求是精神，开拓国际视野”的目的。</string>
+				<key>instructor</key>
+				<string></string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生对外交流协会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>浙江大学学生雏鹰志愿服务协会协会，是由志愿从事社会公益事业和其他相关志愿者服务的浙江大学在校本科生和研究生自发组成的服务性、非营利性的校级社团组织。它的指导单位为浙江大学信息与电子工程学系（信电系）。每个学期社团的面向全校招收一定数量综合素质良好的志愿者从事与组织志愿者服务活动。</string>
+				<key>instructor</key>
+				<string>孙毅</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生雏鹰志愿服务协会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>浙江大学优秀学生发展联谊会（Outstanding Student Developing Association，OSDA），成立于2010年4月，由浙江大学党委学工部指导。下设项目管理中心、人力资源中心、宣传推广中心、公共关系中心四大部门。联谊会旨在通过一系列内部交流活动，为优秀学生提供一个更广阔的学习交流平台，促进他们的全面发展；通过组织大赛、讲座、经验交流会、趣味活动等，促进优秀学生和全校学生之间的交流,提升同学们的综合素质。
+</string>
+				<key>instructor</key>
+				<string>张存如</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生优秀学生发展联谊会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>    浙江大学学生创智先锋社(Genius Pioneer Association)是浙江大学高品质教育体系下的智慧聚集之所，本着“求是、传承”的精神，是专门致力于学生人生价值引导提升的公益性社团。
+    目前创智先锋社承办了浙江大学最大的活动——回访母校，除此之外还有青智论坛、校园Openday、、求是·印迹以及表白策划大赛等一系列极具特色的活动，未来我们还将秉承“大学人生起航第一站”的原则做出更多惠及广大浙大师生的活动。
+    携手创智先锋，启迪人生之路，成就无限未来！
+ </string>
+				<key>instructor</key>
+				<string>招生办：金茹老师</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生创智先锋社</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string> 浙江大学学生保健协会（Health Promotion Association of Zhejiang University，简称HPA）是在浙江大学校团委直接领导下、浙江大学学生社团联合会指导监督下独立开展工作和活动的实践公益性社团。社团以医学院为指导单位，聘请陈超老师担任社团指导老师，开展各类健康科普、公益实践活动。
+社团理念：健康、公益、责任
+社团宗旨：宣传健康理念，普及健康知识，促进身心健康
+社团目标：构筑健康生活，远离疾病困扰，服务浙大学子
+
+社团特色：年轻朝气、主题与内容轻松生活化、活动丰富、活动方向与主题独一无二
+
+活动方向：疾病防治，保健养生，与健康同行</string>
+				<key>instructor</key>
+				<string>陈超</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生保健协会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string></string>
+				<key>instructor</key>
+				<string></string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生文化中国学生成才俱乐部</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>    浙江大学彩虹团队（下简称“彩虹”）是一个成立于2007年的组织，它致力于唤起青年对梦想的热情，并通过身体力行的方式鼓励青年勇敢追求自己的梦想。彩虹团队的成员自称RTers（阿提尔斯），因其队服以黑色为底色，故又称“黑衣人”。破冰、素拓是彩虹对外的主干项目，但是我们做的绝不仅于此。相比于其他社团五彩缤纷的对外活动，我们更加关注自身的成长。</string>
+				<key>instructor</key>
+				<string>冯萍</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生彩虹团队</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string></string>
+				<key>instructor</key>
+				<string></string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生网络创业精英俱乐部</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string></string>
+				<key>instructor</key>
+				<string></string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生企业俱乐部联合会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string></string>
+				<key>instructor</key>
+				<string></string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生紫领人才俱乐部</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>  
+
+
+  浙江大学营养学会成立于2010年4月24日，至今已成功举办过三届“健康工程”论坛。学会邀请Mark L Wahlqvist教授（国际营养科学联盟前主席）、John R Lupien 教授(联合国粮农组织食品营养部前部长)和李铎教授（国际著名营养学家，浙江大学教授）作为学会指导老师，学会秉承“熏陶学术，分享营养”为目标，致力于服务学生生活，推动对食品营养、人类健康的科学研究，帮助有志于从事科研、热爱科研的同学进一步激发学术热情，提供国内外一流专家交流的平台为宗旨的学生学会。</string>
+				<key>instructor</key>
+				<string>李铎 教授</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生营养学会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string></string>
+				<key>instructor</key>
+				<string>张颖</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生农业创新与创业俱乐部</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string> 浙江大學來自香港、澳門及台灣地區之同學，本愛校愛鄉之信念，為團結港澳臺地區同學，促進德、智、體、群、美之發展，宣我校精神，揚我校名聲，增加我校學生對港澳臺地區之認識，為港澳臺學生謀求福利之增進，增強與校方之溝通，因此成立港澳臺學生交流協會.</string>
+				<key>instructor</key>
+				<string>楼策英(照片） 孙菲菲</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学港澳台学生交流协会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string></string>
+				<key>instructor</key>
+				<string>车淼洁</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生海洋协会</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>category</key>
+		<string>体育运动类</string>
+		<key>leagues</key>
+		<array>
+			<dict>
+				<key>description</key>
+				<string>   浙大棒垒球协会创立于2002年11月11日，与此同时，也自发成立了浙江省第一支高校棒球队——浙大棒球队。浙大棒垒球社自成立之初就以提高学生身体素质，推广棒垒求运动在浙大乃至浙江省的发展为宗旨；在经历了一段时间的发展之后，在华东地区各高校棒垒球运动中已经有了一定的影响力，同时在大量热爱棒垒球运动的在杭人士的帮助下，较好地做到了棒垒球运动的推广工作。
+</string>
+				<key>instructor</key>
+				<string>陈烽</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生棒垒球社</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>    浙江大学学生杨式太极拳协会成立于2004年，至今已经度过了九个年头。九年来，协会坚持以传承中华中华文化为已任，积极开展传统文化与传统武艺的学习、研究以及对外交流活动。在近九年的发展中，杨式太极拳协会形成了自己独特的理念的作风成为浙大富有魅力和特色的社团之一。
+ 
+</string>
+				<key>instructor</key>
+				<string>朱莉</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生杨式太极拳协会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string> </string>
+				<key>instructor</key>
+				<string>王大庆</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生跆拳道协会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string> 我们奔奥运动俱乐部成立于08年北京奥运会之时，本着奥运的精神，于繁忙的学习生活中锻炼我们的身体。我们社团的活动是多样的，现在主要是以越野跑等户外运动为主，包括马拉松的承办，校园吉尼斯,运动达人会的举行等。在平时的时间里，我们发动我们社团的会员，在每周五下午4点在指导老师的带领下在田径场进行体育锻炼......
+</string>
+				<key>instructor</key>
+				<string>陈南生</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生奔奥lohas运动俱乐部</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string></string>
+				<key>instructor</key>
+				<string>精武协会指导老师</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生精武协会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string></string>
+				<key>instructor</key>
+				<string></string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生游泳协会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string> 浙江大学轮滑协会成立于2004年，是集校内轮滑平花以及速滑爱好者于一体的综合性兴趣类及体育类社团。</string>
+				<key>instructor</key>
+				<string></string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生轮滑协会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>篮联组织机构包括:会长，副会长，办公室，活动部，外联部和裁判部。各部门人员齐备，已经正常运转，在多次活动与各项事务中相互配合协调，取得了一定成绩。</string>
+				<key>instructor</key>
+				<string>金慧娟</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生篮球联盟</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>     太极拳是中华民族辩证的理论思维与武术、艺术、引导术的完美结合，是内外兼修的拳术，是高层次的人体文化，它动作柔和、风度潇洒，不受年龄的限制，也不受体质强弱的限制；练习太极拳可以提高全身各系统、器官的机能，增强体质，达到有病治病、健身防病的作用。
+   浙江大学学生太极拳协会于2009年正式成立。本社团以“弘扬中华武术，品位民族传统体育文化”为宗旨，为丰富学生业余生活，提高学生自身素质，定期开展系列太极拳文化活动的团体组织。以团体协作、互帮互助、共同学习的交流，提升学生的自我修养。</string>
+				<key>instructor</key>
+				<string>吴剑</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生太极拳协会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>浙江大学毽球协会成立于2002年，致力于推广毽球运动在浙江大学的普及，旨在活跃、繁荣校园文化，提高同学的身体素质。社团本身性质为体育活动型，行政机构简单，但是机动性和适应力比较强，是一个具有潜力的社团。目前，在浙江大学毽球协会的影响下，我校参加这项运动的同学越来越多，已经形成一定的规模。迄今为止已经举办过六届毽球大赛，每届比赛都吸引了上百人参加，取得了良好的效果。</string>
+				<key>instructor</key>
+				<string>余保玲</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生毽球协会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string> 浙江大学羽毛球协会建立于2001年，是由羽毛球爱好者发起的，旨在为浙江大学的所有羽毛球爱好者服务的兴趣类团体。至今浙大羽协已经走过1 1年风风雨雨，本社以办小而精的社团为宗旨，力求为爱好羽毛球的同学提供好的打球、健身、交友和比赛的平台。
+</string>
+				<key>instructor</key>
+				<string>陈坚坚</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生羽毛球协会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string></string>
+				<key>instructor</key>
+				<string>董育平</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生鹰的部落排球社</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string></string>
+				<key>instructor</key>
+				<string>社团指导老师——朱晓龙老师简介</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生健美操协会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string> 
+ 浙江大学学生空手道协会成立于2001年3月，在这风风雨雨的十年中凭借着大家的信念和努力，发展至今，一贯秉承”谦让不争，知退守柔，果而勿矜，果而勿强，常德不离，唯道是从”的道场训，习武强身，淬炼意志。我们的信念始终如一：力所能及的为每个会员考虑，那么每个会员都会更爱这个家。
+</string>
+				<key>instructor</key>
+				<string>吴剑</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生空手道协会</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>category</key>
+		<string>文化艺术类</string>
+		<key>leagues</key>
+		<array>
+			<dict>
+				<key>description</key>
+				<string> 
+ 浙江大学黑白剧社，即浙江大学文琴艺术总团戏剧社，原是这所百年学府1937年抗战之前的学生文艺社团，当时称为黑白文艺社，是享誉全国的优秀学生自主组织。黑白剧社是校园业余文艺团体，以培养校园戏剧人才，提供戏剧表演天地，丰富校园文化，提高戏剧欣赏品味，营造良好校园戏剧氛围为努力目标。更多详情可点击：http://www.baidu.com/baidu?word=黑白剧社 
+</string>
+				<key>instructor</key>
+				<string>黑白剧社指导老师简介</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生黑白剧社</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string></string>
+				<key>instructor</key>
+				<string></string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学紫金港学生艺术团</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string> 浙江大学学生戏曲协会最早成立于1992年，其前身是华家池戏苑和阳光戏曲社（西溪），1998年合并为浙江大学学生戏曲协会，是本着“弘扬民族文化，丰富校园生活”为宗旨的三星级兴趣爱好类学生社团。戏曲协会在十几年的发展过程中，在学校（团委、文委、社联会党工委等等）、社会各界力量的帮助下，如今已经成为拥有会员百余人，有系统严密的行政组织，独立的财务机构，并设有独立演出团体（阳光演出团）的一个体制完备并具有一定影响力的学生社团。﻿</string>
+				<key>instructor</key>
+				<string>徐超炯</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生戏曲协会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>凉凉秋季！青春舞动！
+紫金港的同学们
+快来跳舞吧
+幻想着
+搭着舞伴的肩翩翩起舞
+浙大舞会舞池你摆动的舞裙
+优雅，是你摆裙的瞬间
+沉醉，在她转瞬的眼眸
+这一切，将不是梦！
+
+</string>
+				<key>instructor</key>
+				<string>徐晓峰</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生交谊舞协会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>浙江大学体育舞蹈协会是由浙大学子自发组织成立的学生群众组织，协会秉着“Energetic、Elegant、Excellent”的“3E”精神，贯彻“努力营造良好的舞蹈氛围，让广大舞友充分享受舞蹈所带来的乐趣”的宗旨，为广大同学提供学习舞蹈的机会、秀出自己的机会、扩大交友的机会。</string>
+				<key>instructor</key>
+				<string>郭彪</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生体育舞蹈协会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string></string>
+				<key>instructor</key>
+				<string></string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生古琴研究会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>婉云京剧艺术社是2006年由浙大名誉教授、香港著名实业家李和声先生及其夫人李尤婉云女士捐资成立的，迄今已有7年。
+其由浙江大学校文艺委员会指导，浙江大学李李和声经济与文化研究中心主管，是以浙大在校学生和教职工为服务对象的校级学生社团组织。
+ 
+其宗旨在于推广、普及京剧文化，吸引、挖掘京剧爱好者和京剧人才，为广大京剧爱好者提供一个欣赏、学习、实践、交流的平台，并代表浙江 大学参加对外京剧交流活动。</string>
+				<key>instructor</key>
+				<string>叶盛华</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生婉云京剧艺术社</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>
+
+我们叫击悦  Joythm
+我们是最快乐的社团
+
+我们是全国第一家大学生非洲鼓社团
+我们是中国大学生非洲鼓推广的先行者</string>
+				<key>instructor</key>
+				<string>指导老师：蔡荃</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生“击悦”非洲鼓社</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string></string>
+				<key>instructor</key>
+				<string>陈强（笔名 江弱水）</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生《紫金港》星空文学社</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string></string>
+				<key>instructor</key>
+				<string></string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生书画社</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string> 浙江大学红楼海棠成立于2006年12月1日，是浙江大学唯一以传播和推广红楼文化为宗旨的学生社团，曾多次举办“红学讲坛”、“海棠小讲”、“红楼梦中人征文”、“中秋诗社”、“红楼古典知识竞赛”等与《红楼梦》相关的大型活动，数次被《浙江大学报》、求是潮、cc98、文化素质网等多家媒体争先报道。全社拥有本科生和研究生会员总计200余人，囊括紫金港、西溪、玉泉、华家池等四大校区，具有多次举办大型活动的经验和能力。浙江大学红楼海棠社的指导单位是浙江大学人文学院。浙江大学红楼海棠社的指导教师是浙江大学人文学院教授、中国古代文学与文化研究所副所长孙敏强老师。</string>
+				<key>instructor</key>
+				<string>孙敏强</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生红楼海棠社</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>子鼠诗社是浙江大学唯一一家双语诗社，扬弃中华传统文化，融合他国优秀文化成果，运用社员们及组织的能动，做到宣传国内外诗词文化、学习他人优秀诗歌，了解世界的文学衍变。子鼠诗社秉承弘扬诗歌文化的宗旨，积极服务广大学生，让大家开拓视野，丰富知识，塑造高尚情操，崇尚自由精神，为成为国际型综合人才做基础。</string>
+				<key>instructor</key>
+				<string>陈艳华</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生子鼠诗社</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>    自由七音全称为自由七音艺术协会，成立于2008年6月，是浙江大学里一群热爱音乐、怀抱音乐梦想的人共同成立的社团。本社团宗旨是在浙大推广音乐，打造一个属于我们的音乐舞台，将校内热爱音乐的同学聚集起来一起创作音乐，分享音乐，在提供音乐学习与交流展示平台的同时，鼓励支持乐队和原创，致力于引领浙大人自己的音乐潮流,成为校园音乐人的聚集地。</string>
+				<key>instructor</key>
+				<string>谭芸</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生自由七音协会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>    这里是国学爱好者的聚集地，这里是希望了解国学的人和希望传播国学的人的平台。博雅国学社致力于让热爱国学的浙大学子从国学中获得更多的力量。以中国优秀的传统学说和思想来指导我们的生活和人生方向，让他们能在国学中寻到心灵的休息和安宁。博雅国学社作为浙江大学国学方面的唯一社团，肩负着向广大学子和社会推广和传播国学的责任。我们会努力让优秀的国学为更多人所知，将国学给予我们的精神财富传递给更多人。
+</string>
+				<key>instructor</key>
+				<string>江宁宁</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生博雅国学社</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>浙江大学学生晨钟诗社成立于2010年5月，其前身是成立于1982年的杭州大学晨钟诗社，迄今已有31年的辉煌历史。本社以发扬中华文化为宗旨，创作、鉴赏诗词。并经常组织会员参加各种诗词交流活动，如每年农历三月初三定期举行的三月三诗会。希望为浙江大学学生的诗词爱好者，提供更为广阔的交流平台，让诗词走进校园，走进学生的生活。</string>
+				<key>instructor</key>
+				<string>胡可先</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生晨钟诗社</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>     社团前身是《浙江大学报》学生记者团，在校报编辑部的指导下，由爱好新闻写作、渴望锻炼新闻技能的同学们组成的记者团队。一直以来，校报学生记者团承担了《浙江大学报》三版的“大学时代”和四版的“求是苑”的大部分写作任务，是校园文化的舆论标杆，是校报的主力军之一。</string>
+				<key>instructor</key>
+				<string>党委宣传部副部长彭凤仪老师</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生新闻社</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string></string>
+				<key>instructor</key>
+				<string></string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生校史研究会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>What Is DFM      
+    什么是DFM呢,很简单,D代表dance, FM代表family, DFM=Dance  FaMily. 这是我们的宗旨,我们的文化,也是我们的全部!!! 所以我们的名字DFM,  就代表我们的一切, we are dance family 。
+
+         D.F.M的含义：Dance FaMily！/Dance For More/ Dance For Miracle!
+
+
+    浙江大学DFM街舞社(以下简称DFM)于2010年春正式成立, 由浙大爱艺者协 会改名而来, 并集合学校所有街舞队而组成的(前身爱艺者协会,成立于1992 年)。DFM一直开拓创新,经历了很多的尝试,始终秉承着“让舞蹈丰富你的大学 生活,充实你的人生”的活动理念,始终围绕着 "happy dance,we are dance family"的舞社口号。</string>
+				<key>instructor</key>
+				<string>张川霞</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生D.F.M街舞社</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>  社团简介
+社团类型：兴趣爱好类     社团星级：三星级
+ 一、社团管理
+协会机构包含：会长、副会长2名、财务负责人、培训部、人资外联部、宣传部。各部门人员齐备，已经正常运转，在多次活动与各项事务中相互配合协调，取得了一定成绩...
+</string>
+				<key>instructor</key>
+				<string>李黎</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生吉他协会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>浙大文联，成立于1997年，是浙江大学唯一的文学性学生社团，是浙江省规模和影响最大的文学社团，多年来，文学社一直坚守纯文学“高峰”，同时兼容并蓄，弘扬传统，探索先锋。我们的口号是“将文学进行到底”。当文学不再是时代和社会的宠儿，我们所瞩目的文学已不复是一种愉娱，而成为一种坚卓的求索，并真正需要我们肩负着它一步一步走过荒漠，承受风沙与荆棘，只有在花开的绿洲，我们才有休憩的心情和权利，更坚定我们向前的步伐。</string>
+				<key>instructor</key>
+				<string>楼艳</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生文学联合会</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>category</key>
+		<string>兴趣爱好类</string>
+		<key>leagues</key>
+		<array>
+			<dict>
+				<key>description</key>
+				<string>    浙江大学学生无极棋社，前身是成立于2002年的浙江大学学生联众棋牌社，2005年更名为无极棋社至今，是浙江大学唯一的棋牌类社团，现有累计近千名社员。无极棋社在各类社团评比中取得许多荣誉，各个棋队几年来代表浙大参加各项赛事为学校争得了许多荣誉。
+</string>
+				<key>instructor</key>
+				<string>杨永明</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生无极棋社</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>    浙江大学梵音剧社成立于2003年11月，是浙江大学学生自发组建并不断发展成熟起来的一个校园业余戏剧团体，曾多次被评为浙江大学十佳学生社团。梵音二字源于佛教，意即清净中的声音。以“红”为代表色的梵音剧社，正是在这一片清净的校园天地中发出了属于学生戏剧爱好者自己的独特声音。
+    梵音剧社的首要目标是丰富校园文化，培养校园戏剧人才，为校内广大戏剧艺术爱好者提供学习、交流和实践的空间。自处女作《金锁记》上演以来，短短8年间剧社已排练演出了大中型话剧、先锋艺术话剧和校园实验短剧30余出，各种演出40多场，迅速成长为浙江大学活跃度最高的学生组织之一。一届又一届社员在观摩名家表演、进行形体和发声训练到学习戏剧知识、独立编导剧目、打理后台、设计舞美的过程中，逐渐从初步戏剧艺术爱好者成长为多方面发展的业余戏剧人才，同时为广大同学带来了艺术的享受，获得了广泛的认可。</string>
+				<key>instructor</key>
+				<string>李五一</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生梵音剧社</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string></string>
+				<key>instructor</key>
+				<string></string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生无我茶社</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string></string>
+				<key>instructor</key>
+				<string></string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生乒乓球协会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string></string>
+				<key>instructor</key>
+				<string>严力蛟</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生旅游协会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string> 浙江大学Fantasy学生动漫社前身是浙江大学华家池校区学生动漫社，成立于2001年4月11日，是浙江大学唯一的三星级全校性动漫爱好者社团。
+我们的目标是打造浙大最有影响力的动漫爱好者交流平台，培养动漫爱好者的相关技能。对内设有原创部、DRAMA部和COS部三个部门，对外开放大量全校性活动。
+</string>
+				<key>instructor</key>
+				<string>欧阳润清</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生Fantasy动漫社</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>　浙江大学春秋社隶属于浙江大学人文学院历史系，创办于1997年。其拥有深厚的文化底蕴，旨在培养学生历史文化素养、发扬爱校精神、浓厚浙大人文氛围。 　　春秋社现有设有社长一人，编辑部、活动部、宣传部三个部门。</string>
+				<key>instructor</key>
+				<string>陶磊</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生春秋社</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string> 魔术魔方协会是一个充满活力的协会。</string>
+				<key>instructor</key>
+				<string></string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生魔术魔方协会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string></string>
+				<key>instructor</key>
+				<string></string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生CC98网络协会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>成立时间：2009年4月
+
+宗旨：
+1、普及滑板运动，丰富校园文化
+2、为滑板爱好者提供交流平台
+3、提高滑板爱好者的技术与身体素质
+4、培养浙大人坚韧意志与勇敢面对挫折的精神
+ 
+
+</string>
+				<key>instructor</key>
+				<string>傅建东</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生Old School Skateboard滑板社</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string></string>
+				<key>instructor</key>
+				<string>张剑波</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生天文爱好者协会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string></string>
+				<key>instructor</key>
+				<string></string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生DV联盟</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>桥牌是用英文Bridge（桥）的名字来称呼扑克牌的玩法，来源于英国莱斯特郡的一座古老的桥梁。</string>
+				<key>instructor</key>
+				<string>林洁</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生桥牌协会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>　　浙江大学美食社，专注美食30年。社团活动均围绕“美食”二字展开，是吃货们的理想聚集场所，会定期举办一些关于吃的活动，敬请期待。</string>
+				<key>instructor</key>
+				<string>郭雪艳</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生美食社</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string></string>
+				<key>instructor</key>
+				<string></string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生科幻协会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>【弁言】方寸世界展寰宇风情，浙江大学学生集邮协会自成立以来，一直致力于弘扬中华集邮文化，树立良好的邮风、邮德，为丰富会员的课余文化生活而努力。协会曾多次举办邮展、邮票交流、集邮知识讲座等活动，为增进全校师生对邮品的认识而不断努力！
+【关于集邮】邮票，蕴涵着浓厚的文化气息，反映了时代的变迁，社会的发展，从图案内容、意义和审美、到设计、历史背景、印刷过程等方面，无不体现着人类智慧的结晶。集邮活动也就此应运而生。作为获取知识的一种有效形式，结交朋友的一个重要途径，集邮在方寸小纸之间展示着博大精深的世界，映射了五彩斑斓的人生。
+如果你爱邮票，如果你爱收藏，如果你想留住永恒，如果你想感受集邮文化，体会集邮乐趣，那么……
+请不要犹豫，成为我们的一员吧！（更多资料请点击“查看全文”）-</string>
+				<key>instructor</key>
+				<string>来雄翔</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生集邮协会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>浙江大学学生澜天社是一个旨在促进读书交流的社团。社团的宗旨是“读古今奇书，交天下朋友”。</string>
+				<key>instructor</key>
+				<string>鲁平</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生澜天社</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>  我们的浙江大学学生影视动画学社宗旨就是为爱好影视动画的同学们提供一个学习、表现并提高自我和相互交流的一个平台。让同学们在感受光影对视觉的冲击与旋律对听觉的震撼中收获知识，交流沟通，分享心得。从中体会到现代的影视中的人生真谛，人文风情，自然百科，历史变迁，是同学们对影视有更深刻的了解。</string>
+				<key>instructor</key>
+				<string>王婧</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生影视动画学社</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string> 六艺书协是紫金港校区一个集书法、绘画、文学艺术于一体的学术性社团，始创于2003年。社团创始人之初衷，是希望通过本社团之协力，为各位爱好古典文学及艺术的同学提供一个相互交流与沟通之平台，继承发扬我国源远流长辉煌灿烂之传统文化，营造校园内浓厚的文化氛围及人文环境。经过几届全体六艺同仁的努力，在过去的几年中，社团组织开展了如文化沙龙、影评书评、踏青采风、名师讲座等系列活动，受到了会员及广大非会员的欢迎。
+ </string>
+				<key>instructor</key>
+				<string></string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生六艺书协</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>浙江大学学生足球协会（Students' Football Association of Zhejiang University），简称“浙大学生足协”（ZJUSFA）
+以促进足球运动在浙大校园内的普及与发展为宗旨，通过主办、承办或协办一系列以足球为主题的活动（三好杯、CC98杯、新生联赛等），为我校广大足球爱好者提供学习与交流的平台，为中国基层足球文化建设贡献一份力量。</string>
+				<key>instructor</key>
+				<string>柳志鹏</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生足球协会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string></string>
+				<key>instructor</key>
+				<string></string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生清韵钢琴社</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>category</key>
+		<string>学术科技类</string>
+		<key>leagues</key>
+		<array>
+			<dict>
+				<key>description</key>
+				<string></string>
+				<key>instructor</key>
+				<string></string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生研究生求是学社</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>    浙江大学中国特色社会主义理论体系研究会（CSRA）是在浙江大学党委、团委、研工部和学工部共同指导下的学生社团。社团以“关注社会、研究社会、引领社会”为社团发展理念，以培养浙大学子的“社会素养、世界眼光和战略思维”为己任，以“政治建设、时政分析、民生经济、社会管理”为活动主题的浙江大学“四星级社团”。</string>
+				<key>instructor</key>
+				<string>任立娣</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生中国特色社会主义理论体系研究会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string> 浙江大学学生模拟联合国协会（Zhejiang University Model United Nations Association）成立于2007年，是由浙江大学外国语言文化与国际交流学院支持创办，外事处及外国语学院下属的学生社团，现有核心成员40余人。协会以弘扬模联文化，传承联合国精神为宗旨，开展一系列模拟联合国活动。协会的精品活动泛长三角地区模拟联合国大会（PYDMUN）已成为国内知名的模联会议，每年吸引到300余名来自全球各地的模联爱好者相聚西子湖畔，共议全球局势。2013年4月浙江大学学生模拟联合国协会获评为浙江大学示范性社团。
+</string>
+				<key>instructor</key>
+				<string>沈晓华</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生模拟联合国协会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>浙江大学学生经济学会（Student Economic Association Of Zhejiang University），简称学生经济学会（SEA），自1985年成立至今已走过20多年的风风雨雨，应该来说是浙大历史最悠久的社团之一，作为浙江大学首届十佳社团，一直以来受到全校范围内同学和老师的肯定。以“追求精神致富，提倡思想交流”为口号，以“活跃经济学术氛围，提高学生学术水平”为宗旨，以“自由、梦想”为理念，以学术服务、学术研讨和社会实践为活动方向，吸引着众多的经济学爱好者的参与，志同道合的人们相互影响共同进步，共同到达他们理想的彼岸。</string>
+				<key>instructor</key>
+				<string>孙韶阳</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生经济学会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string> 浙江大学生命科学协会是一个由浙江大学生命科学学院团委管理指导的三星级学术科技类社团。“家”是生科协建设的宗旨。社团每年都会参与到生命科学学院所举办的全校性生命科学界的活动组织当中，其自身的特色活动植物认知、植物知识竞赛等等已经成为了每学期的经典活动。
+
+ 
+</string>
+				<key>instructor</key>
+				<string>谭芸</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生生命科学协会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>　　食品科技协会以科技、健康、安全为宗旨，开展对外食品科技交流, 营造校园内浓厚的科研氛围；提倡科学健康饮食方式习惯，传播中外博大精深的美食文化；同时培养学生的实际动手能力、交际能力以及组织能力，为广大同学提供一个接触并运用食品科技，展现自我能力的新平台。</string>
+				<key>instructor</key>
+				<string>应铁进</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生食品科技协会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>浙江大学学生外语协会是外语学院最早成立的社团，成立于2000年，致力于激发同学们学习外语的热情，引导同学们对外语的兴趣，为同学们了解外语、学习外语提供良好的环境和条件。</string>
+				<key>instructor</key>
+				<string>沈晓华</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生外语协会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>    浙江大学学生网络信息研究会是浙江大学学生自愿组成并依法登记的社团，在校党委宣传部和研工部、学工部、共青团浙江大学委员会的具体指导下开展各项工作。本协会以繁荣网络文化、关注网络舆情、优化网络环境为宗旨，努力提高广大学生网络应用技能和对网络信息的鉴别力；努力营造校园网络“文明、和谐、理性、健康”的信息环境。为校园文化的繁荣发展添砖加瓦!</string>
+				<key>instructor</key>
+				<string>赵仁明</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生网络信息研究会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>浙江大学微软技术俱乐部（MSTC.ZJU）关注、着眼、并立足于浙大学生对编程技术的兴趣和热情，以强大的技术团队和长期稳定的品牌活动作为自身的核心竞争力，在微软亚洲研究院和浙江大学团委的指导下，致力于在浙大校园内：
+
+★ 倡导、支持编程技术的交流，并提供全方位的服务....Service
+★ 积极架构程序员之间的交流和互助网络..............Network
+★ 崇尚协作与整合，建设开放和谐的技术社区..........Community</string>
+				<key>instructor</key>
+				<string>陈越</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生微软学生技术俱乐部</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>浙江大学学生法学研究会（始于1985年）是一个面向全校、历史悠久、实力雄厚的四星级社团组织，秉承“精通法理、勤于实践、献身法治、维护正义”之宗旨，多年获得“十佳学生社团”、“优秀学生社团”荣誉称号，更曾被省教育厅、省团委评为浙江省学生优秀学生社团。在社团的组织实践中涌现出了一系列精品活动，包括王者之约——新生辩论赛，寓法于乐的法律版真人大富翁、省高院参观与旁听、文广与社区普法实践、模拟法庭、学术沙龙讲座等，精彩纷呈，展现了法之魅力！ </string>
+				<key>instructor</key>
+				<string>王书剑</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生法学研究会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>        
+浙江大学学生科学技术协会（SAST)，简称浙大科协，是独立承办校内最大赛事——浙江大学“蒲公英”学生创业计划竞赛的精英社团。自2003年协会创立以来，经过10年的探索发展，科协已成为学术科技、创新创业双头并进的创新型学术科技类社团。创立以来，科协多次荣获“明星社团”、“优秀社团”等称号，更连续7年获得校“十佳社团”荣誉称号。2008年，科协被评为浙江省“优秀社团”。2009年，科协被评选为校四星级社团。
+</string>
+				<key>instructor</key>
+				<string>指导老师：苏超</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生科学技术协会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>浙江大学心理健康协会（简称心协），成立于1996年12月的心协，是浙江省第一个学生心理健康自主组织和学生专业社团。是学术科技类社团，目前是三星级。心协一直秉持“学习心理健康，宣传心理健康，研究心理健康，增进心理健康”的宗旨，获得了“十佳社团” “优秀社团” “创新型社团”等一系列社团荣誉称号。
+</string>
+				<key>instructor</key>
+				<string>李娟</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生心理健康协会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string> 浙江大学学生医学进展研究会是浙江大学医学院学生自发成立的学生医学实践与学术研讨社团，宗旨是“求是创新”。我会立志做好医学生专业准入阶段的素质培养；通过与校内和社会团体的合作，锻炼医学生和非医学学生的语言沟通、人际交流能力以及领导才能；致力于医学生学术研究能力的加强，增强学生对科学研究的兴趣，加强不同学科、不同学院学生之间的真正融合；引导医学本科学生参与学生科研能力锻炼计划，提高学术科研水平。
+</string>
+				<key>instructor</key>
+				<string>韩永亮</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生医学进展研究会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>科技探索者协会协会是校内首个综合性科技社团，覆盖面广，规模庞大，集中各学科精锐，发挥浙大学科综合优势，学术力量雄厚，提供学生课外学术交流及实践动手平台。
+协会拥有完整的制度、广泛的学生基础和优良的硬件资源，并邀请多位校内最受欢迎的老师作为协会的指导老师，指导协会发展。
+协会在SRTP、学科竞赛以及国家大学生创新性实验计划等各级学生科研训练项目拥有丰富的推广经验和完备的学术资料。协会拥有探索论坛和探索视界等长期开展的精品活动，并且会举办各种动手实践和参观学习活动。
+协会的目标是逐步形成集学生自主科研、动手实践，课外知识学习、培训、交流，校内外学生科技活动的组织、开展及相关刊物的出版、发行于一体的综合性科技社团，并始终坚持团结人、发掘人、培养人的根本目标。
+ 
+我们坚持“海纳百川，独立不迁”的会训，我们的口号是“用探索的心换无悔的青春！”形成了独特的社团文化。</string>
+				<key>instructor</key>
+				<string>毛一平</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生科技探索者协会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string></string>
+				<key>instructor</key>
+				<string></string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生心理学会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>浙江大学求是辩论社成立于2007年6月,是在共青团浙江大学委员会,浙江大学学生社团指导中心指导下,由具有浙江大学正式学籍的在校生自愿组织的学生群众性团体.
+ </string>
+				<key>instructor</key>
+				<string></string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生求是辩论社</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>浙江大学机器人协会是2005年由浙江大学12位在CCTV全国机器人大赛、“海特杯”机械设计大赛、挑战杯科技大赛、电子设计大赛及足球机器人大赛中获奖的本科生和研究生发起，并在浙江大学机器人科教实践基地的帮助下成立的校级社团。 </string>
+				<key>instructor</key>
+				<string>熊蓉</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生机器人协会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>浙江大学Power Of Voice协会（POV）是隶属于浙江大学学务处、浙江大学外语学院下，以提升浙江大学全体学生英语氛围、培养浙江大学各类英语精英人才、提高浙江大学英 语比赛成绩与实力为目标的综合性、专业性协会。浙江大学Power Of Voice协会主要由浙江大学在校本科生（包括留学生）、研究生组成，她的发起人中有浙江省大学生英语演讲比赛第一名及一等奖获得者，有浙江大学校英语辩 论队资深成员，有多年学生会及社团经验的组织者，有各项专业能力突出的技术人员。他们怀揣着共同的理念与理想，在浙江大学学务处、浙江大学外语学院等部门 领导及老师的关怀指导下，于2008年10月正式完成社团的注册及成立。</string>
+				<key>instructor</key>
+				<string></string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生POV（Power of Voice）协会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string></string>
+				<key>instructor</key>
+				<string>孙韶阳</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生金融学社</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>浙江大学学生人力资源管理学会（HRMA）是在浙江大学人力资源管理研究所的指导下于2009年5月成立的，是一个集学术培训、实践交流于一体的开放型、综合型、创新型学生组织。学会致力于在浙江大学范围内构建以浙大学生为主，各类专家学者、企业人士等共同参与的基于人力资源管理的商学交流平台，通过学术培训和实践锻炼等方式，大力提高广大成员的理论和实务能力，以帮助他们适应未来发展。</string>
+				<key>instructor</key>
+				<string>指导老师：张小林副教授</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生人力资源管理学会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>浙江大学学生广告协会成立于1996年，其宗旨是为广大对广告有兴趣，甚至是今后有志于向此行业发展的同学提供一个实践的平台，并且与学校其他机构、社团以及校外组织合作，协助他们组织各种活动，服务于学生，丰富同学们的大学生活，活跃和繁荣校园文化。 </string>
+				<key>instructor</key>
+				<string>胡晓云</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生广告协会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string> 小社团，大能量！
+ 
+ 
+在对外活动中，以引领求是人挑战外语学习更高境界为梦想，为求是学子提供专业口译咨询培训的平台，并为其提供爱好发展、能力提高的舞台。
+在对内活动中，促进社团成员个人能力的发展，提升社员及会员的英语的综合能力。创建温馨的家文化，除了能力还要留给他们记忆。</string>
+				<key>instructor</key>
+				<string>沈晓华</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生口译者协会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string></string>
+				<key>instructor</key>
+				<string></string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生ShARE-ZJU</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string></string>
+				<key>instructor</key>
+				<string></string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生腾讯创新俱乐部</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>           浙江大学LabVIEW俱乐部成立于2007年3月30日（浙江大学110周年成立），是浙江大学与美国国家仪器有限公司(NI校企共建的技术类学生社团。浙江大学LabVIEW俱乐部自创办以来，秉着“创建学习、使用、交流LabVIEW软件的平台”的根本宗旨，积极开展各种丰富多彩的校园学习交流活动。</string>
+				<key>instructor</key>
+				<string>黄运操</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生LabVIEW俱乐部</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>浙江大学财商俱乐部是隶属于浙江大学会计与财务管理系的一个致力于推广“财商”理念，践行“财商”精神的专业类社团。通过搭建分享传承、交流思辨的沟通平台，培养财商思维，提升专业素养，倡导自主学习氛围。</string>
+				<key>instructor</key>
+				<string></string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生财商俱乐部</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string> 自2008年创社以来，SOSA已经历五个春秋。作为浙江大学第一个为出国留学服务的社团，SOSA旨在为浙大学子建立一个资源丰富的出国留学资讯交流平台，通过社团内部执行团队搜集咨询、传递信息，会员之间互相沟通，校外留学专家的信息输入这三种渠道实现资讯的流通。社团希望整合利用好浙江大学的优秀校友资源，为后继者的出国申请提供最为有效地帮助。</string>
+				<key>instructor</key>
+				<string>吕成祯</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生出国留学学生圈</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string> 机械科技创新协会（简称机创社）是由浙江大学学生自愿组成的群众性非赢利组织。协会的指导单位为共青团浙江大学机械工程学系委员会，管理部门为浙江大学社团联合会。协会以弘扬机械文化，普及机械知识，增强动手能力为宗旨，为爱好机械的同学提供一个学习和交流的平台，使浙大学子加深对机械知识的认识，发展机械方面的兴趣与爱好，强化各类金工动手的能力，是一个学术科技类的协会。同时，作为一个交流平台，旨在帮助社员在这里结识朋友，营造一种“大家庭”的氛围。
+ 
+ </string>
+				<key>instructor</key>
+				<string>顾大强</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生机械创新协会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string> 
+
+
+
+    浙江大学证券与投资研究会（Security and Investment Research  Association简称SIRA）成立于2010年6月，是校内新成立的一个关注证券投资的社团。SIRA下设玉泉分会和紫金港分会，负责两大校区的日常事务和活动组织。社团主要承办金融投资及其相关活动。我们旨在引导正确的投资理念，提高证券投资的理论和实践水平，活跃校园学术气氛，为广大学生提供一个学习与交流的平台，丰富学生生活。
+
+
+
+</string>
+				<key>instructor</key>
+				<string>浙江大学证券与投资研究会指导老师——孙韶阳</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生证券与投资研究会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>MCA，全称浙江大学学生管理咨询协会（Management Consulting Association），是由浙江大学进入麦肯锡（McKinsey）、贝恩（Bain）、艾意凯（L.E.K.）、罗兰贝格（Roland Berger）等顶尖咨询公司及进入中金公司（CICC）、高盛集团（Goldman Sachs）、摩根士丹利（Morgan Stanley）等投行领域的毕业生创建的学生社团，旨在服务浙大同学，交流管理咨询知识，培养管理咨询、投资银行等专业服务(Professional Service)领域的气氛，普及商业分析的方法，为浙大有志于进入咨询、投行等专业服务领域的校友提供交流平台，建立起一个属于浙江大学的优秀人际网络。MCA定位以咨询为主，金融为辅，以就业为导向，以分享和互助为核心文化，成员专业背景多元化。MCA通过规范的项目制运作开展活动，通过内部培训等形式提升会员个人能力，通过季刊等形式交流思想，通过与麦肯锡等公司的合作提供给会员实习机会，通过每个会员的成长和奉献发展协会本身，是一个专业性的精英社团、学术性的学生社团、校内外的交流平台。</string>
+				<key>instructor</key>
+				<string>洪何露</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生管理咨询协会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>  浙江大学学生营养与健康协会成立于2010年11月，是一个充满朝气与活力的学生社团。协会由浙江大学医学部公共卫生系、浙江大学紫金港餐饮中心作为指导部门，接受共青团浙江大学委员会和浙江大学社团联合会的共同监督管理。营养与健康协会又简称NHA，分别代表nutrition、healthy、association。协会本着“love life，love myself”健康的理念，“不挥霍年轻的身体，不透支未来的健康；关注饮食健康，注重生活质量”的宗旨，立志为广大同学创造一个健康生活的平台。
+ </string>
+				<key>instructor</key>
+				<string>杨敏</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生营养与健康协会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>        浙江大学物流协会成立于2011年4月，是以浙江大学管理学院物流管理专业为主体、面向全校对物流有兴趣的学生开展的学术类社团。中国物流发展日新月异，诞生于时代尖端的物流协会也同样拥有着这一份蓬勃发展的气势。物流协会根在物流，沙盘比赛、物流理念共享显示出我们对物流的热爱与坚持；物流协会面向四方，广邀学子、多方技术交流代表了我们与外界的接触和交融。学术没有边界，物流协会同样秉承着将物流向外推广、与其余学科融合的理念，在校园内与不同背景的学子积极交流，为宣扬物流理念而努力。物流协会是新生的社团，这代表了拥有无限的可能性；物流协会会如同中国的物流一样，在未来闪闪发光。
+</string>
+				<key>instructor</key>
+				<string>邓明荣</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生物流协会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>  浙江大学合成生物学研究会（Synthetic Biology Club of Zhejiang University）成立于2011年，由全校各院系对合成生物学有兴趣的本科生与研究生组成，以”推广合成生物学，推进科研成果应用于实践”为宗旨，以由美国麻省理工学院（MIT）主办的国际基因工程机器大赛为依托，在世界的舞台上展示浙江大学学子对于合成生物学的乐趣与科研能力。</string>
+				<key>instructor</key>
+				<string>陈铭</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生合成生物学研究会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>  浙江大学学生公共管理学会成立于2012年5月13日。公共管理学会是在浙江大学公共管理学院团委指导下的，由学生自发组织成立并开展活动的团体。</string>
+				<key>instructor</key>
+				<string>卓亨逵</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生公共管理学会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string></string>
+				<key>instructor</key>
+				<string></string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生互联网教育实践协会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string>    浙江大学学生绿色化工协会以化工系团委为指导单位，协会宗旨为“以行动传递绿色化工理念，以实践引领绿色化工潮流——我们绿化生产线！”希望通过社团的活动，营造化工学术氛围，倡导“化工无污染，制造高效能”，大力传递绿色化工理念。</string>
+				<key>instructor</key>
+				<string>王芳</string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生绿色化工协会</string>
+			</dict>
+			<dict>
+				<key>description</key>
+				<string></string>
+				<key>instructor</key>
+				<string></string>
+				<key>logo</key>
+				<string></string>
+				<key>name</key>
+				<string>浙江大学学生计算机学会</string>
+			</dict>
+		</array>
+	</dict>
+</array>
 </plist>

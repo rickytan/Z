@@ -84,13 +84,59 @@
                             </constraints>
                         </view>
                     </navigationItem>
+                    <connections>
+                        <segue destination="UEn-vx-PFI" kind="push" id="SSw-B9-MxP"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Vw-3y-e9A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1196" y="203"/>
         </scene>
+        <!--Table View Controller-->
+        <scene sceneID="yai-YW-yrj">
+            <objects>
+                <tableViewController id="UEn-vx-PFI" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="84" sectionHeaderHeight="22" sectionFooterHeight="22" id="fd9-QA-B63">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="4iG-s4-ie0" imageView="NXq-3q-BXq" rowHeight="84" style="IBUITableViewCellStyleDefault" id="Kkx-eF-SPg" customClass="ZImageListCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="84"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Kkx-eF-SPg" id="GBt-pM-5D9">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="83"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4iG-s4-ie0">
+                                            <rect key="frame" x="87" y="0.0" width="218" height="83"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Icon.png" id="NXq-3q-BXq">
+                                            <rect key="frame" x="15" y="13" width="57" height="57"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="UEn-vx-PFI" id="MbW-Fi-fng"/>
+                            <outlet property="delegate" destination="UEn-vx-PFI" id="edD-mq-oeJ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Wns-Q3-Slj"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qHf-4d-Ii9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2090" y="416"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="Icon.png" width="57" height="57"/>
         <image name="fresh.png" width="118" height="43"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

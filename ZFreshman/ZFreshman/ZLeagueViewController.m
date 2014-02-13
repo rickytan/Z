@@ -80,7 +80,11 @@
     
     // Configure the cell...
     cell.textLabel.text = self.leagues[indexPath.section][@"leagues"][indexPath.row][@"name"];
-    cell.imageView.image = [UIImage imageNamed:self.leagues[indexPath.section][@"leagues"][indexPath.row][@"logo"]];
+    NSString *imageName = self.leagues[indexPath.section][@"leagues"][indexPath.row][@"logo"];
+    if (imageName.length > 0)
+        cell.imageView.image = [UIImage imageNamed:imageName];
+    else
+        cell.imageView.image = nil;
     
     return cell;
 }

@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=NO">
-		<title>WiFi无线上网</title>
+		<title>Mac 下如何登录 VPN</title>
 		<style type="text/css">
 			h1,
 h2,
@@ -155,9 +155,6 @@ sup {
 			p {
 				text-indent: 2em;
 			}
-			li p {
-				text-indent: 0;
-			}
 			img {
 				max-width: 90%;
 				border: 8px #fff solid;
@@ -174,70 +171,34 @@ sup {
 		</style>
 	</head>
 	<body>
-		<h1>WiFi无线上网</h1>
+		<h1>Mac 下如何登录 VPN</h1>
 
-<p>2013年初，全校范围内基本实现了无线网络覆盖，大大方便了同学们的上网需求。</p>
-
-<h2>笔记本电脑</h2>
+<p>浙大 VPN 使用的是无 <code>IPSec</code> 的 <code>L2TP</code> 协议，所以 Mac 电脑下自带的 VPN 连接默认是无法使用的，其实只要添加以下 <code>VPN</code> 设置就可以了：</p>
 
 <ol>
-<li><p>打开无线网卡，找到 SSID 为<code>ZJUWLAN</code>的 WiFi 网络；</p>
+<li>在 <code>/etc/ppp</code> 目录下创建空文件：<code>options</code>（需要超级权限）;</li>
+<li><p>打开 <code>options</code>，并键下以下文件内容：</p>
 
-<blockquote>
-  <p>请确认已正确安装无线网卡驱动，并已打开无线网卡开关。选择SSID为ZJUWLAN的无线网络，并双击进行连接，无线网卡的地址设为自动获取。</p>
-</blockquote></li>
-<li><p>登录浙江大学无线网络；</p>
-
-<blockquote>
-  <p>打开浏览器输入任意网址，即可进入认证页面，无线网帐号无需另行申请（用户名和密码即为校网<code>VPN</code>用户名密码）。</p>
-</blockquote></li>
-</ol>
-
-<p><strong>注意：</strong><em>部分浏览器由于安全设置问题会导致认证页面无法正常弹出，这时将浏览器跳转地址https://中的字母s删掉后回车，即可正常显示认证页面</em></p>
-
-<p><img src="./Images/https.png" alt="" /></p>
-
-<p><strong>温馨提示：</strong></p>
-
-<p><strong>使用电脑上网时，不可同时连接有线网络和无线网络，若插网线使用有线网络，请将无线网络断开；若使用无线网络，请将网线拔出，否则可能造成拨号错误。</strong></p>
-
-<h2>移动终端</h2>
-
-<h3>苹果产品（以iPhone手机为例）</h3>
-
-<ol>
-<li><p>点击<strong>设置</strong>图标进入设置，打开无线局域网（WiFi），iPhone开始自动搜索周围WIFI网络；  </p>
-
-<p><img src="./Images/iphone-wifi.png" alt="" /></p></li>
-<li><p>选择<code>ZJUWLAN</code>后，点击浏览器，打开任意网页，会出现无线网络认证界面，提示您输入用户名和密码。登录成功后即可上网。</p>
-
-<p><img src="./Images/iphone-wifi1.png" alt="image" />
-<img src="./Images/iphone-wifi2.png" alt="image" />
- </p></li>
-</ol>
-
-<h3>Android手机设置无线</h3>
-
-<ol>
-<li>点击桌面上的<strong>设置</strong>图标进入设置打开WLAN，手机开始自动搜索周围的WIFI网络；</li>
-<li>搜索ZJUWLAN并点击浏览器上网，会提示输入用户名和密码； </li>
-<li>登录成功后，在ZJUWLAN下面会显示“已连接”，就可以上网浏览了。</li>
+<pre><code>plugin L2TP.ppp
+l2tpnoipsec
+</code></pre></li>
+<li><p>保存，退出，打开网络设置新建<code>VPN</code>，输入用户名密码就好，浙大 VPN 服务器地址为：<code>lns.zju.edu.cn</code>，其它可选的有<code>10.5.1.5</code>，<code>10.5.1.7</code>，<code>10.5.1.9</code></p></li>
 </ol>
 
 
 		<div class="related">
 			<h2>相关问题：</h2>
 			<ul>
-				<li><a href=./Win7下如何登录VPN.html>Win7下如何登录VPN</a></li>
-<li><a href=./学校内如何上网.html>学校内如何上网</a></li>
+				<li><a href=./Win7 下如何登录 VPN.html>Win7 下如何登录 VPN</a></li>
 <li><a href=./手机中使用zju邮箱账号.html>手机中使用zju邮箱账号</a></li>
-<li><a href=./vpn帐号如何申请.html>vpn帐号如何申请</a></li>
-<li><a href=./浙江大学概况.html>浙江大学概况</a></li>
+<li><a href=./常用网络资源.html>常用网络资源</a></li>
+<li><a href=./图书馆使用指南.html>图书馆使用指南</a></li>
+<li><a href=./使用代理服务器上网.html>使用代理服务器上网</a></li>
 
 			</ul>
 		</div>
 	</body>
 </html>
 <!--
-WiFi,ZJUWLAN,上网,即可,密码,打开,无线,无线网卡,无线网络,浏览器,点击,用户名,网络,认证,设置
+10.5,Mac,VPN,l2tpnoipsec,options,ppp,以下,使用,打开,文件,新建,浙大,自带,设置,退出
 -->

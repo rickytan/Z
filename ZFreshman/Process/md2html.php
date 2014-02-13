@@ -50,7 +50,7 @@
         $filepath = $out_dir. "/". $filename;
         echo "Processing file ". $filepath. "\n";
         echo "Tags:". implode(",", $file_tag['tags']). "\n";
-        $related = get_related_pages($file_tags, $file_tag);
+        $related = get_related_pages($file_tags, $file_tag, 8);
         $related_html = "";
         foreach ($related as $value) {
             $related_html .= "<li><a href=./". $value. ">". pathinfo($value)['filename']. "</a></li>\n";

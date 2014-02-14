@@ -8,6 +8,7 @@
 
 #import "ZLeagueViewController.h"
 #import "UIColor+RExtension.h"
+#import "ZLeagueIntroViewController.h"
 
 @interface ZLeagueViewController ()
 @property (nonatomic, strong) NSArray *leagues;
@@ -79,12 +80,14 @@
                                                             forIndexPath:indexPath];
     
     // Configure the cell...
-    cell.textLabel.text = self.leagues[indexPath.section][@"leagues"][indexPath.row][@"name"];
-    NSString *imageName = self.leagues[indexPath.section][@"leagues"][indexPath.row][@"logo"];
+    NSDictionary *item = self.leagues[indexPath.section][@"leagues"][indexPath.row];
+    cell.textLabel.text = item[@"name"];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"指导老师：%@", item[@"instructor"]];
+    NSString *imageName = item[@"logo"];
     if (imageName.length > 0)
         cell.imageView.image = [UIImage imageNamed:imageName];
     else
-        cell.imageView.image = nil;
+        cell.imageView.image = [UIImage imageNamed:@"league.png"];
     
     return cell;
 }
@@ -92,9 +95,8 @@
 - (void)tableView:(UITableView *)tableView
 didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [tableView deselectRowAtIndexPath:indexPath
-                             animated:YES];
-
+    [self performSegueWithIdentifier:@"Detail"
+                              sender:self];
 }
 
 /*
@@ -106,16 +108,18 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a story board-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"Detail"]) {
+        ZLeagueIntroViewController *intro = (ZLeagueIntroViewController *)segue.destinationViewController;
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        NSDictionary *item = self.leagues[indexPath.section][@"leagues"][indexPath.row];
+        intro.text = item[@"description"];
+    }
 }
-
- */
 
 @end

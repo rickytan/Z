@@ -36,6 +36,11 @@
     rect.origin.x = CGRectGetMaxX(self.imageView.frame) + 8;
     rect.size.width = MIN(rect.size.width, CGRectGetWidth(self.contentView.bounds) - rect.origin.x);
     self.textLabel.frame = rect;
+
+    rect = self.detailTextLabel.frame;
+    rect.origin.x = CGRectGetMaxX(self.imageView.frame) + 8;
+    rect.size.width = MIN(rect.size.width, CGRectGetWidth(self.contentView.bounds) - rect.origin.x);
+    self.detailTextLabel.frame = rect;
 }
 
 @end

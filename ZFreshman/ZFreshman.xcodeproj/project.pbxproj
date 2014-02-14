@@ -136,6 +136,8 @@
 		9C6DD67D18AD0DD2005A7E1E /* 100@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C6DD67C18AD0DD2005A7E1E /* 100@2x.png */; };
 		9C6DD67F18AD0EE4005A7E1E /* bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C6DD67E18AD0EE4005A7E1E /* bar@2x.png */; };
 		9C6DD68118AD0FA5005A7E1E /* UI7NavigationBarBackButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C6DD68018AD0FA5005A7E1E /* UI7NavigationBarBackButton@2x.png */; };
+		9C6DD68318AE0686005A7E1E /* league@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C6DD68218AE0686005A7E1E /* league@2x.png */; };
+		9C6DD68618AE07FE005A7E1E /* ZLeagueIntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6DD68518AE07FE005A7E1E /* ZLeagueIntroViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -289,6 +291,9 @@
 		9C6DD67C18AD0DD2005A7E1E /* 100@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "100@2x.png"; sourceTree = "<group>"; };
 		9C6DD67E18AD0EE4005A7E1E /* bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bar@2x.png"; sourceTree = "<group>"; };
 		9C6DD68018AD0FA5005A7E1E /* UI7NavigationBarBackButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UI7NavigationBarBackButton@2x.png"; sourceTree = "<group>"; };
+		9C6DD68218AE0686005A7E1E /* league@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "league@2x.png"; sourceTree = "<group>"; };
+		9C6DD68418AE07FE005A7E1E /* ZLeagueIntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLeagueIntroViewController.h; sourceTree = "<group>"; };
+		9C6DD68518AE07FE005A7E1E /* ZLeagueIntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLeagueIntroViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -363,6 +368,8 @@
 				9C6DD4E218ACA52C005A7E1E /* ZImageListCell.m */,
 				9C6DD5AF18ACC14D005A7E1E /* ZLeagueViewController.h */,
 				9C6DD5B018ACC14D005A7E1E /* ZLeagueViewController.m */,
+				9C6DD68418AE07FE005A7E1E /* ZLeagueIntroViewController.h */,
+				9C6DD68518AE07FE005A7E1E /* ZLeagueIntroViewController.m */,
 			);
 			path = ZFreshman;
 			sourceTree = "<group>";
@@ -399,6 +406,7 @@
 		9C6DD4C118AA6B56005A7E1E /* Resouces */ = {
 			isa = PBXGroup;
 			children = (
+				9C6DD68218AE0686005A7E1E /* league@2x.png */,
 				9C6DD67E18AD0EE4005A7E1E /* bar@2x.png */,
 				9C6DD4CB18ABBCDD005A7E1E /* Default-568h@2x.png */,
 				9C6DD4CC18ABBCDD005A7E1E /* Default.png */,
@@ -641,6 +649,7 @@
 				9C6DD4D718AC5D8D005A7E1E /* fresh@2x.png in Resources */,
 				9C6DD62E18ACCF4E005A7E1E /* 22@2x.png in Resources */,
 				9C6DD61E18ACCF4E005A7E1E /* 6@2x.png in Resources */,
+				9C6DD68318AE0686005A7E1E /* league@2x.png in Resources */,
 				9C6DD63618ACCF4E005A7E1E /* 30@2x.png in Resources */,
 				9C6DD66E18ACCF4E005A7E1E /* 86@2x.png in Resources */,
 				9C6DD64E18ACCF4E005A7E1E /* 54@2x.png in Resources */,
@@ -743,6 +752,7 @@
 				9C6DD4D518ABC5D8005A7E1E /* UIColor+RExtension.m in Sources */,
 				9C6DD4E318ACA52C005A7E1E /* ZImageListCell.m in Sources */,
 				9C6DD4CA18ABB7AA005A7E1E /* ZHomeViewController.m in Sources */,
+				9C6DD68618AE07FE005A7E1E /* ZLeagueIntroViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

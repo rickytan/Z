@@ -16,7 +16,7 @@
     [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"bar.png"]
                                        forBarMetrics:UIBarMetricsDefault];
     NSDictionary *textAttr = @{UITextAttributeFont: [UIFont boldSystemFontOfSize:20],
-                               UITextAttributeTextColor: [UIColor blackColor],
+                               UITextAttributeTextColor: [UIColor iOS7DefaultBlueTint],
                                UITextAttributeTextShadowColor: [UIColor clearColor],
                                UITextAttributeTextShadowOffset: [NSValue valueWithCGSize:CGSizeZero]};
     [[UINavigationBar appearance] setTitleTextAttributes:textAttr];
@@ -27,11 +27,11 @@
         [[UIBarButtonItem appearance] setBackButtonBackgroundImage:[UIImage imageNamed:@"UI7NavigationBarBackButton.png"]
                                                           forState:UIControlStateNormal
                                                         barMetrics:UIBarMetricsDefault];
-        [[UIBarButtonItem appearance] setTitleTextAttributes:@{UITextAttributeTextColor: [UIColor blackColor],
+        [[UIBarButtonItem appearance] setTitleTextAttributes:@{UITextAttributeTextColor: [UIColor iOS7DefaultBlueTint],
                                                                UITextAttributeFont: [UIFont systemFontOfSize:16],
                                                                UITextAttributeTextShadowOffset: [NSValue valueWithCGSize:CGSizeZero]}
                                                     forState:UIControlStateNormal];
-        [[UIBarButtonItem appearance] setTitleTextAttributes:@{UITextAttributeTextColor: [UIColor blackColor],
+        [[UIBarButtonItem appearance] setTitleTextAttributes:@{UITextAttributeTextColor: [UIColor iOS7DefaultBlueTint],
                                                                UITextAttributeFont: [UIFont systemFontOfSize:16],
                                                                UITextAttributeTextShadowOffset: [NSValue valueWithCGSize:CGSizeZero]}
                                                     forState:UIControlStateHighlighted];

@@ -32,6 +32,9 @@
     self.leagues = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"League"
                                                                                     ofType:@"plist"]];
 
+    self.tableView.sectionIndexTrackingBackgroundColor = [UIColor iOS7DefaultBlueTint];
+    self.tableView.sectionIndexColor = [UIColor whiteColor];
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -71,6 +74,14 @@
     return label;
 }
 
+- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
+{
+    static NSArray *indexTitles = nil;
+    if (!indexTitles) {
+        indexTitles = @[@"实", @"体", @"文", @"兴", @"学"];
+    }
+    return indexTitles;
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath

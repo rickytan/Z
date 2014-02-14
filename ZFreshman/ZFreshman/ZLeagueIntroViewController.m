@@ -40,6 +40,8 @@
 {
     if (_text != text) {
         _text = text;
+        if (_text.length == 0)
+            _text = @"无简介";
         self.textView.text = text;
     }
 }

@@ -10,7 +10,7 @@
 #import "UIColor+RExtension.h"
 
 static NSString *cellTitles[] = {@"专业简介", @"新生宝典", @"校园地图", @"社团组织"};
-static NSString *cellSegues[] = {@"", @"", @"Map", @"League"};
+static NSString *cellSegues[] = {@"MajorIntro", @"Question", @"Map", @"League"};
 
 @interface ZHomeItemCell : UICollectionViewCell
 @property (nonatomic, assign) IBOutlet UILabel *textLabel;

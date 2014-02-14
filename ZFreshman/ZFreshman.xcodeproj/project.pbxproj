@@ -140,6 +140,8 @@
 		9C6DD68618AE07FE005A7E1E /* ZLeagueIntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6DD68518AE07FE005A7E1E /* ZLeagueIntroViewController.m */; };
 		9C6DD68818AE0F17005A7E1E /* zjg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C6DD68718AE0F17005A7E1E /* zjg.jpg */; };
 		9C6DD68B18AE0FAD005A7E1E /* ZMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6DD68A18AE0FAD005A7E1E /* ZMapViewController.m */; };
+		9C6DD68E18AE13EC005A7E1E /* ZShadowLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6DD68D18AE13EC005A7E1E /* ZShadowLabel.m */; };
+		9C6DD69118AE1CCA005A7E1E /* ZQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6DD69018AE1CCA005A7E1E /* ZQuestionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -299,6 +301,10 @@
 		9C6DD68718AE0F17005A7E1E /* zjg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = zjg.jpg; sourceTree = "<group>"; };
 		9C6DD68918AE0FAD005A7E1E /* ZMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMapViewController.h; sourceTree = "<group>"; };
 		9C6DD68A18AE0FAD005A7E1E /* ZMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMapViewController.m; sourceTree = "<group>"; };
+		9C6DD68C18AE13EC005A7E1E /* ZShadowLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZShadowLabel.h; sourceTree = "<group>"; };
+		9C6DD68D18AE13EC005A7E1E /* ZShadowLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZShadowLabel.m; sourceTree = "<group>"; };
+		9C6DD68F18AE1CCA005A7E1E /* ZQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZQuestionViewController.h; sourceTree = "<group>"; };
+		9C6DD69018AE1CCA005A7E1E /* ZQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZQuestionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -377,6 +383,10 @@
 				9C6DD68A18AE0FAD005A7E1E /* ZMapViewController.m */,
 				9C6DD4D818AC5F61005A7E1E /* ZShiningImageView.h */,
 				9C6DD4D918AC5F61005A7E1E /* ZShiningImageView.m */,
+				9C6DD68C18AE13EC005A7E1E /* ZShadowLabel.h */,
+				9C6DD68D18AE13EC005A7E1E /* ZShadowLabel.m */,
+				9C6DD68F18AE1CCA005A7E1E /* ZQuestionViewController.h */,
+				9C6DD69018AE1CCA005A7E1E /* ZQuestionViewController.m */,
 			);
 			path = ZFreshman;
 			sourceTree = "<group>";
@@ -757,12 +767,14 @@
 				9C6DD5B118ACC14D005A7E1E /* ZLeagueViewController.m in Sources */,
 				9C4D1FB518658E9300EFE020 /* main.m in Sources */,
 				9C4D1FB918658E9300EFE020 /* ZAppDelegate.m in Sources */,
+				9C6DD68E18AE13EC005A7E1E /* ZShadowLabel.m in Sources */,
 				9C6DD4DA18AC5F61005A7E1E /* ZShiningImageView.m in Sources */,
 				9C6DD4D518ABC5D8005A7E1E /* UIColor+RExtension.m in Sources */,
 				9C6DD4E318ACA52C005A7E1E /* ZImageListCell.m in Sources */,
 				9C6DD4CA18ABB7AA005A7E1E /* ZHomeViewController.m in Sources */,
 				9C6DD68618AE07FE005A7E1E /* ZLeagueIntroViewController.m in Sources */,
 				9C6DD68B18AE0FAD005A7E1E /* ZMapViewController.m in Sources */,
+				9C6DD69118AE1CCA005A7E1E /* ZQuestionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

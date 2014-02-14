@@ -31,7 +31,7 @@
     anim.byValue = [NSValue valueWithCGPoint:CGPointMake(self.bounds.size.width, 0)];
     anim.removedOnCompletion = YES;
     anim.delegate = self;
-    anim.duration = 1.0;
+    anim.duration = 1.5;
     anim.autoreverses = YES;
     [maskLayer addAnimation:anim
                      forKey:nil];

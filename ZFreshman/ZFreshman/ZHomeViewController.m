@@ -10,6 +10,7 @@
 #import "UIColor+RExtension.h"
 
 static NSString *cellTitles[] = {@"专业简介", @"新生宝典", @"校园地图", @"社团组织"};
+static NSString *cellSegues[] = {@"", @"", @"Map", @"League"};
 
 @interface ZHomeItemCell : UICollectionViewCell
 @property (nonatomic, assign) IBOutlet UILabel *textLabel;
@@ -94,16 +95,9 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     [collectionView deselectItemAtIndexPath:indexPath
                                    animated:YES];
-    switch (indexPath.row) {
-        case 0:
-
-            break;
-        case 3:
-            [self performSegueWithIdentifier:@"League"
-                                      sender:self];
-            break;
-        default:
-            break;
+    if (cellSegues[indexPath.row].length > 0) {
+        [self performSegueWithIdentifier:cellSegues[indexPath.row]
+                                  sender:self];
     }
 
 }

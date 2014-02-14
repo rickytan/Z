@@ -92,11 +92,83 @@
                     </navigationItem>
                     <connections>
                         <segue destination="UEn-vx-PFI" kind="push" identifier="League" id="SSw-B9-MxP"/>
+                        <segue destination="SJE-LY-EDC" kind="push" identifier="Map" id="p9N-1r-VGp"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Vw-3y-e9A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1196" y="203"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="WPQ-Cu-cha">
+            <objects>
+                <tableViewController id="5Fz-qD-VTv" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="VrY-Po-clA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="MKV-J5-3Aw">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MKV-J5-3Aw" id="ZGa-gO-CvQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="5Fz-qD-VTv" id="5db-1L-KnJ"/>
+                            <outlet property="delegate" destination="5Fz-qD-VTv" id="DXC-rv-K2n"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FeW-Nd-7Vk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2090" y="-917"/>
+        </scene>
+        <!--Map View Controller - 校园地图-->
+        <scene sceneID="Aru-YQ-oDW">
+            <objects>
+                <viewController id="SJE-LY-EDC" customClass="ZMapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Hqy-Rn-Rhm"/>
+                        <viewControllerLayoutGuide type="bottom" id="cwF-IK-L9Y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UdR-Dq-ci5">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="4" translatesAutoresizingMaskIntoConstraints="NO" id="act-7v-Vuk">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="zjg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="uoG-Ce-UJD">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <connections>
+                                    <outlet property="delegate" destination="SJE-LY-EDC" id="97b-TO-6qm"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="act-7v-Vuk" secondAttribute="trailing" id="EHq-4E-ZwO"/>
+                            <constraint firstItem="act-7v-Vuk" firstAttribute="top" secondItem="Hqy-Rn-Rhm" secondAttribute="bottom" id="fHe-Sr-zLt"/>
+                            <constraint firstItem="act-7v-Vuk" firstAttribute="leading" secondItem="UdR-Dq-ci5" secondAttribute="leading" id="snd-24-Y4j"/>
+                            <constraint firstAttribute="bottom" secondItem="act-7v-Vuk" secondAttribute="bottom" id="xv5-aL-Fx8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="校园地图" id="9TX-gA-dHt"/>
+                    <connections>
+                        <outlet property="imageView" destination="uoG-Ce-UJD" id="IJI-OK-CCu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4v2-Rf-Dv6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2090" y="-254"/>
         </scene>
         <!--League View Controller - 社团组织-->
         <scene sceneID="yai-YW-yrj">
@@ -194,6 +266,7 @@
     <resources>
         <image name="Icon.png" width="57" height="57"/>
         <image name="fresh.png" width="118" height="43"/>
+        <image name="zjg.jpg" width="1703" height="3166"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

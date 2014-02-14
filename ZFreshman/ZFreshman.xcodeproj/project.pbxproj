@@ -138,6 +138,8 @@
 		9C6DD68118AD0FA5005A7E1E /* UI7NavigationBarBackButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C6DD68018AD0FA5005A7E1E /* UI7NavigationBarBackButton@2x.png */; };
 		9C6DD68318AE0686005A7E1E /* league@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C6DD68218AE0686005A7E1E /* league@2x.png */; };
 		9C6DD68618AE07FE005A7E1E /* ZLeagueIntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6DD68518AE07FE005A7E1E /* ZLeagueIntroViewController.m */; };
+		9C6DD68818AE0F17005A7E1E /* zjg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C6DD68718AE0F17005A7E1E /* zjg.jpg */; };
+		9C6DD68B18AE0FAD005A7E1E /* ZMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6DD68A18AE0FAD005A7E1E /* ZMapViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -294,6 +296,9 @@
 		9C6DD68218AE0686005A7E1E /* league@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "league@2x.png"; sourceTree = "<group>"; };
 		9C6DD68418AE07FE005A7E1E /* ZLeagueIntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLeagueIntroViewController.h; sourceTree = "<group>"; };
 		9C6DD68518AE07FE005A7E1E /* ZLeagueIntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLeagueIntroViewController.m; sourceTree = "<group>"; };
+		9C6DD68718AE0F17005A7E1E /* zjg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = zjg.jpg; sourceTree = "<group>"; };
+		9C6DD68918AE0FAD005A7E1E /* ZMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMapViewController.h; sourceTree = "<group>"; };
+		9C6DD68A18AE0FAD005A7E1E /* ZMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMapViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -356,20 +361,22 @@
 			children = (
 				9C6DD4C618ABB5C1005A7E1E /* Main.storyboard */,
 				9C4D1FAF18658E9300EFE020 /* Supporting Files */,
+				9C6DD4D318ABC5D8005A7E1E /* UIColor+RExtension.h */,
+				9C6DD4D418ABC5D8005A7E1E /* UIColor+RExtension.m */,
 				9C4D1FB718658E9300EFE020 /* ZAppDelegate.h */,
 				9C4D1FB818658E9300EFE020 /* ZAppDelegate.m */,
 				9C6DD4C818ABB7AA005A7E1E /* ZHomeViewController.h */,
 				9C6DD4C918ABB7AA005A7E1E /* ZHomeViewController.m */,
-				9C6DD4D318ABC5D8005A7E1E /* UIColor+RExtension.h */,
-				9C6DD4D418ABC5D8005A7E1E /* UIColor+RExtension.m */,
-				9C6DD4D818AC5F61005A7E1E /* ZShiningImageView.h */,
-				9C6DD4D918AC5F61005A7E1E /* ZShiningImageView.m */,
 				9C6DD4E118ACA52C005A7E1E /* ZImageListCell.h */,
 				9C6DD4E218ACA52C005A7E1E /* ZImageListCell.m */,
-				9C6DD5AF18ACC14D005A7E1E /* ZLeagueViewController.h */,
-				9C6DD5B018ACC14D005A7E1E /* ZLeagueViewController.m */,
 				9C6DD68418AE07FE005A7E1E /* ZLeagueIntroViewController.h */,
 				9C6DD68518AE07FE005A7E1E /* ZLeagueIntroViewController.m */,
+				9C6DD5AF18ACC14D005A7E1E /* ZLeagueViewController.h */,
+				9C6DD5B018ACC14D005A7E1E /* ZLeagueViewController.m */,
+				9C6DD68918AE0FAD005A7E1E /* ZMapViewController.h */,
+				9C6DD68A18AE0FAD005A7E1E /* ZMapViewController.m */,
+				9C6DD4D818AC5F61005A7E1E /* ZShiningImageView.h */,
+				9C6DD4D918AC5F61005A7E1E /* ZShiningImageView.m */,
 			);
 			path = ZFreshman;
 			sourceTree = "<group>";
@@ -407,6 +414,7 @@
 			isa = PBXGroup;
 			children = (
 				9C6DD68218AE0686005A7E1E /* league@2x.png */,
+				9C6DD68718AE0F17005A7E1E /* zjg.jpg */,
 				9C6DD67E18AD0EE4005A7E1E /* bar@2x.png */,
 				9C6DD4CB18ABBCDD005A7E1E /* Default-568h@2x.png */,
 				9C6DD4CC18ABBCDD005A7E1E /* Default.png */,
@@ -629,6 +637,7 @@
 				9C6DD67618ACCF4E005A7E1E /* 94@2x.png in Resources */,
 				9C6DD66618ACCF4E005A7E1E /* 78@2x.png in Resources */,
 				9C6DD64B18ACCF4E005A7E1E /* 51@2x.png in Resources */,
+				9C6DD68818AE0F17005A7E1E /* zjg.jpg in Resources */,
 				9C6DD65018ACCF4E005A7E1E /* 56@2x.png in Resources */,
 				9C6DD62318ACCF4E005A7E1E /* 11@2x.png in Resources */,
 				9C6DD64A18ACCF4E005A7E1E /* 50@2x.png in Resources */,
@@ -753,6 +762,7 @@
 				9C6DD4E318ACA52C005A7E1E /* ZImageListCell.m in Sources */,
 				9C6DD4CA18ABB7AA005A7E1E /* ZHomeViewController.m in Sources */,
 				9C6DD68618AE07FE005A7E1E /* ZLeagueIntroViewController.m in Sources */,
+				9C6DD68B18AE0FAD005A7E1E /* ZMapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,9 +1,7 @@
 <?php
     define("ROOT", dirname(__FILE__));
     
-	require_once "Michelf/Markdown.inc.php";
-    require_once "Michelf/MarkdownExtra.inc.php";
-	use \Michelf\Markdown;
+	require_once "markdown_extended.php";
 	
 	require_once "tags.php";
     require_once "related.php";
@@ -27,7 +25,8 @@
 		echo "Processing file ". $file. "\n";
 		$filename = pathinfo($file)['filename'];
 		$markdown = @file_get_contents($file);
-        $content = Markdown::defaultTransform($markdown);
+        //$content = MarkdownExtra::defaultTransform($markdown);
+        $content = MarkdownExtended($markdown);
 		$tags = get_tags_arr(strip_tags($content));		// 提取文章的关键词
 		sort($tags);
 		$tag_str = implode(",", $tags);

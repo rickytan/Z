@@ -8,9 +8,10 @@
 
 #import "ZHomeViewController.h"
 #import "UIColor+RExtension.h"
+#import <MediaPlayer/MediaPlayer.h>
 
-static NSString *cellTitles[] = {@"专业简介", @"新生宝典", @"校园地图", @"社团组织"};
-static NSString *cellSegues[] = {@"MajorIntro", @"Question", @"Map", @"League"};
+static NSString *cellTitles[] = {@"专业简介", @"新生宝典", @"校园地图", @"社团组织", @"浙大写意"};
+static NSString *cellSegues[] = {@"MajorIntro", @"Question", @"Map", @"League", @"playVideo"};
 
 @interface ZHomeItemCell : UICollectionViewCell
 @property (nonatomic, assign) IBOutlet UILabel *textLabel;
@@ -69,6 +70,12 @@ static NSString *cellSegues[] = {@"MajorIntro", @"Question", @"Map", @"League"};
     // Dispose of any resources that can be recreated.
 }
 
+- (void)playVideo
+{
+    MPMoviePlayerViewController *player = [[MPMoviePlayerViewController alloc] initWithContentURL:[NSURL URLWithString:@"http://61.160.198.203/youku/6973F5A8BD94E832224DA75631/03002001004DDA70FF8F9503802B8F42EB7811-91E6-C741-20E3-E1F7A89E110B.mp4"]];
+    [self presentMoviePlayerViewControllerAnimated:player];
+}
+
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
     return 1;
@@ -84,7 +91,7 @@ static NSString *cellSegues[] = {@"MajorIntro", @"Question", @"Map", @"League"};
                   cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     ZHomeItemCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ItemCell"
-                                                                           forIndexPath:indexPath];
+                                                                    forIndexPath:indexPath];
     cell.backgroundColor = [UIColor colorForIndex:indexPath.row];
     cell.textLabel.text = cellTitles[indexPath.row];
     return cell;
@@ -96,10 +103,16 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath
     [collectionView deselectItemAtIndexPath:indexPath
                                    animated:YES];
     if (cellSegues[indexPath.row].length > 0) {
-        [self performSegueWithIdentifier:cellSegues[indexPath.row]
-                                  sender:self];
+        @try {
+            [self performSegueWithIdentifier:cellSegues[indexPath.row]
+                                      sender:self];
+        }
+        @catch (NSException *exception) {
+            SEL action = NSSelectorFromString(cellSegues[indexPath.row]);
+            if ([self respondsToSelector:action])
+                [self performSelector:action];
+        }
     }
-
 }
 
 @end

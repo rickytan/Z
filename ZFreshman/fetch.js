@@ -15,3 +15,22 @@ $("#artph>li").each(function(i,v) {
 		console.log("Done! "+url);
 	});
 });
+
+
+Traning = [];
+
+node = document.querySelectorAll(".zjpy_04");
+for (var i = 0; i < node.length; i++) {
+	var div = node[i];
+	var category = div.innerText.trim();
+	var table = div.nextElementSibling;
+	var links = table.querySelectorAll("td a");
+	var majors = [];
+	for (var j = 0; j < links.length; j++) {
+		var a = links[j];
+		var url = a.href;
+		var name = a.innerText.trim();
+		majors.push({"url":url,"name":name});
+	}
+	Traning.push({"category":category, "majors":majors});
+}

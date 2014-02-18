@@ -5,10 +5,27 @@
 	
 	require_once "tags.php";
     require_once "related.php";
+
+function recurse_copy($src,$dst) { 
+    $dir = opendir($src); 
+    @mkdir($dst); 
+    while(false !== ( $file = readdir($dir)) ) { 
+        if (( $file != '.' ) && ( $file != '..' )) { 
+            if ( is_dir($src . '/' . $file) ) { 
+                recurse_copy($src . '/' . $file,$dst . '/' . $file); 
+            } 
+            else { 
+                copy($src . '/' . $file,$dst . '/' . $file); 
+            } 
+        } 
+    } 
+    closedir($dir); 
+}
 	
 	$config = array(
 		"template"=>"Template/temp.html",	        // 模板文件
-		"style"=>"Template/Style/Clearness.css"    // 样式文件
+		//"style"=>"Template/Style/Clearness.css"    // 样式文件
+		"style"=>"Template/Style/Github2.css"    // 样式文件
 	);
 	
 	$template = @file_get_contents($config['template']);
@@ -58,6 +75,10 @@
         $html = str_replace("{{related}}", $related_html, $html);
         file_put_contents($filepath, $html);
     }
+
+	echo "\nCopy files...\n";
+
+	recurse_copy($dir."/Images", $out_dir."/Images");
     
 	echo "\nDone!\n";
 ?>

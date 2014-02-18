@@ -2578,6 +2578,7 @@ class MarkdownExtra_Parser extends Markdown_Parser {
 		return "\n\n".$this->hashBlock($codeblock)."\n\n";
 	}
 	function _doFencedCodeBlocks_newlines($matches) {
+		return "<br$this->empty_element_suffix"; 
 		return str_repeat("<br$this->empty_element_suffix", 
 			strlen($matches[0]));
 	}

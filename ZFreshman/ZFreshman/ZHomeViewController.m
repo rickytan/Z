@@ -10,7 +10,7 @@
 #import "UIColor+RExtension.h"
 #import <MediaPlayer/MediaPlayer.h>
 
-static NSString *cellTitles[] = {@"专业简介", @"新生宝典", @"校园地图", @"社团组织", @"浙大写意", @""};
+static NSString *cellTitles[] = {@"专业简介", @"新生宝典", @"校园地图", @"社团组织", @"浙大写意"};
 static NSString *cellSegues[] = {@"MajorIntro", @"Question", @"Map", @"League", @"playVideo"};
 
 @interface ZHomeItemCell : UICollectionViewCell

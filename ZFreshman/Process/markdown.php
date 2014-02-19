@@ -566,6 +566,7 @@ class Markdown_Parser {
 	# These are all the transformations that form block-level
 	# tags like paragraphs, headers, and list items.
 	#
+		"doTels"	        => 9,
 		"doHeaders"         => 10,
 		"doHorizontalRules" => 20,
 		
@@ -2219,6 +2220,10 @@ class MarkdownExtra_Parser extends Markdown_Parser {
 		return $this->hashPart($text, 'C');
 	}
 
+	function doTels($text) {
+		$text = preg_replace("/`?((\d{3,4}-)?\d{8})`?[^<>\x80-\xff]/", "<a href=tel://$1><code>$1</code></a>", $text);
+		return $text;
+	}
 
 	function doHeaders($text) {
 	#

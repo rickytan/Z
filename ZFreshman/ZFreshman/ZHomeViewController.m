@@ -64,6 +64,21 @@ static NSString *cellSegues[] = {@"MajorIntro", @"Question", @"Map", @"League", 
 	// Do any additional setup after loading the view.
 }
 
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation
+{
+    return UIInterfaceOrientationPortrait;
+}
+
+- (BOOL)shouldAutorotate
+{
+    return YES;
+}
+
+- (NSUInteger)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskPortrait;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -72,7 +87,7 @@ static NSString *cellSegues[] = {@"MajorIntro", @"Question", @"Map", @"League", 
 
 - (void)playVideo
 {
-    MPMoviePlayerViewController *player = [[MPMoviePlayerViewController alloc] initWithContentURL:[NSURL URLWithString:@"http://61.160.198.203/youku/6973F5A8BD94E832224DA75631/03002001004DDA70FF8F9503802B8F42EB7811-91E6-C741-20E3-E1F7A89E110B.mp4"]];
+    MPMoviePlayerViewController *player = [[MPMoviePlayerViewController alloc] initWithContentURL:[NSURL URLWithString:@"http://rickytan.me/download/zdxy.mp4"]];
     [self presentMoviePlayerViewControllerAnimated:player];
 }
 

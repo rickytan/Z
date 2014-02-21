@@ -142,6 +142,7 @@
 		9C6DD68B18AE0FAD005A7E1E /* ZMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6DD68A18AE0FAD005A7E1E /* ZMapViewController.m */; };
 		9C6DD68E18AE13EC005A7E1E /* ZShadowLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6DD68D18AE13EC005A7E1E /* ZShadowLabel.m */; };
 		9C6DD69118AE1CCA005A7E1E /* ZQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6DD69018AE1CCA005A7E1E /* ZQuestionViewController.m */; };
+		9C9B212818B7B21B009D233E /* ZNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9B212718B7B21B009D233E /* ZNavigationViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -305,6 +306,8 @@
 		9C6DD68D18AE13EC005A7E1E /* ZShadowLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZShadowLabel.m; sourceTree = "<group>"; };
 		9C6DD68F18AE1CCA005A7E1E /* ZQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZQuestionViewController.h; sourceTree = "<group>"; };
 		9C6DD69018AE1CCA005A7E1E /* ZQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZQuestionViewController.m; sourceTree = "<group>"; };
+		9C9B212618B7B21B009D233E /* ZNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNavigationViewController.h; sourceTree = "<group>"; };
+		9C9B212718B7B21B009D233E /* ZNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNavigationViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -381,12 +384,14 @@
 				9C6DD5B018ACC14D005A7E1E /* ZLeagueViewController.m */,
 				9C6DD68918AE0FAD005A7E1E /* ZMapViewController.h */,
 				9C6DD68A18AE0FAD005A7E1E /* ZMapViewController.m */,
-				9C6DD4D818AC5F61005A7E1E /* ZShiningImageView.h */,
-				9C6DD4D918AC5F61005A7E1E /* ZShiningImageView.m */,
-				9C6DD68C18AE13EC005A7E1E /* ZShadowLabel.h */,
-				9C6DD68D18AE13EC005A7E1E /* ZShadowLabel.m */,
+				9C9B212618B7B21B009D233E /* ZNavigationViewController.h */,
+				9C9B212718B7B21B009D233E /* ZNavigationViewController.m */,
 				9C6DD68F18AE1CCA005A7E1E /* ZQuestionViewController.h */,
 				9C6DD69018AE1CCA005A7E1E /* ZQuestionViewController.m */,
+				9C6DD68C18AE13EC005A7E1E /* ZShadowLabel.h */,
+				9C6DD68D18AE13EC005A7E1E /* ZShadowLabel.m */,
+				9C6DD4D818AC5F61005A7E1E /* ZShiningImageView.h */,
+				9C6DD4D918AC5F61005A7E1E /* ZShiningImageView.m */,
 			);
 			path = ZFreshman;
 			sourceTree = "<group>";
@@ -767,6 +772,7 @@
 				9C6DD5B118ACC14D005A7E1E /* ZLeagueViewController.m in Sources */,
 				9C4D1FB518658E9300EFE020 /* main.m in Sources */,
 				9C4D1FB918658E9300EFE020 /* ZAppDelegate.m in Sources */,
+				9C9B212818B7B21B009D233E /* ZNavigationViewController.m in Sources */,
 				9C6DD68E18AE13EC005A7E1E /* ZShadowLabel.m in Sources */,
 				9C6DD4DA18AC5F61005A7E1E /* ZShiningImageView.m in Sources */,
 				9C6DD4D518ABC5D8005A7E1E /* UIColor+RExtension.m in Sources */,

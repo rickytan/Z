@@ -81,7 +81,7 @@ static NSString *cellSegues[] = {@"Traning", @"Question", @"Map", @"League", @"p
 
 - (NSUInteger)supportedInterfaceOrientations
 {
-    return UIInterfaceOrientationMaskAllButUpsideDown;
+    return UIInterfaceOrientationMaskPortrait;
 }
 
 - (void)didReceiveMemoryWarning

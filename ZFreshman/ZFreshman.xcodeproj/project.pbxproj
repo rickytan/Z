@@ -19,7 +19,6 @@
 		9C4D1FD818658E9300EFE020 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C4D1FD618658E9300EFE020 /* InfoPlist.strings */; };
 		9C4D1FDA18658E9300EFE020 /* ZFreshmanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4D1FD918658E9300EFE020 /* ZFreshmanTests.m */; };
 		9C6DD4C518AA6BAA005A7E1E /* HTML in Resources */ = {isa = PBXBuildFile; fileRef = 9C6DD4C418AA6BAA005A7E1E /* HTML */; };
-		9C6DD4C718ABB5C1005A7E1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C6DD4C618ABB5C1005A7E1E /* Main.storyboard */; };
 		9C6DD4CA18ABB7AA005A7E1E /* ZHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6DD4C918ABB7AA005A7E1E /* ZHomeViewController.m */; };
 		9C6DD4CE18ABBCDD005A7E1E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C6DD4CB18ABBCDD005A7E1E /* Default-568h@2x.png */; };
 		9C6DD4CF18ABBCDD005A7E1E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C6DD4CC18ABBCDD005A7E1E /* Default.png */; };
@@ -146,6 +145,8 @@
 		9CB07B9018BB69FC00EF40A9 /* ZMovieController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB07B8F18BB69FC00EF40A9 /* ZMovieController.m */; };
 		9CB07B9218BB737700EF40A9 /* TraningPlan.json in Resources */ = {isa = PBXBuildFile; fileRef = 9CB07B9118BB737700EF40A9 /* TraningPlan.json */; };
 		9CB07B9518BB77C200EF40A9 /* ZMajorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB07B9418BB77C200EF40A9 /* ZMajorViewController.m */; };
+		9CB07B9818BB99ED00EF40A9 /* ZNoAutoLayoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB07B9718BB99ED00EF40A9 /* ZNoAutoLayoutView.m */; };
+		9CB07BA218BB9FAF00EF40A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CB07BA118BB9FAF00EF40A9 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -164,7 +165,6 @@
 		9C4D1FAA18658E9300EFE020 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		9C4D1FAC18658E9300EFE020 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9C4D1FB018658E9300EFE020 /* ZFreshman-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ZFreshman-Info.plist"; sourceTree = "<group>"; };
-		9C4D1FB218658E9300EFE020 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9C4D1FB418658E9300EFE020 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9C4D1FB618658E9300EFE020 /* ZFreshman-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZFreshman-Prefix.pch"; sourceTree = "<group>"; };
 		9C4D1FB718658E9300EFE020 /* ZAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZAppDelegate.h; sourceTree = "<group>"; };
@@ -172,10 +172,8 @@
 		9C4D1FCC18658E9300EFE020 /* ZFreshmanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZFreshmanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C4D1FCD18658E9300EFE020 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		9C4D1FD518658E9300EFE020 /* ZFreshmanTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ZFreshmanTests-Info.plist"; sourceTree = "<group>"; };
-		9C4D1FD718658E9300EFE020 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9C4D1FD918658E9300EFE020 /* ZFreshmanTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFreshmanTests.m; sourceTree = "<group>"; };
 		9C6DD4C418AA6BAA005A7E1E /* HTML */ = {isa = PBXFileReference; lastKnownFileType = folder; path = HTML; sourceTree = SOURCE_ROOT; };
-		9C6DD4C618ABB5C1005A7E1E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9C6DD4C818ABB7AA005A7E1E /* ZHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHomeViewController.h; sourceTree = "<group>"; };
 		9C6DD4C918ABB7AA005A7E1E /* ZHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHomeViewController.m; sourceTree = "<group>"; };
 		9C6DD4CB18ABBCDD005A7E1E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -316,6 +314,9 @@
 		9CB07B9118BB737700EF40A9 /* TraningPlan.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TraningPlan.json; sourceTree = "<group>"; };
 		9CB07B9318BB77C200EF40A9 /* ZMajorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMajorViewController.h; sourceTree = "<group>"; };
 		9CB07B9418BB77C200EF40A9 /* ZMajorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMajorViewController.m; sourceTree = "<group>"; };
+		9CB07B9618BB99ED00EF40A9 /* ZNoAutoLayoutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNoAutoLayoutView.h; sourceTree = "<group>"; };
+		9CB07B9718BB99ED00EF40A9 /* ZNoAutoLayoutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNoAutoLayoutView.m; sourceTree = "<group>"; };
+		9CB07BA118BB9FAF00EF40A9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -376,7 +377,7 @@
 		9C4D1FAE18658E9300EFE020 /* ZFreshman */ = {
 			isa = PBXGroup;
 			children = (
-				9C6DD4C618ABB5C1005A7E1E /* Main.storyboard */,
+				9CB07BA118BB9FAF00EF40A9 /* Main.storyboard */,
 				9C4D1FAF18658E9300EFE020 /* Supporting Files */,
 				9C6DD4D318ABC5D8005A7E1E /* UIColor+RExtension.h */,
 				9C6DD4D418ABC5D8005A7E1E /* UIColor+RExtension.m */,
@@ -404,6 +405,8 @@
 				9C6DD68D18AE13EC005A7E1E /* ZShadowLabel.m */,
 				9C6DD4D818AC5F61005A7E1E /* ZShiningImageView.h */,
 				9C6DD4D918AC5F61005A7E1E /* ZShiningImageView.m */,
+				9CB07B9618BB99ED00EF40A9 /* ZNoAutoLayoutView.h */,
+				9CB07B9718BB99ED00EF40A9 /* ZNoAutoLayoutView.m */,
 			);
 			path = ZFreshman;
 			sourceTree = "<group>";
@@ -440,9 +443,6 @@
 		9C6DD4C118AA6B56005A7E1E /* Resouces */ = {
 			isa = PBXGroup;
 			children = (
-				9CB07B9118BB737700EF40A9 /* TraningPlan.json */,
-				9C6DD68218AE0686005A7E1E /* league@2x.png */,
-				9C6DD68718AE0F17005A7E1E /* zjg.jpg */,
 				9C6DD67E18AD0EE4005A7E1E /* bar@2x.png */,
 				9C6DD4CB18ABBCDD005A7E1E /* Default-568h@2x.png */,
 				9C6DD4CC18ABBCDD005A7E1E /* Default.png */,
@@ -454,7 +454,10 @@
 				9C6DD4DD18AC9487005A7E1E /* Icon@2x.png */,
 				9C6DD4E618ACBC0D005A7E1E /* League */,
 				9C6DD4E418ACA622005A7E1E /* League.plist */,
+				9C6DD68218AE0686005A7E1E /* league@2x.png */,
+				9CB07B9118BB737700EF40A9 /* TraningPlan.json */,
 				9C6DD68018AD0FA5005A7E1E /* UI7NavigationBarBackButton@2x.png */,
+				9C6DD68718AE0F17005A7E1E /* zjg.jpg */,
 			);
 			path = Resouces;
 			sourceTree = "<group>";
@@ -682,7 +685,6 @@
 				9C6DD66918ACCF4E005A7E1E /* 81@2x.png in Resources */,
 				9C6DD4D018ABBCDD005A7E1E /* Default@2x.png in Resources */,
 				9C6DD67A18ACCF4E005A7E1E /* 98@2x.png in Resources */,
-				9C6DD4C718ABB5C1005A7E1E /* Main.storyboard in Resources */,
 				9C6DD4D718AC5D8D005A7E1E /* fresh@2x.png in Resources */,
 				9C6DD62E18ACCF4E005A7E1E /* 22@2x.png in Resources */,
 				9C6DD61E18ACCF4E005A7E1E /* 6@2x.png in Resources */,
@@ -701,6 +703,7 @@
 				9C6DD66218ACCF4E005A7E1E /* 74@2x.png in Resources */,
 				9C6DD67718ACCF4E005A7E1E /* 95@2x.png in Resources */,
 				9C6DD65218ACCF4E005A7E1E /* 58@2x.png in Resources */,
+				9CB07BA218BB9FAF00EF40A9 /* Main.storyboard in Resources */,
 				9C6DD65518ACCF4E005A7E1E /* 61@2x.png in Resources */,
 				9C6DD63A18ACCF4E005A7E1E /* 34@2x.png in Resources */,
 				9C6DD67018ACCF4E005A7E1E /* 88@2x.png in Resources */,
@@ -783,6 +786,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CB07B9818BB99ED00EF40A9 /* ZNoAutoLayoutView.m in Sources */,
 				9C6DD5B118ACC14D005A7E1E /* ZLeagueViewController.m in Sources */,
 				9C4D1FB518658E9300EFE020 /* main.m in Sources */,
 				9C4D1FB918658E9300EFE020 /* ZAppDelegate.m in Sources */,
@@ -822,7 +826,6 @@
 		9C4D1FB118658E9300EFE020 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				9C4D1FB218658E9300EFE020 /* en */,
 				9C6DD5B218ACC3D8005A7E1E /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
@@ -831,7 +834,6 @@
 		9C4D1FD618658E9300EFE020 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				9C4D1FD718658E9300EFE020 /* en */,
 				9C6DD5B318ACC3D8005A7E1E /* zh-Hans */,
 			);
 			name = InfoPlist.strings;

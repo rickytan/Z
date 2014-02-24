@@ -1,0 +1,33 @@
+
+/* Class = "IBUITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "3KT-Mv-o3H"; */
+"3KT-Mv-o3H.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "4iG-s4-ie0"; */
+"4iG-s4-ie0.text" = "Title";
+
+/* Class = "IBUINavigationItem"; title = "校园地图"; ObjectID = "9TX-gA-dHt"; */
+"9TX-gA-dHt.title" = "校园地图";
+
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "F2n-aq-9UN"; */
+"F2n-aq-9UN.text" = "Title";
+
+/* Class = "IBUINavigationItem"; title = "社团简介"; ObjectID = "IBZ-Vc-EuC"; */
+"IBZ-Vc-EuC.title" = "社团简介";
+
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "TT7-jN-qIl"; */
+"TT7-jN-qIl.text" = "Title";
+
+/* Class = "IBUINavigationItem"; title = "培养方案"; ObjectID = "WB9-A9-sdj"; */
+"WB9-A9-sdj.title" = "培养方案";
+
+/* Class = "IBUINavigationItem"; title = "社团组织"; ObjectID = "Wns-Q3-Slj"; */
+"Wns-Q3-Slj.title" = "社团组织";
+
+/* Class = "IBUILabel"; text = "新生宝典"; ObjectID = "lkG-fc-tie"; */
+"lkG-fc-tie.text" = "新生宝典";
+
+/* Class = "IBUIBarButtonItem"; title = "返回"; ObjectID = "pQ4-dP-lQX"; */
+"pQ4-dP-lQX.title" = "返回";
+
+/* Class = "IBUILabel"; text = "Subtitle"; ObjectID = "ywM-QO-lLt"; */
+"ywM-QO-lLt.text" = "Subtitle";

@@ -17,22 +17,22 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
 {
-    return UIInterfaceOrientationIsLandscape(toInterfaceOrientation);
+    return toInterfaceOrientation != UIInterfaceOrientationPortraitUpsideDown;
 }
 
 - (BOOL)shouldAutorotate
 {
-    return NO;
+    return YES;
 }
 
 - (NSUInteger)supportedInterfaceOrientations
 {
-    return UIInterfaceOrientationMaskLandscapeLeft | UIInterfaceOrientationMaskLandscapeRight;
+    return UIInterfaceOrientationMaskAllButUpsideDown;
 }
 
 - (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation
 {
-    return UIInterfaceOrientationLandscapeLeft;
+    return UIInterfaceOrientationLandscapeRight;
 }
 
 @end

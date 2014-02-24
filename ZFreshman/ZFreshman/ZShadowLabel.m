@@ -27,7 +27,7 @@
     CGRect f = rect;
     f.origin.y = 30;
     for (int i=0; i < 32; ++i) {
-        [[UIColor colorWithWhite:0.2
+        [[UIColor colorWithWhite:0.3
                            alpha:0.05 - 0.1 * i / 32] set];
         [self.text drawInRect:f
                      withFont:self.font

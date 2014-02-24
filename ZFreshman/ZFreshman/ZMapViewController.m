@@ -8,9 +8,29 @@
 
 #import "ZMapViewController.h"
 
+@interface ZImageView : UIImageView@end
+@implementation ZImageView
+
+- (void)setFrame:(CGRect)frame
+{
+    [super setFrame:frame];
+}
+
+- (void)setCenter:(CGPoint)center
+{
+    [super setCenter:center];
+}
+
+- (void)setBounds:(CGRect)bounds
+{
+    [super setBounds:bounds];
+}
+
+@end
+
 @interface ZMapViewController () <UIScrollViewDelegate>
 @property (nonatomic, assign) IBOutlet UIScrollView *scrollView;
-@property (nonatomic, assign) IBOutlet UIImageView *imageView;
+@property (nonatomic, retain) IBOutlet UIImageView *imageView;
 @property (nonatomic, assign) BOOL zoomIn;
 @end
 
@@ -29,20 +49,16 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-
     self.scrollView.frame = self.view.bounds;
-    self.scrollView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-    self.imageView.frame = self.scrollView.bounds;
-    self.imageView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+    self.imageView = [[UIImageView alloc] initWithFrame:self.scrollView.bounds];
+    self.imageView.contentMode = UIViewContentModeScaleAspectFit;
+    self.imageView.image = [UIImage imageNamed:@"zjg.jpg"];
+    [self.scrollView addSubview:self.imageView];
 
     [self setUpScaleAndFrame];
     [self centeringImageView];
+
+    [self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
 }
 
 - (void)didReceiveMemoryWarning
@@ -84,7 +100,7 @@
     CGFloat vfactor = size.height / imgSize.height;
     CGFloat factor = MIN(hfactor, vfactor);
 
-    self.imageView.bounds = (CGRect){{0,0}, {imgSize.width * factor, imgSize.height * factor}};
+    self.imageView.bounds = (CGRect){{0, 0}, {imgSize.width * factor, imgSize.height * factor}};
 
     if (hfactor > 1.0 && vfactor > 1.0)
         factor = 1.0;

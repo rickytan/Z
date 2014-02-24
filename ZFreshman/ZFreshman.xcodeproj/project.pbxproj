@@ -390,6 +390,8 @@
 				9C6DD68518AE07FE005A7E1E /* ZLeagueIntroViewController.m */,
 				9C6DD5AF18ACC14D005A7E1E /* ZLeagueViewController.h */,
 				9C6DD5B018ACC14D005A7E1E /* ZLeagueViewController.m */,
+				9CB07B9318BB77C200EF40A9 /* ZMajorViewController.h */,
+				9CB07B9418BB77C200EF40A9 /* ZMajorViewController.m */,
 				9C6DD68918AE0FAD005A7E1E /* ZMapViewController.h */,
 				9C6DD68A18AE0FAD005A7E1E /* ZMapViewController.m */,
 				9CB07B8E18BB69FC00EF40A9 /* ZMovieController.h */,
@@ -402,8 +404,6 @@
 				9C6DD68D18AE13EC005A7E1E /* ZShadowLabel.m */,
 				9C6DD4D818AC5F61005A7E1E /* ZShiningImageView.h */,
 				9C6DD4D918AC5F61005A7E1E /* ZShiningImageView.m */,
-				9CB07B9318BB77C200EF40A9 /* ZMajorViewController.h */,
-				9CB07B9418BB77C200EF40A9 /* ZMajorViewController.m */,
 			);
 			path = ZFreshman;
 			sourceTree = "<group>";
@@ -616,7 +616,7 @@
 				ORGANIZATIONNAME = Ricky;
 				TargetAttributes = {
 					9C4D1FA418658E9300EFE020 = {
-						DevelopmentTeam = B3YWFPRYS3;
+						DevelopmentTeam = NY4X8H3D79;
 					};
 					9C4D1FCB18658E9300EFE020 = {
 						TestTargetID = 9C4D1FA418658E9300EFE020;

@@ -129,7 +129,11 @@
     UIViewController *controller = (UIViewController *)segue.destinationViewController;
     controller.title = self.majors[indexPath.section][@"majors"][indexPath.row][@"name"];
     UIWebView *web = (UIWebView *)controller.view;
-    [web loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.majors[indexPath.section][@"majors"][indexPath.row][@"url"]]]];
+    web.scalesPageToFit = YES;
+    web.multipleTouchEnabled = YES;
+    NSURL *url = [NSURL URLWithString:[self.majors[indexPath.section][@"majors"][indexPath.row][@"url"] stringByReplacingOccurrencesOfString:@"bksy"
+                                                                                                                                  withString:@"ugrs"]];
+    [web loadRequest:[NSURLRequest requestWithURL:url]];
 }
 
 @end

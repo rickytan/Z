@@ -66,7 +66,7 @@ static NSString *cellSegues[] = {@"Traning", @"Question", @"Map", @"League", @"p
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
 {
-    return toInterfaceOrientation == UIInterfaceOrientationPortrait;
+    return toInterfaceOrientation != UIInterfaceOrientationPortraitUpsideDown;
 }
 
 - (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation
@@ -81,7 +81,7 @@ static NSString *cellSegues[] = {@"Traning", @"Question", @"Map", @"League", @"p
 
 - (NSUInteger)supportedInterfaceOrientations
 {
-    return UIInterfaceOrientationMaskPortrait;
+    return UIInterfaceOrientationMaskAllButUpsideDown;
 }
 
 - (void)didReceiveMemoryWarning

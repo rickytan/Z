@@ -64,22 +64,21 @@
 
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    self.scrollView.frame = self.view.bounds;
-    self.imageView.frame = self.scrollView.bounds;
-
-    [self setUpScaleAndFrame];
-    [self centeringImageView];
-}
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+
+    self.scrollView.frame = self.view.bounds;
+    self.imageView.frame = self.scrollView.bounds;
+    [self setUpScaleAndFrame];
+    [self centeringImageView];
+}
 
 #pragma mark - Gestures
 
@@ -126,6 +125,7 @@
     self.scrollView.maximumZoomScale = 1.0 / factor;
     self.scrollView.zoomScale = 1.0;
     [UIView setAnimationsEnabled:YES];
+    _zoomIn = NO;
 }
 
 - (void)centeringImageView

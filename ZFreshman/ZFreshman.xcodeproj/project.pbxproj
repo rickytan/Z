@@ -145,7 +145,6 @@
 		9CB07B9018BB69FC00EF40A9 /* ZMovieController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB07B8F18BB69FC00EF40A9 /* ZMovieController.m */; };
 		9CB07B9218BB737700EF40A9 /* TraningPlan.json in Resources */ = {isa = PBXBuildFile; fileRef = 9CB07B9118BB737700EF40A9 /* TraningPlan.json */; };
 		9CB07B9518BB77C200EF40A9 /* ZMajorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB07B9418BB77C200EF40A9 /* ZMajorViewController.m */; };
-		9CB07B9818BB99ED00EF40A9 /* ZNoAutoLayoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB07B9718BB99ED00EF40A9 /* ZNoAutoLayoutView.m */; };
 		9CB07BA218BB9FAF00EF40A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CB07BA118BB9FAF00EF40A9 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -314,8 +313,6 @@
 		9CB07B9118BB737700EF40A9 /* TraningPlan.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TraningPlan.json; sourceTree = "<group>"; };
 		9CB07B9318BB77C200EF40A9 /* ZMajorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMajorViewController.h; sourceTree = "<group>"; };
 		9CB07B9418BB77C200EF40A9 /* ZMajorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMajorViewController.m; sourceTree = "<group>"; };
-		9CB07B9618BB99ED00EF40A9 /* ZNoAutoLayoutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNoAutoLayoutView.h; sourceTree = "<group>"; };
-		9CB07B9718BB99ED00EF40A9 /* ZNoAutoLayoutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNoAutoLayoutView.m; sourceTree = "<group>"; };
 		9CB07BA118BB9FAF00EF40A9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -405,8 +402,6 @@
 				9C6DD68D18AE13EC005A7E1E /* ZShadowLabel.m */,
 				9C6DD4D818AC5F61005A7E1E /* ZShiningImageView.h */,
 				9C6DD4D918AC5F61005A7E1E /* ZShiningImageView.m */,
-				9CB07B9618BB99ED00EF40A9 /* ZNoAutoLayoutView.h */,
-				9CB07B9718BB99ED00EF40A9 /* ZNoAutoLayoutView.m */,
 			);
 			path = ZFreshman;
 			sourceTree = "<group>";
@@ -786,7 +781,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CB07B9818BB99ED00EF40A9 /* ZNoAutoLayoutView.m in Sources */,
 				9C6DD5B118ACC14D005A7E1E /* ZLeagueViewController.m in Sources */,
 				9C4D1FB518658E9300EFE020 /* main.m in Sources */,
 				9C4D1FB918658E9300EFE020 /* ZAppDelegate.m in Sources */,

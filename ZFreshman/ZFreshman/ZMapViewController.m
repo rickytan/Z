@@ -29,7 +29,7 @@
 @end
 
 @interface ZMapViewController () <UIScrollViewDelegate>
-@property (nonatomic, assign) IBOutlet UIScrollView *scrollView;
+@property (nonatomic, retain) IBOutlet UIScrollView *scrollView;
 @property (nonatomic, retain) IBOutlet UIImageView *imageView;
 @property (nonatomic, assign) BOOL zoomIn;
 @end
@@ -49,16 +49,29 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    self.scrollView.frame = self.view.bounds;
-    self.imageView = [[UIImageView alloc] initWithFrame:self.scrollView.bounds];
-    self.imageView.contentMode = UIViewContentModeScaleAspectFit;
-    self.imageView.image = [UIImage imageNamed:@"zjg.jpg"];
+
+    self.scrollView                     = [[UIScrollView alloc] initWithFrame:self.view.bounds];
+    self.scrollView.delegate            = self;
+    self.scrollView.decelerationRate    = UIScrollViewDecelerationRateFast;
+    self.scrollView.autoresizesSubviews = YES;
+    
+    self.imageView                  = [[UIImageView alloc] initWithFrame:self.scrollView.bounds];
+    self.imageView.contentMode      = UIViewContentModeScaleAspectFit;
+    self.imageView.image            = [UIImage imageNamed:@"zjg.jpg"];
+    self.imageView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     [self.scrollView addSubview:self.imageView];
+    [self.view addSubview:self.scrollView];
+
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.scrollView.frame = self.view.bounds;
+    self.imageView.frame = self.scrollView.bounds;
 
     [self setUpScaleAndFrame];
     [self centeringImageView];
-
-    [self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
 }
 
 - (void)didReceiveMemoryWarning
@@ -66,6 +79,9 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+#pragma mark - Gestures
 
 - (IBAction)onDoubleTap:(UITapGestureRecognizer*)tap
 {
@@ -94,7 +110,7 @@
 - (void)setUpScaleAndFrame
 {
     CGSize imgSize = self.imageView.image.size;
-    CGSize size = self.scrollView.bounds.size;
+    CGSize size = self.scrollView.frame.size;
 
     CGFloat hfactor = size.width / imgSize.width;
     CGFloat vfactor = size.height / imgSize.height;
@@ -114,7 +130,7 @@
 
 - (void)centeringImageView
 {
-    CGSize boundsSize = self.scrollView.bounds.size;
+    CGSize boundsSize = self.scrollView.frame.size;
     CGRect frameToCenter = self.imageView.frame;
 
     // Horizontally
@@ -133,10 +149,6 @@
 
     self.imageView.frame = frameToCenter;
 }
-
-#pragma mark - Gestures
-
-
 
 #pragma mark - UIScroll Delegate
 

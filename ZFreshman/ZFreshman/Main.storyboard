@@ -188,18 +188,9 @@
                         <viewControllerLayoutGuide type="top" id="Hqy-Rn-Rhm"/>
                         <viewControllerLayoutGuide type="bottom" id="cwF-IK-L9Y"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="UdR-Dq-ci5" customClass="ZNoAutoLayoutView">
+                    <view key="view" contentMode="scaleToFill" id="UdR-Dq-ci5">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <scrollView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="act-7v-Vuk">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <connections>
-                                    <outlet property="delegate" destination="SJE-LY-EDC" id="97b-TO-6qm"/>
-                                </connections>
-                            </scrollView>
-                        </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <gestureRecognizers/>
                         <connections>
@@ -207,9 +198,6 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" title="校园地图" id="9TX-gA-dHt"/>
-                    <connections>
-                        <outlet property="scrollView" destination="act-7v-Vuk" id="x5q-dA-2oa"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4v2-Rf-Dv6" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer numberOfTapsRequired="2" id="WJz-Wy-zZO">

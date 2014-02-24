@@ -15,6 +15,8 @@
 {
     [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"bar.png"]
                                        forBarMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"bar.png"]
+                                       forBarMetrics:UIBarMetricsLandscapePhone];
     NSDictionary *textAttr = @{UITextAttributeFont: [UIFont boldSystemFontOfSize:20],
                                UITextAttributeTextColor: [UIColor iOS7DefaultBlueTint],
                                UITextAttributeTextShadowColor: [UIColor clearColor],

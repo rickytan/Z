@@ -8,10 +8,10 @@
 
 #import "ZHomeViewController.h"
 #import "UIColor+RExtension.h"
-#import <MediaPlayer/MediaPlayer.h>
+#import "ZMovieController.h"
 
-static NSString *cellTitles[] = {@"专业简介", @"新生宝典", @"校园地图", @"社团组织", @"浙大写意"};
-static NSString *cellSegues[] = {@"MajorIntro", @"Question", @"Map", @"League", @"playVideo"};
+static NSString *cellTitles[] = {@"培养方案", @"新生宝典", @"校园地图", @"社团组织", @"浙大写意"};
+static NSString *cellSegues[] = {@"Traning", @"Question", @"Map", @"League", @"playVideo"};
 
 @interface ZHomeItemCell : UICollectionViewCell
 @property (nonatomic, assign) IBOutlet UILabel *textLabel;
@@ -64,6 +64,11 @@ static NSString *cellSegues[] = {@"MajorIntro", @"Question", @"Map", @"League", 
 	// Do any additional setup after loading the view.
 }
 
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+{
+    return toInterfaceOrientation == UIInterfaceOrientationPortrait;
+}
+
 - (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation
 {
     return UIInterfaceOrientationPortrait;
@@ -87,7 +92,7 @@ static NSString *cellSegues[] = {@"MajorIntro", @"Question", @"Map", @"League", 
 
 - (void)playVideo
 {
-    MPMoviePlayerViewController *player = [[MPMoviePlayerViewController alloc] initWithContentURL:[NSURL URLWithString:@"http://rickytan.me/download/zdxy.mp4"]];
+    MPMoviePlayerViewController *player = [[ZMovieController alloc] initWithContentURL:[NSURL URLWithString:@"http://v.youku.com/player/getRealM3U8/vid/XMjY5NDYyNjk2/type/mp4/v.m3u8"]];
     [self presentMoviePlayerViewControllerAnimated:player];
 }
 

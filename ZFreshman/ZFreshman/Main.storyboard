@@ -96,6 +96,7 @@
                         <segue destination="UEn-vx-PFI" kind="push" identifier="League" id="SSw-B9-MxP"/>
                         <segue destination="SJE-LY-EDC" kind="push" identifier="Map" id="p9N-1r-VGp"/>
                         <segue destination="5Fz-qD-VTv" kind="push" identifier="Question" id="w7I-nO-PeQ"/>
+                        <segue destination="83z-ui-Usv" kind="push" identifier="Traning" id="kU7-q4-Pei"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Vw-3y-e9A" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -322,6 +323,67 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XUS-9G-N7d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2532" y="416"/>
+        </scene>
+        <!--Major View Controller - 培养方案-->
+        <scene sceneID="1nx-X0-oSo">
+            <objects>
+                <tableViewController id="83z-ui-Usv" customClass="ZMajorViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="NDR-4k-wwC">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="F2n-aq-9UN" style="IBUITableViewCellStyleDefault" id="nNE-QJ-ctv">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nNE-QJ-ctv" id="XdJ-re-sbo">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="F2n-aq-9UN">
+                                            <rect key="frame" x="10" y="0.0" width="280" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="zmD-FX-bw0" kind="push" id="gyR-7m-cYk"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="83z-ui-Usv" id="ov7-74-6Gx"/>
+                            <outlet property="delegate" destination="83z-ui-Usv" id="Rcs-ev-VAb"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="培养方案" id="WB9-A9-sdj">
+                        <barButtonItem key="backBarButtonItem" title="返回" id="pQ4-dP-lQX"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1nu-Qa-CTR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2090" y="-1587"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="uKB-ca-pcI">
+            <objects>
+                <viewController id="zmD-FX-bw0" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pYZ-Uo-qD0"/>
+                        <viewControllerLayoutGuide type="bottom" id="ELu-ba-aog"/>
+                    </layoutGuides>
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="osx-IX-LDu" customClass="UIWebView">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="z2z-0H-se9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tBq-Yv-qxf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2507" y="-1587"/>
         </scene>
     </scenes>
     <resources>

@@ -10,7 +10,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" definesPresentationContext="YES" id="RrL-IS-FBF" customClass="ZNavigationViewController" sceneMemberID="viewController">
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="jsj-pq-o3b">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jsj-pq-o3b">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="deviceRGB"/>
                         <textAttributes key="titleTextAttributes">

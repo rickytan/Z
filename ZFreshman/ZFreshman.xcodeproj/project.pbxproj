@@ -146,6 +146,7 @@
 		9CB07B9218BB737700EF40A9 /* TraningPlan.json in Resources */ = {isa = PBXBuildFile; fileRef = 9CB07B9118BB737700EF40A9 /* TraningPlan.json */; };
 		9CB07B9518BB77C200EF40A9 /* ZMajorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB07B9418BB77C200EF40A9 /* ZMajorViewController.m */; };
 		9CB07BA218BB9FAF00EF40A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CB07BA118BB9FAF00EF40A9 /* Main.storyboard */; };
+		9CB07BA418BE4E2B00EF40A9 /* bg-568@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CB07BA318BE4E2B00EF40A9 /* bg-568@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -314,6 +315,7 @@
 		9CB07B9318BB77C200EF40A9 /* ZMajorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMajorViewController.h; sourceTree = "<group>"; };
 		9CB07B9418BB77C200EF40A9 /* ZMajorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMajorViewController.m; sourceTree = "<group>"; };
 		9CB07BA118BB9FAF00EF40A9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		9CB07BA318BE4E2B00EF40A9 /* bg-568@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-568@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -439,6 +441,7 @@
 			isa = PBXGroup;
 			children = (
 				9C6DD67E18AD0EE4005A7E1E /* bar@2x.png */,
+				9CB07BA318BE4E2B00EF40A9 /* bg-568@2x.png */,
 				9C6DD4CB18ABBCDD005A7E1E /* Default-568h@2x.png */,
 				9C6DD4CC18ABBCDD005A7E1E /* Default.png */,
 				9C6DD4CD18ABBCDD005A7E1E /* Default@2x.png */,
@@ -691,6 +694,7 @@
 				9C6DD61C18ACCF4E005A7E1E /* 4@2x.png in Resources */,
 				9C6DD66A18ACCF4E005A7E1E /* 82@2x.png in Resources */,
 				9C6DD4CE18ABBCDD005A7E1E /* Default-568h@2x.png in Resources */,
+				9CB07BA418BE4E2B00EF40A9 /* bg-568@2x.png in Resources */,
 				9C6DD62F18ACCF4E005A7E1E /* 23@2x.png in Resources */,
 				9C6DD66818ACCF4E005A7E1E /* 80@2x.png in Resources */,
 				9C6DD63B18ACCF4E005A7E1E /* 35@2x.png in Resources */,

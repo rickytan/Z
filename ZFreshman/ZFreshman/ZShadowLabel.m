@@ -7,6 +7,7 @@
 //
 
 #import "ZShadowLabel.h"
+@import CoreText;
 
 @implementation ZShadowLabel
 
@@ -26,9 +27,9 @@
     // Drawing code
     CGRect f = rect;
     f.origin.y = 30;
-    for (int i=0; i < 32; ++i) {
-        [[UIColor colorWithWhite:0.3
-                           alpha:0.05 - 0.1 * i / 32] set];
+    for (int i=0; i < 48; ++i) {
+        [[UIColor colorWithWhite:0.4
+                           alpha:0.05 - 0.1 * i / 48] set];
         [self.text drawInRect:f
                      withFont:self.font
                 lineBreakMode:self.lineBreakMode
@@ -36,6 +37,7 @@
         f.origin.x += 0.5;
         f.origin.y += 0.5;
     }
+    
     [super drawRect:rect];
 }
 

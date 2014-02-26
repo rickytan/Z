@@ -10,11 +10,6 @@
 
 @implementation ZMovieController
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-}
-
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
 {
     return toInterfaceOrientation != UIInterfaceOrientationPortraitUpsideDown;
@@ -32,7 +27,7 @@
 
 - (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation
 {
-    return UIInterfaceOrientationLandscapeRight;
+    return UIInterfaceOrientationPortrait;
 }
 
 @end

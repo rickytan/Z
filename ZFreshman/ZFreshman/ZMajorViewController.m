@@ -8,6 +8,7 @@
 
 #import "ZMajorViewController.h"
 #import "UIColor+RExtension.h"
+#import "ZWebViewController.h"
 
 @interface ZMajorViewController ()
 @property (nonatomic, strong) NSArray *majors;
@@ -126,14 +127,11 @@
                  sender:(id)sender
 {
     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-    UIViewController *controller = (UIViewController *)segue.destinationViewController;
+    ZWebViewController *controller = (ZWebViewController *)segue.destinationViewController;
     controller.title = self.majors[indexPath.section][@"majors"][indexPath.row][@"name"];
-    UIWebView *web = (UIWebView *)controller.view;
-    web.scalesPageToFit = YES;
-    web.multipleTouchEnabled = YES;
     NSURL *url = [NSURL URLWithString:[self.majors[indexPath.section][@"majors"][indexPath.row][@"url"] stringByReplacingOccurrencesOfString:@"bksy"
                                                                                                                                   withString:@"ugrs"]];
-    [web loadRequest:[NSURLRequest requestWithURL:url]];
+    controller.url = url;
 }
 
 @end

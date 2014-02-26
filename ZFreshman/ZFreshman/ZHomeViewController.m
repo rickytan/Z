@@ -95,9 +95,7 @@ static NSString *cellSegues[] = {@"Traning", @"Question", @"Map", @"League", @"p
 - (void)playVideo
 {
     MPMoviePlayerViewController *player = [[ZMovieController alloc] initWithContentURL:[NSURL URLWithString:@"http://v.youku.com/player/getRealM3U8/vid/XMjY5NDYyNjk2/type/mp4/v.m3u8"]];
-//    [self presentMoviePlayerViewControllerAnimated:player];
-    [self presentModalViewController:player
-                            animated:YES];
+    [self presentMoviePlayerViewControllerAnimated:player];
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView

@@ -8,7 +8,7 @@
 
 #import "UIColor+RExtension.h"
 
-static NSString *cellColors[] = {@"#866fd7", @"#3cc", @"#086ca2", @"#ffd200", @"#00a779", @"#c561d3", @"#274e70", @"#ff7373"};
+static NSString *cellColors[] = {@"#866fd7", @"#3cc", @"#086ca2", @"#ffd200", @"#00a779", @"#c561d3", @"#274e70", @"#ff7373", @"#ff8d40", @"#aef100", @"#3e13af", @"#3f8fd2"};
 
 @implementation UIColor (RExtension)
 

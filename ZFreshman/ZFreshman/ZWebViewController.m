@@ -7,6 +7,7 @@
 //
 
 #import "ZWebViewController.h"
+#import "SVModalWebViewController.h"
 
 @interface ZWebViewController () <UIWebViewDelegate>
 @property (nonatomic, assign) IBOutlet UIWebView *webView;
@@ -34,6 +35,22 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Web Delegate
+
+- (BOOL)webView:(UIWebView *)webView
+shouldStartLoadWithRequest:(NSURLRequest *)request
+ navigationType:(UIWebViewNavigationType)navigationType
+{
+    if (navigationType == UIWebViewNavigationTypeLinkClicked && !request.URL.isFileURL && [request.URL.scheme hasPrefix:@"http"]) {
+        SVModalWebViewController *controller = [[SVModalWebViewController alloc] initWithURL:request.URL];
+        [self presentViewController:controller
+                           animated:YES
+                         completion:NULL];
+        return NO;
+    }
+    return YES;
 }
 
 @end

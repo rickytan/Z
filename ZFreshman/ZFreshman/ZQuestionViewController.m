@@ -7,9 +7,11 @@
 //
 
 #import "ZQuestionViewController.h"
+#import "SVProgressHUD.h"
+#import "ZWebViewController.h"
 
 @interface ZQuestionViewController ()
-
+@property (nonatomic, strong) NSArray *questions;
 @end
 
 @implementation ZQuestionViewController
@@ -27,11 +29,7 @@
 {
     [super viewDidLoad];
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self initData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -40,20 +38,82 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (NSString *)cacheFilePath
+{
+    static NSString *cachePath = nil;
+    if (!cachePath) {
+        cachePath = [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"cached.plist"];
+    }
+    return cachePath;
+}
+
+- (NSString *)htmlPath
+{
+    static NSString *htmlPath = nil;
+    if (!htmlPath) {
+        htmlPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"HTML"];
+    }
+    return htmlPath;
+}
+
+- (NSArray *)loadCache
+{
+    return [NSArray arrayWithContentsOfFile:[self cacheFilePath]];
+}
+
+- (void)buildData
+{
+    [SVProgressHUD showWithStatus:@"数据处理中..."
+                         maskType:SVProgressHUDMaskTypeClear];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+
+        NSFileManager *fm = [NSFileManager defaultManager];
+        NSString *htmlPath = [self htmlPath];
+        NSArray *items = [fm contentsOfDirectoryAtPath:htmlPath
+                                                 error:NULL];
+        NSMutableArray *questionItems = [NSMutableArray arrayWithCapacity:items.count];
+
+        for (NSString *file in items) {
+            NSString *path = [htmlPath stringByAppendingPathComponent:file];
+            NSDictionary *attr = [fm attributesOfItemAtPath:path
+                                                      error:NULL];
+            if ([attr[NSFileType] isEqualToString:NSFileTypeRegular] && [file.pathExtension.lowercaseString isEqualToString:@"html"]) {
+                [questionItems addObject:@{@"Title": [file stringByDeletingPathExtension],
+                                           @"Url": file}];
+            }
+        }
+        self.questions = [NSArray arrayWithArray:questionItems];
+#ifndef DEBUG
+        [self.questions writeToFile:[self cacheFilePath]
+                         atomically:YES];
+#endif
+
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [SVProgressHUD dismiss];
+            [self.tableView reloadData];
+        });
+    });
+}
+
+- (void)initData
+{
+    self.questions = [self loadCache];
+    if (!self.questions.count) {
+        [self buildData];
+    }
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+- (NSInteger)tableView:(UITableView *)tableView
+ numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return self.questions.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -62,50 +122,12 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
+    cell.textLabel.text = self.questions[indexPath.row][@"Title"];
     
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
 #pragma mark - Navigation
 
 // In a story board-based application, you will often want to do a little preparation before navigation
@@ -113,8 +135,10 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    ZWebViewController *web = (ZWebViewController *)segue.destinationViewController;
+    web.url = [NSURL fileURLWithPath:[[self htmlPath] stringByAppendingPathComponent:self.questions[indexPath.row][@"Url"]]];
 }
 
- */
 
 @end

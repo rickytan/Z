@@ -148,6 +148,12 @@
 		9CB07BA218BB9FAF00EF40A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CB07BA118BB9FAF00EF40A9 /* Main.storyboard */; };
 		9CB07BA418BE4E2B00EF40A9 /* bg-568@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CB07BA318BE4E2B00EF40A9 /* bg-568@2x.png */; };
 		9CB07BA718BE571000EF40A9 /* ZQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB07BA618BE571000EF40A9 /* ZQuestionViewController.m */; };
+		9CB07BAC18BE5BEB00EF40A9 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9CB07BA918BE5BEB00EF40A9 /* SVProgressHUD.bundle */; };
+		9CB07BAD18BE5BEB00EF40A9 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB07BAB18BE5BEB00EF40A9 /* SVProgressHUD.m */; };
+		9CB07BBC18BE680300EF40A9 /* SVWebViewController.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9CB07BAF18BE680300EF40A9 /* SVWebViewController.strings */; };
+		9CB07BBD18BE680300EF40A9 /* SVModalWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB07BB618BE680300EF40A9 /* SVModalWebViewController.m */; };
+		9CB07BBE18BE680300EF40A9 /* SVWebViewController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9CB07BB718BE680300EF40A9 /* SVWebViewController.bundle */; };
+		9CB07BBF18BE680300EF40A9 /* SVWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB07BB918BE680300EF40A9 /* SVWebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -319,6 +325,15 @@
 		9CB07BA318BE4E2B00EF40A9 /* bg-568@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-568@2x.png"; sourceTree = "<group>"; };
 		9CB07BA518BE571000EF40A9 /* ZQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZQuestionViewController.h; sourceTree = "<group>"; };
 		9CB07BA618BE571000EF40A9 /* ZQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZQuestionViewController.m; sourceTree = "<group>"; };
+		9CB07BA918BE5BEB00EF40A9 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		9CB07BAA18BE5BEB00EF40A9 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		9CB07BAB18BE5BEB00EF40A9 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		9CB07BB518BE680300EF40A9 /* SVModalWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVModalWebViewController.h; sourceTree = "<group>"; };
+		9CB07BB618BE680300EF40A9 /* SVModalWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVModalWebViewController.m; sourceTree = "<group>"; };
+		9CB07BB718BE680300EF40A9 /* SVWebViewController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVWebViewController.bundle; sourceTree = "<group>"; };
+		9CB07BB818BE680300EF40A9 /* SVWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVWebViewController.h; sourceTree = "<group>"; };
+		9CB07BB918BE680300EF40A9 /* SVWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVWebViewController.m; sourceTree = "<group>"; };
+		9CB07BBA18BE680300EF40A9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/SVWebViewController.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -348,11 +363,13 @@
 		9C4D1F9C18658E9300EFE020 = {
 			isa = PBXGroup;
 			children = (
-				9C4D1FAE18658E9300EFE020 /* ZFreshman */,
-				9C4D1FD318658E9300EFE020 /* ZFreshmanTests */,
 				9C4D1FA718658E9300EFE020 /* Frameworks */,
 				9C4D1FA618658E9300EFE020 /* Products */,
 				9C6DD4C118AA6B56005A7E1E /* Resouces */,
+				9CB07BA818BE5BEB00EF40A9 /* SVProgressHUD */,
+				9CB07BAE18BE680300EF40A9 /* SVWebViewController */,
+				9C4D1FAE18658E9300EFE020 /* ZFreshman */,
+				9C4D1FD318658E9300EFE020 /* ZFreshmanTests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -401,14 +418,14 @@
 				9CB07B8F18BB69FC00EF40A9 /* ZMovieController.m */,
 				9C9B212618B7B21B009D233E /* ZNavigationViewController.h */,
 				9C9B212718B7B21B009D233E /* ZNavigationViewController.m */,
-				9C6DD68F18AE1CCA005A7E1E /* ZWebViewController.h */,
-				9C6DD69018AE1CCA005A7E1E /* ZWebViewController.m */,
+				9CB07BA518BE571000EF40A9 /* ZQuestionViewController.h */,
+				9CB07BA618BE571000EF40A9 /* ZQuestionViewController.m */,
 				9C6DD68C18AE13EC005A7E1E /* ZShadowLabel.h */,
 				9C6DD68D18AE13EC005A7E1E /* ZShadowLabel.m */,
 				9C6DD4D818AC5F61005A7E1E /* ZShiningImageView.h */,
 				9C6DD4D918AC5F61005A7E1E /* ZShiningImageView.m */,
-				9CB07BA518BE571000EF40A9 /* ZQuestionViewController.h */,
-				9CB07BA618BE571000EF40A9 /* ZQuestionViewController.m */,
+				9C6DD68F18AE1CCA005A7E1E /* ZWebViewController.h */,
+				9C6DD69018AE1CCA005A7E1E /* ZWebViewController.m */,
 			);
 			path = ZFreshman;
 			sourceTree = "<group>";
@@ -573,6 +590,29 @@
 			path = League;
 			sourceTree = "<group>";
 		};
+		9CB07BA818BE5BEB00EF40A9 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				9CB07BA918BE5BEB00EF40A9 /* SVProgressHUD.bundle */,
+				9CB07BAA18BE5BEB00EF40A9 /* SVProgressHUD.h */,
+				9CB07BAB18BE5BEB00EF40A9 /* SVProgressHUD.m */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
+		9CB07BAE18BE680300EF40A9 /* SVWebViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9CB07BAF18BE680300EF40A9 /* SVWebViewController.strings */,
+				9CB07BB518BE680300EF40A9 /* SVModalWebViewController.h */,
+				9CB07BB618BE680300EF40A9 /* SVModalWebViewController.m */,
+				9CB07BB718BE680300EF40A9 /* SVWebViewController.bundle */,
+				9CB07BB818BE680300EF40A9 /* SVWebViewController.h */,
+				9CB07BB918BE680300EF40A9 /* SVWebViewController.m */,
+			);
+			path = SVWebViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -637,6 +677,11 @@
 				en,
 				Base,
 				"zh-Hans",
+				da,
+				"es-ES",
+				es,
+				fr,
+				"zh-Hant",
 			);
 			mainGroup = 9C4D1F9C18658E9300EFE020;
 			productRefGroup = 9C4D1FA618658E9300EFE020 /* Products */;
@@ -671,6 +716,7 @@
 				9C6DD67618ACCF4E005A7E1E /* 94@2x.png in Resources */,
 				9C6DD66618ACCF4E005A7E1E /* 78@2x.png in Resources */,
 				9C6DD64B18ACCF4E005A7E1E /* 51@2x.png in Resources */,
+				9CB07BBC18BE680300EF40A9 /* SVWebViewController.strings in Resources */,
 				9C6DD68818AE0F17005A7E1E /* zjg.jpg in Resources */,
 				9C6DD65018ACCF4E005A7E1E /* 56@2x.png in Resources */,
 				9C6DD62318ACCF4E005A7E1E /* 11@2x.png in Resources */,
@@ -724,6 +770,7 @@
 				9C6DD65118ACCF4E005A7E1E /* 57@2x.png in Resources */,
 				9C6DD63F18ACCF4E005A7E1E /* 39@2x.png in Resources */,
 				9C6DD65918ACCF4E005A7E1E /* 65@2x.png in Resources */,
+				9CB07BAC18BE5BEB00EF40A9 /* SVProgressHUD.bundle in Resources */,
 				9C6DD63318ACCF4E005A7E1E /* 27@2x.png in Resources */,
 				9C6DD66018ACCF4E005A7E1E /* 72@2x.png in Resources */,
 				9C6DD62A18ACCF4E005A7E1E /* 18@2x.png in Resources */,
@@ -750,6 +797,7 @@
 				9C6DD62B18ACCF4E005A7E1E /* 19@2x.png in Resources */,
 				9C6DD63118ACCF4E005A7E1E /* 25@2x.png in Resources */,
 				9C6DD68118AD0FA5005A7E1E /* UI7NavigationBarBackButton@2x.png in Resources */,
+				9CB07BBE18BE680300EF40A9 /* SVWebViewController.bundle in Resources */,
 				9C6DD66D18ACCF4E005A7E1E /* 85@2x.png in Resources */,
 				9C6DD64518ACCF4E005A7E1E /* 45@2x.png in Resources */,
 				9C6DD61B18ACCF4E005A7E1E /* 3@2x.png in Resources */,
@@ -799,11 +847,14 @@
 				9C6DD68E18AE13EC005A7E1E /* ZShadowLabel.m in Sources */,
 				9C6DD4DA18AC5F61005A7E1E /* ZShiningImageView.m in Sources */,
 				9C6DD4D518ABC5D8005A7E1E /* UIColor+RExtension.m in Sources */,
+				9CB07BBD18BE680300EF40A9 /* SVModalWebViewController.m in Sources */,
+				9CB07BAD18BE5BEB00EF40A9 /* SVProgressHUD.m in Sources */,
 				9C6DD4E318ACA52C005A7E1E /* ZImageListCell.m in Sources */,
 				9CB07B9518BB77C200EF40A9 /* ZMajorViewController.m in Sources */,
 				9C6DD4CA18ABB7AA005A7E1E /* ZHomeViewController.m in Sources */,
 				9C6DD68618AE07FE005A7E1E /* ZLeagueIntroViewController.m in Sources */,
 				9C6DD68B18AE0FAD005A7E1E /* ZMapViewController.m in Sources */,
+				9CB07BBF18BE680300EF40A9 /* SVWebViewController.m in Sources */,
 				9C6DD69118AE1CCA005A7E1E /* ZWebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -841,6 +892,14 @@
 				9C6DD5B318ACC3D8005A7E1E /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9CB07BAF18BE680300EF40A9 /* SVWebViewController.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9CB07BBA18BE680300EF40A9 /* zh-Hans */,
+			);
+			name = SVWebViewController.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

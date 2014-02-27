@@ -11,6 +11,7 @@
 
 @interface ZWebViewController () <UIWebViewDelegate>
 @property (nonatomic, assign) IBOutlet UIWebView *webView;
+@property (nonatomic, assign) BOOL flip;
 @end
 
 @implementation ZWebViewController
@@ -50,7 +51,37 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
                          completion:NULL];
         return NO;
     }
+    else if (navigationType == UIWebViewNavigationTypeLinkClicked) {
+        self.flip = YES;
+    }
     return YES;
+}
+
+- (void)webViewDidStartLoad:(UIWebView *)webView
+{
+    if (self.flip)
+        [UIView transitionWithView:self.view
+                          duration:0.35
+                           options:UIViewAnimationOptionTransitionCrossDissolve | UIViewAnimationOptionAllowAnimatedContent | UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionCurveEaseInOut
+                        animations:^{
+                            self.webView.alpha = 0.0;
+                        }
+                        completion:^(BOOL finished) {
+
+                        }];
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    [UIView animateWithDuration:0.3
+                          delay:0
+                        options:UIViewAnimationOptionCurveEaseOut | UIViewAnimationOptionBeginFromCurrentState
+                     animations:^{
+                         self.webView.alpha = 1.0;
+                     }
+                     completion:^(BOOL finished) {
+
+                     }];
 }
 
 @end

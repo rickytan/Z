@@ -188,6 +188,7 @@
                                 </connections>
                             </webView>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="wZn-i9-c7u" secondAttribute="trailing" id="9kN-Nw-Yvw"/>
                             <constraint firstItem="wZn-i9-c7u" firstAttribute="leading" secondItem="kAy-GE-owh" secondAttribute="leading" id="D1Y-H0-56H"/>

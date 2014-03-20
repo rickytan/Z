@@ -121,7 +121,7 @@
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="TT7-jN-qIl" style="IBUITableViewCellStyleDefault" id="MKV-J5-3Aw">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="TT7-jN-qIl" style="IBUITableViewCellStyleDefault" id="MKV-J5-3Aw">
                                 <rect key="frame" x="0.0" y="66" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MKV-J5-3Aw" id="ZGa-gO-CvQ">
@@ -159,9 +159,9 @@
                     <connections>
                         <outlet property="delegate" destination="5Fz-qD-VTv" id="QvD-O3-prg"/>
                         <outlet property="searchBar" destination="Ecb-d6-x9x" id="uo8-Fm-yN3"/>
-                        <outlet property="searchContentsController" destination="5Fz-qD-VTv" id="cNa-qb-ZDP"/>
-                        <outlet property="searchResultsDataSource" destination="5Fz-qD-VTv" id="RSZ-ag-mlt"/>
-                        <outlet property="searchResultsDelegate" destination="5Fz-qD-VTv" id="n2H-SF-tIy"/>
+                        <outlet property="searchContentsController" destination="5Fz-qD-VTv" id="O8a-p0-zBe"/>
+                        <outlet property="searchResultsDataSource" destination="5Fz-qD-VTv" id="KzR-vX-XHK"/>
+                        <outlet property="searchResultsDelegate" destination="5Fz-qD-VTv" id="vbB-i5-g5w"/>
                     </connections>
                 </searchDisplayController>
             </objects>

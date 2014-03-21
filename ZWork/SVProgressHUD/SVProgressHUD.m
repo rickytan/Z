@@ -41,7 +41,7 @@ CGFloat SVProgressHUDRingThickness = 6;
 
 @property (nonatomic, readonly) CGFloat visibleKeyboardHeight;
 
-- (void)showProgress:(float)progress
+- (void)showProgress:(CGFloat)progress
               status:(NSString*)string
             maskType:(SVProgressHUDMaskType)hudMaskType;
 

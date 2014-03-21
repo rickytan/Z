@@ -662,7 +662,7 @@
 				ORGANIZATIONNAME = Ricky;
 				TargetAttributes = {
 					9C4D1FA418658E9300EFE020 = {
-						DevelopmentTeam = NY4X8H3D79;
+						DevelopmentTeam = JM9WSY7Q38;
 					};
 					9C4D1FCB18658E9300EFE020 = {
 						TestTargetID = 9C4D1FA418658E9300EFE020;
@@ -982,13 +982,13 @@
 		9C4D1FDE18658E9300EFE020 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: hang zhang (JM9WSY7Q38)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: hang zhang (JM9WSY7Q38)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZFreshman/ZFreshman-Prefix.pch";
 				INFOPLIST_FILE = "ZFreshman/ZFreshman-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "831BE0AD-24E0-4816-8B06-340D83958BD5";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -997,13 +997,13 @@
 		9C4D1FDF18658E9300EFE020 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: hang zhang (JM9WSY7Q38)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: hang zhang (JM9WSY7Q38)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZFreshman/ZFreshman-Prefix.pch";
 				INFOPLIST_FILE = "ZFreshman/ZFreshman-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "831BE0AD-24E0-4816-8B06-340D83958BD5";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

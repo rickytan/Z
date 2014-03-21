@@ -404,6 +404,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = Ricky;
 				TargetAttributes = {
+					9C4D1EE418658D2200EFE020 = {
+						DevelopmentTeam = JM9WSY7Q38;
+					};
 					9C4D1F0818658D2200EFE020 = {
 						TestTargetID = 9C4D1EE418658D2200EFE020;
 					};
@@ -599,12 +602,14 @@
 		9C4D1F1B18658D2200EFE020 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: hang zhang (JM9WSY7Q38)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZTel/ZTel-Prefix.pch";
 				INFOPLIST_FILE = "ZTel/ZTel-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "16FF03DC-AEE6-4752-B17A-36F984187F04";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -613,12 +618,14 @@
 		9C4D1F1C18658D2200EFE020 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: hang zhang (JM9WSY7Q38)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZTel/ZTel-Prefix.pch";
 				INFOPLIST_FILE = "ZTel/ZTel-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "16FF03DC-AEE6-4752-B17A-36F984187F04";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

@@ -58,6 +58,7 @@
                                                               alpha:1.0]];
         [[UITabBar appearance] setSelectionIndicatorImage:[[UIImage alloc] init]];
     }
+    self.window.backgroundColor = [UIColor scrollViewTexturedBackgroundColor];
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions

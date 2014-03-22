@@ -32,6 +32,7 @@
     RTSiderViewController *sider = [[RTSiderViewController alloc] init];
     sider.delegate = self;
     sider.dataSource = self;
+    sider.translationStyle = SlideTranslationStyleHalfPull;
     [sider setMiddleViewController:self.homeController];
     [sider setRightViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"Settings"]];
     [self addChildViewController:sider];

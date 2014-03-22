@@ -57,6 +57,11 @@
 		9C86159518DD581500D5F5BC /* header@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C86159418DD581500D5F5BC /* header@2x.png */; };
 		9C86159718DDCDA000D5F5BC /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C86159618DDCDA000D5F5BC /* settings@2x.png */; };
 		9C86159918DDCEDE00D5F5BC /* plasmid@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C86159818DDCEDE00D5F5BC /* plasmid@2x.png */; };
+		9C86159C18DDD61C00D5F5BC /* ZSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C86159B18DDD61C00D5F5BC /* ZSettingsViewController.m */; };
+		9C86159E18DDE3F100D5F5BC /* work@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C86159D18DDE3F100D5F5BC /* work@2x.png */; };
+		9C8615A118DDEAC800D5F5BC /* ZLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8615A018DDEAC800D5F5BC /* ZLoginViewController.m */; };
+		9C8615A418DDEEB000D5F5BC /* weibo-signin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C8615A218DDEEB000D5F5BC /* weibo-signin@2x.png */; };
+		9C8615A518DDEEB000D5F5BC /* qq-signin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C8615A318DDEEB000D5F5BC /* qq-signin@2x.png */; };
 		9CD39E59188101FF00CF97A1 /* bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CD39E58188101FF00CF97A1 /* bar@2x.png */; };
 		9CD39E5C188102AC00CF97A1 /* UI7NavigationBarBackButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CD39E5B188102AC00CF97A1 /* UI7NavigationBarBackButton@2x.png */; };
 		9CD39E5E1881195200CF97A1 /* cell-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CD39E5D1881195200CF97A1 /* cell-bg@2x.png */; };
@@ -149,6 +154,13 @@
 		9C86159418DD581500D5F5BC /* header@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "header@2x.png"; sourceTree = "<group>"; };
 		9C86159618DDCDA000D5F5BC /* settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@2x.png"; sourceTree = "<group>"; };
 		9C86159818DDCEDE00D5F5BC /* plasmid@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plasmid@2x.png"; sourceTree = "<group>"; };
+		9C86159A18DDD61C00D5F5BC /* ZSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSettingsViewController.h; sourceTree = "<group>"; };
+		9C86159B18DDD61C00D5F5BC /* ZSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSettingsViewController.m; sourceTree = "<group>"; };
+		9C86159D18DDE3F100D5F5BC /* work@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "work@2x.png"; sourceTree = "<group>"; };
+		9C86159F18DDEAC800D5F5BC /* ZLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLoginViewController.h; sourceTree = "<group>"; };
+		9C8615A018DDEAC800D5F5BC /* ZLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLoginViewController.m; sourceTree = "<group>"; };
+		9C8615A218DDEEB000D5F5BC /* weibo-signin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weibo-signin@2x.png"; sourceTree = "<group>"; };
+		9C8615A318DDEEB000D5F5BC /* qq-signin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qq-signin@2x.png"; sourceTree = "<group>"; };
 		9CD39E58188101FF00CF97A1 /* bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bar@2x.png"; sourceTree = "<group>"; };
 		9CD39E5A1881024A00CF97A1 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		9CD39E5B188102AC00CF97A1 /* UI7NavigationBarBackButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UI7NavigationBarBackButton@2x.png"; sourceTree = "<group>"; };
@@ -263,6 +275,10 @@
 				9C287CE81880018A00934786 /* ZRootViewController.m */,
 				9C4D1F7C18658E3F00EFE020 /* ZViewController.h */,
 				9C4D1F7D18658E3F00EFE020 /* ZViewController.m */,
+				9C86159A18DDD61C00D5F5BC /* ZSettingsViewController.h */,
+				9C86159B18DDD61C00D5F5BC /* ZSettingsViewController.m */,
+				9C86159F18DDEAC800D5F5BC /* ZLoginViewController.h */,
+				9C8615A018DDEAC800D5F5BC /* ZLoginViewController.m */,
 			);
 			path = ZWork;
 			sourceTree = "<group>";
@@ -297,6 +313,9 @@
 		9C7C20E418691F0100F2B2EA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9C8615A218DDEEB000D5F5BC /* weibo-signin@2x.png */,
+				9C8615A318DDEEB000D5F5BC /* qq-signin@2x.png */,
+				9C86159D18DDE3F100D5F5BC /* work@2x.png */,
 				9C86159818DDCEDE00D5F5BC /* plasmid@2x.png */,
 				9C86159618DDCDA000D5F5BC /* settings@2x.png */,
 				9C86159418DD581500D5F5BC /* header@2x.png */,
@@ -422,6 +441,7 @@
 				9C86159718DDCDA000D5F5BC /* settings@2x.png in Resources */,
 				9C7C20E618691F0100F2B2EA /* ku@2x.png in Resources */,
 				9CD39E5E1881195200CF97A1 /* cell-bg@2x.png in Resources */,
+				9C8615A418DDEEB000D5F5BC /* weibo-signin@2x.png in Resources */,
 				9C7C20F31869250100F2B2EA /* Default.png in Resources */,
 				9C86159518DD581500D5F5BC /* header@2x.png in Resources */,
 				9CD39E6018812C4200CF97A1 /* image-holder@2x.png in Resources */,
@@ -430,6 +450,7 @@
 				9C7C20F41869250100F2B2EA /* Default@2x.png in Resources */,
 				9C7C20EE1869210400F2B2EA /* greenButtonHighlight@2x.png in Resources */,
 				9C7C20E9186920F900F2B2EA /* blueButton@2x.png in Resources */,
+				9C86159E18DDE3F100D5F5BC /* work@2x.png in Resources */,
 				9C287CFF188044D300934786 /* icon-120@2x.png in Resources */,
 				9C287CF718803C0400934786 /* SVProgressHUD.bundle in Resources */,
 				9C7C20EA186920F900F2B2EA /* blueButtonHighlight@2x.png in Resources */,
@@ -437,6 +458,7 @@
 				9C86158718DC02AF00D5F5BC /* LICENSE.txt in Resources */,
 				9CD39E5C188102AC00CF97A1 /* UI7NavigationBarBackButton@2x.png in Resources */,
 				9CD39E59188101FF00CF97A1 /* bar@2x.png in Resources */,
+				9C8615A518DDEEB000D5F5BC /* qq-signin@2x.png in Resources */,
 				9C7C20F21869250100F2B2EA /* Default-568h@2x.png in Resources */,
 				9C7C20ED1869210400F2B2EA /* greenButton@2x.png in Resources */,
 				9C4D1F7B18658E3F00EFE020 /* Main.storyboard in Resources */,
@@ -469,12 +491,14 @@
 				9C287CF218802F1900934786 /* ZPaymentSettingViewController.m in Sources */,
 				9C86157418DC012C00D5F5BC /* ZParttimesViewController.m in Sources */,
 				9C287CEC188001A700934786 /* RTSiderViewController.m in Sources */,
+				9C86159C18DDD61C00D5F5BC /* ZSettingsViewController.m in Sources */,
 				9C287CF818803C0400934786 /* SVProgressHUD.m in Sources */,
 				9C86158A18DC02AF00D5F5BC /* MWFeedParser.m in Sources */,
 				9C86159018DD439C00D5F5BC /* ZParttimeDetailViewController.m in Sources */,
 				9C287CFB1880442D00934786 /* ZHelpViewController.m in Sources */,
 				9C4D1F7818658E3F00EFE020 /* ZAppDelegate.m in Sources */,
 				9C86158C18DC02AF00D5F5BC /* NSString+HTML.m in Sources */,
+				9C8615A118DDEAC800D5F5BC /* ZLoginViewController.m in Sources */,
 				9C86158618DC02AF00D5F5BC /* GTMNSString+HTML.m in Sources */,
 				9C86158918DC02AF00D5F5BC /* MWFeedItem.m in Sources */,
 				9C86158B18DC02AF00D5F5BC /* NSDate+InternetDateTime.m in Sources */,
@@ -587,6 +611,7 @@
 		9C4D1F9718658E3F00EFE020 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: sheng tan (24EV2NDP7K)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/ricky/Data/Code/Z/ZWork,
@@ -595,6 +620,7 @@
 				GCC_PREFIX_HEADER = "ZWork/ZWork-Prefix.pch";
 				INFOPLIST_FILE = "ZWork/ZWork-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "699BB3AF-2DA2-46B2-8BB6-D49311392FD9";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -602,6 +628,7 @@
 		9C4D1F9818658E3F00EFE020 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: sheng tan (24EV2NDP7K)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/ricky/Data/Code/Z/ZWork,
@@ -610,6 +637,7 @@
 				GCC_PREFIX_HEADER = "ZWork/ZWork-Prefix.pch";
 				INFOPLIST_FILE = "ZWork/ZWork-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "699BB3AF-2DA2-46B2-8BB6-D49311392FD9";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

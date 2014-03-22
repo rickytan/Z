@@ -11,8 +11,8 @@
 #import "UIView+DL.h"
 
 @interface ZViewController ()
-@property (nonatomic, assign) IBOutlet UIButton *button1;
-@property (nonatomic, assign) IBOutlet UIButton *button2;
+@property (nonatomic, assign) IBOutlet UIButton * button1;
+@property (nonatomic, assign) IBOutlet UIButton * button2;
 @end
 
 @implementation ZViewController
@@ -44,6 +44,21 @@
                             forState:UIControlStateHighlighted];
 
 
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    if (![AVUser currentUser].isAuthenticated) {
+        UIViewController *c = [self.storyboard instantiateViewControllerWithIdentifier:@"LoginNav"];
+        c.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+        [self presentViewController:c
+                           animated:YES
+                         completion:^{
+                             
+                         }];
+    }
 }
 
 - (void)didReceiveMemoryWarning

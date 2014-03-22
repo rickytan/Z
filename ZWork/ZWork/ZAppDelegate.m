@@ -8,6 +8,7 @@
 
 #import "ZAppDelegate.h"
 #import <AVOSCloud/AVOSCloud.h>
+#import <AVOSCloudSNS/AVOSCloudSNS.h>
 
 @implementation ZAppDelegate
 
@@ -69,6 +70,10 @@
     [AVOSCloud setApplicationId:@"6ukj16pp78un0qjf7x04w3vr1swluyj6kljur7j4hisu2iys"
                       clientKey:@"91t0va30iry17r2b4ielpr970f1x16v8uaqm5csgx71ju5l4"];
     [AVOSCloud useAVCloudCN];
+    [AVOSCloudSNS setupPlatform:AVOSCloudSNSSinaWeibo
+                     withAppKey:@"584509756"
+                   andAppSecret:@"3cd48b3a1c43d629d9e56a74b468857a"
+                 andRedirectURI:@"https://api.weibo.com/oauth2/default.html"];
     [AVAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     [AVAnalytics trackAppOpenedWithRemoteNotificationPayload:launchOptions];
     

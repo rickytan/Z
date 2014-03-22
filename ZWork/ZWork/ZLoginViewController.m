@@ -64,17 +64,24 @@
 
 - (void)signInWithType:(AVOSCloudSNSType)type
 {
-    [AVOSCloudSNS loginWithCallback:^(id object, NSError *error) {
+    UIViewController *controller = [AVOSCloudSNS loginManualyWithCallback:^(id object, NSError *error) {
         if (error) {
             NSLog(@"%@", error);
             return;
         }
         [AVUser loginWithAuthData:object
                             block:^(AVUser *user, NSError *error) {
-                                
+                                [self dismissViewControllerAnimated:YES
+                                                         completion:^{
+                                                             [self onDismiss:nil];
+                                                         }];
                             }];
     }
-                         toPlatform:type];
+                                                               toPlatform:type];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:controller];
+    [self presentViewController:nav
+                       animated:YES
+                     completion:NULL];
 }
 
 @end

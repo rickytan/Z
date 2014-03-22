@@ -64,4 +64,9 @@
     return YES;
 }
 
+- (CGFloat)siderViewControllerMarginForSlidingToLeft:(RTSiderViewController *)controller
+{
+    return 120;
+}
+
 @end

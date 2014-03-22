@@ -98,7 +98,7 @@ UIImagePickerControllerDelegate>
     [super viewDidLoad];
     self.maxAttachedImage = 3;
     self.attachedImages = [NSMutableArray array];
-
+    
     self.myNeed = [AVObject objectWithClassName:@"Need"];
     [self.myNeed setObject:@""
                     forKey:@"title"];
@@ -112,6 +112,12 @@ UIImagePickerControllerDelegate>
                     forKey:@"expire"];
     self.tableView.editing = YES;
     [self.tableView reloadData];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self.subjectField becomeFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning
@@ -148,6 +154,7 @@ UIImagePickerControllerDelegate>
         _numberOfPeopleField = [self newTextField];
         _numberOfPeopleField.frame = CGRectMake(0, 0, 64, 36);
         _numberOfPeopleField.tag = 10;
+        _numberOfPeopleField.clearButtonMode = UITextFieldViewModeNever;
         _numberOfPeopleField.textAlignment = NSTextAlignmentRight;
         _numberOfPeopleField.keyboardType = UIKeyboardTypeNumberPad;
     }
@@ -158,12 +165,13 @@ UIImagePickerControllerDelegate>
 {
     if (!_descriptionView) {
         _descriptionView = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, 210, 100)];
+        _descriptionView.contentInset = UIEdgeInsetsMake(4, 4, 4, 4);
+        _descriptionView.bounces = NO;
         _descriptionView.font = [UIFont systemFontOfSize:12];
         _descriptionView.backgroundColor = [UIColor clearColor];
         _descriptionView.delegate = self;
         _descriptionView.dataDetectorTypes = UIDataDetectorTypeAll;
         _descriptionView.layer.borderColor = [UIColor blackColor].CGColor;
-        _descriptionView.contentInset = UIEdgeInsetsMake(4, 4, 4, 4);
         _descriptionView.layer.borderWidth = 1;
     }
     return _descriptionView;
@@ -175,40 +183,45 @@ UIImagePickerControllerDelegate>
 {
     [self dismissViewControllerAnimated:YES
                              completion:^{
-
+                                 
                              }];
 }
 
 - (IBAction)onDone:(id)sender
 {
     [self.view endEditing:YES];
-
+    
     if (self.subjectField.text.length == 0) {
         [SVProgressHUD showErrorWithStatus:@"请输入标题！"];
         return;
     }
-
-    NSInteger count = 0;
-    for (UIImage *image in self.attachedImages) {
-        NSData *imageData = UIImageJPEGRepresentation(image, 0.7);
-        AVFile *file = [AVFile fileWithName:@"image.jpg"
-                                       data:imageData];
-        [file saveInBackground];
-        [self.myNeed setObject:file
-                        forKey:[NSString stringWithFormat:@"image%d", count++]];
-    }
-
+    
     [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeClear];
-    [self.myNeed saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if (succeeded) {
-            [SVProgressHUD showSuccessWithStatus:@"发布成功！"];
-            [self dismissViewControllerAnimated:YES
-                                     completion:NULL];
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSInteger count = 0;
+        for (UIImage *image in self.attachedImages) {
+            NSData *imageData = UIImageJPEGRepresentation(image, 0.7);
+            AVFile *file = [AVFile fileWithName:@"image.jpg"
+                                           data:imageData];
+            if ([file save]) {
+                [self.myNeed setObject:file
+                                forKey:[NSString stringWithFormat:@"image%d", count++]];
+            }
         }
-        else {
-            [SVProgressHUD showErrorWithStatus:@"发布失败！"];
-        }
-    }];
+        NSError *error = nil;
+        [self.myNeed save:&error];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (!error) {
+                [SVProgressHUD showSuccessWithStatus:@"发布成功！"];
+                [self dismissViewControllerAnimated:YES
+                                         completion:NULL];
+            }
+            else {
+                [SVProgressHUD showErrorWithStatus:@"发布失败！"];
+            }
+        });
+    });
 }
 
 #pragma mark - UITextField Delegate
@@ -300,7 +313,7 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath
             }
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ImageCell"
                                                                     forIndexPath:indexPath];
-            cell.imageView.image = [self.attachedImages objectAtIndex:indexPath.row];
+            ((UIImageView*)[cell viewWithTag:100]).image = [self.attachedImages objectAtIndex:indexPath.row];
             return cell;
         }
             break;
@@ -350,7 +363,7 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath
         default:
             break;
     }
-
+    
     return nil;
 }
 
@@ -396,7 +409,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
         UIImagePickerController *picker = [[UIImagePickerController alloc] init];
         picker.delegate = self;
         picker.allowsEditing = YES;
-
+        
         picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
         [self presentViewController:picker
                            animated:YES
@@ -454,7 +467,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     UIImage *image = [info objectForKey:UIImagePickerControllerEditedImage];
     NSInteger count = self.attachedImages.count;
     [self.attachedImages addObject:image];
-
+    
     [picker dismissViewControllerAnimated:YES completion:^{
         [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:count
                                                                     inSection:1]]

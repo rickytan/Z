@@ -10,6 +10,7 @@
 
 @interface ZParttimeDetailViewController () <UIWebViewDelegate>
 @property (nonatomic, assign) IBOutlet UIWebView *webView;
+@property (nonatomic, assign) IBOutlet UIActivityIndicatorView *spinnerView;
 @end
 
 @implementation ZParttimeDetailViewController
@@ -50,6 +51,11 @@
 
 #pragma mark - UIWebView Delegate
 
+- (void)webViewDidStartLoad:(UIWebView *)webView
+{
+    [self.spinnerView startAnimating];
+}
+
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
     [webView stringByEvaluatingJavaScriptFromString:@"\
@@ -72,6 +78,8 @@
     anim.removedOnCompletion = YES;
     [webView.layer addAnimation:anim
                          forKey:@"Fadeout"];
+    
+    [self.spinnerView stopAnimating];
 }
 
 @end

@@ -55,6 +55,8 @@
 		9C86159018DD439C00D5F5BC /* ZParttimeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C86158F18DD439C00D5F5BC /* ZParttimeDetailViewController.m */; };
 		9C86159318DD570D00D5F5BC /* UIView+DL.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C86159218DD570D00D5F5BC /* UIView+DL.m */; };
 		9C86159518DD581500D5F5BC /* header@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C86159418DD581500D5F5BC /* header@2x.png */; };
+		9C86159718DDCDA000D5F5BC /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C86159618DDCDA000D5F5BC /* settings@2x.png */; };
+		9C86159918DDCEDE00D5F5BC /* plasmid@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C86159818DDCEDE00D5F5BC /* plasmid@2x.png */; };
 		9CD39E59188101FF00CF97A1 /* bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CD39E58188101FF00CF97A1 /* bar@2x.png */; };
 		9CD39E5C188102AC00CF97A1 /* UI7NavigationBarBackButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CD39E5B188102AC00CF97A1 /* UI7NavigationBarBackButton@2x.png */; };
 		9CD39E5E1881195200CF97A1 /* cell-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CD39E5D1881195200CF97A1 /* cell-bg@2x.png */; };
@@ -122,7 +124,6 @@
 		9C7C20F11869250100F2B2EA /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		9C7C20F51869269900F2B2EA /* ZNeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNeedViewController.h; sourceTree = "<group>"; };
 		9C7C20F61869269900F2B2EA /* ZNeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNeedViewController.m; sourceTree = "<group>"; };
-		9C7C20F8186927A600F2B2EA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		9C86157218DC012C00D5F5BC /* ZParttimesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZParttimesViewController.h; sourceTree = "<group>"; };
 		9C86157318DC012C00D5F5BC /* ZParttimesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZParttimesViewController.m; sourceTree = "<group>"; };
 		9C86157618DC02AF00D5F5BC /* GTMNSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTMNSString+HTML.h"; sourceTree = "<group>"; };
@@ -146,6 +147,8 @@
 		9C86159118DD570D00D5F5BC /* UIView+DL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DL.h"; sourceTree = "<group>"; };
 		9C86159218DD570D00D5F5BC /* UIView+DL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DL.m"; sourceTree = "<group>"; };
 		9C86159418DD581500D5F5BC /* header@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "header@2x.png"; sourceTree = "<group>"; };
+		9C86159618DDCDA000D5F5BC /* settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@2x.png"; sourceTree = "<group>"; };
+		9C86159818DDCEDE00D5F5BC /* plasmid@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plasmid@2x.png"; sourceTree = "<group>"; };
 		9CD39E58188101FF00CF97A1 /* bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bar@2x.png"; sourceTree = "<group>"; };
 		9CD39E5A1881024A00CF97A1 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		9CD39E5B188102AC00CF97A1 /* UI7NavigationBarBackButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UI7NavigationBarBackButton@2x.png"; sourceTree = "<group>"; };
@@ -294,6 +297,8 @@
 		9C7C20E418691F0100F2B2EA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9C86159818DDCEDE00D5F5BC /* plasmid@2x.png */,
+				9C86159618DDCDA000D5F5BC /* settings@2x.png */,
 				9C86159418DD581500D5F5BC /* header@2x.png */,
 				9CD39E58188101FF00CF97A1 /* bar@2x.png */,
 				9C7C20E7186920F900F2B2EA /* blueButton@2x.png */,
@@ -414,11 +419,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C86159718DDCDA000D5F5BC /* settings@2x.png in Resources */,
 				9C7C20E618691F0100F2B2EA /* ku@2x.png in Resources */,
 				9CD39E5E1881195200CF97A1 /* cell-bg@2x.png in Resources */,
 				9C7C20F31869250100F2B2EA /* Default.png in Resources */,
 				9C86159518DD581500D5F5BC /* header@2x.png in Resources */,
 				9CD39E6018812C4200CF97A1 /* image-holder@2x.png in Resources */,
+				9C86159918DDCEDE00D5F5BC /* plasmid@2x.png in Resources */,
 				9C287D01188044D300934786 /* icon@2x.png in Resources */,
 				9C7C20F41869250100F2B2EA /* Default@2x.png in Resources */,
 				9C7C20EE1869210400F2B2EA /* greenButtonHighlight@2x.png in Resources */,
@@ -498,7 +505,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				9C4D1F7A18658E3F00EFE020 /* Base */,
-				9C7C20F8186927A600F2B2EA /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

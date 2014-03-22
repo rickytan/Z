@@ -13,9 +13,7 @@
  of AVRelation is associated with a particular parent object and key.
  */
 @interface AVRelation : NSObject {
-    AVObject *parent;
-    NSString *key;
-    NSString *targetClass;
+    
 }
 
 @property (nonatomic, retain) NSString *targetClass;
@@ -44,6 +42,16 @@
 
 /*!
  @return A AVQuery that can be used to get parent objects in this relation.
+ */
+
+/**
+ *  A AVQuery that can be used to get parent objects in this relation.
+ *
+ *  @param parentClassName parent Class Name
+ *  @param relationKey     relation Key
+ *  @param child           child object
+ *
+ *  @return the Query
  */
 +(AVQuery *)reverseQuery:(NSString *)parentClassName
              relationKey:(NSString *)relationKey

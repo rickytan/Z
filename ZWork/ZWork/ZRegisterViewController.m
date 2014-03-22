@@ -7,9 +7,14 @@
 //
 
 #import "ZRegisterViewController.h"
+#import <AVOSCloud/AVOSCloud.h>
+#import <AVOSCloudSNS/AVOSCloudSNS.h>
+#import <AVOSCloudSNS/AVUser+SNS.h>
 
 @interface ZRegisterViewController ()
-
+- (IBAction)onHideKeyboard:(id)sender;
+- (IBAction)onWeibo:(id)sender;
+- (IBAction)onQQ:(id)sender;
 @end
 
 @implementation ZRegisterViewController
@@ -35,4 +40,33 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)onHideKeyboard:(id)sender
+{
+    [self.view endEditing:YES];
+}
+
+- (IBAction)onWeibo:(id)sender
+{
+    [self signInWithType:AVOSCloudSNSSinaWeibo];
+}
+
+- (IBAction)onQQ:(id)sender
+{
+    [self signInWithType:AVOSCloudSNSQQ];
+}
+
+- (void)signInWithType:(AVOSCloudSNSType)type
+{
+    [AVOSCloudSNS loginWithCallback:^(id object, NSError *error) {
+        if (error) {
+            NSLog(@"%@", error);
+            return;
+        }
+        [AVUser loginWithAuthData:object
+                            block:^(AVUser *user, NSError *error) {
+                                
+                            }];
+    }
+                         toPlatform:type];
+}
 @end

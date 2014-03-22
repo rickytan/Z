@@ -62,6 +62,8 @@
 		9C8615A118DDEAC800D5F5BC /* ZLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8615A018DDEAC800D5F5BC /* ZLoginViewController.m */; };
 		9C8615A418DDEEB000D5F5BC /* weibo-signin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C8615A218DDEEB000D5F5BC /* weibo-signin@2x.png */; };
 		9C8615A518DDEEB000D5F5BC /* qq-signin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C8615A318DDEEB000D5F5BC /* qq-signin@2x.png */; };
+		9C8615A818DDF02900D5F5BC /* ZRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8615A718DDF02900D5F5BC /* ZRegisterViewController.m */; };
+		9C8615AA18DDF11700D5F5BC /* AVOSCloudSNS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C8615A918DDF11700D5F5BC /* AVOSCloudSNS.framework */; };
 		9CD39E59188101FF00CF97A1 /* bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CD39E58188101FF00CF97A1 /* bar@2x.png */; };
 		9CD39E5C188102AC00CF97A1 /* UI7NavigationBarBackButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CD39E5B188102AC00CF97A1 /* UI7NavigationBarBackButton@2x.png */; };
 		9CD39E5E1881195200CF97A1 /* cell-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CD39E5D1881195200CF97A1 /* cell-bg@2x.png */; };
@@ -161,6 +163,9 @@
 		9C8615A018DDEAC800D5F5BC /* ZLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLoginViewController.m; sourceTree = "<group>"; };
 		9C8615A218DDEEB000D5F5BC /* weibo-signin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weibo-signin@2x.png"; sourceTree = "<group>"; };
 		9C8615A318DDEEB000D5F5BC /* qq-signin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qq-signin@2x.png"; sourceTree = "<group>"; };
+		9C8615A618DDF02900D5F5BC /* ZRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRegisterViewController.h; sourceTree = "<group>"; };
+		9C8615A718DDF02900D5F5BC /* ZRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRegisterViewController.m; sourceTree = "<group>"; };
+		9C8615A918DDF11700D5F5BC /* AVOSCloudSNS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloudSNS.framework; sourceTree = "<group>"; };
 		9CD39E58188101FF00CF97A1 /* bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bar@2x.png"; sourceTree = "<group>"; };
 		9CD39E5A1881024A00CF97A1 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		9CD39E5B188102AC00CF97A1 /* UI7NavigationBarBackButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UI7NavigationBarBackButton@2x.png"; sourceTree = "<group>"; };
@@ -179,6 +184,7 @@
 				9C4D1F6A18658E3F00EFE020 /* CoreGraphics.framework in Frameworks */,
 				9C4D1F6C18658E3F00EFE020 /* UIKit.framework in Frameworks */,
 				9C4D1F6818658E3F00EFE020 /* Foundation.framework in Frameworks */,
+				9C8615AA18DDF11700D5F5BC /* AVOSCloudSNS.framework in Frameworks */,
 				9C287CD5187FF31000934786 /* AVOSCloud.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -231,6 +237,7 @@
 		9C4D1F6618658E3F00EFE020 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9C8615A918DDF11700D5F5BC /* AVOSCloudSNS.framework */,
 				9C287CDC187FFB7800934786 /* MobileCoreServices.framework */,
 				9C287CDA187FF64300934786 /* SystemConfiguration.framework */,
 				9C287CD6187FF61400934786 /* CoreTelephony.framework */,
@@ -279,6 +286,8 @@
 				9C86159B18DDD61C00D5F5BC /* ZSettingsViewController.m */,
 				9C86159F18DDEAC800D5F5BC /* ZLoginViewController.h */,
 				9C8615A018DDEAC800D5F5BC /* ZLoginViewController.m */,
+				9C8615A618DDF02900D5F5BC /* ZRegisterViewController.h */,
+				9C8615A718DDF02900D5F5BC /* ZRegisterViewController.m */,
 			);
 			path = ZWork;
 			sourceTree = "<group>";
@@ -487,6 +496,7 @@
 				9C7C20F71869269900F2B2EA /* ZNeedViewController.m in Sources */,
 				9C287CE91880018A00934786 /* ZRootViewController.m in Sources */,
 				9C4D1F7E18658E3F00EFE020 /* ZViewController.m in Sources */,
+				9C8615A818DDF02900D5F5BC /* ZRegisterViewController.m in Sources */,
 				9C86159318DD570D00D5F5BC /* UIView+DL.m in Sources */,
 				9C287CF218802F1900934786 /* ZPaymentSettingViewController.m in Sources */,
 				9C86157418DC012C00D5F5BC /* ZParttimesViewController.m in Sources */,

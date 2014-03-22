@@ -19,16 +19,28 @@
 #import "AVPush.h"
 #import "AVOSCloud.h"
 #import "AVCloud.h"
-#import "AVAnalytics.h"
 #import "AVRelation.h"
 #import "AVSubclassing.h"
+#import "AVStatus.h"
 
-typedef enum AVStorageType : NSInteger {
+#if defined(__IPHONE_OS_VERSION_MIN_REQUIRED)
+#import "AVAnalytics.h"
+#endif
+
+/**
+ *  Storage Type
+ */
+typedef NS_ENUM(int, AVStorageType){
+    /// QiNiu
     AVStorageTypeQiniu = 0,
+    
+    /* Parse */
     AVStorageTypeParse,
+    
+    /* AWS S3 */
     AVStorageTypeS3,
-    AVStorageTypeNum
-} AVStorageType;
+    
+} ;
 
 typedef enum AVLogLevel : NSUInteger {
     AVLogLevelNone      = 0,
@@ -41,6 +53,10 @@ typedef enum AVLogLevel : NSUInteger {
 
 #define kAVDefaultNetworkTimeoutInterval 10.0
 
+
+/**
+ *  AVOSCloud is the main Class for AVOSCloud SDK
+ */
 @interface AVOSCloud : NSObject
 
 /** @name Connecting to AVOS Cloud */
@@ -48,19 +64,67 @@ typedef enum AVLogLevel : NSUInteger {
 /*!
  Sets the applicationId and clientKey of your application.
  @param applicationId The applicaiton id for your AVOS Cloud application.
- @param applicationId The client key for your AVOS Cloud application.
+ @param clientKey The client key for your AVOS Cloud application.
  */
 + (void)setApplicationId:(NSString *)applicationId clientKey:(NSString *)clientKey;
+
+/**
+ *  get Application Id
+ *
+ *  @return Application Id
+ */
 + (NSString *)getApplicationId;
+
+/**
+ *  get Client Key
+ *
+ *  @return Client Key
+ */
 + (NSString *)getClientKey;
 
-+ (void)useAVCloud;
+
+/**
+ *  开启LastModify支持, 减少流量消耗
+ *
+ *  @param enabled 开启
+ */
++ (void)setLastModifyEnabled:(BOOL)enabled;
+
+/**
+ *  获取是否开启LastModify支持
+ */
++ (BOOL)getLastModifyEnabled;
+
+/**
+ *  清空LastModify缓存
+ */
++(void)clearLastModifyCache;
+
++ (void)useAVCloud AVDeprecated("2.3.3以后废除");
 + (void)setStorageType:(AVStorageType)type;
 
-+ (void)useAVCloudUS;
-+ (void)useAVCloudCN;
+/**
+ *  Use AVOS US data center
+ */
++ (void)useAVCloudUS AVDeprecated("2.3.3以后废除");
 
+/**
+ *  Use AVOS China data center. the default option is China
+ */
++ (void)useAVCloudCN AVDeprecated("2.3.3以后废除");
+
+/**
+ *  *  get the timeout interval for AVOS request
+ *
+ *  @return timeout interval
+ */
 + (NSTimeInterval)networkTimeoutInterval;
+
+/**
+ *  set the timeout interval for AVOS request
+ *
+ *  @param time  timeout interval
+ */
 + (void)setNetworkTimeoutInterval:(NSTimeInterval)time;
 
 // log
@@ -68,11 +132,34 @@ typedef enum AVLogLevel : NSUInteger {
 + (AVLogLevel)logLevel;
 
 #pragma mark Schedule work
-// default 30 days
+
+/**
+ *  get the query cache expired days
+ *
+ *  @return the query cache expired days
+ */
 + (NSInteger)queryCacheExpiredDays;
+
+/**
+ *  set Query Cache Expired Days, default is 30 days
+ *
+ *  @param days the days you want to set
+ */
 + (void)setQueryCacheExpiredDays:(NSInteger)days;
-// default 30 days
+
+/**
+ *  get the file cache expired days
+ *
+ *  @return the file cache expired days
+ */
 + (NSInteger)fileCacheExpiredDays;
+
+
+/**
+ *  set File Cache Expired Days, default is 30 days
+ *
+ *  @param days the days you want to set
+ */
 + (void)setFileCacheExpiredDays:(NSInteger)days;
 
 
@@ -88,8 +175,11 @@ typedef AVInstallation PFInstallation;
 typedef AVPush PFPush;
 typedef AVOSCloud Parse;
 typedef AVCloud PFCloud;
-typedef AVAnalytics PFAnalytics;
+
 typedef AVRelation PFRelation;
 
+#if defined(__IPHONE_OS_VERSION_MIN_REQUIRED)
+typedef AVAnalytics PFAnalytics;
+#endif
 
 @end

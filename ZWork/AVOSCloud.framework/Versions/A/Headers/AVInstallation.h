@@ -47,13 +47,15 @@
  it. If this installation is not stored on disk, returns a AVInstallation
  with deviceType and installationId fields set to those of the
  current installation.
- @result Returns a AVInstallation that represents the currently-running
+ @return a AVInstallation that represents the currently-running
  installation.
  */
 + (AVInstallation *)currentInstallation;
 
 /*!
  Sets the device token string property from an NSData-encoded token.
+ 
+ @param deviceTokenData  NSData-encoded device token.
  */
 - (void)setDeviceTokenFromData:(NSData *)deviceTokenData;
 

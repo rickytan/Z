@@ -198,6 +198,19 @@
 	
 }
 
+- (BOOL)parseData:(NSData *)data
+{
+    [self reset];
+    parsing = YES;
+	aborted = NO;
+	stopped = NO;
+	failed = NO;
+	parsingComplete = NO;
+    [self startParsingData:data
+          textEncodingName:@"utf-8"];
+    return YES;
+}
+
 // Begin XML parsing
 - (void)startParsingData:(NSData *)data textEncodingName:(NSString *)textEncodingName {
 	if (data && !feedParser) {
@@ -457,9 +470,9 @@
 		
 		// End tag or close
 		if (ELEMENT_IS_EMPTY(elementName)) {
-			[currentText appendFormat:@" />", elementName];
+			[currentText appendFormat:@" />"];
 		} else {
-			[currentText appendFormat:@">", elementName];
+			[currentText appendFormat:@">"];
 		}
 		
 		// Dont continue

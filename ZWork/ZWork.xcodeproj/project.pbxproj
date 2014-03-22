@@ -44,14 +44,15 @@
 		9C7C20F41869250100F2B2EA /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C7C20F11869250100F2B2EA /* Default@2x.png */; };
 		9C7C20F71869269900F2B2EA /* ZNeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C7C20F61869269900F2B2EA /* ZNeedViewController.m */; };
 		9C86157418DC012C00D5F5BC /* ZParttimesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C86157318DC012C00D5F5BC /* ZParttimesViewController.m */; };
-		9C86158618DC02AF00D5F5BC /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C86157718DC02AF00D5F5BC /* GTMNSString+HTML.m */; };
+		9C86158618DC02AF00D5F5BC /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C86157718DC02AF00D5F5BC /* GTMNSString+HTML.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9C86158718DC02AF00D5F5BC /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9C86157818DC02AF00D5F5BC /* LICENSE.txt */; };
-		9C86158818DC02AF00D5F5BC /* MWFeedInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C86157A18DC02AF00D5F5BC /* MWFeedInfo.m */; };
-		9C86158918DC02AF00D5F5BC /* MWFeedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C86157C18DC02AF00D5F5BC /* MWFeedItem.m */; };
-		9C86158A18DC02AF00D5F5BC /* MWFeedParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C86157E18DC02AF00D5F5BC /* MWFeedParser.m */; };
-		9C86158B18DC02AF00D5F5BC /* NSDate+InternetDateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C86158118DC02AF00D5F5BC /* NSDate+InternetDateTime.m */; };
-		9C86158C18DC02AF00D5F5BC /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C86158318DC02AF00D5F5BC /* NSString+HTML.m */; };
-		9C86158D18DC02AF00D5F5BC /* NSString+XMLEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C86158518DC02AF00D5F5BC /* NSString+XMLEntities.m */; };
+		9C86158818DC02AF00D5F5BC /* MWFeedInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C86157A18DC02AF00D5F5BC /* MWFeedInfo.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9C86158918DC02AF00D5F5BC /* MWFeedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C86157C18DC02AF00D5F5BC /* MWFeedItem.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9C86158A18DC02AF00D5F5BC /* MWFeedParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C86157E18DC02AF00D5F5BC /* MWFeedParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9C86158B18DC02AF00D5F5BC /* NSDate+InternetDateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C86158118DC02AF00D5F5BC /* NSDate+InternetDateTime.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9C86158C18DC02AF00D5F5BC /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C86158318DC02AF00D5F5BC /* NSString+HTML.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9C86158D18DC02AF00D5F5BC /* NSString+XMLEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C86158518DC02AF00D5F5BC /* NSString+XMLEntities.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9C86159018DD439C00D5F5BC /* ZParttimeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C86158F18DD439C00D5F5BC /* ZParttimeDetailViewController.m */; };
 		9CD39E59188101FF00CF97A1 /* bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CD39E58188101FF00CF97A1 /* bar@2x.png */; };
 		9CD39E5C188102AC00CF97A1 /* UI7NavigationBarBackButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CD39E5B188102AC00CF97A1 /* UI7NavigationBarBackButton@2x.png */; };
 		9CD39E5E1881195200CF97A1 /* cell-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CD39E5D1881195200CF97A1 /* cell-bg@2x.png */; };
@@ -138,6 +139,8 @@
 		9C86158318DC02AF00D5F5BC /* NSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HTML.m"; sourceTree = "<group>"; };
 		9C86158418DC02AF00D5F5BC /* NSString+XMLEntities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XMLEntities.h"; sourceTree = "<group>"; };
 		9C86158518DC02AF00D5F5BC /* NSString+XMLEntities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XMLEntities.m"; sourceTree = "<group>"; };
+		9C86158E18DD439C00D5F5BC /* ZParttimeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZParttimeDetailViewController.h; sourceTree = "<group>"; };
+		9C86158F18DD439C00D5F5BC /* ZParttimeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZParttimeDetailViewController.m; sourceTree = "<group>"; };
 		9CD39E58188101FF00CF97A1 /* bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bar@2x.png"; sourceTree = "<group>"; };
 		9CD39E5A1881024A00CF97A1 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		9CD39E5B188102AC00CF97A1 /* UI7NavigationBarBackButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UI7NavigationBarBackButton@2x.png"; sourceTree = "<group>"; };
@@ -240,14 +243,16 @@
 				9C287CFA1880442D00934786 /* ZHelpViewController.m */,
 				9C7C20F51869269900F2B2EA /* ZNeedViewController.h */,
 				9C7C20F61869269900F2B2EA /* ZNeedViewController.m */,
+				9C86158E18DD439C00D5F5BC /* ZParttimeDetailViewController.h */,
+				9C86158F18DD439C00D5F5BC /* ZParttimeDetailViewController.m */,
+				9C86157218DC012C00D5F5BC /* ZParttimesViewController.h */,
+				9C86157318DC012C00D5F5BC /* ZParttimesViewController.m */,
 				9C287CF018802F1900934786 /* ZPaymentSettingViewController.h */,
 				9C287CF118802F1900934786 /* ZPaymentSettingViewController.m */,
 				9C287CE71880018A00934786 /* ZRootViewController.h */,
 				9C287CE81880018A00934786 /* ZRootViewController.m */,
 				9C4D1F7C18658E3F00EFE020 /* ZViewController.h */,
 				9C4D1F7D18658E3F00EFE020 /* ZViewController.m */,
-				9C86157218DC012C00D5F5BC /* ZParttimesViewController.h */,
-				9C86157318DC012C00D5F5BC /* ZParttimesViewController.m */,
 			);
 			path = ZWork;
 			sourceTree = "<group>";
@@ -449,6 +454,7 @@
 				9C287CEC188001A700934786 /* RTSiderViewController.m in Sources */,
 				9C287CF818803C0400934786 /* SVProgressHUD.m in Sources */,
 				9C86158A18DC02AF00D5F5BC /* MWFeedParser.m in Sources */,
+				9C86159018DD439C00D5F5BC /* ZParttimeDetailViewController.m in Sources */,
 				9C287CFB1880442D00934786 /* ZHelpViewController.m in Sources */,
 				9C4D1F7818658E3F00EFE020 /* ZAppDelegate.m in Sources */,
 				9C86158C18DC02AF00D5F5BC /* NSString+HTML.m in Sources */,

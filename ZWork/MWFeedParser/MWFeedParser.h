@@ -133,6 +133,7 @@ typedef enum { FeedTypeUnknown, FeedTypeRSS, FeedTypeRSS1, FeedTypeAtom } FeedTy
 
 // Begin parsing
 - (BOOL)parse;
+- (BOOL)parseData:(NSData *)data;
 
 // Stop parsing
 - (void)stopParsing;

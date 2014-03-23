@@ -74,6 +74,10 @@
                      withAppKey:@"584509756"
                    andAppSecret:@"3cd48b3a1c43d629d9e56a74b468857a"
                  andRedirectURI:@"https://api.weibo.com/oauth2/default.html"];
+    [AVOSCloudSNS setupPlatform:AVOSCloudSNSQQ
+                     withAppKey:@"101044351"
+                   andAppSecret:@"c5231ba69d21768e4fcfa8c089625573"
+                 andRedirectURI:nil];
     [AVAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     [AVAnalytics trackAppOpenedWithRemoteNotificationPayload:launchOptions];
     

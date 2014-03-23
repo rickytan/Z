@@ -69,19 +69,24 @@
             NSLog(@"%@", error);
             return;
         }
-        [AVUser loginWithAuthData:object
-                            block:^(AVUser *user, NSError *error) {
-                                [self dismissViewControllerAnimated:YES
-                                                         completion:^{
-                                                             [self onDismiss:nil];
-                                                         }];
-                            }];
+        [AVUser currentUser].username = object[@"username"];
+        [[AVUser currentUser] setObject:object[@"avatar"]
+                                 forKey:@"avatar"];
+        [[AVUser currentUser] addAuthData:object
+                                    block:^(AVUser *user, NSError *error) {
+                                        [self dismissViewControllerAnimated:YES
+                                                                 completion:^{
+                                                                     [self onDismiss:nil];
+                                                                 }];
+                                    }];
     }
                                                                toPlatform:type];
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:controller];
-    [self presentViewController:nav
-                       animated:YES
-                     completion:NULL];
+    if (controller) {
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:controller];
+        [self presentViewController:nav
+                           animated:YES
+                         completion:NULL];
+    }
 }
 
 @end

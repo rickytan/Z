@@ -33,6 +33,21 @@
 	<string>1.0.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLIconFile</key>
+			<string>icon@2x</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>sinaweibosso.584509756</string>
+				<string>tencent101044351</string>
+				<string>zwork</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>1.0.0</string>
 	<key>LSRequiresIPhoneOS</key>

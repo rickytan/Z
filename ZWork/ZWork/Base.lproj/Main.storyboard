@@ -40,10 +40,10 @@
             </objects>
             <point key="canvasLocation" x="234" y="371"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="EQz-Tr-ltm">
             <objects>
-                <tableViewController storyboardIdentifier="Settings" id="vYf-7s-2fm" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="Settings" id="vYf-7s-2fm" customClass="ZSettingsViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Anz-c5-6Es">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -147,6 +147,9 @@
                                                     <state key="highlighted">
                                                         <color key="titleColor" red="0.90196084980000002" green="0.90588241820000004" blue="0.91372555489999996" alpha="1" colorSpace="deviceRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="onLogout:" destination="vYf-7s-2fm" eventType="touchUpInside" id="csY-yA-zPF"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>

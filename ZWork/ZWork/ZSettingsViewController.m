@@ -7,6 +7,9 @@
 //
 
 #import "ZSettingsViewController.h"
+#import "RTSiderViewController.h"
+#import <AVOSCloud/AVOSCloud.h>
+#import <SDWebImage/UIButton+WebCache.h>
 
 @interface ZSettingsCell : UITableViewCell
 @end
@@ -43,7 +46,8 @@
 @end
 
 @interface ZSettingsViewController ()
-
+@property (nonatomic, assign) IBOutlet UIButton * headButton;
+- (IBAction)onLogout:(id)sender;
 @end
 
 @implementation ZSettingsViewController
@@ -63,10 +67,27 @@
 
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    if ([AVUser currentUser].isAuthenticated) {
+        [self.headButton setImageWithURL:[NSURL URLWithString:[[AVUser currentUser] objectForKey:@"avatar"]]
+                                forState:UIControlStateNormal
+                        placeholderImage:[UIImage imageNamed:@"header.png"]];
+    }
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)onLogout:(id)sender
+{
+    [AVUser logOut];
+//    [self.navigationController popViewControllerAnimated:YES];
+    [self.siderViewController slideToMiddleAnimated:YES];
 }
 
 #pragma mark - Table view data source

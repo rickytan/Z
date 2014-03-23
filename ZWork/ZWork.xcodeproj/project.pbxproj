@@ -64,6 +64,8 @@
 		9C8615A518DDEEB000D5F5BC /* qq-signin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C8615A318DDEEB000D5F5BC /* qq-signin@2x.png */; };
 		9C8615A818DDF02900D5F5BC /* ZRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8615A718DDF02900D5F5BC /* ZRegisterViewController.m */; };
 		9C8615AA18DDF11700D5F5BC /* AVOSCloudSNS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C8615A918DDF11700D5F5BC /* AVOSCloudSNS.framework */; };
+		9C8615AC18DE87E900D5F5BC /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C8615AB18DE87E900D5F5BC /* CoreLocation.framework */; };
+		9C8615AE18DE95A300D5F5BC /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C8615AD18DE95A300D5F5BC /* SDWebImage.framework */; };
 		9CD39E59188101FF00CF97A1 /* bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CD39E58188101FF00CF97A1 /* bar@2x.png */; };
 		9CD39E5C188102AC00CF97A1 /* UI7NavigationBarBackButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CD39E5B188102AC00CF97A1 /* UI7NavigationBarBackButton@2x.png */; };
 		9CD39E5E1881195200CF97A1 /* cell-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CD39E5D1881195200CF97A1 /* cell-bg@2x.png */; };
@@ -166,6 +168,8 @@
 		9C8615A618DDF02900D5F5BC /* ZRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRegisterViewController.h; sourceTree = "<group>"; };
 		9C8615A718DDF02900D5F5BC /* ZRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRegisterViewController.m; sourceTree = "<group>"; };
 		9C8615A918DDF11700D5F5BC /* AVOSCloudSNS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloudSNS.framework; sourceTree = "<group>"; };
+		9C8615AB18DE87E900D5F5BC /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		9C8615AD18DE95A300D5F5BC /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = "<group>"; };
 		9CD39E58188101FF00CF97A1 /* bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bar@2x.png"; sourceTree = "<group>"; };
 		9CD39E5A1881024A00CF97A1 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		9CD39E5B188102AC00CF97A1 /* UI7NavigationBarBackButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UI7NavigationBarBackButton@2x.png"; sourceTree = "<group>"; };
@@ -178,6 +182,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C8615AE18DE95A300D5F5BC /* SDWebImage.framework in Frameworks */,
+				9C8615AC18DE87E900D5F5BC /* CoreLocation.framework in Frameworks */,
 				9C287CDD187FFB7800934786 /* MobileCoreServices.framework in Frameworks */,
 				9C287CDB187FF64300934786 /* SystemConfiguration.framework in Frameworks */,
 				9C287CD7187FF61400934786 /* CoreTelephony.framework in Frameworks */,
@@ -237,13 +243,15 @@
 		9C4D1F6618658E3F00EFE020 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9C8615AD18DE95A300D5F5BC /* SDWebImage.framework */,
+				9C287CD4187FF31000934786 /* AVOSCloud.framework */,
 				9C8615A918DDF11700D5F5BC /* AVOSCloudSNS.framework */,
+				9C4D1F6918658E3F00EFE020 /* CoreGraphics.framework */,
+				9C8615AB18DE87E900D5F5BC /* CoreLocation.framework */,
+				9C287CD6187FF61400934786 /* CoreTelephony.framework */,
+				9C4D1F6718658E3F00EFE020 /* Foundation.framework */,
 				9C287CDC187FFB7800934786 /* MobileCoreServices.framework */,
 				9C287CDA187FF64300934786 /* SystemConfiguration.framework */,
-				9C287CD6187FF61400934786 /* CoreTelephony.framework */,
-				9C287CD4187FF31000934786 /* AVOSCloud.framework */,
-				9C4D1F6718658E3F00EFE020 /* Foundation.framework */,
-				9C4D1F6918658E3F00EFE020 /* CoreGraphics.framework */,
 				9C4D1F6B18658E3F00EFE020 /* UIKit.framework */,
 				9C4D1F8618658E3F00EFE020 /* XCTest.framework */,
 			);

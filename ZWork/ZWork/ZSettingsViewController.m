@@ -45,9 +45,10 @@
 
 @end
 
-@interface ZSettingsViewController ()
+@interface ZSettingsViewController () <UIActionSheetDelegate>
 @property (nonatomic, assign) IBOutlet UIButton * headButton;
 - (IBAction)onLogout:(id)sender;
+- (IBAction)onHeader:(id)sender;
 @end
 
 @implementation ZSettingsViewController
@@ -88,6 +89,11 @@
     [AVUser logOut];
 //    [self.navigationController popViewControllerAnimated:YES];
     [self.siderViewController slideToMiddleAnimated:YES];
+}
+
+- (IBAction)onHeader:(id)sender
+{
+    
 }
 
 #pragma mark - Table view data source

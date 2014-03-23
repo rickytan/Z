@@ -66,6 +66,8 @@
 		9C8615AA18DDF11700D5F5BC /* AVOSCloudSNS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C8615A918DDF11700D5F5BC /* AVOSCloudSNS.framework */; };
 		9C8615AC18DE87E900D5F5BC /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C8615AB18DE87E900D5F5BC /* CoreLocation.framework */; };
 		9C8615AE18DE95A300D5F5BC /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C8615AD18DE95A300D5F5BC /* SDWebImage.framework */; };
+		9C8615B018DE981D00D5F5BC /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C8615AF18DE981D00D5F5BC /* ImageIO.framework */; };
+		9C8615B418DE997B00D5F5BC /* Toast+UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8615B318DE997B00D5F5BC /* Toast+UIView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9CD39E59188101FF00CF97A1 /* bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CD39E58188101FF00CF97A1 /* bar@2x.png */; };
 		9CD39E5C188102AC00CF97A1 /* UI7NavigationBarBackButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CD39E5B188102AC00CF97A1 /* UI7NavigationBarBackButton@2x.png */; };
 		9CD39E5E1881195200CF97A1 /* cell-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CD39E5D1881195200CF97A1 /* cell-bg@2x.png */; };
@@ -170,6 +172,9 @@
 		9C8615A918DDF11700D5F5BC /* AVOSCloudSNS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloudSNS.framework; sourceTree = "<group>"; };
 		9C8615AB18DE87E900D5F5BC /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		9C8615AD18DE95A300D5F5BC /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = "<group>"; };
+		9C8615AF18DE981D00D5F5BC /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		9C8615B218DE997B00D5F5BC /* Toast+UIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Toast+UIView.h"; sourceTree = "<group>"; };
+		9C8615B318DE997B00D5F5BC /* Toast+UIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Toast+UIView.m"; sourceTree = "<group>"; };
 		9CD39E58188101FF00CF97A1 /* bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bar@2x.png"; sourceTree = "<group>"; };
 		9CD39E5A1881024A00CF97A1 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		9CD39E5B188102AC00CF97A1 /* UI7NavigationBarBackButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UI7NavigationBarBackButton@2x.png"; sourceTree = "<group>"; };
@@ -182,6 +187,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C8615B018DE981D00D5F5BC /* ImageIO.framework in Frameworks */,
 				9C8615AE18DE95A300D5F5BC /* SDWebImage.framework in Frameworks */,
 				9C8615AC18DE87E900D5F5BC /* CoreLocation.framework in Frameworks */,
 				9C287CDD187FFB7800934786 /* MobileCoreServices.framework in Frameworks */,
@@ -223,6 +229,7 @@
 			children = (
 				9C4D1F6618658E3F00EFE020 /* Frameworks */,
 				9C86157518DC02AF00D5F5BC /* MWFeedParser */,
+				9C8615B118DE997B00D5F5BC /* Toast */,
 				9C4D1F6518658E3F00EFE020 /* Products */,
 				9C7C20E418691F0100F2B2EA /* Resources */,
 				9C287CF318803C0400934786 /* SVProgressHUD */,
@@ -243,6 +250,7 @@
 		9C4D1F6618658E3F00EFE020 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9C8615AF18DE981D00D5F5BC /* ImageIO.framework */,
 				9C8615AD18DE95A300D5F5BC /* SDWebImage.framework */,
 				9C287CD4187FF31000934786 /* AVOSCloud.framework */,
 				9C8615A918DDF11700D5F5BC /* AVOSCloudSNS.framework */,
@@ -378,6 +386,15 @@
 			path = MWFeedParser;
 			sourceTree = "<group>";
 		};
+		9C8615B118DE997B00D5F5BC /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				9C8615B218DE997B00D5F5BC /* Toast+UIView.h */,
+				9C8615B318DE997B00D5F5BC /* Toast+UIView.m */,
+			);
+			path = Toast;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -509,6 +526,7 @@
 				9C4D1F7E18658E3F00EFE020 /* ZViewController.m in Sources */,
 				9C8615A818DDF02900D5F5BC /* ZRegisterViewController.m in Sources */,
 				9C86159318DD570D00D5F5BC /* UIView+DL.m in Sources */,
+				9C8615B418DE997B00D5F5BC /* Toast+UIView.m in Sources */,
 				9C287CF218802F1900934786 /* ZPaymentSettingViewController.m in Sources */,
 				9C86157418DC012C00D5F5BC /* ZParttimesViewController.m in Sources */,
 				9C287CEC188001A700934786 /* RTSiderViewController.m in Sources */,

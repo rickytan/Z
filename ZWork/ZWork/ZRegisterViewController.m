@@ -10,11 +10,18 @@
 #import <AVOSCloud/AVOSCloud.h>
 #import <AVOSCloudSNS/AVOSCloudSNS.h>
 #import <AVOSCloudSNS/AVUser+SNS.h>
+#import "SVProgressHUD.h"
+#import "Toast+UIView.h"
 
 @interface ZRegisterViewController ()
+@property (nonatomic, assign) IBOutlet UITextField * username;
+@property (nonatomic, assign) IBOutlet UITextField * password;
+@property (nonatomic, assign) IBOutlet UITextField * confirmPass;
+@property (nonatomic, assign) UIViewController     * loginController;
 - (IBAction)onHideKeyboard:(id)sender;
 - (IBAction)onWeibo:(id)sender;
 - (IBAction)onQQ:(id)sender;
+- (IBAction)onReg:(id)sender;
 @end
 
 @implementation ZRegisterViewController
@@ -45,6 +52,33 @@
     [self.view endEditing:YES];
 }
 
+- (IBAction)onReg:(id)sender
+{
+    if (self.username.text.length == 0) {
+        [self.username becomeFirstResponder];
+        return;
+    }
+    
+    if (self.password.text.length < 6) {
+        [SVProgressHUD showErrorWithStatus:@"至少六位吧"];
+        [self.password becomeFirstResponder];
+        return;
+    }
+    
+    if (![self.password.text isEqualToString:self.confirmPass.text]) {
+        [SVProgressHUD showErrorWithStatus:@"两次密码不一致！"];
+        [self.confirmPass becomeFirstResponder];
+        return;
+    }
+    
+    NSString *regExp = @"[a-zA-Z0-9._%+-]+@([A-Za-z0-9-]+\\.)+[a-zA-Z]{2,4}";
+    NSPredicate *match = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",regExp];
+    if (![match evaluateWithObject:self.username.text]) {
+        [SVProgressHUD showErrorWithStatus:@"邮箱不合法！"];
+        return;
+    }
+}
+
 - (IBAction)onWeibo:(id)sender
 {
     [self signInWithType:AVOSCloudSNSSinaWeibo];
@@ -57,20 +91,40 @@
 
 - (void)signInWithType:(AVOSCloudSNSType)type
 {
-    UIViewController *controller = [AVOSCloudSNS loginManualyWithCallback:^(id object, NSError *error) {
+    [self.view makeToastActivity];
+    
+    typeof(self) weakSelf = self;
+    self.loginController = [AVOSCloudSNS loginManualyWithCallback:^(id object, NSError *error) {
         if (error) {
             NSLog(@"%@", error);
             return;
         }
         [AVUser loginWithAuthData:object
                             block:^(AVUser *user, NSError *error) {
-                                
+                                if (!error) {
+                                    user.username = object[@"username"];
+                                    [user setObject:object[@"avatar"]
+                                             forKey:@"avatar"];
+                                    [user saveEventually];
+                                }
+                                [weakSelf.view hideToastActivity];
+                                if (weakSelf.loginController)
+                                    [weakSelf.loginController dismissViewControllerAnimated:YES
+                                                                                 completion:^{
+                                                                                     [weakSelf dismissViewControllerAnimated:YES
+                                                                                                                  completion:NULL];
+                                                                                 }];
+                                else
+                                    [weakSelf dismissViewControllerAnimated:YES
+                                                                 completion:NULL];
                             }];
     }
-                                                               toPlatform:type];
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:controller];
-    [self presentViewController:nav
-                       animated:YES
-                     completion:NULL];
+                                                       toPlatform:type];
+    if (self.loginController) {
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:self.loginController];
+        [self presentViewController:nav
+                           animated:YES
+                         completion:NULL];
+    }
 }
 @end

@@ -169,6 +169,9 @@
                             <outlet property="delegate" destination="vYf-7s-2fm" id="vX1-Q0-6e5"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="headButton" destination="CNH-YW-Ha5" id="tAx-Wm-xOK"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TCd-Zo-1QE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -728,6 +731,9 @@
                                 <state key="normal" title="登录">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onLogin:" destination="ubJ-Sf-JnG" eventType="touchUpInside" id="jJ4-Vp-fH3"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fe-Hn-kUr">
                                 <rect key="frame" x="40" y="302" width="240" height="44"/>
@@ -798,6 +804,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="logo" destination="ZeH-fy-6Gx" id="hHi-eE-BoM"/>
+                        <outlet property="password" destination="DLE-Vg-Ubk" id="SCx-Gs-fY4"/>
+                        <outlet property="username" destination="sTj-5v-fQh" id="2Fs-TU-1Ol"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="963-cj-5IX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -816,13 +824,13 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eAd-iT-YxR">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="至少六位" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eAd-iT-YxR">
                                 <rect key="frame" x="91" y="63" width="180" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="alphabet" secureTextEntry="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DT9-UU-xMK">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="请输入有效邮箱地址" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DT9-UU-xMK">
                                 <rect key="frame" x="91" y="25" width="180" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -836,6 +844,9 @@
                                 <state key="normal" title="注册">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onReg:" destination="218-QP-Ga0" eventType="touchUpInside" id="TeL-mw-avd"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="邮箱" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fkr-C6-Zs0">
                                 <rect key="frame" x="40" y="31" width="42" height="17"/>
@@ -871,7 +882,7 @@
                                     <action selector="onWeibo:" destination="218-QP-Ga0" eventType="touchUpInside" id="6e1-Pf-5BK"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aC6-KD-gW9">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="重复上面的密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aC6-KD-gW9">
                                 <rect key="frame" x="91" y="101" width="180" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -891,6 +902,11 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" title="注册" id="rAD-0X-YP4"/>
+                    <connections>
+                        <outlet property="confirmPass" destination="aC6-KD-gW9" id="azO-Ao-we5"/>
+                        <outlet property="password" destination="eAd-iT-YxR" id="0Wm-Mp-X2W"/>
+                        <outlet property="username" destination="DT9-UU-xMK" id="0hj-iD-IT4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N47-1Y-PTL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

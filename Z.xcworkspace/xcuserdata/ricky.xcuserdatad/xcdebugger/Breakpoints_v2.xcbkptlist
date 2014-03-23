@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ZWork/ZWork/ZLoginViewController.m"
-            timestampString = "417243080.36149"
+            timestampString = "417245370.075617"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
             landmarkName = "-onLogin:"
             landmarkType = "5">
          </BreakpointContent>

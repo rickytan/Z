@@ -75,8 +75,22 @@
     NSPredicate *match = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",regExp];
     if (![match evaluateWithObject:self.username.text]) {
         [SVProgressHUD showErrorWithStatus:@"邮箱不合法！"];
+        [self.username becomeFirstResponder];
         return;
     }
+    
+    [self.view endEditing:YES];
+    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeClear];
+    AVUser *user = [AVUser user];
+    user.email = self.username.text;
+    user.password = self.password.text;
+    [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (succeeded)
+            [self performSegueWithIdentifier:@"SetupUsername"
+                                      sender:self];
+        else
+            [SVProgressHUD showErrorWithStatus:@"出错了..."];
+    }];
 }
 
 - (IBAction)onWeibo:(id)sender

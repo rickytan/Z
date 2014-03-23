@@ -66,6 +66,7 @@
     }
     
     if (self.password.text.length < 6) {
+        [SVProgressHUD showErrorWithStatus:@"至少六位吧"];
         [self.password becomeFirstResponder];
         return;
     }
@@ -74,9 +75,11 @@
     NSPredicate *match = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",regExp];
     if (![match evaluateWithObject:self.username.text]) {
         [SVProgressHUD showErrorWithStatus:@"邮箱不合法！"];
+        [self.username becomeFirstResponder];
         return;
     }
     
+    [self.view endEditing:YES];
     [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeClear];
     [AVUser logInWithUsernameInBackground:self.username.text
                                  password:self.password.text

@@ -693,7 +693,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MFP-xW-Lrk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-346" y="-323"/>
+            <point key="canvasLocation" x="-572" y="-323"/>
         </scene>
         <!--Login View Controller - 登录-->
         <scene sceneID="qV0-bm-aCG">
@@ -810,7 +810,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="963-cj-5IX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="100" y="-323"/>
+            <point key="canvasLocation" x="-126" y="-323"/>
         </scene>
         <!--Register View Controller - 注册-->
         <scene sceneID="r2O-Gk-RoM">
@@ -906,11 +906,92 @@
                         <outlet property="confirmPass" destination="aC6-KD-gW9" id="azO-Ao-we5"/>
                         <outlet property="password" destination="eAd-iT-YxR" id="0Wm-Mp-X2W"/>
                         <outlet property="username" destination="DT9-UU-xMK" id="0hj-iD-IT4"/>
+                        <segue destination="Mz3-I3-WF1" kind="push" identifier="SetupUsername" id="OoK-rb-oSM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N47-1Y-PTL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="538" y="-323"/>
+            <point key="canvasLocation" x="294" y="-320"/>
+        </scene>
+        <!--Setup Info View Controller - 信息-->
+        <scene sceneID="g9Q-wL-8Ba">
+            <objects>
+                <viewController id="Mz3-I3-WF1" customClass="ZSetupInfoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="v3O-gS-6f5"/>
+                        <viewControllerLayoutGuide type="bottom" id="TuX-bs-pHy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="K0W-yW-vky">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JbO-0X-kY8">
+                                <rect key="frame" x="118" y="38" width="84" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="4j3-yH-Hms"/>
+                                    <constraint firstAttribute="height" constant="84" id="M7Y-mn-CSR"/>
+                                    <constraint firstAttribute="width" constant="84" id="rVa-EV-2Ld"/>
+                                    <constraint firstAttribute="width" constant="84" id="rdc-fi-oxE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" image="header.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.bordeWidth">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="42"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hch-ty-Dx7">
+                                <rect key="frame" x="70" y="176" width="180" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="昵称" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ukN-f1-del">
+                                <rect key="frame" x="70" y="151" width="42" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IFh-qN-Z0o">
+                                <rect key="frame" x="40" y="250" width="240" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.3921568627" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                <state key="normal" title="进入">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onReg:" destination="218-QP-Ga0" eventType="touchUpInside" id="N9J-rs-YNR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JbO-0X-kY8" firstAttribute="top" secondItem="v3O-gS-6f5" secondAttribute="bottom" constant="38" id="q9r-BX-fTd"/>
+                            <constraint firstAttribute="centerX" secondItem="JbO-0X-kY8" secondAttribute="centerX" id="yHc-xs-f2q"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="信息" id="5ZV-XK-AJb"/>
+                    <connections>
+                        <outlet property="enterButton" destination="IFh-qN-Z0o" id="Xgx-dP-og3"/>
+                        <outlet property="headButton" destination="JbO-0X-kY8" id="QPv-Ci-f17"/>
+                        <outlet property="username" destination="Hch-ty-Dx7" id="9Oy-v3-ya7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NJq-71-9iX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="743" y="-323"/>
         </scene>
         <!--Help View Controller - 助人为乐-->
         <scene sceneID="0GV-zR-0FM">

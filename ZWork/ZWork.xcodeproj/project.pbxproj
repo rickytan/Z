@@ -68,6 +68,7 @@
 		9C8615AE18DE95A300D5F5BC /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C8615AD18DE95A300D5F5BC /* SDWebImage.framework */; };
 		9C8615B018DE981D00D5F5BC /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C8615AF18DE981D00D5F5BC /* ImageIO.framework */; };
 		9C8615B418DE997B00D5F5BC /* Toast+UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8615B318DE997B00D5F5BC /* Toast+UIView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9C8615B718DEAB4800D5F5BC /* ZSetupInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8615B618DEAB4800D5F5BC /* ZSetupInfoViewController.m */; };
 		9CD39E59188101FF00CF97A1 /* bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CD39E58188101FF00CF97A1 /* bar@2x.png */; };
 		9CD39E5C188102AC00CF97A1 /* UI7NavigationBarBackButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CD39E5B188102AC00CF97A1 /* UI7NavigationBarBackButton@2x.png */; };
 		9CD39E5E1881195200CF97A1 /* cell-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CD39E5D1881195200CF97A1 /* cell-bg@2x.png */; };
@@ -175,6 +176,8 @@
 		9C8615AF18DE981D00D5F5BC /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		9C8615B218DE997B00D5F5BC /* Toast+UIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Toast+UIView.h"; sourceTree = "<group>"; };
 		9C8615B318DE997B00D5F5BC /* Toast+UIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Toast+UIView.m"; sourceTree = "<group>"; };
+		9C8615B518DEAB4800D5F5BC /* ZSetupInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSetupInfoViewController.h; sourceTree = "<group>"; };
+		9C8615B618DEAB4800D5F5BC /* ZSetupInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSetupInfoViewController.m; sourceTree = "<group>"; };
 		9CD39E58188101FF00CF97A1 /* bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bar@2x.png"; sourceTree = "<group>"; };
 		9CD39E5A1881024A00CF97A1 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		9CD39E5B188102AC00CF97A1 /* UI7NavigationBarBackButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UI7NavigationBarBackButton@2x.png"; sourceTree = "<group>"; };
@@ -304,6 +307,8 @@
 				9C86159B18DDD61C00D5F5BC /* ZSettingsViewController.m */,
 				9C4D1F7C18658E3F00EFE020 /* ZViewController.h */,
 				9C4D1F7D18658E3F00EFE020 /* ZViewController.m */,
+				9C8615B518DEAB4800D5F5BC /* ZSetupInfoViewController.h */,
+				9C8615B618DEAB4800D5F5BC /* ZSetupInfoViewController.m */,
 			);
 			path = ZWork;
 			sourceTree = "<group>";
@@ -536,6 +541,7 @@
 				9C86159018DD439C00D5F5BC /* ZParttimeDetailViewController.m in Sources */,
 				9C287CFB1880442D00934786 /* ZHelpViewController.m in Sources */,
 				9C4D1F7818658E3F00EFE020 /* ZAppDelegate.m in Sources */,
+				9C8615B718DEAB4800D5F5BC /* ZSetupInfoViewController.m in Sources */,
 				9C86158C18DC02AF00D5F5BC /* NSString+HTML.m in Sources */,
 				9C8615A118DDEAC800D5F5BC /* ZLoginViewController.m in Sources */,
 				9C86158618DC02AF00D5F5BC /* GTMNSString+HTML.m in Sources */,

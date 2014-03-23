@@ -210,6 +210,9 @@ UIImagePickerControllerDelegate>
             }
         }
         NSError *error = nil;
+        AVRelation *relation = [[AVUser currentUser] relationforKey:@"myNeed"];
+        [relation addObject:self.myNeed];
+        [[AVUser currentUser] saveInBackground];
         [self.myNeed save:&error];
         dispatch_async(dispatch_get_main_queue(), ^{
             if (!error) {

@@ -69,6 +69,7 @@
 		9C8615B018DE981D00D5F5BC /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C8615AF18DE981D00D5F5BC /* ImageIO.framework */; };
 		9C8615B418DE997B00D5F5BC /* Toast+UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8615B318DE997B00D5F5BC /* Toast+UIView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9C8615B718DEAB4800D5F5BC /* ZSetupInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8615B618DEAB4800D5F5BC /* ZSetupInfoViewController.m */; };
+		9C8615BA18DEDB7300D5F5BC /* NSString+Email.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8615B918DEDB7300D5F5BC /* NSString+Email.m */; };
 		9CD39E59188101FF00CF97A1 /* bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CD39E58188101FF00CF97A1 /* bar@2x.png */; };
 		9CD39E5C188102AC00CF97A1 /* UI7NavigationBarBackButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CD39E5B188102AC00CF97A1 /* UI7NavigationBarBackButton@2x.png */; };
 		9CD39E5E1881195200CF97A1 /* cell-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CD39E5D1881195200CF97A1 /* cell-bg@2x.png */; };
@@ -178,6 +179,8 @@
 		9C8615B318DE997B00D5F5BC /* Toast+UIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Toast+UIView.m"; sourceTree = "<group>"; };
 		9C8615B518DEAB4800D5F5BC /* ZSetupInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSetupInfoViewController.h; sourceTree = "<group>"; };
 		9C8615B618DEAB4800D5F5BC /* ZSetupInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSetupInfoViewController.m; sourceTree = "<group>"; };
+		9C8615B818DEDB7300D5F5BC /* NSString+Email.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Email.h"; sourceTree = "<group>"; };
+		9C8615B918DEDB7300D5F5BC /* NSString+Email.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Email.m"; sourceTree = "<group>"; };
 		9CD39E58188101FF00CF97A1 /* bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bar@2x.png"; sourceTree = "<group>"; };
 		9CD39E5A1881024A00CF97A1 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		9CD39E5B188102AC00CF97A1 /* UI7NavigationBarBackButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UI7NavigationBarBackButton@2x.png"; sourceTree = "<group>"; };
@@ -309,6 +312,8 @@
 				9C4D1F7D18658E3F00EFE020 /* ZViewController.m */,
 				9C8615B518DEAB4800D5F5BC /* ZSetupInfoViewController.h */,
 				9C8615B618DEAB4800D5F5BC /* ZSetupInfoViewController.m */,
+				9C8615B818DEDB7300D5F5BC /* NSString+Email.h */,
+				9C8615B918DEDB7300D5F5BC /* NSString+Email.m */,
 			);
 			path = ZWork;
 			sourceTree = "<group>";
@@ -527,6 +532,7 @@
 				9C287CE6187FFDAF00934786 /* NSDate+RExtension.m in Sources */,
 				9C287CE3187FFD5E00934786 /* UIDateField.m in Sources */,
 				9C7C20F71869269900F2B2EA /* ZNeedViewController.m in Sources */,
+				9C8615BA18DEDB7300D5F5BC /* NSString+Email.m in Sources */,
 				9C287CE91880018A00934786 /* ZRootViewController.m in Sources */,
 				9C4D1F7E18658E3F00EFE020 /* ZViewController.m in Sources */,
 				9C8615A818DDF02900D5F5BC /* ZRegisterViewController.m in Sources */,

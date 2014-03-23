@@ -15,6 +15,7 @@
 
 @interface ZRegisterViewController ()
 @property (nonatomic, assign) IBOutlet UITextField * username;
+@property (nonatomic, assign) IBOutlet UITextField * email;
 @property (nonatomic, assign) IBOutlet UITextField * password;
 @property (nonatomic, assign) IBOutlet UITextField * confirmPass;
 @property (nonatomic, assign) UIViewController     * loginController;
@@ -59,6 +60,11 @@
         return;
     }
     
+    if (self.email.text.length == 0) {
+        [self.email becomeFirstResponder];
+        return;
+    }
+    
     if (self.password.text.length < 6) {
         [SVProgressHUD showErrorWithStatus:@"至少六位吧"];
         [self.password becomeFirstResponder];
@@ -73,23 +79,39 @@
     
     NSString *regExp = @"[a-zA-Z0-9._%+-]+@([A-Za-z0-9-]+\\.)+[a-zA-Z]{2,4}";
     NSPredicate *match = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",regExp];
-    if (![match evaluateWithObject:self.username.text]) {
+    if (![match evaluateWithObject:self.email.text]) {
         [SVProgressHUD showErrorWithStatus:@"邮箱不合法！"];
-        [self.username becomeFirstResponder];
+        [self.email becomeFirstResponder];
         return;
     }
     
     [self.view endEditing:YES];
     [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeClear];
     AVUser *user = [AVUser user];
-    user.email = self.username.text;
+    user.email = self.email.text;
+    user.username = self.username.text;
     user.password = self.password.text;
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if (succeeded)
+        if (succeeded) {
+            [SVProgressHUD dismiss];
             [self performSegueWithIdentifier:@"SetupUsername"
                                       sender:self];
-        else
-            [SVProgressHUD showErrorWithStatus:@"出错了..."];
+        }
+        else {
+            NSString *msg = nil;
+            switch (error.code) {
+                case 202:
+                    msg = @"用户名已存在！";
+                    break;
+                case 203:
+                    msg = @"邮箱已存在！";
+                default:
+                    break;
+            }
+            [SVProgressHUD dismiss];
+            [self.view makeToast:msg ? msg : @"出错了..."];
+            [user deleteEventually];
+        }
     }];
 }
 
@@ -117,7 +139,7 @@
                             block:^(AVUser *user, NSError *error) {
                                 if (!error) {
                                     user.username = object[@"username"];
-                                    [user setObject:object[@"avatar"]
+                                    [user setObject:[AVFile fileWithURL:object[@"avatar"]]
                                              forKey:@"avatar"];
                                     [user saveEventually];
                                 }

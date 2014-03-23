@@ -12,8 +12,9 @@
 #import <AVOSCloudSNS/AVUser+SNS.h>
 #import "SVProgressHUD.h"
 #import "Toast+UIView.h"
+#import "NSString+Email.h"
 
-@interface ZLoginViewController ()
+@interface ZLoginViewController () <UIAlertViewDelegate>
 @property (nonatomic, assign) IBOutlet UIImageView * logo;
 @property (nonatomic, assign) IBOutlet UITextField * username;
 @property (nonatomic, assign) IBOutlet UITextField * password;
@@ -23,6 +24,7 @@
 - (IBAction)onWeibo:(id)sender;
 - (IBAction)onQQ:(id)sender;
 - (IBAction)onLogin:(id)sender;
+- (IBAction)onForget:(id)sender;
 @end
 
 @implementation ZLoginViewController
@@ -56,6 +58,17 @@
 - (IBAction)onHideKeyboard:(id)sender
 {
     [self.view endEditing:YES];
+}
+
+- (IBAction)onForget:(id)sender
+{
+    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"请输入您的注册邮箱"
+                                                     message:nil
+                                                    delegate:self
+                                           cancelButtonTitle:@"取消"
+                                           otherButtonTitles:@"好", nil];
+    alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+    [alert show];
 }
 
 - (IBAction)onLogin:(id)sender
@@ -118,7 +131,8 @@
                             block:^(AVUser *user, NSError *error) {
                                 if (!error) {
                                     user.username = object[@"username"];
-                                    [user setObject:object[@"avatar"]
+                                    NSString *img = object[@"avatar"];
+                                    [user setObject:[AVFile fileWithURL:img]
                                              forKey:@"avatar"];
                                     [user saveEventually];
                                 }
@@ -141,6 +155,29 @@
                            animated:YES
                          completion:NULL];
     }
+}
+
+#pragma mark - UIAlert
+
+- (void)alertView:(UIAlertView *)alertView
+clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex != alertView.cancelButtonIndex) {
+        [AVUser requestPasswordResetForEmailInBackground:[alertView textFieldAtIndex:0].text
+                                                   block:^(BOOL succeeded, NSError *error) {
+                                                       if (succeeded) {
+                                                           [self.view makeToast:@"已发送，请注意查收！"];
+                                                       }
+                                                       else {
+                                                           [self.view makeToast:error.localizedDescription];
+                                                       }
+                                                   }];
+    }
+}
+
+- (BOOL)alertViewShouldEnableFirstOtherButton:(UIAlertView *)alertView
+{
+    return [alertView textFieldAtIndex:0].text.isValidEmail;
 }
 
 @end

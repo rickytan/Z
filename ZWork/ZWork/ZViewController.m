@@ -9,6 +9,7 @@
 #import "ZViewController.h"
 #import <AVOSCloud/AVOSCloud.h>
 #import "UIView+DL.h"
+#import "RTSiderViewController.h"
 
 @interface ZViewController ()
 @property (nonatomic, assign) IBOutlet UIButton * button1;
@@ -58,6 +59,9 @@
                          completion:^{
                              
                          }];
+    }
+    else if ([AVUser currentUser].isNew) {
+        [self.siderViewController slideToLeftAnimated:YES];
     }
 }
 

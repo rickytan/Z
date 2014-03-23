@@ -210,10 +210,10 @@ UIImagePickerControllerDelegate>
             }
         }
         NSError *error = nil;
+        [self.myNeed save:&error];
         AVRelation *relation = [[AVUser currentUser] relationforKey:@"myNeed"];
         [relation addObject:self.myNeed];
         [[AVUser currentUser] saveInBackground];
-        [self.myNeed save:&error];
         dispatch_async(dispatch_get_main_queue(), ^{
             if (!error) {
                 [SVProgressHUD showSuccessWithStatus:@"发布成功！"];

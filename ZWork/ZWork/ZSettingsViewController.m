@@ -146,11 +146,11 @@
 didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     UIImage *image = [info objectForKey:UIImagePickerControllerEditedImage];
-    [self.headButton setImage:image
-                     forState:UIControlStateNormal];
     [picker dismissViewControllerAnimated:YES
                                completion:^{
                                    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeClear];
+                                   [self.headButton setImage:image
+                                                    forState:UIControlStateNormal];
                                    AVFile *file = [AVFile fileWithName:@"image.jpg" data:UIImageJPEGRepresentation(image, 0.7)];
                                    [file saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                                        if (succeeded) {

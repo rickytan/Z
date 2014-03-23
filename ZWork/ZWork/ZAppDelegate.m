@@ -83,6 +83,16 @@
     
     return YES;
 }
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+    return [AVOSCloudSNS handleOpenURL:url];
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    return [AVOSCloudSNS handleOpenURL:url];
+}
 							
 - (void)applicationWillResignActive:(UIApplication *)application
 {

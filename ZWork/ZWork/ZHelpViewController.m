@@ -99,6 +99,11 @@
 
 - (void)appendItems
 {
+    static BOOL isAppending = NO;
+    if (isAppending)
+        return;
+    isAppending = YES;
+    
     AVQuery *query = [AVQuery queryWithClassName:@"Need"];
     query.skip = self.needsItems.count;
     query.limit = 20;
@@ -107,12 +112,9 @@
     [query orderByDescending:@"updatedAt"];
     
     [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeClear];
-    
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             self.hasMore = (objects.count == 20);
-            [self.needsItems removeAllObjects];
-            [self.tableView reloadData];
             
             NSInteger count = self.needsItems.count;
             [self.needsItems addObjectsFromArray:objects];
@@ -129,6 +131,7 @@
         else {
             [SVProgressHUD showErrorWithStatus:@"加载失败！"];
         }
+        isAppending = NO;
     }];
 }
 
@@ -184,6 +187,9 @@
     else
         cell.attachedImageView.image = [UIImage imageNamed:@"icon-120.png"];
     
+    if (indexPath.row == self.needsItems.count - 3) {
+        [self appendItems];
+    }
     return cell;
 }
 

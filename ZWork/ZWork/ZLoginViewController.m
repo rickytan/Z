@@ -131,10 +131,10 @@
                             block:^(AVUser *user, NSError *error) {
                                 if (!error) {
                                     user.username = object[@"username"];
-                                    NSString *img = object[@"avatar"];
-                                    [user setObject:[AVFile fileWithURL:img]
+                                    AVFile *file = [AVFile fileWithURL:object[@"avatar"]];
+                                    [user setObject:file
                                              forKey:@"avatar"];
-                                    [user saveEventually];
+                                    [user saveInBackground];
                                 }
                                 [weakSelf.view hideToastActivity];
                                 if (weakSelf.loginController)

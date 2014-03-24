@@ -234,16 +234,19 @@
                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onAVOS:" destination="4BR-47-wel" eventType="touchUpInside" id="cqO-X5-dYS"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="LDh-hB-25A" firstAttribute="top" secondItem="f1q-yk-mH6" secondAttribute="bottom" id="5xm-Iy-MBf"/>
                             <constraint firstItem="f1q-yk-mH6" firstAttribute="leading" secondItem="d1M-6y-h39" secondAttribute="leading" id="Bdl-DP-ZTu"/>
-                            <constraint firstItem="kxe-Ci-UK2" firstAttribute="leading" secondItem="yG2-1v-pKm" secondAttribute="trailing" constant="8" id="ILz-S9-GtV"/>
+                            <constraint firstItem="kxe-Ci-UK2" firstAttribute="centerY" secondItem="yG2-1v-pKm" secondAttribute="centerY" id="IO7-gP-PEV"/>
                             <constraint firstItem="f1q-yk-mH6" firstAttribute="top" secondItem="d1M-6y-h39" secondAttribute="top" id="OYm-DJ-Xow"/>
                             <constraint firstItem="LDh-hB-25A" firstAttribute="top" secondItem="yG2-1v-pKm" secondAttribute="bottom" constant="12" id="TTV-Ls-osb"/>
-                            <constraint firstItem="LDh-hB-25A" firstAttribute="top" secondItem="kxe-Ci-UK2" secondAttribute="bottom" constant="6" id="hhi-ID-IZO"/>
+                            <constraint firstItem="kxe-Ci-UK2" firstAttribute="leading" secondItem="yG2-1v-pKm" secondAttribute="trailing" constant="8" id="cwc-4v-g0H"/>
                             <constraint firstAttribute="trailing" secondItem="f1q-yk-mH6" secondAttribute="trailing" id="m18-j2-PCx"/>
                             <constraint firstItem="yG2-1v-pKm" firstAttribute="leading" secondItem="d1M-6y-h39" secondAttribute="leading" constant="27" id="rQS-we-fv1"/>
                         </constraints>

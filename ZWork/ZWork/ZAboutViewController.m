@@ -10,6 +10,7 @@
 
 @interface ZAboutViewController ()
 - (IBAction)onBack:(id)sender;
+- (IBAction)onAVOS:(id)sender;
 @end
 
 @implementation ZAboutViewController
@@ -39,6 +40,11 @@
 {
     [self dismissViewControllerAnimated:YES
                              completion:NULL];
+}
+
+- (IBAction)onAVOS:(id)sender
+{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://cn.avoscloud.com/"]];
 }
 
 @end

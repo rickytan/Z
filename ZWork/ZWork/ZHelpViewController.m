@@ -188,7 +188,7 @@
     else
         cell.attachedImageView.image = [UIImage imageNamed:@"icon-120.png"];
     
-    if (indexPath.row == self.needsItems.count - 3) {
+    if (self.hasMore && indexPath.row == self.needsItems.count - 3) {
         [self appendItems];
     }
     return cell;

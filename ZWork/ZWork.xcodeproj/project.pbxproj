@@ -71,6 +71,8 @@
 		9C8615B718DEAB4800D5F5BC /* ZSetupInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8615B618DEAB4800D5F5BC /* ZSetupInfoViewController.m */; };
 		9C8615BA18DEDB7300D5F5BC /* NSString+Email.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8615B918DEDB7300D5F5BC /* NSString+Email.m */; };
 		9C8615BD18DEEB5400D5F5BC /* ZAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8615BC18DEEB5400D5F5BC /* ZAboutViewController.m */; };
+		9C8615C018DFC0B300D5F5BC /* ZHelpDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8615BF18DFC0B300D5F5BC /* ZHelpDetailViewController.m */; };
+		9C8615C218DFC53E00D5F5BC /* template.html in Resources */ = {isa = PBXBuildFile; fileRef = 9C8615C118DFC53E00D5F5BC /* template.html */; };
 		9CD39E59188101FF00CF97A1 /* bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CD39E58188101FF00CF97A1 /* bar@2x.png */; };
 		9CD39E5C188102AC00CF97A1 /* UI7NavigationBarBackButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CD39E5B188102AC00CF97A1 /* UI7NavigationBarBackButton@2x.png */; };
 		9CD39E5E1881195200CF97A1 /* cell-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CD39E5D1881195200CF97A1 /* cell-bg@2x.png */; };
@@ -184,6 +186,9 @@
 		9C8615B918DEDB7300D5F5BC /* NSString+Email.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Email.m"; sourceTree = "<group>"; };
 		9C8615BB18DEEB5400D5F5BC /* ZAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZAboutViewController.h; sourceTree = "<group>"; };
 		9C8615BC18DEEB5400D5F5BC /* ZAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZAboutViewController.m; sourceTree = "<group>"; };
+		9C8615BE18DFC0B300D5F5BC /* ZHelpDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHelpDetailViewController.h; sourceTree = "<group>"; };
+		9C8615BF18DFC0B300D5F5BC /* ZHelpDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHelpDetailViewController.m; sourceTree = "<group>"; };
+		9C8615C118DFC53E00D5F5BC /* template.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = template.html; sourceTree = "<group>"; };
 		9CD39E58188101FF00CF97A1 /* bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bar@2x.png"; sourceTree = "<group>"; };
 		9CD39E5A1881024A00CF97A1 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		9CD39E5B188102AC00CF97A1 /* UI7NavigationBarBackButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UI7NavigationBarBackButton@2x.png"; sourceTree = "<group>"; };
@@ -282,6 +287,8 @@
 				9C4D1F7918658E3F00EFE020 /* Main.storyboard */,
 				9C287CE4187FFDAF00934786 /* NSDate+RExtension.h */,
 				9C287CE5187FFDAF00934786 /* NSDate+RExtension.m */,
+				9C8615B818DEDB7300D5F5BC /* NSString+Email.h */,
+				9C8615B918DEDB7300D5F5BC /* NSString+Email.m */,
 				9C287CEA188001A700934786 /* RTSiderViewController.h */,
 				9C287CEB188001A700934786 /* RTSiderViewController.m */,
 				9C4D1F6E18658E3F00EFE020 /* Supporting Files */,
@@ -289,10 +296,14 @@
 				9C287CE2187FFD5E00934786 /* UIDateField.m */,
 				9C86159118DD570D00D5F5BC /* UIView+DL.h */,
 				9C86159218DD570D00D5F5BC /* UIView+DL.m */,
+				9C8615BB18DEEB5400D5F5BC /* ZAboutViewController.h */,
+				9C8615BC18DEEB5400D5F5BC /* ZAboutViewController.m */,
 				9C4D1F7618658E3F00EFE020 /* ZAppDelegate.h */,
 				9C4D1F7718658E3F00EFE020 /* ZAppDelegate.m */,
 				9C287CDE187FFCF200934786 /* ZEditingViewController.h */,
 				9C287CDF187FFCF200934786 /* ZEditingViewController.m */,
+				9C8615BE18DFC0B300D5F5BC /* ZHelpDetailViewController.h */,
+				9C8615BF18DFC0B300D5F5BC /* ZHelpDetailViewController.m */,
 				9C287CF91880442D00934786 /* ZHelpViewController.h */,
 				9C287CFA1880442D00934786 /* ZHelpViewController.m */,
 				9C86159F18DDEAC800D5F5BC /* ZLoginViewController.h */,
@@ -311,14 +322,10 @@
 				9C287CE81880018A00934786 /* ZRootViewController.m */,
 				9C86159A18DDD61C00D5F5BC /* ZSettingsViewController.h */,
 				9C86159B18DDD61C00D5F5BC /* ZSettingsViewController.m */,
-				9C4D1F7C18658E3F00EFE020 /* ZViewController.h */,
-				9C4D1F7D18658E3F00EFE020 /* ZViewController.m */,
 				9C8615B518DEAB4800D5F5BC /* ZSetupInfoViewController.h */,
 				9C8615B618DEAB4800D5F5BC /* ZSetupInfoViewController.m */,
-				9C8615B818DEDB7300D5F5BC /* NSString+Email.h */,
-				9C8615B918DEDB7300D5F5BC /* NSString+Email.m */,
-				9C8615BB18DEEB5400D5F5BC /* ZAboutViewController.h */,
-				9C8615BC18DEEB5400D5F5BC /* ZAboutViewController.m */,
+				9C4D1F7C18658E3F00EFE020 /* ZViewController.h */,
+				9C4D1F7D18658E3F00EFE020 /* ZViewController.m */,
 			);
 			path = ZWork;
 			sourceTree = "<group>";
@@ -374,6 +381,7 @@
 				9CD39E5F18812C4200CF97A1 /* image-holder@2x.png */,
 				9C7C20E518691F0100F2B2EA /* ku@2x.png */,
 				9CD39E5B188102AC00CF97A1 /* UI7NavigationBarBackButton@2x.png */,
+				9C8615C118DFC53E00D5F5BC /* template.html */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -512,6 +520,7 @@
 				9CD39E59188101FF00CF97A1 /* bar@2x.png in Resources */,
 				9C8615A518DDEEB000D5F5BC /* qq-signin@2x.png in Resources */,
 				9C7C20F21869250100F2B2EA /* Default-568h@2x.png in Resources */,
+				9C8615C218DFC53E00D5F5BC /* template.html in Resources */,
 				9C7C20ED1869210400F2B2EA /* greenButton@2x.png in Resources */,
 				9C4D1F7B18658E3F00EFE020 /* Main.storyboard in Resources */,
 			);
@@ -554,6 +563,7 @@
 				9C4D1F7818658E3F00EFE020 /* ZAppDelegate.m in Sources */,
 				9C8615B718DEAB4800D5F5BC /* ZSetupInfoViewController.m in Sources */,
 				9C86158C18DC02AF00D5F5BC /* NSString+HTML.m in Sources */,
+				9C8615C018DFC0B300D5F5BC /* ZHelpDetailViewController.m in Sources */,
 				9C8615A118DDEAC800D5F5BC /* ZLoginViewController.m in Sources */,
 				9C86158618DC02AF00D5F5BC /* GTMNSString+HTML.m in Sources */,
 				9C8615BD18DEEB5400D5F5BC /* ZAboutViewController.m in Sources */,

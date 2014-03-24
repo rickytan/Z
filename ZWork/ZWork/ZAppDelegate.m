@@ -70,6 +70,7 @@
     [AVOSCloud setApplicationId:@"6ukj16pp78un0qjf7x04w3vr1swluyj6kljur7j4hisu2iys"
                       clientKey:@"91t0va30iry17r2b4ielpr970f1x16v8uaqm5csgx71ju5l4"];
     [AVOSCloud useAVCloudCN];
+    [AVUser enableAutomaticUser];
     [AVOSCloudSNS setupPlatform:AVOSCloudSNSSinaWeibo
                      withAppKey:@"584509756"
                    andAppSecret:@"3cd48b3a1c43d629d9e56a74b468857a"

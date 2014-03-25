@@ -134,7 +134,9 @@
                                     AVFile *file = [AVFile fileWithURL:object[@"avatar"]];
                                     [user setObject:file
                                              forKey:@"avatar"];
-                                    [user saveInBackground];
+                                    [user saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                                        
+                                    }];
                                 }
                                 [weakSelf.view hideToastActivity];
                                 if (weakSelf.loginController)

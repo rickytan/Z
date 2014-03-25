@@ -68,8 +68,8 @@
     AVQuery *query = [AVQuery queryWithClassName:@"Need"];
     query.skip = 0;
     query.limit = 20;
-    //[query whereKey:@"expire"
-    //    greaterThan:[NSDate date]];
+    [query whereKey:@"expire"
+        greaterThan:[NSDate date]];
     [query orderByDescending:@"updatedAt"];
     
     [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeClear];
@@ -108,8 +108,8 @@
     AVQuery *query = [AVQuery queryWithClassName:@"Need"];
     query.skip = self.needsItems.count;
     query.limit = 20;
-    //[query whereKey:@"expire"
-    //    greaterThan:[NSDate date]];
+    [query whereKey:@"expire"
+        greaterThan:[NSDate date]];
     [query orderByDescending:@"updatedAt"];
     
     [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeClear];

@@ -678,8 +678,8 @@
 		9C4D1F9718658E3F00EFE020 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: hang zhang (L824E9BN2D)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: hang zhang (L824E9BN2D)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: hang zhang (JM9WSY7Q38)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: hang zhang (JM9WSY7Q38)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/ricky/Data/Code/Z/ZWork,
@@ -689,7 +689,7 @@
 				INFOPLIST_FILE = "ZWork/ZWork-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "BE0DC4BE-699D-422E-B2E1-05A7E5078D6C";
+				PROVISIONING_PROFILE = "F3C28EE9-8D8B-4761-B464-BD4ED75A2A9A";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -697,8 +697,8 @@
 		9C4D1F9818658E3F00EFE020 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: hang zhang (L824E9BN2D)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: hang zhang (L824E9BN2D)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: hang zhang (JM9WSY7Q38)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: hang zhang (JM9WSY7Q38)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/ricky/Data/Code/Z/ZWork,
@@ -708,7 +708,7 @@
 				INFOPLIST_FILE = "ZWork/ZWork-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "BE0DC4BE-699D-422E-B2E1-05A7E5078D6C";
+				PROVISIONING_PROFILE = "F3C28EE9-8D8B-4761-B464-BD4ED75A2A9A";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -17,6 +17,7 @@
 @interface FavoritePhoneController ()
 @property (nonatomic, strong) NSMutableArray *favoritePhone;
 @property (nonatomic, strong) NSMutableArray *favoritePhoneItems;
+@property (nonatomic, strong) UILabel * noDataLabel;
 - (void)queryFavoritePhoneItem;
 @end
 
@@ -71,6 +72,23 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (UILabel *)noDataLabel
+{
+    if (!_noDataLabel) {
+        _noDataLabel = [[UILabel alloc] init];
+        _noDataLabel.text = @"无收藏";
+        _noDataLabel.textAlignment = NSTextAlignmentCenter;
+        _noDataLabel.font = [UIFont systemFontOfSize:18];
+        _noDataLabel.textColor = [UIColor lightGrayColor];
+        _noDataLabel.hidden = YES;
+        [_noDataLabel sizeToFit];
+        CGRect r = (CGRect){{0, 44*3}, {CGRectGetWidth(self.tableView.frame), 44}};
+        _noDataLabel.center = CGPointMake(CGRectGetMidX(r), CGRectGetMidY(r));
+        [self.tableView addSubview:_noDataLabel];
+    }
+    return _noDataLabel;
+}
+
 #pragma mark - Methods
 
 - (void)queryFavoritePhoneItem
@@ -89,7 +107,7 @@
             
             if (item.isLeaf) {
                 NSMutableArray *nums = [NSMutableArray arrayWithCapacity:10];
-                FMResultSet *numresult = [_db executeQueryWithFormat:@"SELECT number FROM Number WHERE nid = %d",item.ID];
+                FMResultSet *numresult = [_db executeQueryWithFormat:@"SELECT number FROM Number WHERE nid = %ld",item.ID];
                 while ([numresult next]) {
                     [nums addObject:[numresult stringForColumn:@"number"]];
                 }
@@ -115,6 +133,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    self.noDataLabel.hidden = !(self.favoritePhoneItems.count == 0);
     return self.favoritePhoneItems.count;
 }
 

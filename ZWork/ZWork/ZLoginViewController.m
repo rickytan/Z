@@ -131,11 +131,16 @@
                             block:^(AVUser *user, NSError *error) {
                                 if (!error) {
                                     user.username = object[@"username"];
-                                    AVFile *file = [AVFile fileWithURL:object[@"avatar"]];
-                                    [user setObject:file
-                                             forKey:@"avatar"];
-                                    [user saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-                                        
+                                    AVFile *file = [AVFile fileWithName:@"image.jpg"
+                                                                   data:[NSData dataWithContentsOfURL:[NSURL URLWithString:object[@"avatar"]]]];
+//                                    [file save:&error];
+//                                    NSLog(@"%@", error);
+                                    [file saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                                        [user setObject:file
+                                                 forKey:@"avatar"];
+                                        [user saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                                            NSLog(@"%@", error);
+                                        }];
                                     }];
                                 }
                                 [weakSelf.view hideToastActivity];

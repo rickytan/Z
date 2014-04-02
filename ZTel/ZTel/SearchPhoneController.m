@@ -71,6 +71,7 @@
     [super viewDidLoad];
     
     [self.searchBar setBackgroundImage:[UIImage imageNamed:@"navbar-with-shadow.png"]];
+    self.tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
     
     UIMenuController *menuController = [UIMenuController sharedMenuController];
     UIMenuItem *item = [[UIMenuItem alloc] initWithTitle:@"短信发送"
@@ -298,12 +299,12 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
 }
-
+/*
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
     [self.searchBar resignFirstResponder];
 }
-
+*/
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

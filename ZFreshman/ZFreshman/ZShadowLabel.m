@@ -26,7 +26,7 @@
 {
     // Drawing code
     CGRect f = rect;
-    f.origin.y = 30;
+    f.origin.y = (f.size.height - self.font.pointSize) / 2 - 4;
     for (int i=0; i < 48; ++i) {
         [[UIColor colorWithWhite:0.4
                            alpha:0.05 - 0.1 * i / 48] set];

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B3116" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" initialViewController="RrL-IS-FBF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" initialViewController="RrL-IS-FBF">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Navigation View Controller-->
@@ -34,21 +34,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="15" minimumInteritemSpacing="15" id="S1z-cI-FFq">
-                            <size key="itemSize" width="84" height="84"/>
+                            <size key="itemSize" width="120" height="120"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="15" minY="15" maxX="15" maxY="15"/>
+                            <inset key="sectionInset" minX="30" minY="30" maxX="30" maxY="30"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ItemCell" id="vJw-Lp-95t" customClass="ZHomeItemCell">
-                                <rect key="frame" x="15" y="15" width="84" height="84"/>
+                                <rect key="frame" x="30" y="30" width="120" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="84" height="84"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="新生宝典" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lkG-fc-tie" customClass="ZShadowLabel">
-                                            <rect key="frame" x="0.0" y="0.0" width="84" height="84"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -59,10 +59,10 @@
                                 </view>
                                 <color key="backgroundColor" red="0.28404425179999998" green="0.76821966239999995" blue="0.98823535439999999" alpha="1" colorSpace="deviceRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="lkG-fc-tie" secondAttribute="bottom" id="0lW-mf-2eP"/>
-                                    <constraint firstAttribute="trailing" secondItem="lkG-fc-tie" secondAttribute="trailing" id="87s-Zh-Rx2"/>
-                                    <constraint firstItem="lkG-fc-tie" firstAttribute="leading" secondItem="vJw-Lp-95t" secondAttribute="leading" id="no6-5y-Uhd"/>
-                                    <constraint firstItem="lkG-fc-tie" firstAttribute="top" secondItem="vJw-Lp-95t" secondAttribute="top" id="rcc-8i-0Rt"/>
+                                    <constraint firstItem="lkG-fc-tie" firstAttribute="top" secondItem="vJw-Lp-95t" secondAttribute="top" id="5QZ-Vn-ods"/>
+                                    <constraint firstAttribute="trailing" secondItem="lkG-fc-tie" secondAttribute="trailing" id="6cg-f4-Bjn"/>
+                                    <constraint firstItem="lkG-fc-tie" firstAttribute="leading" secondItem="vJw-Lp-95t" secondAttribute="leading" id="8Nt-3V-g9o"/>
+                                    <constraint firstAttribute="bottom" secondItem="lkG-fc-tie" secondAttribute="bottom" id="Ylf-aY-hal"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="textLabel" destination="lkG-fc-tie" id="3jR-vh-dZq"/>

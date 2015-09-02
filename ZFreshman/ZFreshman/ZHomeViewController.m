@@ -10,8 +10,8 @@
 #import "UIColor+RExtension.h"
 #import "ZMovieController.h"
 
-static NSString *cellTitles[] = {@"培养方案", @"新生宝典", @"校园地图", @"社团组织", @"浙大写意"};
-static NSString *cellSegues[] = {@"Traning", @"Question", @"Map", @"League", @"playVideo"};
+static NSString *cellTitles[] = {@"培养方案", @"新生宝典", @"校园地图", @"社团组织"/*, @"浙大写意"*/};
+static NSString *cellSegues[] = {@"Traning", @"Question", @"Map", @"League"/*, @"playVideo"*/};
 
 @interface ZHomeItemCell : UICollectionViewCell
 @property (nonatomic, assign) IBOutlet UILabel *textLabel;

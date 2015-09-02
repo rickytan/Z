@@ -171,7 +171,7 @@
 
 - (void)scrollViewDidEndZooming:(UIScrollView *)scrollView
                        withView:(UIView *)view
-                        atScale:(float)scale
+                        atScale:(CGFloat)scale
 {
     [self centeringImageView];
     if (scale == scrollView.minimumZoomScale)

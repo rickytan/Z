@@ -63,7 +63,7 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    UILabel *label = [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"Header"];
+    UILabel *label = (UILabel *)[tableView dequeueReusableHeaderFooterViewWithIdentifier:@"Header"];
     if (!label) {
         label = [[UILabel alloc] init];
         label.font = [UIFont boldSystemFontOfSize:18];

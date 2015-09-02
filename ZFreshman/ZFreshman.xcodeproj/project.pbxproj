@@ -658,11 +658,11 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = Z;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Ricky;
 				TargetAttributes = {
 					9C4D1FA418658E9300EFE020 = {
-						DevelopmentTeam = JM9WSY7Q38;
+						DevelopmentTeam = B3YWFPRYS3;
 					};
 					9C4D1FCB18658E9300EFE020 = {
 						TestTargetID = 9C4D1FA418658E9300EFE020;
@@ -909,7 +909,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -924,6 +923,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -949,7 +949,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -982,13 +981,14 @@
 		9C4D1FDE18658E9300EFE020 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: hang zhang (JM9WSY7Q38)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: hang zhang (JM9WSY7Q38)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZFreshman/ZFreshman-Prefix.pch";
 				INFOPLIST_FILE = "ZFreshman/ZFreshman-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = org.ricky.zfreshman;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "831BE0AD-24E0-4816-8B06-340D83958BD5";
+				PROVISIONING_PROFILE = "2a431c7b-e8bc-4661-84c2-a2f7b4cdb885";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -997,13 +997,14 @@
 		9C4D1FDF18658E9300EFE020 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: hang zhang (JM9WSY7Q38)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: hang zhang (JM9WSY7Q38)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ricky Tan (DLR42XEMUG)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ricky Tan (DLR42XEMUG)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZFreshman/ZFreshman-Prefix.pch";
 				INFOPLIST_FILE = "ZFreshman/ZFreshman-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = org.ricky.zfreshman;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "831BE0AD-24E0-4816-8B06-340D83958BD5";
+				PROVISIONING_PROFILE = "2a431c7b-e8bc-4661-84c2-a2f7b4cdb885";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1012,7 +1013,6 @@
 		9C4D1FE118658E9300EFE020 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ZFreshman.app/ZFreshman";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -1026,6 +1026,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "ZFreshmanTests/ZFreshmanTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.ricky.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -1035,7 +1036,6 @@
 		9C4D1FE218658E9300EFE020 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ZFreshman.app/ZFreshman";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -1045,6 +1045,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZFreshman/ZFreshman-Prefix.pch";
 				INFOPLIST_FILE = "ZFreshmanTests/ZFreshmanTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.ricky.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
